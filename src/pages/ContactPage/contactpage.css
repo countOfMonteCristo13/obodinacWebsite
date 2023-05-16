@@ -1,0 +1,312 @@
+.o__contactPage{
+    background: var(--color-darkgrey);
+
+}
+
+.o__contactPage_section{
+    padding: 3rem;
+    background: var(--color-darkgrey);
+    height: 80vh;
+    flex-direction: column;
+}
+
+.height-auto{
+    height: auto;
+}
+
+.o__contactPage_options{
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+}
+
+
+.o__contactPage_options-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	border-radius: 15px;
+	border: 2px solid #284280;
+	background-color: #284280;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+.o__contactPage_options-button img{
+	max-width: 100px;
+}
+
+.o__contactPage_options-button:hover{
+	transform: scale(1.1);
+}
+
+
+
+/* PROZOR */
+
+
+.o__contactPage_options-window{
+	
+	background-color: #284280;
+	padding: 2rem 3rem;
+	margin-top: 2rem;
+	border-radius: 20px;
+	/* transition: all 0.2s; */
+}
+
+/* PROZOR PORUKA */
+
+#option-message{
+    width: 100%;
+}
+
+.kontakt-inputi{
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+.kontakt-inputi label,input,select,textarea{
+	margin-bottom: 1rem;
+}
+
+
+.kontakt-inputi label{
+	color: white;
+    font-size: 1.5rem;
+}
+
+.kontakt-inputi input,
+.kontakt-inputi select,
+.kontakt-inputi textarea{
+	padding: 1rem;
+	border-radius: 10px;
+	border: 1px solid #284280;
+    outline: none;
+    font-size: 1rem;
+}
+
+.kontakt-inputi textarea{
+    width: 100%;
+}
+
+
+.o__contactPage_options_message-submit input{
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	color: #284280;
+}
+
+.o__contactPage_options_message-submit input{
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+.o__contactPage_options_message-submit input:hover {
+	transform: scale(1.1);
+}
+
+/* PROZOR POZIV */
+
+#option-call{
+    gap: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.o__contactPage_options-call{
+    display: flex;
+    flex-direction: column;
+}
+
+.o__contactPage_options_call-person{
+	display: flex;
+	justify-content: space-between;
+    gap: 1rem;
+	padding: 3rem;
+	background-color: #284280;
+	border-radius: 20px;
+}
+
+.o__contactPage_options_call-person_img{
+	background-color: white;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+}
+
+.o__contactPage_options_call-person_info{
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.o__contactPage_options_call-person_info p{
+	letter-spacing:0.5px;
+}
+
+.o__contactPage_options_call-person_info p:first-child{
+	font-size: 2em;
+	font-weight: 300;
+}
+
+.d-none{
+	display: none;
+}
+
+@media screen and (max-width:1150px){
+    .o__contactPage_options_call-person{
+        padding: 2rem;
+    }
+
+    .kontakt-inputi{
+        padding: 2rem 0;
+    }
+    
+}
+
+
+@media screen and (max-width:770px) {
+
+    .o__contactPage_section{
+        padding-top: 4rem;
+    }
+    .o__contactPage_options_call-person{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .o__contactPage_options_call-person_info{
+        align-items: center;
+    }
+    .o__contactPage_options_call-person_info p{
+        text-align: center;
+    }
+
+    .o__contactPage_options-button img{
+        max-width: 80px;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+
+    .o__contactPage_options_call-person_info p{
+        font-size: 0.8rem;
+    }
+
+    .o__contactPage_options_call-person_info p:first-child{
+        font-size: 1.5rem;
+    }
+
+    .o__contactPage_options_call-person_img{
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .o__contactPage_options-window{
+        padding: 2rem;
+    }
+
+    .o__contactPage_options_message-submit input{
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    .o__contactPage_section{
+
+        padding: 4rem 2rem 3rem 2rem;
+    }
+
+    .kontakt-inputi{
+        padding: 0;
+    }
+
+    .kontakt-inputi label{
+        font-size: 1.1rem;
+    }
+
+    .kontakt-inputi input, .kontakt-inputi select, .kontakt-inputi textarea{
+        font-size: 0.8rem;
+    }
+
+    #submitButton input{
+        font-size: 0.8rem;
+    }
+
+    .o__contactPage_options-button img{
+        max-width: 50px;
+    }
+    .o__contactPage_options{
+        gap: 4rem;
+    }
+    
+}
+
+
+@media screen and (max-width:400px) {
+
+    .o__contactPage_options_call-person_info p{
+        font-size: 0.5rem;
+    }
+
+    .o__contactPage_options_call-person_info p:first-child{
+        font-size: 1rem;
+    }
+
+    .o__contactPage_options_call-person_img{
+
+        width: 150px;
+        height: 150px;
+    }
+
+    .kontakt-inputi label{
+        font-size: 1rem;
+    }
+
+    .kontakt-inputi input, .kontakt-inputi select, .kontakt-inputi textarea{
+        font-size: 0.6rem;
+    }
+
+    
+}
+
+@media screen and (max-width:300px) {
+
+
+    .o__contactPage_options_call-person_img{
+
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .o__contactPage_section{
+        padding: 4rem 1rem 3rem 1rem;
+        background: var(--color-darkgrey);
+    }
+
+    .kontakt-inputi input, .kontakt-inputi select, .kontakt-inputi textarea{
+        padding: 0.7rem;
+    }
+
+    .o__contactPage_options-button img{
+        max-width: 40px;
+    }
+
+}
+

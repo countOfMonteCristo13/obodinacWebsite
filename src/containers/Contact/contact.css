@@ -1,0 +1,14 @@
+.o__contact{
+    background: var(--color-grey);
+    padding: 1rem 2rem 3rem 2rem;
+}
+
+.o__contact_container{
+    background: var(--color-blue);
+    color: var(--color-white);
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

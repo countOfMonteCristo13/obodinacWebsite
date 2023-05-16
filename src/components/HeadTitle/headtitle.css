@@ -1,0 +1,53 @@
+.title{
+    background: var(--color-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h2{
+    font-size: 3rem;
+    color: var(--color-white);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#gray{
+    background: var(--color-darkgrey);
+}
+
+#gray h2{
+    color: var(--color-blue);
+}
+
+#transparent{
+    background: transparent;
+    justify-content: flex-start;
+}
+#transparent h2{
+    text-decoration: underline;
+}
+
+
+#blue{
+    background: transparent;
+}
+
+#blue h2{
+    color: var(--color-blue);
+    font-size: 3rem;
+    padding: unset;
+}
+
+
+
+@media screen and (max-width:450px) {
+    .title h2{
+        font-size: 1.8rem;
+    }
+
+    #blue h2{
+
+        font-size: 2rem;
+    }
+}

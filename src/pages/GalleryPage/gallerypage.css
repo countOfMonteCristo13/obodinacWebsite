@@ -1,0 +1,109 @@
+.o__galleryPage{
+    background-color: var(--color-darkgrey);
+}
+
+.o__galleryPage_section{
+    padding: 0 2rem 3.5rem 2rem;
+}
+
+.subHeading{
+    background-color: var(--color-blue);
+    border-radius: 20px;
+    width: 500px;
+    margin-top: 3rem;
+}
+
+.subHeading h2{
+    font-size: 2rem;
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+}
+
+.o__galleryPage_photo-type_buttons{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.o__galleryPage_phototype-buttons_button{
+    background: transparent;
+    color: var(--color-blue);
+    padding:0.5rem 1rem ;
+    border-style: unset;
+    border-radius: 10px;
+    border: 1px solid var(--color-blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.o__galleryPage_phototype-buttons_button:hover{
+    background: var(--color-blue);
+    color: var(--color-white);
+}
+
+.o__galleryPage_blueline{
+    padding: 0 2rem;
+}
+
+.o__galleryPage_blueline div{
+    height: 3px;
+    width: 100%;
+    background: var(--color-blue);
+    border-radius: 10px;
+}
+
+.margint{
+    margin-top: 3rem;
+}
+
+
+
+.o__galleryPage_button-wrapper button{
+    font-size: 1.2rem;
+    color: var(--color-white);
+    background: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.o__galleryPage_button-wrapper button:hover{
+    background: var(--color-white);
+    color: var(--color-blue);
+}
+
+@media screen and (max-width:450px) {
+
+    .o__galleryPage_phototype-buttons_button{
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .o__galleryPage_section{
+        padding: 0 3rem 3.5rem 3rem;
+    }
+    
+    .o__galleryPage_blueline{
+        padding: 0 3rem;
+    }
+
+    .subHeading h2{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:350px){
+    .o__galleryPage_phototype-buttons_button{
+        font-size: 0.6rem;
+        padding: 0.2rem 0.7rem;
+    }
+
+    
+    .subHeading h2{
+        font-size: 1.3rem;
+    }
+}

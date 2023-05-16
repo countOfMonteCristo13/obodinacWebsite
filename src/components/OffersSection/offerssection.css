@@ -1,0 +1,150 @@
+.o__offersSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--color-darkgrey);
+    padding: 3.5rem 4rem;
+}
+
+.o__offersSection_img{
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.o__offersSection_img img{
+    max-width: 300px;
+    object-fit: cover;
+}
+
+.o__offersSection_details{
+    height: 100%;
+    width: 50%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.o__offersSection_details h2{
+    font-size: 2.3rem;
+    color: var(--color-blue);
+}
+
+
+.o__offersSection_details p{
+    line-height: 2rem;
+    color: var(--color-blue);
+}
+
+#odd .o__offersSection_img{
+    justify-content: flex-end;
+}
+
+#odd{
+    flex-direction: row-reverse;
+}
+
+#odd .o__offersSection_details{
+    text-align: left;
+    align-items: flex-start;
+}
+
+@media screen and (max-width:1150px){
+    .o__offersSection{
+        padding: 3.5rem;
+    }
+}
+
+
+@media screen and (max-width:1025px) {
+    .o__offersSection{
+        flex-direction: column;
+        padding: 3rem 2rem;
+    }
+
+    #odd{
+        flex-direction: column;
+    }
+
+    .o__offersSection_img{
+        width: 80%;
+    }
+
+    .o__offersSection_details{
+        width: 80%;
+        align-items: center;
+        text-align: justify;
+    }
+
+    #odd .o__offersSection_details{
+        width: 80%;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .o__offersSection_details h2{
+        text-align: center;
+    }
+
+    #odd .o__offersSection_details h2{
+        text-align: center;
+    }
+
+    .o__offersSection_img{
+        justify-content: center;
+    }
+    #odd .o__offersSection_img{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:770px){
+    .o__offersSection_img img{
+        max-width: 250px;
+    }
+
+}
+
+@media screen and (max-width:600px){
+    .o__offersSection_img img{
+        max-width: 200px;
+    }
+
+}
+
+@media screen and (max-width:450px){
+    .o__offersSection_img img{
+        max-width: 150px;
+    }
+
+    .o__offersSection_details h2{
+        font-size: 2rem;
+    }
+
+    .o__offersSection_details p{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+
+    .o__offersSection{
+        padding: 3rem 1rem;
+    }
+
+}
+
+@media screen and (max-width:350px){
+    .o__offersSection_details h2{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width:300px){
+    .o__offersSection_img img{
+        max-width: 120px;
+    }
+
+}
