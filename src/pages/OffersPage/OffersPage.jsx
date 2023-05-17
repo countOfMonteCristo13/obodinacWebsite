@@ -6,6 +6,11 @@ import OffersSection from '../../components/OffersSection/OffersSection'
 import CardFlip from '../../components/CardFlip/CardFlip'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 
+import { connect } from 'react-redux'
+import { setOffersPageScroll } from '../../actions'
+
+import { scroller } from 'react-scroll'
+
 
 import { Link } from 'react-router-dom'
 
@@ -19,7 +24,35 @@ let ventilacijaD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fu
 let rekuperatorD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
 
 
-const OffersPage = () => {
+const mapStateToProps = (state) => {
+  return {
+    offersPageScroll: state.offersPageScroll,
+  };
+};
+
+const mapDispatchToProps = {
+  setOffersPageScroll,
+};
+
+const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
+  
+
+  useEffect(() => {
+
+    console.log(offersPageScroll)
+
+    const scrollToSection = () => {
+      scroller.scrollTo(offersPageScroll, {
+        duration: 0,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+      });
+    };
+    
+    scrollToSection();
+    setOffersPageScroll('top');
+
+  },[]);
 
 
   const HeadText = ({title,wrapper,id}) => {
@@ -48,7 +81,7 @@ const OffersPage = () => {
       <NavbarSection image={images.maintenanceWhite} imageLogo={images.obodinacFooter2}/>
       <ScrollUp image={images.upArrow}/>
 
-      <HeadText title="Klimatizacija"/>
+      <HeadText id='klimatizacija' title="Klimatizacija"/>
       <BlueLine/>
       <OffersSection title='Split klima uredjaji' description={splitD} alt='split klima' image={images.klimaUredjajHeader}/>
       <OffersSection title='Multi klima uredjaji' description={multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
@@ -68,12 +101,12 @@ const OffersPage = () => {
         </div>
       </div>
 
-      <HeadText  title='Grejanje' wrapper='wrapper'/>
+      <HeadText id='grejanje'  title='Grejanje' wrapper='wrapper'/>
 
       <OffersSection title='Radijatorsko grejanje' description={radijatorD} alt='radijator' image={images.radiator}/>
       <OffersSection title='Podno grejanje' description={podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
 
-      <HeadText title='Ventilacija' wrapper='wrapper'/>
+      <HeadText id='ventilacija' title='Ventilacija' wrapper='wrapper'/>
 
       <OffersSection title='Standard Ventilacija' description={ventilacijaD} alt='ventilacija' image={images.vent}/>
       <OffersSection title='Rekuperator' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
@@ -85,4 +118,4 @@ const OffersPage = () => {
   )
 }
 
-export default OffersPage
+export default connect(mapStateToProps,mapDispatchToProps)(OffersPage);

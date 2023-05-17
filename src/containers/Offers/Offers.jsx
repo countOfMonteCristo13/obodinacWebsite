@@ -5,7 +5,6 @@ import HeadTitle from '../../components/HeadTitle/HeadTitle'
 import Section from '../../components/Section/Section'
 
 
-
 const Offers = () => {
 
   const klimatizacijaD = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptate atque, labore aliquid debitis perferendis nulla quidem quam, accusantium nam laudantium nesciunt ad quia! Aliquid commodi iusto quae blanditiis ab.'

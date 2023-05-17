@@ -3,9 +3,27 @@ import './section.css'
 
 import { Link } from 'react-router-dom'
 
-const Section = ({title,description,image,alt,odd}) => {
+import { connect } from 'react-redux'
+import { setOffersPageScroll } from '../../actions'
 
+const mapDispatchToProps = {
+  setOffersPageScroll,
+};
 
+const mapStateToProps = state =>{
+  return{
+    offersPageScroll: state.offersPageScroll,
+  }
+}
+
+const Section = ({title,description,image,alt,odd,route,setOffersPageScroll}) => {
+
+  const changeOffersScrollSection = (section) =>{
+    const scrollValue = section;
+    setOffersPageScroll(scrollValue);
+  }
+
+  
 
   return (
     <div className='o__section  section__padding' id={odd}>
@@ -18,7 +36,7 @@ const Section = ({title,description,image,alt,odd}) => {
             <h2>{title}</h2>
             <p>{description}</p>
             <Link to={`/offers`}>
-              <button className='custom__button' type='button'>Detaljnije...</button>
+              <button onClick={() => changeOffersScrollSection(route)} className='custom__button' type='button'>Detaljnije...</button>
             </Link>
         </div>
 
@@ -27,4 +45,4 @@ const Section = ({title,description,image,alt,odd}) => {
   )
 }
 
-export default Section
+export default connect(mapStateToProps,mapDispatchToProps)(Section);
