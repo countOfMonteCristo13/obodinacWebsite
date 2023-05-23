@@ -39,8 +39,9 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
   useEffect(() => {
 
-    console.log(offersPageScroll)
+    const page = document.querySelector('#op__top');
 
+    
     const scrollToSection = () => {
       scroller.scrollTo(offersPageScroll, {
         duration: 0,
@@ -48,9 +49,11 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         smooth: 'easeInOutQuart',
       });
     };
-    
+
+
+
     scrollToSection();
-    setOffersPageScroll('top');
+    setOffersPageScroll('op__top');
 
   },[]);
 
@@ -77,44 +80,46 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
 
   return (
-    <div className='o__offersPage' id='top'>
-      <NavbarSection image={images.maintenanceWhite} imageLogo={images.obodinacFooter2}/>
+    <>
       <ScrollUp image={images.upArrow}/>
+      
+      <div className='o__offersPage slide-enterance1' id='op__top'>
+        <NavbarSection activeLink='nav__offers'/>
+        <HeadText id='op__klimatizacija' title="Klimatizacija"/>
+        <BlueLine/>
+        <OffersSection title='Split klima uredjaji' description={splitD} alt='split klima' image={images.klimaUredjajHeader}/>
+        <OffersSection title='Multi klima uredjaji' description={multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
+        <OffersSection title='Centralni sistem' description={centralniD} alt='centralni sistem' image={images.centralniSistem}/>
+        <OffersSection title='Kanalski klima uredjaji' description={kanalD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
 
-      <HeadText id='klimatizacija' title="Klimatizacija"/>
-      <BlueLine/>
-      <OffersSection title='Split klima uredjaji' description={splitD} alt='split klima' image={images.klimaUredjajHeader}/>
-      <OffersSection title='Multi klima uredjaji' description={multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
-      <OffersSection title='Centralni sistem' description={centralniD} alt='centralni sistem' image={images.centralniSistem}/>
-      <OffersSection title='Kanalski klima uredjaji' description={kanalD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
-
-      <div className='o__offersPage_types'>
-        <div className='o__offersPage_types-headtext flex__center'>
-          <h2>Tipovi unutrašnjih jedinica</h2>
+        <div className='o__offersPage_types'>
+          <div className='o__offersPage_types-headtext flex__center'>
+            <h2>Tipovi unutrašnjih jedinica</h2>
+          </div>
+          <div className='o__offersPage_types-cards'>
+          <CardFlip imageF={images.unutrasnjaKlima} imageB={images.unutrasnjaKlimaP} opis="Zidna" klasa='zidna'/>
+          <CardFlip imageF={images.plafonskaKlima} imageB={images.plafonskaKlimaP} opis="Plafonska" klasa='plafonska'/>
+          <CardFlip imageF={images.parapetnaKlima} imageB={images.podplafonskaKlimaP} opis="Podplafonska" klasa='podplafonska'/>          
+          <CardFlip imageF={images.kanalskaKlima} imageB={images.kanalskaKlimaP} opis="Kanalska" klasa='kanalska'/>
+          <CardFlip imageF={images.parapetnaKlima} imageB={images.parapetnaKlimaP} opis="Parapetna" klasa='parapetna'/>          
+          </div>
         </div>
-        <div className='o__offersPage_types-cards'>
-        <CardFlip imageF={images.unutrasnjaKlima} imageB={images.unutrasnjaKlimaP} opis="Zidna" klasa='zidna'/>
-        <CardFlip imageF={images.plafonskaKlima} imageB={images.plafonskaKlimaP} opis="Plafonska" klasa='plafonska'/>
-        <CardFlip imageF={images.parapetnaKlima} imageB={images.podplafonskaKlimaP} opis="Podplafonska" klasa='podplafonska'/>          
-        <CardFlip imageF={images.kanalskaKlima} imageB={images.kanalskaKlimaP} opis="Kanalska" klasa='kanalska'/>
-        <CardFlip imageF={images.parapetnaKlima} imageB={images.parapetnaKlimaP} opis="Parapetna" klasa='parapetna'/>          
+
+        <HeadText id='op__grejanje'  title='Grejanje' wrapper='wrapper'/>
+
+        <OffersSection title='Radijatorsko grejanje' description={radijatorD} alt='radijator' image={images.radiator}/>
+        <OffersSection title='Podno grejanje' description={podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
+
+        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper'/>
+
+        <OffersSection title='Standard Ventilacija' description={ventilacijaD} alt='ventilacija' image={images.vent}/>
+        <OffersSection title='Rekuperator' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
+        <BlueLine/>
+        <div className='o__offersPage_button-wrapper flex__center'>
+          <Link to={'/contact'}><button type='button' className='custom__button'>Kontaktirajte Nas</button></Link>
         </div>
       </div>
-
-      <HeadText id='grejanje'  title='Grejanje' wrapper='wrapper'/>
-
-      <OffersSection title='Radijatorsko grejanje' description={radijatorD} alt='radijator' image={images.radiator}/>
-      <OffersSection title='Podno grejanje' description={podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
-
-      <HeadText id='ventilacija' title='Ventilacija' wrapper='wrapper'/>
-
-      <OffersSection title='Standard Ventilacija' description={ventilacijaD} alt='ventilacija' image={images.vent}/>
-      <OffersSection title='Rekuperator' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
-      <BlueLine/>
-      <div className='o__offersPage_button-wrapper flex__center'>
-        <Link to={'/contact'}><button type='button' className='custom__button'>Kontaktirajte Nas</button></Link>
-      </div>
-    </div>
+    </>  
   )
 }
 

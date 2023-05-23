@@ -4,7 +4,7 @@
 }
 
 .o__contactPage_section{
-    padding: 3rem;
+    padding: 3rem 4rem;
     background: var(--color-darkgrey);
     height: 80vh;
     flex-direction: column;
@@ -165,6 +165,14 @@
 
 .d-none{
 	display: none;
+}
+
+@media screen and (min-width:1440px){
+    #option-message,
+    #option-call{
+        max-width: 1400px;
+    }
+
 }
 
 @media screen and (max-width:1150px){

@@ -16,7 +16,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   font-family: var(--font-base);
 }
 
@@ -53,5 +52,31 @@ a{
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+
+
+
+
+.slide-enterance1 {
+	-webkit-animation: slide-enterance1 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: slide-enterance1 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes slide-enterance1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slide-enterance1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

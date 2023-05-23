@@ -56,6 +56,7 @@ import split3 from '../assets/split3.jpg'
 import split4 from '../assets/split4.jpg'
 import rightArrow from '../assets/rightArrow.png'
 import leftArrow from '../assets/leftArrow.png'
+import burger from '../assets/burger.png'
 
 
 const images = {
@@ -116,7 +117,8 @@ const images = {
     split3,
     split4,
     leftArrow,
-    rightArrow
+    rightArrow,
+    burger,
 }
 
 export default images

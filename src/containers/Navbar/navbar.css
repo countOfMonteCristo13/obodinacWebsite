@@ -99,9 +99,9 @@
 
 
 .o__header_menu-overlay-links li:hover{
-    -webkit-box-shadow: 2px 2px 5px 0px black;
-    -moz-box-shadow: 2px 2px 5px 0px black;
-    box-shadow: 2px 2px 5px 0px black;
+    -webkit-box-shadow: 2px 2px 5px 0px white;
+    -moz-box-shadow: 2px 2px 5px 0px white;
+    box-shadow: 2px 2px 5px 0px white;
 }
 
 

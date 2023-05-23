@@ -1,4 +1,4 @@
-.o__header_scrollUp{
+.o__scrollUp{
     padding: 0.5rem;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.09);
@@ -9,43 +9,31 @@
     right: 0.5rem;
     bottom: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s ease-in-out;
+    z-index: 1000;
 }
 
-.o__header_scrollUp img{
+.o__scrollUp img{
     max-width: 2rem;
 }
 
 
-.o__header_scrollUp:hover img{
+.o__scrollUp:hover img{
     transform: scale(1.1);
 }
 
-.sun,.snowflake,.fan{
-    background: var(--color-blue);
-    box-shadow: unset;
-    backdrop-filter: unset;
-    right: unset;
-    left: 0.5rem;
-}
 
 
-.snowflake{
-    bottom: 3.5rem;
-}
 
-.fan{
-    bottom: 6.5rem;
-}
 
 @media screen and (max-width:1150px) {
 
-    .o__header_scrollUp{
+    .o__scrollUp{
         padding: 0.4rem;
     }
     
     
-    .o__header_scrollUp img{
+    .o__scrollUp img{
         max-width: 1.8rem;
     }
 }
@@ -53,14 +41,12 @@
 @media screen and (max-width:770px) {
 
 
-    .o__header_scrollUp{
+    .o__scrollUp{
         padding: 0.3rem;
-        right: 0.8rem;
-        bottom: 10px;
     }
     
     
-    .o__header_scrollUp img{
+    .o__scrollUp img{
         max-width: 1.5rem;
     }
 }
@@ -68,15 +54,13 @@
 @media screen and (max-width:450px) {
 
 
-    .o__header_scrollUp{
+    .o__scrollUp{
         padding: 0.2rem;
-        right: 0.8rem;
-        bottom: 10px;
         border-radius: 5px;
     }
     
     
-    .o__header_scrollUp img{
+    .o__scrollUp img{
         max-width: 1rem;
     }
 

@@ -1,0 +1,38 @@
+.gp__swiper-img{
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gp__swiper{
+    max-width: 800px;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+
+.swiper-button-next, 
+.swiper-button-prev{
+    color: #284280 !important;
+    font-weight: bold !important;
+    
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--color-blue) !important;
+}
+
+
+@media screen and (max-width:768px){
+    .swiper-button-next:after, 
+    .swiper-button-prev:after{
+        font-size: 2rem !important;
+    }
+}
+
+@media screen and (max-width:576px){
+    .swiper-button-next:after, 
+    .swiper-button-prev:after{
+        font-size: 1.5rem !important;
+    }
+}

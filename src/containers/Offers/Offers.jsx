@@ -14,9 +14,9 @@ const Offers = () => {
   return (
     <div className='o__offers'>
       <HeadTitle title='Naša ponuda'/> 
-        <Section route='klimatizacija' title="Klimatizacija" description={klimatizacijaD} image={images.klimatizacija} alt='klimatizacija'/>
-        <Section route='grejanje' className="o__offers_grejanje" title="Grejanje" description={grejanjeD} image={images.grejanje} alt='grejanje' odd='odd'/>
-        <Section route='ventilacija' title="Ventilacija" description={ventilacijaD} image={images.ventilacija} alt='ventilacija'/>
+        <Section route='op__klimatizacija' title="Klimatizacija" description={klimatizacijaD} image={images.klimatizacija} alt='klimatizacija'/>
+        <Section route='op__grejanje' className="o__offers_grejanje" title="Grejanje" description={grejanjeD} image={images.grejanje} alt='grejanje' odd='odd'/>
+        <Section route='op__ventilacija' title="Ventilacija" description={ventilacijaD} image={images.ventilacija} alt='ventilacija'/>
     </div>
 
 

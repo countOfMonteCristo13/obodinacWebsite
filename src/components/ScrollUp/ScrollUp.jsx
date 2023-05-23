@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import './scrollup.css'
 
-const ScrollUp = ({image,type}) => {
+const ScrollUp = ({image}) => {
 
     const [buttonUp, setButtonUp] = useState(false);
 
@@ -24,14 +24,17 @@ const ScrollUp = ({image,type}) => {
     }, []);
   
     const scrollUp = () =>{
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
 
   return (
     <div>
     {
         buttonUp &&
-        <div onClick={scrollUp} className={`o__header_scrollUp flex__center ${type}`}>
+        <div onClick={scrollUp} className={`o__scrollUp flex__center`}>
           <img src={image} alt="up arrow" />
         </div>
     }

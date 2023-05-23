@@ -25,7 +25,6 @@ const Header = () => {
 
 
       </header>
-      <ScrollUp image={images.upArrow}/>
     </div>
   )
 }
