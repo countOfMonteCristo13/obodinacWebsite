@@ -21,10 +21,8 @@ const mapDispatchToProps = {
 const Gallery = ({setGalleryPageScroll,galleryPageScroll}) => {
 
   const changeGalleryScrollSection = (section) =>{
-    console.log(section);
     const scrollValue = section;
     setGalleryPageScroll(scrollValue);
-    console.log(galleryPageScroll);
   }
 
   return (

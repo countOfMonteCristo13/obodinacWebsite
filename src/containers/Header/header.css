@@ -94,31 +94,16 @@
 
     .o__header_logo{
         margin: 0;
+        max-width: 400px;
     }
 
     .o__header_logo img{
-        max-width: 400px;
+        max-width: 100%;
+        object-fit: cover;
     }
 
     .o__header_images{
        display: none;
-    }
-
-}
-
-@media screen and (max-width:450px) {
-
-    .o__header_logo img{
-        max-width: 300px;
-    }
-
-
-}
-
-@media screen and (max-width:350px) {
-
-    .o__header_logo img{
-        max-width: 200px;
     }
 
 }

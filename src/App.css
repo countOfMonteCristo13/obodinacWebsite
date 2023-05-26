@@ -99,4 +99,8 @@
     padding: 0.5rem 1rem;
   }
 
+  .section__padding{
+    padding: 3rem 2rem;
+  }
+
 }

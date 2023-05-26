@@ -34,7 +34,7 @@ const ScrollUp = ({image}) => {
     <div>
     {
         buttonUp &&
-        <div onClick={scrollUp} className={`o__scrollUp flex__center`}>
+        <div onClick={scrollUp} className='o__scrollUp flex__center'>
           <img src={image} alt="up arrow" />
         </div>
     }

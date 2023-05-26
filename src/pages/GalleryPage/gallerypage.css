@@ -45,9 +45,6 @@
     color: var(--color-white);
 }
 
-.o__galleryPage_blueline{
-    padding: 0 2rem;
-}
 
 .o__galleryPage_blueline div{
     height: 3px;
@@ -105,10 +102,6 @@
 
     .o__galleryPage_section{
         padding: 0 3rem 3.5rem 3rem;
-    }
-    
-    .o__galleryPage_blueline{
-        padding: 0 3rem;
     }
 
     .subHeading h2{

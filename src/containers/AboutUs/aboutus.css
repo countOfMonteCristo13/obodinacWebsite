@@ -1,6 +1,6 @@
 .o__aboutUs{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     background-color: var(--color-white);
@@ -11,7 +11,7 @@
 }
 
 .o__aboutUs_img img{
-    height: 500px;
+    height: 450px;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -58,11 +58,15 @@
     }
 
     .o__aboutUs_img{
-        width: 80%;
+        width: 100%;
+    }
+
+    .o__aboutUs_img img{
+        height: auto;
     }
 
     .o__aboutUs_details{
-        width: 80%;
+        width: 100%;
         align-items: center;
         text-align: justify;
     }
@@ -70,14 +74,23 @@
 
 @media screen and (max-width:770px){
     .o__aboutUs_img img{
-        height: 400px;
+        height: 450px;
     }
 
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:576px){
+
     .o__aboutUs_img img{
         height: 350px;
+    }
+
+    .o__aboutUs_details{
+        gap: 1.5rem;
+    }
+
+    .o__aboutUs{
+        gap: 1.5rem;
     }
 
 }
@@ -98,9 +111,9 @@
 
 }
 
-@media screen and (max-width:300px){
+@media screen and (max-width:350px){
     .o__aboutUs_img img{
-        height: 150px;
+        height: 200px;
     }
 
 }

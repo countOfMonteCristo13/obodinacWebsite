@@ -3,15 +3,27 @@
 }
 
 .o__line{
-    display: none;
     padding: 0rem 2rem;
     background: white;
 }
 
+
+.o__line-hidden{
+    display: none;
+}
+
+
 .o__line div{
     
-    height: 2px;
+    height: 4px;
     border-radius: 10px;
     background: var(--color-blue);
     width: 100%;
+}
+
+@media screen and (max-width:770px) {
+
+    .o__line-hidden{
+        display: block;
+    }
 }
