@@ -1,13 +1,13 @@
 .gp__swiper-img{
     max-width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .gp__swiper{
-    max-width: 800px;
+    max-width: 700px;
     max-height: 500px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 

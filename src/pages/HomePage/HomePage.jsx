@@ -15,6 +15,9 @@ const HomePage = () => {
 
   useEffect(() =>{
     window.scrollTo(0,0);
+
+    const line = document.querySelector('.o__line');
+    console.log(line);
   },[]);
 
 

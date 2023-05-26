@@ -27,19 +27,26 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
 
     useEffect(() => {
 
-        console.log(galleryPageScroll)
-
-        const page = document.querySelector('#gp__top');
-    
-        const scrollToSection = () => {
-          scroller.scrollTo(galleryPageScroll, {
-            duration: 0,
-            delay: 0,
-            smooth: 'easeInOutQuart',
-          });
-        };
-
-        scrollToSection();
+        if(window.innerWidth < 771){
+            const scrollToSection = () => {
+                scroller.scrollTo(galleryPageScroll, {
+                  duration: 0,
+                  delay: 0,
+                  smooth: 'easeInOutQuart',
+                });
+              };
+              scrollToSection();
+        }else{
+            const scrollToSection = () => {
+                scroller.scrollTo(galleryPageScroll, {
+                  duration: 0,
+                  delay: 0,
+                  smooth: 'easeInOutQuart',
+                  offset:-40,
+                });
+              };
+              scrollToSection();
+        }
         setGalleryPageScroll('gp__top');
     
     },[]);
@@ -84,7 +91,9 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Centralni Sistem</button>
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Kanal</button>
                 </div>
-                <Slider sliderImg={klimatizaijaImgs} id='split'/>
+                {/* <Slider sliderImg={klimatizaijaImgs} id='split'/> */}
+
+                <ImageSlider/>
                 
                 <SubHeading title='Grejanje' route='gp__grejanje'/>
                 
@@ -92,8 +101,9 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Radijator</button>
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Podno</button>
                 </div>
-                <Slider sliderImg={sliderImg} id='grejanje'/>
-                
+                {/* <Slider sliderImg={sliderImg} id='grejanje'/> */}
+                <ImageSlider/>
+
                 <SubHeading title='Ventilacija' route='gp__ventilacija'/>
                 
                 <div className='o__galleryPage_photo-type_buttons'>
@@ -107,7 +117,8 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Kernovanje</button>
                     <button type='button' className='o__galleryPage_phototype-buttons_button'>Solarni Paneli</button>
                 </div>
-                <Slider sliderImg={sliderImg} id='dodatno'/>
+                {/* <Slider sliderImg={sliderImg} id='dodatno'/> */}
+                <ImageSlider/>
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
