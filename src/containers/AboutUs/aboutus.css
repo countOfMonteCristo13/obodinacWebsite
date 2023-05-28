@@ -37,20 +37,7 @@
     color: var(--color-blue);
 }
 
-.o__aboutUs_details button{
-    font-size: 1.1rem;
-    font-weight: 300;
-    background: #b2bbd1;
-    color: var(--color-blue);
-    transition: all 0.1s;
-    cursor: pointer;
-}
 
-.o__aboutUs_details button:hover{
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-}
 
 @media screen and (max-width:1025px) {
     .o__aboutUs{

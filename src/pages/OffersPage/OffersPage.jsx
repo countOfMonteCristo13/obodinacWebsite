@@ -116,7 +116,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <OffersSection title='Rekuperator' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine/>
         <div className='o__offersPage_button-wrapper flex__center'>
-          <Link to={'/contact'}><button type='button' className='custom__button'>Kontaktirajte Nas</button></Link>
+          <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
         </div>
       </div>
     </>  

@@ -25,58 +25,6 @@
 }
 
 
-.o__bg {
-  background: url('./assets/bg1.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
-
-.o__bg1 {
-
-    background:-moz-linear-gradient(90deg, rgba(100, 145, 255, 1) 0%, rgba(40, 66, 128, 1) 100%); 
-    background:-webkit-linear-gradient(90deg, rgba(100, 145, 255, 1) 0%, rgba(40, 66, 128, 1) 100%);
-    background:-o-linear-gradient(90deg, rgba(100, 145, 255, 1) 0%, rgba(40, 66, 128, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#284280', endColorstr='#6491FF', GradientType=0 );
-    background:-ms-linear-gradient(90deg, rgba(100, 145, 255, 1) 0%, rgba(40, 66, 128, 1) 100%);
-    background:linear-gradient(90deg, rgba(100, 145, 255, 1) 0%, rgba(40, 66, 128, 1) 100%);
-}
-
-.o__bg2{    
-    background:-moz-linear-gradient(90deg, rgba(40, 66, 128, 1) 15%, rgba(178, 187, 209, 1) 85%); 
-    background:-webkit-linear-gradient(90deg, rgba(40, 66, 128, 1) 15%, rgba(178, 187, 209, 1) 85%);
-    background:-o-linear-gradient(90deg, rgba(40, 66, 128, 1) 15%, rgba(178, 187, 209, 1) 85%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B2BBD1', endColorstr='#284280', GradientType=0 );
-    background:-ms-linear-gradient(90deg, rgba(40, 66, 128, 1) 15%, rgba(178, 187, 209, 1) 85%);
-    background:linear-gradient(90deg, rgba(40, 66, 128, 1) 15%, rgba(178, 187, 209, 1) 85%);
-  }
-
-.o__bg3{
-  background:-moz-radial-gradient(circle at 10% 10%, rgba(40, 66, 128, 1) 12%, rgba(178, 187, 209, 1) 78%);
-  background:-webkit-radial-gradient(circle at 10% 10%, rgba(40, 66, 128, 1) 12%, rgba(178, 187, 209, 1) 78%);
-  background:-o-radial-gradient(circle at 10% 10%, rgba(40, 66, 128, 1) 12%, rgba(178, 187, 209, 1) 78%);
-  background:-ms-radial-gradient(circle at 10% 10%, rgba(40, 66, 128, 1) 12%, rgba(178, 187, 209, 1) 78%);
-  background:radial-gradient(circle at 10% 10%, rgba(40, 66, 128, 1) 12%, rgba(178, 187, 209, 1) 78%);
-
-}
-
-.o__bg4{
-     /* ff 3.6+ */
-     background:-moz-radial-gradient(circle at 0% 0%, rgba(40, 66, 128, 1) 5%, rgba(178, 187, 209, 1) 31%);
-
-     /* safari 5.1+,chrome 10+ */
-     background:-webkit-radial-gradient(circle at 0% 0%, rgba(40, 66, 128, 1) 5%, rgba(178, 187, 209, 1) 31%);
- 
-     /* opera 11.10+ */
-     background:-o-radial-gradient(circle at 0% 0%, rgba(40, 66, 128, 1) 5%, rgba(178, 187, 209, 1) 31%);
- 
-     /* ie 10+ */
-     background:-ms-radial-gradient(circle at 0% 0%, rgba(40, 66, 128, 1) 5%, rgba(178, 187, 209, 1) 31%);
- 
-     /* global 92%+ browsers support */
-     background:radial-gradient(circle at 0% 0%, rgba(40, 66, 128, 1) 5%, rgba(178, 187, 209, 1) 31%);
-}
 
 .custom__button{
   font-family: var(--font-base);
@@ -85,18 +33,45 @@
   border: none;
 }
 
+.more-btn{
+  font-size: 1.1rem;
+  font-weight: 300;
+  background: var(--color-darkgrey);
+  border: 2px solid var(--color-darkgrey);
+  color: var(--color-blue);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
 
-@media screen and (max-width:770px) {
+.more-btn:hover{
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
+  box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
+}
+
+.checkout-btn{
+  font-size: 1.1rem;
+  color: var(--color-white);
+  background: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.checkout-btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    font-weight: bold;
+}
+
+
+@media screen and (max-width:768px) {
   .section__head{
     background-color: var(--color-blue);
   }
 
   .section__head h2{
     color: var(--color-white);
-  }
-
-  .custom__button{
-    padding: 0.5rem 1rem;
   }
 
   .section__padding{

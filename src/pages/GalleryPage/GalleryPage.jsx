@@ -47,21 +47,28 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
               scrollToSection();
         }
         setGalleryPageScroll('gp__top');
+
+
+
     
     },[]);
 
-    // const klimatizaijaImgs = [
-    //     images.split1,
-    //     images.split2,
-    //     images.split3,
-    //     images.split4
-    // ]
+    const imageSliderFilter = (event) =>{
 
-    // const sliderImg = [
-    //     "https://source.unsplash.com/78A265wPiO4",
-    //     "https://source.unsplash.com/ndN00KmbJ1c",
-    //     "https://source.unsplash.com/eOpewngf68w"
-    // ]
+
+        const buttonsWrapper = event.target.parentNode;
+        const buttons = Array.from(buttonsWrapper.getElementsByTagName('button'));
+        const buttonClicked = event.target;
+
+
+        buttons.forEach((button) => {
+            button.classList.remove('active-btn')
+        })
+
+        buttonClicked.classList.add('active-btn')
+
+    }
+
 
     const SubHeading = ({title,route}) =>{
         return(
@@ -85,10 +92,11 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                 <SubHeading title='Klimatizacija' route='gp__klimatizacija'/>
 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Split</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Multi</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Centralni Sistem</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Kanal</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Split</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Multi</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Centralni Sistem</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Kanal</button>
                 </div>
 
                 <ImageSlider/>
@@ -96,29 +104,25 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                 <SubHeading title='Grejanje' route='gp__grejanje'/>
                 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Radijator</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Podno</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Radijator</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Podno</button>
                 </div>
                 <ImageSlider/>
 
                 <SubHeading title='Ventilacija' route='gp__ventilacija'/>
                 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Standard</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Rekuperator</button>
-                </div>
-                <ImageSlider/>
-                <SubHeading title='Dodatno'/>
-                <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Kernovanje</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button'>Solarni Paneli</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Standard</button>
+                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Rekuperator</button>
                 </div>
                 <ImageSlider/>
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
                 <div className='o__galleryPage_button-wrapper flex__center margint'>
-                    <Link to={'/contact'}><button type='button' className='custom__button'>Kontaktirajte Nas</button></Link>
+                    <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
                 </div>
 
             </div>

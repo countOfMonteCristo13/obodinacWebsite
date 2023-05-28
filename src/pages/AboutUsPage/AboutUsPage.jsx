@@ -26,7 +26,7 @@ const AboutUsPage = () => {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere laborum! Autem, ratione eveniet sequi perspiciatis saepe labore quo doloremque dolorem nihil id corporis, commodi laudantium error. Odio, porro tempore?</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere laborum! Autem, ratione eveniet sequi perspiciatis saepe labore quo doloremque dolorem nihil id corporis, commodi laudantium error. Odio, porro tempore?</p>
               <div className='o__aboutPage_section-description_line'/>
-              <Link to={'/contact'}><button className='custom__button'>Kontaktirajte Nas</button></Link>
+              <Link to={'/contact'}><button className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ const AboutUs = () => {
         <div className='o__aboutUs_details'>
             <h2>O nama</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias reiciendis sunt impedit cumque dignissimos rem necessitatibus. Voluptatem sequi quidem ipsum officiis, modi eum sunt ut ullam vitae, enim error blanditiis!</p>
-            <Link to={'/about'}> <button className='custom__button' type='button'>Detaljnije...</button></Link>
+            <Link to={'/about'}> <button className='custom__button more-btn' type='button'>Detaljnije...</button></Link>
         </div>
       
 

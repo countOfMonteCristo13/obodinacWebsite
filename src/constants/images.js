@@ -58,6 +58,11 @@ import rightArrow from '../assets/rightArrow.png'
 import leftArrow from '../assets/leftArrow.png'
 import burger from '../assets/burger.png'
 import servisKlime from '../assets/servisKlime.png'
+import polovnaKlima1 from '../assets/polovnaKlima1.png'
+import polovnaKlima2 from '../assets/polovnaKlima2.png'
+import polovnaKlima3 from '../assets/polovnaKlima3.png'
+import polovnaKlima4 from '../assets/polovnaKlima4.png'
+import polovnaKlima5 from '../assets/polovnaKlima5.png'
 
 
 const images = {
@@ -120,7 +125,13 @@ const images = {
     leftArrow,
     rightArrow,
     burger,
-    servisKlime
+    servisKlime,
+    polovnaKlima1,
+    polovnaKlima2,
+    polovnaKlima3,
+    polovnaKlima4,
+    polovnaKlima5,
+
 }
 
 export default images

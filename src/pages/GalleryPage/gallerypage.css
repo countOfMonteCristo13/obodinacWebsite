@@ -21,7 +21,7 @@
 }
 
 .o__galleryPage_photo-type_buttons{
-    padding: 1rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -45,6 +45,12 @@
     color: var(--color-white);
 }
 
+.active-btn{
+    background: var(--color-blue);
+    color: var(--color-white);
+    cursor: default;
+}
+
 
 .o__galleryPage_blueline div{
     height: 3px;
@@ -59,21 +65,13 @@
 
 
 
-.o__galleryPage_button-wrapper button{
-    font-size: 1.2rem;
-    color: var(--color-white);
-    background: var(--color-blue);
-    border: 2px solid var(--color-blue);
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-}
 
-.o__galleryPage_button-wrapper button:hover{
-    background: var(--color-white);
-    color: var(--color-blue);
-}
 
-@media screen and (max-width:770px){
+@media screen and (max-width:768px){
+
+    .o__galleryPage_photo-type_buttons{
+        padding: 1.5rem 0;
+    }
 
     .subHeading{
         width: 400px;
@@ -102,6 +100,10 @@
 
     .o__galleryPage_section{
         padding: 0 3rem 3.5rem 3rem;
+    }
+
+    .subHeading{
+        margin-top: 1.5rem;
     }
 
     .subHeading h2{

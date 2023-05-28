@@ -36,7 +36,7 @@ const Section = ({title,description,image,alt,odd,route,setOffersPageScroll}) =>
             <h2>{title}</h2>
             <p>{description}</p>
             <Link to={`/offers`}>
-              <button onClick={() => changeOffersScrollSection(route)} className='custom__button' type='button'>Detaljnije...</button>
+              <button onClick={() => changeOffersScrollSection(route)} className='custom__button more-btn' type='button'>Detaljnije...</button>
             </Link>
         </div>
 

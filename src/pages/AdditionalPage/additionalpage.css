@@ -21,19 +21,3 @@
 .o__addoffersPage_button-wrapper{
     padding: 0 0 3rem 0;
 }
-
-.o__addoffersPage_button-wrapper button{
-    font-size: 1.2rem;
-    color: var(--color-white);
-    background: var(--color-blue);
-    border: 2px solid var(--color-blue);
-    cursor: pointer;
-    transition: all 0.2s ease-in;
-    
-}
-
-.o__addoffersPage_button-wrapper button:hover{
-    background-color: var(--color-white);
-    color: var(--color-blue);
-    font-weight: bold;
-}

@@ -37,20 +37,6 @@
     color: var(--color-blue);
 }
 
-.part_2 button{
-    font-size: 1.1rem;
-    font-weight: 300;
-    background: var(--color-darkgrey);
-    color: var(--color-blue);
-    transition: all 0.1s;
-    cursor: pointer;
-}
-
-.part_2 button:hover{
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-}
 
 .part_3{
     width: 30%;

@@ -38,20 +38,6 @@
     color: var(--color-blue);
 }
 
-.o__section_details button{
-    font-size: 1.1rem;
-    font-weight: 300;
-    background: var(--color-darkgrey);
-    color: var(--color-blue);
-    transition: all 0.1s;
-    cursor: pointer;
-}
-
-.o__section_details button:hover{
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-    box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-}
 
 #odd{
     flex-direction: row-reverse;
@@ -80,17 +66,13 @@
         width: 100%;
     }
 
-    .o__section_details{
+    .o__section_details,
+    #odd .o__section_details{
         width: 100%;
         align-items: center;
         text-align: justify;
     }
 
-    #odd .o__section_details{
-        width: 80%;
-        align-items: center;
-        text-align: justify;
-    }
 }
 
 @media screen and (max-width:770px){

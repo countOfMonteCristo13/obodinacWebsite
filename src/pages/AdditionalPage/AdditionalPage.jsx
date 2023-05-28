@@ -3,9 +3,9 @@ import './additionalpage.css'
 import { images } from '../../constants'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
-
 import OffersSection from '../../components/OffersSection/OffersSection'
 import ImageSlider from '../../components/ImageSlider/ImageSlider'
+import SpareAC from '../../components/SpareAC/SpareAC'
 
 import { Link } from 'react-router-dom'
 
@@ -45,11 +45,11 @@ const AdditionalPage = () => {
           <BlueLine/>
           <OffersSection title='Polovni klima uredjaji' description={desc} alt='polovne klime' image={images.klimaUredjajHeader}/>
           <div className='o__addoffersPage_slider-wrapper'>
-            <ImageSlider/>
+            <SpareAC/>
           </div>
           <BlueLine/>
           <div className='o__addoffersPage_button-wrapper flex__center'>
-            <Link to={'/contact'}><button type='button' className='custom__button'>Kontaktirajte Nas</button></Link>
+            <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
           </div>
       </div>
     </>
