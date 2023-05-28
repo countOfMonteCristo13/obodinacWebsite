@@ -10,7 +10,11 @@
     bottom: 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    z-index: 1000;
+    z-index: 800;
+}
+
+.o__scrollUp-hide{
+    display: none;
 }
 
 .o__scrollUp img{

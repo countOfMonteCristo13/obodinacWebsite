@@ -7,11 +7,15 @@ const ScrollUp = ({image}) => {
 
     useEffect(() => {
 
-      
+      const scrollBtn = document.querySelector('#scroll-btn');
+      console.log(scrollBtn);
+
       const handleScroll = () => {
           if (window.scrollY > 0) {
             setButtonUp(true);
+            scrollBtn.classList.remove('o__scrollUp-hide');
           } else {
+            scrollBtn.classList.add('o__scrollUp-hide');
             setButtonUp(false);
           }
       }
@@ -31,7 +35,7 @@ const ScrollUp = ({image}) => {
     }
 
   return (
-    <div>
+    <div className='o__scrollUp-hide' id='scroll-btn'>
     {
         buttonUp &&
         <div onClick={scrollUp} className='o__scrollUp flex__center'>

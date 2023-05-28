@@ -44,9 +44,9 @@ const AdditionalPage = () => {
           </div>
           <BlueLine/>
           <OffersSection title='Polovni klima uredjaji' description={desc} alt='polovne klime' image={images.klimaUredjajHeader}/>
-          <div className='o__addoffersPage_slider-wrapper'>
-            <SpareAC/>
-          </div>
+          
+          <SpareAC/>
+          
           <BlueLine/>
           <div className='o__addoffersPage_button-wrapper flex__center'>
             <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
