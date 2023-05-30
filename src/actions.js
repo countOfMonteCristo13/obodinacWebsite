@@ -1,4 +1,4 @@
-import { SET_OFFERS_PAGE_SCROLL, SET_GALLERY_PAGE_SCROLL } from "./constantss";
+import { SET_OFFERS_PAGE_SCROLL, SET_GALLERY_PAGE_SCROLL,SET_SCROLL_UP } from "./constantss";
 
 export const setOffersPageScroll = (scrollValue) => {
     return {
@@ -11,5 +11,12 @@ export const setGalleryPageScroll = (scrollValue) =>{
     return{
         type: SET_GALLERY_PAGE_SCROLL,
         payload: scrollValue
+    };
+};
+
+export const setScrollUpBtn = (scrollBtnVisibility) =>{
+    return{
+        type:SET_SCROLL_UP,
+        payload:scrollBtnVisibility
     };
 };

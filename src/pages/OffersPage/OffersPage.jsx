@@ -39,22 +39,6 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
   useEffect(() => {
 
-    // const page = document.querySelector('#op__top');
-
-    
-    // const scrollToSection = () => {
-    //   scroller.scrollTo(offersPageScroll, {
-    //     duration: 0,
-    //     delay: 0,
-    //     smooth: 'easeInOutQuart',
-    //   });
-    // };
-
-
-
-    // scrollToSection();
-    // setOffersPageScroll('op__top');
-
     if(window.innerWidth < 769){
       const scrollToSection = () => {
           scroller.scrollTo(offersPageScroll, {

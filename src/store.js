@@ -1,4 +1,4 @@
-import { SET_OFFERS_PAGE_SCROLL,SET_GALLERY_PAGE_SCROLL } from './constantss';
+import { SET_OFFERS_PAGE_SCROLL,SET_GALLERY_PAGE_SCROLL,SET_SCROLL_UP } from './constantss';
 
 import { legacy_createStore as createStore} from 'redux'
 
@@ -6,6 +6,7 @@ import { legacy_createStore as createStore} from 'redux'
 const initialState = {
   offersPageScroll: 'op__top',
   galleryPageScroll: 'gp__top',
+  scrollUpBtn: true,
 };
 
 // Define reducer function
@@ -21,6 +22,11 @@ const rootReducer = (state = initialState, action) => {
         return{
             ...state,
             galleryPageScroll: action.payload
+        }
+    case SET_SCROLL_UP:
+        return{
+            ...state,
+            scrollUpBtn: action.payload
         }
     default:
       return state;

@@ -7,23 +7,33 @@ import { Link } from 'react-router-dom'
 
 import ImageSlider from '../ImageSlider/ImageSlider'
 
-const SpareAC = () => {
+import { connect } from 'react-redux'
+import { setScrollUpBtn } from '../../actions'
+
+const mapDispatchToProps = {
+    setScrollUpBtn,
+}
+
+
+
+const SpareAC = ({setScrollUpBtn}) => {
     const [toggleMenu,setToggleMenu] = useState(false);
     const [imgSrc, setImgSrc] = useState('');
     const [imgTitle, setImgTitle] = useState('');
 
+ 
     useEffect(() =>{
 
         const body = document.querySelector('body');
         console.log(body)
-        const scrollUp = document.querySelector('#scroll-btn');
         
         if(toggleMenu){
             body.classList.add('overflow-hidden');
-            scrollUp.classList.add('o__scrollUp-hide')
+            setScrollUpBtn(false);
+
         }else{
             body.classList.remove('overflow-hidden');
-            scrollUp.classList.remove('o__scrollUp-hide');
+            setScrollUpBtn(true);
         }
     })
 
@@ -67,13 +77,10 @@ const SpareAC = () => {
                         toggleMenu && 
                             <div className='o__spareAC-menu'>
                                 <div className='o__spareAC-menu-desc-wrapper'>
-                                    {/* <div className='o__spareAC-menu-img'>
-                                        <img src={imgSrc} alt={imgTitle} />
-                                    </div>                                     */}
                                     <div className='o__spareAC-menu-desc'>
                                         <h2 onClick={() => setToggleMenu(false)}>{imgTitle}</h2>
                                         <p>Veritatis dignissimos aliquid dolorum cumque et reprehenderit dolore, nesciunt omnis quae ipsa! Dolorem corrupti doloribus praesentium? A amet provident laboriosam sequi quis.</p>
-                                        <Link to={'/contact'}><button onClick={() => setToggleMenu(false)} className='custom__button checkout-btn o__spareAC-klima-buttons_button' id='reserve-btn'>Rezerviši</button></Link>
+                                        <Link to={'/contact'}><button className='custom__button checkout-btn o__spareAC-klima-buttons_button' id='reserve-btn'>Rezerviši</button></Link>
                                     </div>
                                 </div>
                                 <div className='o__spareAC-menu-slider'>
@@ -88,4 +95,4 @@ const SpareAC = () => {
 
 }
 
-export default SpareAC
+export default connect(null,mapDispatchToProps)(SpareAC);

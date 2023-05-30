@@ -34,8 +34,6 @@ const ContactPage = () => {
             }
         }
         
-        // console.log(classListaPoruka);
-        // console.log(dugmePoruka);
         
         dugmePoruka.addEventListener('click', () =>{
             ispitivanjeVidljivostiProzora(prozorPozivPrikazan,pozivProzor);
@@ -83,6 +81,8 @@ const ContactPage = () => {
                         <input type="text" name="ime" placeholder="Petrović" required/>
                         <label htmlFor="email">Email</label>
                         <input type="email" name="email" placeholder="petar.petrovic@gmail.com" required/>
+                        <label htmlFor="phone">Broj telefona</label>
+                        <input type="number" name="phone" placeholder="123/345-678"/>
 
                         <label htmlFor="problem">Moguci problem</label>
                         <select name="problem" id="problem">

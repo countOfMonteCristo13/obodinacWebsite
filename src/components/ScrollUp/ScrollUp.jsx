@@ -1,21 +1,24 @@
 import React, {useEffect,useState} from 'react'
 import './scrollup.css'
 
-const ScrollUp = ({image}) => {
+import { connect } from 'react-redux';
+
+const mapStateToProps = (state) =>{
+  return{
+    scrollUpBtn:state.scrollUpBtn,
+  }
+}
+
+const ScrollUp = ({image,scrollUpBtn}) => {
 
     const [buttonUp, setButtonUp] = useState(false);
 
     useEffect(() => {
 
-      const scrollBtn = document.querySelector('#scroll-btn');
-      console.log(scrollBtn);
-
       const handleScroll = () => {
           if (window.scrollY > 0) {
             setButtonUp(true);
-            scrollBtn.classList.remove('o__scrollUp-hide');
           } else {
-            scrollBtn.classList.add('o__scrollUp-hide');
             setButtonUp(false);
           }
       }
@@ -35,9 +38,9 @@ const ScrollUp = ({image}) => {
     }
 
   return (
-    <div className='o__scrollUp-hide' id='scroll-btn'>
+    <div>
     {
-        buttonUp &&
+        (buttonUp && scrollUpBtn) &&
         <div onClick={scrollUp} className='o__scrollUp flex__center'>
           <img src={image} alt="up arrow" />
         </div>
@@ -46,4 +49,4 @@ const ScrollUp = ({image}) => {
   )
 }
 
-export default ScrollUp
+export default connect(mapStateToProps)(ScrollUp);

@@ -8,17 +8,17 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { setGalleryPageScroll } from '../../actions'
 
-const mapStateToProps = state => {
-  return {
-    galleryPageScroll: state.galleryPageScroll  // state se tako zove
-  }
-}
+// const mapStateToProps = state => {
+//   return {
+//     galleryPageScroll: state.galleryPageScroll  // state se tako zove
+//   }
+// }
 
 const mapDispatchToProps = {
   setGalleryPageScroll,
 }
 
-const Gallery = ({setGalleryPageScroll,galleryPageScroll}) => {
+const Gallery = ({setGalleryPageScroll}) => {
 
   const changeGalleryScrollSection = (section) =>{
     const scrollValue = section;
@@ -58,4 +58,4 @@ const Gallery = ({setGalleryPageScroll,galleryPageScroll}) => {
   )
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Gallery);
+export default connect(null,mapDispatchToProps)(Gallery);
