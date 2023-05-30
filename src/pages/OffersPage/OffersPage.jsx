@@ -39,21 +39,43 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
   useEffect(() => {
 
-    const page = document.querySelector('#op__top');
+    // const page = document.querySelector('#op__top');
 
     
-    const scrollToSection = () => {
-      scroller.scrollTo(offersPageScroll, {
-        duration: 0,
-        delay: 0,
-        smooth: 'easeInOutQuart',
-      });
-    };
+    // const scrollToSection = () => {
+    //   scroller.scrollTo(offersPageScroll, {
+    //     duration: 0,
+    //     delay: 0,
+    //     smooth: 'easeInOutQuart',
+    //   });
+    // };
 
 
 
-    scrollToSection();
-    setOffersPageScroll('op__top');
+    // scrollToSection();
+    // setOffersPageScroll('op__top');
+
+    if(window.innerWidth < 769){
+      const scrollToSection = () => {
+          scroller.scrollTo(offersPageScroll, {
+            duration: 0,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+          });
+        };
+        scrollToSection();
+  }else{
+      const scrollToSection = () => {
+          scroller.scrollTo(offersPageScroll, {
+            duration: 0,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            offset:-40,
+          });
+        };
+        scrollToSection();
+  }
+  setOffersPageScroll('gp__top');
 
   },[]);
 

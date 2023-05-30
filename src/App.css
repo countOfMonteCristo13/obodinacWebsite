@@ -78,4 +78,9 @@
     padding: 3rem 2rem;
   }
 
+  .more-btn,
+  .checkout-btn{
+    font-size: 1rem;
+  }
+
 }

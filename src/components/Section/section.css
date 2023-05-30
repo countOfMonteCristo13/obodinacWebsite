@@ -75,7 +75,7 @@
 
 }
 
-@media screen and (max-width:770px){
+@media screen and (max-width:768px){
     .o__section_img img{
         height: 400px;
     }

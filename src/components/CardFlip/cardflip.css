@@ -1,6 +1,6 @@
 .cardFlip__scene{
-    width: 360px;
-    height: 400px;
+    width: 340px;
+    height: 380px;
     perspective: 600px;
 }
 
@@ -23,7 +23,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1.5rem;
     border: 7px solid var(--color-blue);
     border-radius: 20px;
     background: var(--color-white);
@@ -40,14 +40,16 @@
 .cardFlip__card-front img,
 .cardFlip__card-back img{
     max-width: 100%;
+    object-fit: cover;
 }
 
 .cardFlip__card-description{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
+    row-gap: 1rem;
 }
 
 
@@ -61,22 +63,43 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:425px) {
 
-    .cardFlip__card-front,
-    .cardFlip__card-back{
-        padding: 1.5rem;
-    }
 
     .cardFlip__scene{
-        width: 220px;
-        height: 300px;
+        width: 100%;
+        /* height: 100%; */
     }
 
     .cardFlip__card-description h3{
-        font-size: 1.2rem;
+        font-size: 1.8rem;
+    }
+    .cardFlip__card-description img{
+        max-width: 1.8rem;
+    }
+}
+
+@media screen and (max-width:350px) {
+
+
+
+    .cardFlip__card-description h3{
+        font-size: 1.4rem;
+    }
+    .cardFlip__card-description img{
+        max-width: 1.4rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+
+
+
+    .cardFlip__card-description h3{
+        font-size: 1.3rem;
     }
     .cardFlip__card-description img{
         max-width: 1.3rem;
     }
 }
+

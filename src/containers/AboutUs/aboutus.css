@@ -59,7 +59,7 @@
     }
 }
 
-@media screen and (max-width:770px){
+@media screen and (max-width:768px){
     .o__aboutUs_img img{
         height: 450px;
     }

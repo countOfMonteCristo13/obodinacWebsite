@@ -17,7 +17,7 @@
 }
 
 .wrapper{
-    padding: 0rem 3rem;
+    padding: 0rem 2rem;
     margin: 3rem 0rem;
 }
 
@@ -28,8 +28,7 @@
 
 
 .o__offersPage_blueline-wrapper{
-    padding: 0rem 3rem;
-    margin-bottom: 3rem;
+    padding: 0rem 2rem;
 }
 
 .o__offersPage_blueline{
@@ -40,7 +39,7 @@
 }
 
 .o__offersPage_button-wrapper{
-    padding: 0 0 3rem 0;
+    padding: 3rem 0;
 }
 
 
@@ -90,13 +89,13 @@
     }
 }
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:768px) {
     .o__offersPage{
         padding-top: 1rem;
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:576px){
     .o__offersPage_types-headtext h2{
         font-size: 1.5rem;
     }

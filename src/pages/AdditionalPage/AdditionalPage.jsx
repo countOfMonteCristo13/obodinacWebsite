@@ -29,7 +29,7 @@ const AdditionalPage = () => {
   }
 
   return (
-    <>
+    <div className='o__addoffersPage-wrapper'>
       <ScrollUp image={images.upArrow}/>
       <div className='o__addoffersPage slide-enterance1'>
           <NavbarSection activeLink='nav__addoffers'/>
@@ -52,7 +52,7 @@ const AdditionalPage = () => {
             <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
           </div>
       </div>
-    </>
+    </div>
   )
 }
 

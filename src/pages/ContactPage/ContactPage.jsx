@@ -12,6 +12,9 @@ const ContactPage = () => {
         const porukaProzor = document.querySelector('#option-message');
         const pozivProzor = document.querySelector('#option-call')
         const contactSection = document.querySelector('.o__contactPage_section')
+
+        const body = document.querySelector('body');
+        body.classList.remove('overflow-hidden')
         
         let prozorPorukaPrikazan = false;
         let prozorPozivPrikazan = false;

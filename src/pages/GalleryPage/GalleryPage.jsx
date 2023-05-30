@@ -26,7 +26,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
 
     useEffect(() => {
 
-        if(window.innerWidth < 771){
+        if(window.innerWidth < 769){
             const scrollToSection = () => {
                 scroller.scrollTo(galleryPageScroll, {
                   duration: 0,
@@ -121,7 +121,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
-                <div className='o__galleryPage_button-wrapper flex__center margint'>
+                <div className='o__galleryPage_button-wrapper flex__center'>
                     <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
                 </div>
 

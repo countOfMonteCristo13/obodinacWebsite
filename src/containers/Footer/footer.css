@@ -44,7 +44,7 @@
 }
 
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:768px) {
     .o__footer_info{
         flex-direction: column;
     }

@@ -12,7 +12,9 @@ const AdditionalOffers = () => {
         <div className='o__additional_section'>
             <div className='o__additional_container'>
                 <div className='o__additional_container-part flex__center part_1'>
-                    <img src={images.kirnerica} alt="kirnerica" />
+                    <div className='o__additional-img-wrapper'>
+                        <img src={images.kirnerica} alt="kirnerica" />
+                    </div>
                 </div>
                 <div className='o__additional_container-part part_2'>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil dicta doloremque mollitia sunt sapiente repellendus ipsa blanditiis commodi doloribus numquam placeat neque, omnis ea dolorem nulla! Neque, quos modi.</p>
@@ -21,7 +23,9 @@ const AdditionalOffers = () => {
                     </Link>
                 </div>
                 <div className='o__additional_container-part flex__center part_3'>
-                    <img src={images.servisKlime} alt="servis klime" />
+                    <div className='o__additional-img-wrapper'>
+                        <img src={images.servisKlime} alt="servis klime" />
+                    </div>
                 </div>
 
             </div>

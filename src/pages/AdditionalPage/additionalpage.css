@@ -2,8 +2,8 @@
 
 .o__addoffersPage_blueline-wrapper{
     padding: 0rem 2rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
+    /* margin-bottom: 3rem;
+    margin-top: 3rem; */
 }
 
 .o__addoffersPage_blueline{
@@ -14,10 +14,15 @@
 }
 
 .o__addoffersPage_slider-wrapper{
-    margin-top: 3rem;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
 }
 
 .o__addoffersPage_button-wrapper{
-    padding: 0 0 3rem 0;
+    padding: 3rem 0;
+}
+
+@media screen and (max-width:768px) {
+    .o__addoffersPage_slider-wrapper{
+        padding: 2rem;
+    }
 }
