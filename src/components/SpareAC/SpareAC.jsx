@@ -2,6 +2,8 @@ import React, {useState,useEffect} from 'react'
 
 import './spareac.css'
 
+import {images} from '../../constants'
+
 import { polovneKlime } from '../../constants'
 import { Link } from 'react-router-dom'
 
@@ -76,9 +78,12 @@ const SpareAC = ({setScrollUpBtn}) => {
                     {
                         toggleMenu && 
                             <div className='o__spareAC-menu'>
+                                <div className='o__spareAC-menu_close-btn flex__center' onClick={() => setToggleMenu(false)}>
+                                    <img src={images.maintenanceWhite} alt="close btn" />
+                                </div>
                                 <div className='o__spareAC-menu-desc-wrapper'>
                                     <div className='o__spareAC-menu-desc'>
-                                        <h2 onClick={() => setToggleMenu(false)}>{imgTitle}</h2>
+                                        <h2>{imgTitle}</h2>
                                         <p>Veritatis dignissimos aliquid dolorum cumque et reprehenderit dolore, nesciunt omnis quae ipsa! Dolorem corrupti doloribus praesentium? A amet provident laboriosam sequi quis.</p>
                                         <Link to={'/contact'}><button className='custom__button checkout-btn o__spareAC-klima-buttons_button' id='reserve-btn'>Rezerviši</button></Link>
                                     </div>

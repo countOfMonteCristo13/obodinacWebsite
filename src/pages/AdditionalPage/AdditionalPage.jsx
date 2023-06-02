@@ -43,7 +43,15 @@ const AdditionalPage = () => {
             <ImageSlider/>
           </div>
           <BlueLine/>
-          <OffersSection title='Polovni klima uredjaji' description={desc} alt='polovne klime' image={images.klimaUredjajHeader}/>
+          <div className='o__addoffersPage_polovne-klime'>
+            <div className='o__addoffersPage_polovne-klime-title'>
+              <h2>Polovni klima uredjaji</h2>
+            </div>
+            <div className='o__addoffersPage_polovne-klime-desc'>
+              <p>{desc}</p>
+            </div>
+          </div>
+          {/* <OffersSection title='Polovni klima uredjaji' description={desc} alt='polovne klime' image={images.klimaUredjajHeader}/> */}
           
           <SpareAC/>
           

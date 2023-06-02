@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     padding: 3rem 2rem;
+    height: 100%;
 }
 
 
@@ -55,13 +56,13 @@
     height: 100%;
     top: 0;
     background: var(--color-blue);
-    padding: 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .o__spareAC-menu-desc-wrapper{
@@ -94,6 +95,18 @@
     border: 2px solid var(--color-white);
 } 
 
+.o__spareAC-menu_close-btn{
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.3rem;
+    cursor: pointer;
+}
+
+.o__spareAC-menu_close-btn img{
+    max-width: 2rem;
+}
+
 @media screen and (max-width:1024px) {
 
     .o__spareAC-menu{
@@ -114,6 +127,10 @@
 @media screen and (max-width:768px) {
     .o__spareAC-klima-buttons_button{
         padding: 0.5rem 1rem;
+    }
+
+    .o__spareAC-menu_close-btn img{
+        max-width: 1.5rem;
     }
 
 }
@@ -137,6 +154,10 @@
 
     .o__spareAC-klima-desc h2{
         font-size: 1.2rem;
+    }
+
+    .o__spareAC-menu_close-btn img{
+        max-width: 1rem;
     }
 }
 
