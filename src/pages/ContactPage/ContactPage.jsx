@@ -1,11 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './contactpage.css'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import { images } from '../../constants'
 
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 
+import ClipboardJS from 'clipboard'
+
+
 const ContactPage = () => {
+
+    const emailRefs = {
+        nenad: useRef(null),
+        ninoslav: useRef(null),
+        nemanja: useRef(null),
+        nikola: useRef(null)
+    };
+
     useEffect(()=>{
         const dugmePoruka = document.querySelector('.viaMessage');
         const dugmePoziv = document.querySelector('.viaCall');
@@ -14,7 +25,24 @@ const ContactPage = () => {
         const contactSection = document.querySelector('.o__contactPage_section')
 
         const body = document.querySelector('body');
-        body.classList.remove('overflow-hidden')
+        body.classList.remove('overflow-hidden');
+
+        const clipboardInstances = Object.values(emailRefs).map((ref) => new ClipboardJS(ref.current, {
+            text: () => ref.current.innerText,
+          }));
+
+        console.log(emailRefs.nemanja);
+
+        clipboardInstances.forEach((clipboard, index) => {
+            clipboard.on('success', (e) => {
+              console.log(`Email ${e.text} is copied`);
+            });
+        
+            clipboard.on('error', (e) => {
+              console.log('Failed to copy email:', e.text);
+            });
+          });
+        
         
         let prozorPorukaPrikazan = false;
         let prozorPozivPrikazan = false;
@@ -49,7 +77,11 @@ const ContactPage = () => {
             contactSection.classList.add('height-auto');
         })
 
-    })
+        return () => {
+            clipboardInstances.forEach(clipboard => clipboard.destroy());
+        };
+
+    },[])
 
 
 
@@ -84,13 +116,6 @@ const ContactPage = () => {
                         <label htmlFor="phone">Broj telefona</label>
                         <input type="number" name="phone" placeholder="123/345-678"/>
 
-                        <label htmlFor="problem">Moguci problem</label>
-                        <select name="problem" id="problem">
-                            <option value="servis-klime">Servis klima uredjaja</option>
-                            <option value="klima-ne-hladi">Klima uredjaj ne hladi</option>
-                            <option value="klima-ne-greje">Klima uredjaj ne greje </option>
-                            <option value="sudomasina-ne-radi">Mašina za sudje ne radi</option>
-                        </select>
 
                         <label htmlFor="poruka">Poruka</label>
                         <div className='textarea_wrapper flex__center'>
@@ -109,10 +134,10 @@ const ContactPage = () => {
                     <div className="o__contactPage_options_call-person">
                         
                         <div className="o__contactPage_options_call-person_info">
-                            <p className="podatak kontakt-ime">Nenad Buzadžija</p>
+                            <h3 className="podatak kontakt-ime">Nenad Buzadžija</h3>
                             <p className="podatak kontakt-profesija">Majstor bele tehnike/klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: +38163507585</p>
-                            <p className="podatak kontakt-email">Email: nenadbuzadzija@gmail.com</p>
+                            <p className="podatak kontakt-broj">Broj: <a href='tel:+38163507585'> +38163507585</a></p>
+                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nenad}>nenadbuzadzija@gmail.com</span></p>
                             
                         </div>
                         <div className="o__contactPage_options_call-person_img">
@@ -122,10 +147,22 @@ const ContactPage = () => {
                     <div className="o__contactPage_options_call-person">
                         
                         <div className="o__contactPage_options_call-person_info">
-                            <p className="podatak kontakt-ime">Ninoslav Buzadžija</p>
+                            <h3 className="podatak kontakt-ime">Ninoslav Buzadžija</h3>
                             <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: +381655075855</p>
-                            <p className="podatak kontakt-email">Email: klimatizacijagrejanje@gmail.com</p>
+                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381655075855'>+381655075855</a></p>
+                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.ninoslav}>klimatizacijagrejanje@gmail.com</span></p>                         
+                        </div>
+                        <div className="o__contactPage_options_call-person_img">
+                            <img src={images.user} alt="slika osobe" />
+                        </div>
+                    </div>
+                    <div className="o__contactPage_options_call-person">
+                        
+                        <div className="o__contactPage_options_call-person_info">
+                            <h3 className="podatak kontakt-ime">Nemanja Buzadžija</h3>
+                            <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
+                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381631282041'>+381631282041</a></p>
+                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nemanja}>nemanjabuzadzija@gmail.com</span></p>
                             
                         </div>
                         <div className="o__contactPage_options_call-person_img">
@@ -135,23 +172,10 @@ const ContactPage = () => {
                     <div className="o__contactPage_options_call-person">
                         
                         <div className="o__contactPage_options_call-person_info">
-                            <p className="podatak kontakt-ime">Nemanja Buzadžija</p>
+                            <h3 className="podatak kontakt-ime">Nikola Buzadžija</h3>
                             <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: +38163507585</p>
-                            <p className="podatak kontakt-email">Email: nemanjabuzadzija@gmail.com</p>
-                            
-                        </div>
-                        <div className="o__contactPage_options_call-person_img">
-                            <img src={images.user} alt="slika osobe" />
-                        </div>
-                    </div>
-                    <div className="o__contactPage_options_call-person">
-                        
-                        <div className="o__contactPage_options_call-person_info">
-                            <p className="podatak kontakt-ime">Nikola Buzadžija</p>
-                            <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: +381695075855</p>
-                            <p className="podatak kontakt-email">Email: buzadzija.nikola13@gmail.com</p>
+                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381695075855'>+381695075855</a></p>
+                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nikola}>buzadzija.nikola13@gmail.com</span></p>
                             
                         </div>
                         <div className="o__contactPage_options_call-person_img">
@@ -167,3 +191,36 @@ const ContactPage = () => {
 }
 
 export default ContactPage
+
+
+// import React, { useRef } from 'react';
+
+// const MyComponent = () => {
+//   const divRefs = useRef([]);
+
+//   const copyText = (index) => {
+//     const textToCopy = divRefs.current[index].innerText;
+
+//     // Copy the text to the clipboard
+//     // ...
+
+//     console.log('Text copied:', textToCopy);
+//   };
+
+//   return (
+//     <div>
+//       <div onClick={() => copyText(0)} ref={(el) => (divRefs.current[0] = el)}>
+//         Text 1
+//       </div>
+//       <div onClick={() => copyText(1)} ref={(el) => (divRefs.current[1] = el)}>
+//         Text 2
+//       </div>
+//       <div onClick={() => copyText(2)} ref={(el) => (divRefs.current[2] = el)}>
+//         Text 3
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default MyComponent;
+
