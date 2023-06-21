@@ -9,6 +9,8 @@ import SpareAC from '../../components/SpareAC/SpareAC'
 
 import { Link } from 'react-router-dom'
 
+import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
+
 const desc = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
 
 
@@ -35,12 +37,12 @@ const AdditionalPage = () => {
           <NavbarSection activeLink='nav__addoffers'/>
           <OffersSection title='Kernovanje' description={desc} alt='kernovanje' image={images.kirnerica}/>
           <div className='o__addoffersPage_slider-wrapper'>
-            <ImageSlider/>
+            <ImageSlider images={kernovanjeImages}/>
           </div>
           <BlueLine/>
           <OffersSection title='Servis klima uredjaja' description={desc} alt='servis klime' image={images.servisKlime} odd='odd'/>
           <div className='o__addoffersPage_slider-wrapper'>
-            <ImageSlider/>
+            <ImageSlider images={servisKlimaImages}/>
           </div>
           <BlueLine/>
           <div className='o__addoffersPage_polovne-klime'>

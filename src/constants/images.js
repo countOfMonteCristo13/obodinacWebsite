@@ -31,7 +31,6 @@ import unutrasnjaKlima from '../assets/unutrasnjaKlima.png';
 import user from '../assets/user.png';
 import vent from '../assets/vent.png';
 import ventilacija from '../assets/ventilacija.png';
-import ventilacija2 from '../assets/ventilacija2.png';
 import ventilacijaGalerija from '../assets/ventilacijaGalerija.png';
 import vesMasina from '../assets/vesMasina.png';
 import ventWhite from '../assets/ventWhite.png';
@@ -63,6 +62,31 @@ import polovnaKlima2 from '../assets/polovnaKlima2.png'
 import polovnaKlima3 from '../assets/polovnaKlima3.png'
 import polovnaKlima4 from '../assets/polovnaKlima4.png'
 import polovnaKlima5 from '../assets/polovnaKlima5.png'
+import split5 from '../obodinacPhotos/split1.png'
+import split6 from '../obodinacPhotos/split2.png'
+import split7 from '../obodinacPhotos/split3.jpg'
+import servisKlime1 from '../obodinacPhotos/servisKlime1.png'
+import servisKlime2 from '../obodinacPhotos/servisKlime2.png'
+import servisKlime3 from '../obodinacPhotos/servisKlime3.png'
+import ventilacija1 from '../obodinacPhotos/ventilacija1.jpg';
+import ventilacija2 from '../obodinacPhotos/ventilacija2.jpg';
+import ventilacija3 from '../obodinacPhotos/ventilacija3.jpg';
+import ventilacija4 from '../obodinacPhotos/ventilacija4.jpg';
+import centralni1 from '../obodinacPhotos/centralni1.jpg';
+import centralni2 from '../obodinacPhotos/centralni2.jpg';
+import centralni3 from '../obodinacPhotos/centralni3.jpg';
+import centralni4 from '../obodinacPhotos/centralni4.jpg';
+import centralni5 from '../obodinacPhotos/centralni5.jpg';
+import kernovanje1 from '../obodinacPhotos/kernovanje1.png';
+import kernovanje2 from '../obodinacPhotos/kernovanje2.png';
+import kernovanje3 from '../obodinacPhotos/kernovanje3.png';
+import kernovanje4 from '../obodinacPhotos/kernovanje4.png';
+import kernovanje5 from '../obodinacPhotos/kernovanje5.png';
+import kernovanje6 from '../obodinacPhotos/kernovanje6.png';
+import kernovanje7 from '../obodinacPhotos/kernovanje7.png';
+import kernovanje8 from '../obodinacPhotos/kernovanje8.png';
+import kernovanje9 from '../obodinacPhotos/kernovanje9.png';
+import kernovanje10 from '../obodinacPhotos/kernovanje10.png';
 
 
 const images = {
@@ -100,7 +124,10 @@ const images = {
     vent,
     ventWhite,
     ventilacija,
+    ventilacija1,
     ventilacija2,
+    ventilacija3,
+    ventilacija4,
     ventilacijaGalerija,
     vesMasina,
     maintenance,
@@ -131,7 +158,27 @@ const images = {
     polovnaKlima3,
     polovnaKlima4,
     polovnaKlima5,
-
+    split5,
+    split6,
+    split7,
+    servisKlime1,
+    servisKlime2,
+    servisKlime3,
+    centralni1,
+    centralni2,
+    centralni3,
+    centralni4,
+    centralni5,
+    kernovanje1,
+    kernovanje2,
+    kernovanje3,
+    kernovanje4,
+    kernovanje5,
+    kernovanje6,
+    kernovanje7,
+    kernovanje8,
+    kernovanje9,
+    kernovanje10,
 }
 
 export default images

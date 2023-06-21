@@ -12,6 +12,8 @@ import { scroller } from 'react-scroll'
 import { connect } from 'react-redux'
 import { setGalleryPageScroll } from '../../actions'
 
+import { splitImages,ventilacijaImages,centralneImages } from '../../constants/galleryImages'
+
 const mapStateToProps = (state) => {
     return {
       galleryPageScroll: state.galleryPageScroll  // state se tako zove
@@ -99,7 +101,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Kanal</button>
                 </div>
 
-                <ImageSlider/>
+                <ImageSlider images={splitImages}/>
                 
                 <SubHeading title='Grejanje' route='gp__grejanje'/>
                 
@@ -108,7 +110,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Radijator</button>
                     <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Podno</button>
                 </div>
-                <ImageSlider/>
+                <ImageSlider images={centralneImages}/>
 
                 <SubHeading title='Ventilacija' route='gp__ventilacija'/>
                 
@@ -117,7 +119,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                     <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Standard</button>
                     <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Rekuperator</button>
                 </div>
-                <ImageSlider/>
+                <ImageSlider images={ventilacijaImages}/>
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
