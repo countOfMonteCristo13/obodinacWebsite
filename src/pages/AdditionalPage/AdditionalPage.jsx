@@ -35,7 +35,7 @@ const AdditionalPage = () => {
       <ScrollUp image={images.upArrow}/>
       <div className='o__addoffersPage slide-enterance1'>
           <NavbarSection activeLink='nav__addoffers'/>
-          <OffersSection title='Kernovanje' description={desc} alt='kernovanje' image={images.kirnerica}/>
+          <OffersSection title='Dijamantsko bušenje rupa' description={desc} alt='kernovanje' image={images.kirnerica}/>
           <div className='o__addoffersPage_slider-wrapper'>
             <ImageSlider images={kernovanjeImages}/>
           </div>
@@ -52,9 +52,7 @@ const AdditionalPage = () => {
             <div className='o__addoffersPage_polovne-klime-desc'>
               <p>{desc}</p>
             </div>
-          </div>
-          {/* <OffersSection title='Polovni klima uredjaji' description={desc} alt='polovne klime' image={images.klimaUredjajHeader}/> */}
-          
+          </div>          
           <SpareAC/>
           
           <BlueLine/>

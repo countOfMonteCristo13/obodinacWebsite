@@ -14,13 +14,9 @@ import { scroller } from 'react-scroll'
 
 import { Link } from 'react-router-dom'
 
-let splitD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let multiD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
+import tekst from '../../constants/tekst'
+
 let centralniD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let kanalD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let radijatorD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let podnoD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let ventilacijaD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
 let rekuperatorD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
 
 
@@ -93,10 +89,10 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <NavbarSection activeLink='nav__offers'/>
         <HeadText id='op__klimatizacija' title="Klimatizacija"/>
         <BlueLine/>
-        <OffersSection title='Split klima uredjaji' description={splitD} alt='split klima' image={images.klimaUredjajHeader}/>
-        <OffersSection title='Multi klima uredjaji' description={multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
-        <OffersSection title='Centralni sistem' description={centralniD} alt='centralni sistem' image={images.centralniSistem}/>
-        <OffersSection title='Kanalski klima uredjaji' description={kanalD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
+        <OffersSection title='Split klima uredjaji' description={tekst.splitD} alt='split klima' image={images.klimaUredjajHeader}/>
+        <OffersSection title='Multi klima uredjaji' description={tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
+        <OffersSection title='VRF sistem' description={centralniD} alt='vrf sistem' image={images.centralniSistem}/>
+        <OffersSection title='Kanalski klima uredjaji' description={tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
 
         <div className='o__offersPage_types'>
           <div className='o__offersPage_types-headtext flex__center'>
@@ -113,13 +109,13 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
         <HeadText id='op__grejanje'  title='Grejanje' wrapper='wrapper'/>
 
-        <OffersSection title='Radijatorsko grejanje' description={radijatorD} alt='radijator' image={images.radiator}/>
-        <OffersSection title='Podno grejanje' description={podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
+        <OffersSection title='Radijatorsko grejanje' description={tekst.radijatorD} alt='radijator' image={images.radiator}/>
+        <OffersSection title='Podno grejanje' description={tekst.podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
 
         <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper'/>
 
-        <OffersSection title='Standard Ventilacija' description={ventilacijaD} alt='ventilacija' image={images.vent}/>
-        <OffersSection title='Rekuperator' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
+        <OffersSection title='Mehanička ventilacija' description={tekst.ventilacijaD} alt='ventilacija' image={images.vent}/>
+        <OffersSection title='Rekuperatorska ventilacija' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine/>
         <div className='o__offersPage_button-wrapper flex__center'>
           <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
