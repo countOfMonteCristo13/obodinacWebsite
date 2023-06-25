@@ -54,7 +54,20 @@
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
+    .o__additional_container{
+        flex-wrap: wrap-reverse;
+        justify-content: space-around;
+    }
+
+
+    .part_2{
+        order: -1;
+        width: 100%;
+    }
+}
+
+/* @media screen and (max-width:768px) {
     .o__additional_container{
         flex-wrap: wrap-reverse;
         justify-content: space-around;
@@ -66,7 +79,7 @@
         width: 100%;
     }
 
-}
+} */
 
 @media screen and (max-width:576px) {
 

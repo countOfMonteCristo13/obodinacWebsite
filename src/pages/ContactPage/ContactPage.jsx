@@ -31,7 +31,6 @@ const ContactPage = () => {
             text: () => ref.current.innerText,
           }));
 
-        console.log(emailRefs.nemanja);
 
         clipboardInstances.forEach((clipboard, index) => {
             clipboard.on('success', (e) => {
@@ -150,7 +149,12 @@ const ContactPage = () => {
                             <h3 className="podatak kontakt-ime">Ninoslav Buzadžija</h3>
                             <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
                             <p className="podatak kontakt-broj">Broj: <a href='tel:+381655075855'>+381655075855</a></p>
-                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.ninoslav}>klimatizacijagrejanje@gmail.com</span></p>                         
+                            <div className='kontakt-email-wrapper'>
+                                <div className='o__contactPage_options_call-person_info-copy'>
+                                    <p>Kopirano</p>
+                                </div>
+                                <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.ninoslav}>klimatizacijagrejanje@gmail.com</span></p>                         
+                            </div>
                         </div>
                         <div className="o__contactPage_options_call-person_img">
                             <img src={images.user} alt="slika osobe" />

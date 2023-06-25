@@ -10,6 +10,7 @@ import SpareAC from '../../components/SpareAC/SpareAC'
 import { Link } from 'react-router-dom'
 
 import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
+import { tekstDodatno } from '../../constants/tekst'
 
 const desc = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
 
@@ -35,22 +36,22 @@ const AdditionalPage = () => {
       <ScrollUp image={images.upArrow}/>
       <div className='o__addoffersPage slide-enterance1'>
           <NavbarSection activeLink='nav__addoffers'/>
-          <OffersSection title='Dijamantsko bušenje rupa' description={desc} alt='kernovanje' image={images.kirnerica}/>
+          <OffersSection title='Dijamantsko bušenje rupa' description={tekstDodatno.dijamatnskoD} alt='kernovanje' image={images.kirnerica}/>
           <div className='o__addoffersPage_slider-wrapper'>
             <ImageSlider images={kernovanjeImages}/>
           </div>
           <BlueLine/>
-          <OffersSection title='Servis klima uredjaja' description={desc} alt='servis klime' image={images.servisKlime} odd='odd'/>
+          <OffersSection title='Servis klima uređaja' description={tekstDodatno.servisD} alt='servis klime' image={images.servisKlime} odd='odd'/>
           <div className='o__addoffersPage_slider-wrapper'>
             <ImageSlider images={servisKlimaImages}/>
           </div>
           <BlueLine/>
           <div className='o__addoffersPage_polovne-klime'>
             <div className='o__addoffersPage_polovne-klime-title'>
-              <h2>Polovni klima uredjaji</h2>
+              <h2>Polovni klima uređaji</h2>
             </div>
             <div className='o__addoffersPage_polovne-klime-desc'>
-              <p>{desc}</p>
+              <p>{tekstDodatno.polovneD}</p>
             </div>
           </div>          
           <SpareAC/>

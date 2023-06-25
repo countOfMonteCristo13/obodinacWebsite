@@ -37,11 +37,23 @@
     font-size: 1rem;
     font-weight: 200;
     color: var(--color-white);
+    box-sizing: content-box;
+    padding: 0.2rem;
 }
 
-.instagram{
+.cursor-pointer{
     cursor: pointer;
 }
+
+.info h5:hover{
+    /* text-decoration: underline; */
+    font-weight: bold;
+}
+
+.info h5{
+    letter-spacing: 0.03rem;
+}
+
 
 
 @media screen and (max-width:768px) {

@@ -9,11 +9,20 @@
 
 .o__offersPage_headtext{
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .o__offersPage_headtext h2{
     font-size: 3rem;
     color: var(--color-blue);
+}
+
+.o__offersPage_headtext p {
+    color: var(--color-blue);
+    text-align: justify;
+    line-height: 2rem;
 }
 
 .wrapper{
@@ -24,6 +33,7 @@
 .wrapper .o__offersPage_headtext{
     border-bottom: 4px solid var(--color-blue);
     border-top: 4px solid var(--color-blue);
+    padding: 2rem 0;
 }
 
 
@@ -67,6 +77,15 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+}
+
+@media screen and (min-width:1440px){
+
+    
+    .o__offersPage_headtext p{
+        font-size: 1.2rem;
+        line-height: 2.4rem;
+    }
 }
 
 @media screen and (max-width:1150px){

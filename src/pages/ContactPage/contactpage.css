@@ -133,7 +133,7 @@
 	display: flex;
 	justify-content: space-between;
     gap: 1rem;
-	padding: 3rem;
+	padding: 2rem;
 	background-color: #284280;
 	border-radius: 20px;
 }
@@ -180,6 +180,33 @@
     color: var(--color-darkgrey);
 }
 
+.kontakt-email-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.o__contactPage_options_call-person_info-copy{
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    /* transform: translateY(25px); */
+    padding: 0.4rem;
+    background-color: var(--color-darkgrey);
+    border-radius: 10px;
+}
+
+.kontakt-email-wrapper:hover .o__contactPage_options_call-person_info-copy{
+    opacity: 1;
+    transform: translateY(30px);
+}
+
+
+.o__contactPage_options_call-person_info-copy p {
+    font-weight: bold;
+    color: var(--color-blue);
+}
+
 
 
 .d-none{
@@ -194,16 +221,20 @@
 
 }
 
-@media screen and (max-width:1024px){
+/* @media screen and (max-width:1024px){
 
     .o__contactPage_options_call-person{
-        padding: 2rem;
+        padding: 3rem 1.5rem;
     }
 
-}
+} */
 
 
 @media screen and (max-width:768px) {
+
+    .o__contactPage_options_call-person{
+        padding: 3rem 1.5rem;
+    }
 
     .o__contactPage_section{
         padding: 3rem 2rem;
@@ -218,14 +249,23 @@
     .o__contactPage_options_call-person_info{
         align-items: center;
     }
+
     .o__contactPage_options_call-person_info p{
         text-align: center;
+    }
+
+    .kontakt-email-wrapper:hover .o__contactPage_options_call-person_info-copy{
+        transform: translateY(26px);
     }
 
     
 }
 
 @media screen and (max-width:576px) {
+
+    .o__contactPage_options_call-person{
+        padding: 3rem 0.25rem;
+    }
 
     .o__contactPage_options_call-person_info p{
         font-size: 1rem;
@@ -264,8 +304,12 @@
         padding: 0.8rem;
     }
 
+    .o__contactPage_options_call-person_info{
+        gap: 0.7rem;
+    }
+
     .o__contactPage_options_call-person_info p{
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
     .o__contactPage_options_call-person_info h3{
@@ -301,9 +345,6 @@
 
 @media screen and (max-width:320px) {
 
-    .o__contactPage_options_call-person_info p{
-        font-size: 0.5rem;
-    }
 
 
     .kontakt-inputi input, .kontakt-inputi select, .kontakt-inputi textarea{

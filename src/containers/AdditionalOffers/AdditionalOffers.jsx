@@ -5,6 +5,8 @@ import HeadTitle from '../../components/HeadTitle/HeadTitle'
 
 import { Link } from 'react-router-dom'
 
+import { tekstNaslovna } from '../../constants/tekst'
+
 const AdditionalOffers = () => {
   return (
     <div>
@@ -17,7 +19,7 @@ const AdditionalOffers = () => {
                     </div>
                 </div>
                 <div className='o__additional_container-part part_2'>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil dicta doloremque mollitia sunt sapiente repellendus ipsa blanditiis commodi doloribus numquam placeat neque, omnis ea dolorem nulla! Neque, quos modi.</p>
+                    <p>{tekstNaslovna.dodatneUslugeD}</p>
                     <Link to={`/addoffers`}>
                         <button  className='custom__button more-btn' type='button'>Detaljnije...</button>
                     </Link>

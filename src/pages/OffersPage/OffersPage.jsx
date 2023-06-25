@@ -14,10 +14,7 @@ import { scroller } from 'react-scroll'
 
 import { Link } from 'react-router-dom'
 
-import tekst from '../../constants/tekst'
-
-let centralniD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-let rekuperatorD = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
+import { tekst,tekstPodnaslov } from '../../constants/tekst'
 
 
 const mapStateToProps = (state) => {
@@ -60,11 +57,12 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
   },[]);
 
 
-  const HeadText = ({title,wrapper,id}) => {
+  const HeadText = ({title,desc,wrapper,id}) => {
     return(
       <div className={wrapper} id={id}>
         <div className='o__offersPage_headtext flex__center'>
           <h2>{title}</h2>
+          <p>{desc}</p>
         </div>
       </div>
     
@@ -87,12 +85,12 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
       
       <div className='o__offersPage slide-enterance1' id='op__top'>
         <NavbarSection activeLink='nav__offers'/>
-        <HeadText id='op__klimatizacija' title="Klimatizacija"/>
+        <HeadText id='op__klimatizacija' title="Klimatizacija" desc={tekstPodnaslov.klimatizacijaP}/>
         <BlueLine/>
-        <OffersSection title='Split klima uredjaji' description={tekst.splitD} alt='split klima' image={images.klimaUredjajHeader}/>
-        <OffersSection title='Multi klima uredjaji' description={tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
-        <OffersSection title='VRF sistem' description={centralniD} alt='vrf sistem' image={images.centralniSistem}/>
-        <OffersSection title='Kanalski klima uredjaji' description={tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
+        <OffersSection title='Split klima uređaji' description={tekst.splitD} alt='split klima' image={images.klimaUredjajHeader}/>
+        <OffersSection title='Multi klima uređaji' description={tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd'/>
+        <OffersSection title='VRF sistem' description={tekst.vrfD} alt='vrf sistem' image={images.centralniSistem}/>
+        <OffersSection title='Kanalski klima uređaji' description={tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
 
         <div className='o__offersPage_types'>
           <div className='o__offersPage_types-headtext flex__center'>
@@ -107,15 +105,15 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
           </div>
         </div>
 
-        <HeadText id='op__grejanje'  title='Grejanje' wrapper='wrapper'/>
+        <HeadText id='op__grejanje'  title='Grejanje' wrapper='wrapper' desc={tekstPodnaslov.grejanjeP}/>
 
         <OffersSection title='Radijatorsko grejanje' description={tekst.radijatorD} alt='radijator' image={images.radiator}/>
         <OffersSection title='Podno grejanje' description={tekst.podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
 
-        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper'/>
+        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper' desc={tekstPodnaslov.ventilacijaP}/>
 
         <OffersSection title='Mehanička ventilacija' description={tekst.ventilacijaD} alt='ventilacija' image={images.vent}/>
-        <OffersSection title='Rekuperatorska ventilacija' description={rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
+        <OffersSection title='Rekuperatorska ventilacija' description={tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine/>
         <div className='o__offersPage_button-wrapper flex__center'>
           <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
