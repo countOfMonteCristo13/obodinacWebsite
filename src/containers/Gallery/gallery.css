@@ -87,7 +87,7 @@
     }
 }
 
- @media screen and (max-width:450px) {
+ @media screen and (max-width:425px) {
 
     .o__gallery_cards-card button{
         font-size: 1.3em;

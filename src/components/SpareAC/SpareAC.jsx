@@ -27,7 +27,6 @@ const SpareAC = ({setScrollUpBtn}) => {
     useEffect(() =>{
 
         const body = document.querySelector('body');
-        console.log(body)
         
         if(toggleMenu){
             body.classList.add('overflow-hidden');
@@ -55,7 +54,7 @@ const SpareAC = ({setScrollUpBtn}) => {
 
 
             return (
-                <div className='o__spareAC-wrapper'>
+                <div className='o__spareAC-wrapper section__padding'>
                     
                     <div className='o__spareAC'>
                         {polovneKlime.map((klima, index) => (

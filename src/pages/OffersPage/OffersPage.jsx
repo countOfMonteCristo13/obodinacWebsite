@@ -52,14 +52,14 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         };
         scrollToSection();
   }
-  setOffersPageScroll('gp__top');
+  setOffersPageScroll('op__top');
 
   },[]);
 
 
   const HeadText = ({title,desc,wrapper,id}) => {
     return(
-      <div className={wrapper} id={id}>
+      <div className={`${wrapper} flex__center`} id={id}>
         <div className='o__offersPage_headtext flex__center'>
           <h2>{title}</h2>
           <p>{desc}</p>
@@ -92,7 +92,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <OffersSection title='VRF sistem' description={tekst.vrfD} alt='vrf sistem' image={images.centralniSistem}/>
         <OffersSection title='Kanalski klima uređaji' description={tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd'/>
 
-        <div className='o__offersPage_types'>
+        <div className='o__offersPage_types section__padding'>
           <div className='o__offersPage_types-headtext flex__center'>
             <h2>Tipovi unutrašnjih jedinica</h2>
           </div>
@@ -115,7 +115,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <OffersSection title='Mehanička ventilacija' description={tekst.ventilacijaD} alt='ventilacija' image={images.vent}/>
         <OffersSection title='Rekuperatorska ventilacija' description={tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine/>
-        <div className='o__offersPage_button-wrapper flex__center'>
+        <div className='o__offersPage_button-wrapper flex__center section__padding'>
           <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
         </div>
       </div>

@@ -6,7 +6,7 @@
 .o__contactPage_section{
     padding: 3rem 4rem;
     background: var(--color-darkgrey);
-    height: 80vh;
+    height: 90vh;
     flex-direction: column;
 }
 
@@ -25,6 +25,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    max-width: 120px;
 	padding: 1rem;
 	border-radius: 15px;
 	border: 2px solid #284280;
@@ -33,10 +34,6 @@
     cursor: pointer;
 }
 
-
-.o__contactPage_options-button{
-    max-width: 120px;
-}
 
 .o__contactPage_options-button img{
 	width: 100%;
@@ -55,7 +52,7 @@
 .o__contactPage_options-window{
 	
 	background-color: #284280;
-	padding: 2rem;
+	padding: 3rem;
 	margin-top: 2rem;
 	border-radius: 20px;
 }
@@ -67,16 +64,11 @@
 }
 
 .kontakt-inputi{
-	padding: 1rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-}
-
-
-.kontakt-inputi label,input,textarea{
-	margin-bottom: 1rem;
+    gap: 1rem;
 }
 
 
@@ -99,21 +91,25 @@
 }
 
 
-.o__contactPage_options_message-submit input{
-	margin-top: 1rem;
-	font-size: 1.5rem;
-	padding: 1rem 2rem;
-	color: #284280;
+.o__contactPage_options_message-submit{
+    padding: 1rem;
 }
 
 .o__contactPage_options_message-submit input{
-    transition: all 0.3s;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	color: #284280;
     cursor: pointer;
+    border: 2px solid var(--color-grey);
+    box-shadow: 0 0 40px 40px var(--color-grey) inset, 0 0 0 0 var(--color-grey);
+    transition: all 150ms ease-in-out;
 }
 
 
 .o__contactPage_options_message-submit input:hover {
-	transform: scale(1.1);
+    box-shadow: 0 0 5px 0 var(--color-grey) inset, 0 0 3px 2px var(--color-grey);
+    background: var(--color-blue);
+    color: var(--color-grey);
 }
 
 /* PROZOR POZIV */
@@ -180,6 +176,10 @@
     color: var(--color-darkgrey);
 }
 
+.podatak{
+    z-index: 100;
+}
+
 .kontakt-email-wrapper{
     position: relative;
     display: flex;
@@ -189,14 +189,15 @@
 .o__contactPage_options_call-person_info-copy{
     position: absolute;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
-    /* transform: translateY(25px); */
+    transition: all 0.3s ease;
     padding: 0.4rem;
     background-color: var(--color-darkgrey);
     border-radius: 10px;
+    z-index: 0;
 }
 
-.kontakt-email-wrapper:hover .o__contactPage_options_call-person_info-copy{
+
+.showCopied{
     opacity: 1;
     transform: translateY(30px);
 }
@@ -221,16 +222,17 @@
 
 }
 
-/* @media screen and (max-width:1024px){
-
-    .o__contactPage_options_call-person{
-        padding: 3rem 1.5rem;
-    }
-
-} */
-
 
 @media screen and (max-width:768px) {
+
+    .o__contactPage_options-window{
+        padding: 2rem;
+    }
+
+    
+    .o__contactPage_options{
+        gap: 4rem;
+    }
 
     .o__contactPage_options_call-person{
         padding: 3rem 1.5rem;
@@ -258,6 +260,10 @@
         transform: translateY(26px);
     }
 
+    .o__contactPage_options-button{
+        max-width: 110px;
+    }
+
     
 }
 
@@ -271,9 +277,6 @@
         font-size: 1rem;
     }
 
-    .o__contactPage_options-window{
-        padding: 1rem;
-    }
 
     .o__contactPage_options_message-submit input{
         padding: 0.8rem 1.6rem;
@@ -299,8 +302,12 @@
 
 @media screen and (max-width:425px) {
 
+    .o__contactPage_options-window{
+        padding: 1.5rem;
+    }
+
     .o__contactPage_options-button{
-        max-width: 90px;
+        max-width: 100px;
         padding: 0.8rem;
     }
 
@@ -309,7 +316,7 @@
     }
 
     .o__contactPage_options_call-person_info p{
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .o__contactPage_options_call-person_info h3{
@@ -326,9 +333,6 @@
         font-size: 0.6rem;
     }
 
-    .o__contactPage_options{
-        gap: 3rem;
-    }
 
     #submitButton input{
         font-size: 1rem;
@@ -343,11 +347,13 @@
     
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:350px) {
 
+    .o__contactPage_options_call-person_info p{
+        font-size: 0.6rem;
+    }
 
-
-    .kontakt-inputi input, .kontakt-inputi select, .kontakt-inputi textarea{
+    .kontakt-inputi input:not(:last-child),.kontakt-inputi textarea{
         padding: 0.7rem;
     }
 

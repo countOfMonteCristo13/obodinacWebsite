@@ -1,5 +1,5 @@
 .section__padding{
-  padding: 3.5rem 2rem;
+  padding: 3rem;
 }
 
 .flex__center{
@@ -79,12 +79,31 @@
   }
 
   .section__padding{
-    padding: 3rem 2rem;
+    padding: 2rem;
   }
 
   .more-btn,
   .checkout-btn{
     font-size: 1rem;
+  }
+
+  .custom__button{
+    padding: 0.6rem 1.1rem;
+  }
+
+}
+
+
+
+@media screen and (max-width:425px) {
+
+  .more-btn,
+  .checkout-btn{
+    font-size: 0.9rem;
+  }
+
+  .custom__button{
+    padding: 0.5rem 1rem;
   }
 
 }

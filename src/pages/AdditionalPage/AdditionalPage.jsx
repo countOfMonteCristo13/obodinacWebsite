@@ -46,7 +46,7 @@ const AdditionalPage = () => {
             <ImageSlider images={servisKlimaImages}/>
           </div>
           <BlueLine/>
-          <div className='o__addoffersPage_polovne-klime'>
+          <div className='o__addoffersPage_polovne-klime section__padding'>
             <div className='o__addoffersPage_polovne-klime-title'>
               <h2>Polovni klima uređaji</h2>
             </div>
@@ -57,7 +57,7 @@ const AdditionalPage = () => {
           <SpareAC/>
           
           <BlueLine/>
-          <div className='o__addoffersPage_button-wrapper flex__center'>
+          <div className='o__addoffersPage_button-wrapper section__padding flex__center'>
             <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
           </div>
       </div>

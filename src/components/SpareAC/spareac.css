@@ -3,7 +3,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 3rem 2rem;
     height: 100%;
 }
 
@@ -16,7 +15,7 @@
 }
 
 .o__spareAC-klima{
-    padding: 2rem 1.5rem ;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,6 +33,10 @@
 
 .o__spareAC-klima-img img {
     width: 100%;
+}
+
+.o__spareAC-klima-desc{
+    text-align: center;
 }
 
 .o__spareAC-klima-buttons{
@@ -125,9 +128,6 @@
 
 
 @media screen and (max-width:768px) {
-    .o__spareAC-klima-buttons_button{
-        padding: 0.5rem 1rem;
-    }
 
     .o__spareAC-menu_close-btn img{
         max-width: 1.5rem;
@@ -136,17 +136,13 @@
 }
 
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:425px) {
 
     .o__spareAC-klima{
-        padding: 1.3rem;
+        padding: 1.5rem;
         gap: 2rem;
     }
 
-    .o__spareAC-klima-buttons_button{
-        font-size: 0.8rem;
-        padding: 0.4rem 0.9rem;
-    }
 
     .o__spareAC-klima-desc{
         text-align: center;

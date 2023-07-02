@@ -11,7 +11,7 @@
 
 
 .o__aboutPage_section-description{
-    padding: 4rem 6rem;
+    padding: 3rem 4rem 2rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -39,6 +39,7 @@
 @media screen and (max-width:768px) {
     .o__aboutPage_section-description{
         padding: 3rem;
+        padding-bottom: 2rem;
 
     }
 }

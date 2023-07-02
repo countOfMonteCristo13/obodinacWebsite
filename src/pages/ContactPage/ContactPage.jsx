@@ -8,21 +8,64 @@ import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import ClipboardJS from 'clipboard'
 
 
+
 const ContactPage = () => {
 
     const emailRefs = {
-        nenad: useRef(null),
-        ninoslav: useRef(null),
-        nemanja: useRef(null),
-        nikola: useRef(null)
+        'nenad': useRef(null),
+        'ninoslav': useRef(null),
+        'nemanja': useRef(null),
+        'nikola': useRef(null)
     };
+
+    const ObodinacLik = ({id,name,jobDesc,phone,email,img}) => {
+
+        
+
+        return(
+            <div className="o__contactPage_options_call-person">
+                            
+                <div className="o__contactPage_options_call-person_info">
+                    <h3 className="podatak kontakt-ime">{name}</h3>
+                    <p className="podatak kontakt-profesija">{jobDesc}</p>
+                    <p className="podatak kontakt-broj">Broj: <a href={`tel:${phone}`}>{phone}</a></p>
+                    <div className='kontakt-email-wrapper'>
+                        <div className='o__contactPage_options_call-person_info-copy'>
+                            <p>Kopirano</p>
+                        </div>
+                        <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs[id]} onClick={(e) => ispis(e.currentTarget)}>{email}</span></p>                         
+                    </div>
+                </div>
+                <div className="o__contactPage_options_call-person_img">
+                    <img src={img} alt="slika osobe" />
+                </div>
+            </div>
+        );
+    }
+    
+
+
+
+
+    const ispis = (e) =>{
+        console.log(e);
+        const emailWrapper = e.parentNode.parentNode;
+        const emailCopied = emailWrapper.querySelector('.o__contactPage_options_call-person_info-copy');
+        emailCopied.classList.add('showCopied');
+
+        setTimeout(() => {
+            emailCopied.classList.remove('showCopied');
+        },1000)
+    }
 
     useEffect(()=>{
         const dugmePoruka = document.querySelector('.viaMessage');
         const dugmePoziv = document.querySelector('.viaCall');
         const porukaProzor = document.querySelector('#option-message');
-        const pozivProzor = document.querySelector('#option-call')
-        const contactSection = document.querySelector('.o__contactPage_section')
+        const pozivProzor = document.querySelector('#option-call');
+        const contactSection = document.querySelector('.o__contactPage_section');
+
+        
 
         const body = document.querySelector('body');
         body.classList.remove('overflow-hidden');
@@ -113,7 +156,7 @@ const ContactPage = () => {
                         <label htmlFor="email">Email</label>
                         <input type="email" name="email" placeholder="petar.petrovic@gmail.com" required/>
                         <label htmlFor="phone">Broj telefona</label>
-                        <input type="number" name="phone" placeholder="123/345-678"/>
+                        <input type="text" name="phone" placeholder="123/345-678"/>
 
 
                         <label htmlFor="poruka">Poruka</label>
@@ -121,7 +164,7 @@ const ContactPage = () => {
                             <textarea name="poruka" id="poruka" cols="50" rows="10"></textarea>
                         </div>
 
-                        <div className="o__contactPage_options_message-submit" id='submitButton'>
+                        <div className="o__contactPage_options_message-submit flex__center" id='submitButton'>
                             <input type="submit" value="Pošalji"/>
                         </div>
                         
@@ -130,63 +173,10 @@ const ContactPage = () => {
 
                 <div className="o__contactPage_options-call d-none" id="option-call">
 
-                    <div className="o__contactPage_options_call-person">
-                        
-                        <div className="o__contactPage_options_call-person_info">
-                            <h3 className="podatak kontakt-ime">Nenad Buzadžija</h3>
-                            <p className="podatak kontakt-profesija">Majstor bele tehnike/klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: <a href='tel:+38163507585'> +38163507585</a></p>
-                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nenad}>nenadbuzadzija@gmail.com</span></p>
-                            
-                        </div>
-                        <div className="o__contactPage_options_call-person_img">
-                            <img src={images.user} alt="slika osobe" />
-                        </div>
-                    </div>
-                    <div className="o__contactPage_options_call-person">
-                        
-                        <div className="o__contactPage_options_call-person_info">
-                            <h3 className="podatak kontakt-ime">Ninoslav Buzadžija</h3>
-                            <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381655075855'>+381655075855</a></p>
-                            <div className='kontakt-email-wrapper'>
-                                <div className='o__contactPage_options_call-person_info-copy'>
-                                    <p>Kopirano</p>
-                                </div>
-                                <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.ninoslav}>klimatizacijagrejanje@gmail.com</span></p>                         
-                            </div>
-                        </div>
-                        <div className="o__contactPage_options_call-person_img">
-                            <img src={images.user} alt="slika osobe" />
-                        </div>
-                    </div>
-                    <div className="o__contactPage_options_call-person">
-                        
-                        <div className="o__contactPage_options_call-person_info">
-                            <h3 className="podatak kontakt-ime">Nemanja Buzadžija</h3>
-                            <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381631282041'>+381631282041</a></p>
-                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nemanja}>nemanjabuzadzija@gmail.com</span></p>
-                            
-                        </div>
-                        <div className="o__contactPage_options_call-person_img">
-                            <img src={images.user} alt="slika osobe" />
-                        </div>
-                    </div>
-                    <div className="o__contactPage_options_call-person">
-                        
-                        <div className="o__contactPage_options_call-person_info">
-                            <h3 className="podatak kontakt-ime">Nikola Buzadžija</h3>
-                            <p className="podatak kontakt-profesija">Majstor klimatizacije</p>
-                            <p className="podatak kontakt-broj">Broj: <a href='tel:+381695075855'>+381695075855</a></p>
-                            <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs.nikola}>buzadzija.nikola13@gmail.com</span></p>
-                            
-                        </div>
-                        <div className="o__contactPage_options_call-person_img">
-                            <img src={images.user} alt="slika osobe" />
-                        </div>
-                    </div>
-
+                    <ObodinacLik id='nenad' name='Nenad Buzadzija' phone='+38163507585' email='nenad.buzadzija@gmail.com' jobDesc='Majstor bele tehnike/klimatizacije' img={images.user} />
+                    <ObodinacLik id='ninoslav' name='Ninoslav Buzadzija' phone='+381655075855' email='klimatizacijagrejanje@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
+                    <ObodinacLik id='nemanja' name='Nemanja Buzadzija' phone='+381695075855' email='nemanja.buzadzija@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
+                    <ObodinacLik id='nikola' name='Nikola Buzadzija' phone='+381631282041' email='buzadzija.nikola13@gmail.com' jobDesc='Lagan Lik' img={images.user} />
                 </div>
             </div>
         </div>
@@ -197,34 +187,4 @@ const ContactPage = () => {
 export default ContactPage
 
 
-// import React, { useRef } from 'react';
-
-// const MyComponent = () => {
-//   const divRefs = useRef([]);
-
-//   const copyText = (index) => {
-//     const textToCopy = divRefs.current[index].innerText;
-
-//     // Copy the text to the clipboard
-//     // ...
-
-//     console.log('Text copied:', textToCopy);
-//   };
-
-//   return (
-//     <div>
-//       <div onClick={() => copyText(0)} ref={(el) => (divRefs.current[0] = el)}>
-//         Text 1
-//       </div>
-//       <div onClick={() => copyText(1)} ref={(el) => (divRefs.current[1] = el)}>
-//         Text 2
-//       </div>
-//       <div onClick={() => copyText(2)} ref={(el) => (divRefs.current[2] = el)}>
-//         Text 3
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MyComponent;
 

@@ -4,7 +4,7 @@ import './offerssection.css'
 
 const OffersSection = ({title,description,image,alt,odd}) => {
   return (
-    <div className='o__offersSection' id={odd}>
+    <div className='o__offersSection section__padding' id={odd}>
 
         <div className='o__offersSection_img flex__center'>
           <div className='o__offersSection_img-wrapper'>
