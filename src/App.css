@@ -33,6 +33,29 @@
   border: none;
 }
 
+.submit__btn{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    color: #284280;
+    cursor: pointer;
+    border: 2px solid var(--color-grey);
+    box-shadow: 0 0 40px 40px var(--color-grey) inset, 0 0 0 0 var(--color-grey);
+    transition: all 150ms ease-in-out;
+}
+
+.submit__btn:hover {
+  box-shadow: 0 0 5px 0 var(--color-grey) inset, 0 0 3px 2px var(--color-grey);
+  background: var(--color-blue);
+  color: var(--color-grey);
+}
+
+.submit__btn:disabled{
+  box-shadow: 0 0 40px 40px var(--color-grey) inset, 0 0 0 0 var(--color-grey);
+  color: #284280;
+  background: var(--color-grey);
+  cursor: auto;
+}
+
 .more-btn{
   font-size: 1.1rem;
   font-weight: 300;
@@ -83,7 +106,8 @@
   }
 
   .more-btn,
-  .checkout-btn{
+  .checkout-btn,
+  .submit__btn{
     font-size: 1rem;
   }
 
@@ -98,7 +122,8 @@
 @media screen and (max-width:425px) {
 
   .more-btn,
-  .checkout-btn{
+  .checkout-btn,
+  .submit__btn{
     font-size: 0.9rem;
   }
 

@@ -8,9 +8,9 @@ const splitImages = {
     split3:images.split7,
 }
 
-const multiImages = {
+// const multiImages = {
 
-}
+// }
 
 const centralneImages = {
     centralna1:images.centralni1,
@@ -20,19 +20,19 @@ const centralneImages = {
     centralna5:images.centralni5,
 }
 
-const kanalskeImages = {
+// const kanalskeImages = {
 
-}
+// }
 
 //Grejanje
 
-const radijatoriImages = {
+// const radijatoriImages = {
 
-}
+// }
 
-const podnoImages = {
+// const podnoImages = {
 
-}
+// }
 
 //Ventilacija
 

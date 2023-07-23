@@ -9,9 +9,6 @@ import { tekstNaslovna } from '../../constants/tekst'
 
 const Offers = () => {
 
-  const grejanjeD = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptate atque, labore aliquid debitis perferendis nulla quidem quam, accusantium nam laudantium nesciunt ad quia! Aliquid commodi iusto quae blanditiis ab.'
-  const ventilacijaD = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta voluptate atque, labore aliquid debitis perferendis nulla quidem quam, accusantium nam laudantium nesciunt ad quia! Aliquid commodi iusto quae blanditiis ab.'
-
   return (
     <div className='o__offers'>
       <HeadTitle title='Naša ponuda'/> 

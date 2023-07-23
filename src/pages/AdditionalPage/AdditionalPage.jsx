@@ -12,10 +12,6 @@ import { Link } from 'react-router-dom'
 import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
 import { tekstDodatno } from '../../constants/tekst'
 
-const desc = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat aperiam provident perspiciatis, enim, et cum omnis cupiditate voluptas deleniti at laudantium nulla aut consequuntur sint consequatur doloribus harum? In, fugit!';
-
-
-
 const AdditionalPage = () => {
   
   useEffect(() =>{

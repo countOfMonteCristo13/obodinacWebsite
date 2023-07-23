@@ -1,7 +1,6 @@
 import React from 'react'
 import './header.css'
 import {images} from '../../constants'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
 
 
 const Header = () => {

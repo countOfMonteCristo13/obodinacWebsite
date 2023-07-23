@@ -12,6 +12,8 @@ import ImageSlider from '../ImageSlider/ImageSlider'
 import { connect } from 'react-redux'
 import { setScrollUpBtn } from '../../actions'
 
+import { servisKlimaImages } from '../../constants/galleryImages'
+
 const mapDispatchToProps = {
     setScrollUpBtn,
 }
@@ -20,7 +22,6 @@ const mapDispatchToProps = {
 
 const SpareAC = ({setScrollUpBtn}) => {
     const [toggleMenu,setToggleMenu] = useState(false);
-    const [imgSrc, setImgSrc] = useState('');
     const [imgTitle, setImgTitle] = useState('');
 
  
@@ -43,10 +44,9 @@ const SpareAC = ({setScrollUpBtn}) => {
 
         const imgElement = acCard.querySelector('.ac');
 
-        const srcValue = imgElement.getAttribute('src');
+        // const srcValue = imgElement.getAttribute('src');
         const titleValue = imgElement.getAttribute('alt');
 
-        setImgSrc(srcValue);
         setImgTitle(titleValue);
 
         setToggleMenu(true)
@@ -88,7 +88,7 @@ const SpareAC = ({setScrollUpBtn}) => {
                                     </div>
                                 </div>
                                 <div className='o__spareAC-menu-slider'>
-                                    <ImageSlider/>
+                                    <ImageSlider images={servisKlimaImages}/>
                                 </div>
                             </div>
                     }

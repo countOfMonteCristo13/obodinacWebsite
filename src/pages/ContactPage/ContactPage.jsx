@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './contactpage.css'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import { images } from '../../constants'
@@ -6,10 +6,46 @@ import { images } from '../../constants'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 
 import ClipboardJS from 'clipboard'
+import axios from 'axios'
 
 
 
 const ContactPage = () => {
+
+    const [name,setName] = useState('');
+    const [email,setEmail] = useState('');
+    const [phone,setPhone] = useState('');
+    const [message,setMessage] = useState('');
+
+    const [isEmailValid,setIsEmailValid] = useState(false);
+
+
+    const handleEmailChange = (e) =>{
+        const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        const emailValidation = emailRegex.test(e.target.value); // true or false
+
+        setEmail(e.target.value);
+        setIsEmailValid(emailValidation);
+    }
+
+    const isValidForm = () => {
+        return name !== '' && isEmailValid && message !== '';
+    }
+
+    const axiosInstance = axios.create({
+        baseURL:'http://localhost:3001',
+    })
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        const data = {name,email,phone,message};
+        try{
+            await axiosInstance.post('/send-email',data);
+            console.log('mail was sent');
+        }catch(error){
+            console.log(error)
+        }
+    }
 
     const emailRefs = {
         'nenad': useRef(null),
@@ -19,9 +55,6 @@ const ContactPage = () => {
     };
 
     const ObodinacLik = ({id,name,jobDesc,phone,email,img}) => {
-
-        
-
         return(
             <div className="o__contactPage_options_call-person">
                             
@@ -43,10 +76,6 @@ const ContactPage = () => {
         );
     }
     
-
-
-
-
     const ispis = (e) =>{
         console.log(e);
         const emailWrapper = e.parentNode.parentNode;
@@ -64,8 +93,6 @@ const ContactPage = () => {
         const porukaProzor = document.querySelector('#option-message');
         const pozivProzor = document.querySelector('#option-call');
         const contactSection = document.querySelector('.o__contactPage_section');
-
-        
 
         const body = document.querySelector('body');
         body.classList.remove('overflow-hidden');
@@ -125,10 +152,6 @@ const ContactPage = () => {
 
     },[])
 
-
-
-
-    
   return (
     <>
         <ScrollUp image={images.upArrow}/>
@@ -147,32 +170,27 @@ const ContactPage = () => {
                 </div>
 
                 <div className="o__contactPage_options-window d-none" id="option-message">
-                    <form action="" className="kontakt-inputi">
+                    <form onSubmit={handleSubmit} className="kontakt-inputi">
 
-                        <label htmlFor="ime">Ime</label>
-                        <input type="text" name="ime" placeholder="Petar" required/>
-                        <label htmlFor="prezime">Prezime</label>
-                        <input type="text" name="ime" placeholder="Petrović" required/>
+                        <label htmlFor="ime">Ime i prezime</label>
+                        <input type="text" name="ime" placeholder="Petar Petrović" required onChange={(e) =>{setName(e.target.value)}}/>
                         <label htmlFor="email">Email</label>
-                        <input type="email" name="email" placeholder="petar.petrovic@gmail.com" required/>
-                        <label htmlFor="phone">Broj telefona</label>
-                        <input type="text" name="phone" placeholder="123/345-678"/>
-
-
+                        <input type="email" name="email" placeholder="petar.petrovic@gmail.com" required onChange={handleEmailChange}/>
+                        <label htmlFor="phone">Broj telefona (<span className='phone-optional'>Opcionalno</span>)</label>
+                        <input type="text" name="phone" placeholder="123/345-678" onChange={(e) => setPhone(e.target.value)}/>
                         <label htmlFor="poruka">Poruka</label>
                         <div className='textarea_wrapper flex__center'>
-                            <textarea name="poruka" id="poruka" cols="50" rows="10"></textarea>
+                            <textarea name="poruka" id="poruka" cols="50" rows="10" onChange={(e) => setMessage(e.target.value)}></textarea>
                         </div>
 
                         <div className="o__contactPage_options_message-submit flex__center" id='submitButton'>
-                            <input type="submit" value="Pošalji"/>
+                            <button className='custom__button submit__btn' type="submit" value="Pošalji" disabled={!isValidForm()}>Pošalji</button>
                         </div>
                         
                     </form>
                 </div>
 
                 <div className="o__contactPage_options-call d-none" id="option-call">
-
                     <ObodinacLik id='nenad' name='Nenad Buzadzija' phone='+38163507585' email='nenad.buzadzija@gmail.com' jobDesc='Majstor bele tehnike/klimatizacije' img={images.user} />
                     <ObodinacLik id='ninoslav' name='Ninoslav Buzadzija' phone='+381655075855' email='klimatizacijagrejanje@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
                     <ObodinacLik id='nemanja' name='Nemanja Buzadzija' phone='+381695075855' email='nemanja.buzadzija@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />

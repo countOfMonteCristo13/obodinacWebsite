@@ -8,7 +8,7 @@ const NavbarSection = ({activeLink}) => {
     const [toggleMenu,setToggleMenu] = useState(false);
     const [homePage,setHomePage] = useState(false);
     const closeWindow = () =>{
-        if(window.innerWidth > 770){
+        if(window.innerWidth > 767){
         setToggleMenu(false);
         }
     }
@@ -50,7 +50,7 @@ const NavbarSection = ({activeLink}) => {
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-    })
+    },[activeLink,toggleMenu])
     
       return (
         <nav className='o__nav'>

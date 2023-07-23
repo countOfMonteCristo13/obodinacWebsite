@@ -12,8 +12,7 @@ import { Pagination, Navigation } from "swiper";
 
 const ImageSlider = ({images}) => {
 
-
-
+  console.log(images);
 
   return (
     <>
@@ -28,12 +27,9 @@ const ImageSlider = ({images}) => {
         modules={[Pagination, Navigation]}
         className="mySwiper gp__swiper"
       >
-        {/* <SwiperSlide><img className="gp__swiper-img" src="https://source.unsplash.com/78A265wPiO4" alt="1"/></SwiperSlide>
-        <SwiperSlide><img className="gp__swiper-img" src="https://source.unsplash.com/ndN00KmbJ1c" alt="2" /></SwiperSlide>
-        <SwiperSlide><img className="gp__swiper-img" src="https://source.unsplash.com/eOpewngf68w" alt="3" /></SwiperSlide> */}
         {Object.values(images).map((image,index) => (
           <SwiperSlide key={index}>
-            <img className="gp__swiper-img" src={image} alt={`Image ${index+1}`} />
+            <img className="gp__swiper-img" src={image} alt={`${index+1}`} />
           </SwiperSlide>
         ))}
       </Swiper>
