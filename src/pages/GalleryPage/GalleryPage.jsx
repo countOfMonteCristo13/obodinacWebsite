@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './gallerypage.css'
 import { images } from '../../constants'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
@@ -12,7 +12,7 @@ import { scroller } from 'react-scroll'
 import { connect } from 'react-redux'
 import { setGalleryPageScroll } from '../../actions'
 
-import { splitImages,ventilacijaImages,centralneImages } from '../../constants/galleryImages'
+import {ventilacija, klimatizacija, grejanje } from '../../constants/galleryImages'
 
 const mapStateToProps = (state) => {
     return {
@@ -25,6 +25,10 @@ const mapStateToProps = (state) => {
   }
 
 const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
+
+    const [ventilacijaFilter,setVentilacijaFilter] = useState('Sve');
+    const [grejanjeFilter,setGrejanjeFilter] = useState('Sve');
+    const [klimatizacijaFilter,setKlimatizacijaFilter] = useState('Sve');
 
     useEffect(() => {
 
@@ -55,21 +59,6 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
     
     },[]);
 
-    const imageSliderFilter = (event) =>{
-
-
-        const buttonsWrapper = event.target.parentNode;
-        const buttons = Array.from(buttonsWrapper.getElementsByTagName('button'));
-        const buttonClicked = event.target;
-
-
-        buttons.forEach((button) => {
-            button.classList.remove('active-btn')
-        })
-
-        buttonClicked.classList.add('active-btn')
-
-    }
 
 
     const SubHeading = ({title,route}) =>{
@@ -94,32 +83,32 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                 <SubHeading title='Klimatizacija' route='gp__klimatizacija'/>
 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Split</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Multi</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Centralni Sistem</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Kanal</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${klimatizacijaFilter === 'Sve' ? 'active-btn' : ''}`} onClick={() => setKlimatizacijaFilter('Sve')}>Sve</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${klimatizacijaFilter === 'Split' ? 'active-btn' : ''}`} onClick={() => setKlimatizacijaFilter('Split')}>Split</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${klimatizacijaFilter === 'Multi' ? 'active-btn' : ''}`} onClick={() => setKlimatizacijaFilter('Multi')}>Multi</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${klimatizacijaFilter === 'Centralni' ? 'active-btn' : ''}`} onClick={() => setKlimatizacijaFilter('Centralni')}>Centralni Sistem</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${klimatizacijaFilter === 'Kanalski' ? 'active-btn' : ''}`} onClick={() => setKlimatizacijaFilter('Kanalske')}>Kanal</button>
                 </div>
 
-                <ImageSlider images={splitImages}/>
+                <ImageSlider images={klimatizacija[klimatizacijaFilter]}/>
                 
                 <SubHeading title='Grejanje' route='gp__grejanje'/>
                 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Radijator</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Podno</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${grejanjeFilter === 'Sve' ? 'active-btn' : ''}`} onClick={() => setGrejanjeFilter('Sve')}>Sve</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${grejanjeFilter === 'Radijator' ? 'active-btn' : ''}`} onClick={() => setGrejanjeFilter('Radijator')}>Radijator</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${grejanjeFilter === 'Podno' ? 'active-btn' : ''}`} onClick={() => setGrejanjeFilter('Podno')}>Podno</button>
                 </div>
-                <ImageSlider images={centralneImages}/>
+                <ImageSlider images={grejanje[grejanjeFilter]}/>
 
                 <SubHeading title='Ventilacija' route='gp__ventilacija'/>
                 
                 <div className='o__galleryPage_photo-type_buttons'>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button active-btn' onClick={(event) => imageSliderFilter(event)}>Sve</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Standard</button>
-                    <button type='button' className='o__galleryPage_phototype-buttons_button' onClick={(event) => imageSliderFilter(event)}>Rekuperator</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${ventilacijaFilter === 'Sve' ? 'active-btn' : ''}`} onClick={() => setVentilacijaFilter('Sve')}>Sve</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${ventilacijaFilter === 'Mehanička' ? 'active-btn' : ''}`} onClick={() => setVentilacijaFilter('Mehanička')}>Mehanička</button>
+                    <button type='button' className={`o__galleryPage_phototype-buttons_button ${ventilacijaFilter === 'Rekuperator' ? 'active-btn' : ''}`} onClick={() => setVentilacijaFilter('Rekuperator')}>Rekuperator</button>
                 </div>
-                <ImageSlider images={ventilacijaImages}/>
+                <ImageSlider images={ventilacija[ventilacijaFilter]}/>
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
@@ -134,3 +123,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(GalleryPage);
+
+
+
+

@@ -72,11 +72,23 @@ import ventilacija1 from '../obodinacPhotos/ventilacija1.jpg';
 import ventilacija2 from '../obodinacPhotos/ventilacija2.jpg';
 import ventilacija3 from '../obodinacPhotos/ventilacija3.jpg';
 import ventilacija4 from '../obodinacPhotos/ventilacija4.jpg';
+import ventilacija5 from '../obodinacPhotos/ventilacija5.png';
+import ventilacija6 from '../obodinacPhotos/ventilacija6.png';
+import ventilacija7 from '../obodinacPhotos/ventilacija7.png';
+import ventilacija8 from '../obodinacPhotos/ventilacija8.jpg';
+import ventilacija9 from '../obodinacPhotos/ventilacija9.jpg';
 import centralni1 from '../obodinacPhotos/centralni1.jpg';
 import centralni2 from '../obodinacPhotos/centralni2.jpg';
 import centralni3 from '../obodinacPhotos/centralni3.jpg';
 import centralni4 from '../obodinacPhotos/centralni4.jpg';
 import centralni5 from '../obodinacPhotos/centralni5.jpg';
+import centralni6 from '../obodinacPhotos/centralni6.jpg';
+import centralni7 from '../obodinacPhotos/centralni7.jpg';
+import centralni8 from '../obodinacPhotos/centralni8.jpg';
+import centralni9 from '../obodinacPhotos/centralni9.jpg';
+import kanalski1 from '../obodinacPhotos/kanalski1.jpg';
+import kanalski2 from '../obodinacPhotos/kanalski2.png';
+import kanalski3 from '../obodinacPhotos/kanalski3.jpg';
 import kernovanje1 from '../obodinacPhotos/kernovanje1.png';
 import kernovanje2 from '../obodinacPhotos/kernovanje2.png';
 import kernovanje3 from '../obodinacPhotos/kernovanje3.png';
@@ -87,6 +99,21 @@ import kernovanje7 from '../obodinacPhotos/kernovanje7.png';
 import kernovanje8 from '../obodinacPhotos/kernovanje8.png';
 import kernovanje9 from '../obodinacPhotos/kernovanje9.png';
 import kernovanje10 from '../obodinacPhotos/kernovanje10.png';
+import podnoGrejanje1 from '../obodinacPhotos/podnoGrejanje1.png';
+import podnoGrejanje2 from '../obodinacPhotos/podnoGrejanje2.png';
+import podnoGrejanje3 from '../obodinacPhotos/podnoGrejanje3.png';
+import podnoGrejanje4 from '../obodinacPhotos/podnoGrejanje4.png';
+import podnoGrejanje5 from '../obodinacPhotos/podnoGrejanje5.png';
+import podnoGrejanje6 from '../obodinacPhotos/podnoGrejanje6.png';
+import podnoGrejanje7 from '../obodinacPhotos/podnoGrejanje7.png';
+import podnoGrejanje8 from '../obodinacPhotos/podnoGrejanje8.png';
+import podnoGrejanje9 from '../obodinacPhotos/podnoGrejanje9.png';
+import radijator1 from '../obodinacPhotos/radijator1.png';
+import radijator2 from '../obodinacPhotos/radijator2.png';
+import radijator3 from '../obodinacPhotos/radijator3.png';
+import radijator4 from '../obodinacPhotos/radijator4.png';
+import radijator5 from '../obodinacPhotos/radijator5.png';
+import radijator6 from '../obodinacPhotos/radijator6.png';
 
 
 const images = {
@@ -128,6 +155,11 @@ const images = {
     ventilacija2,
     ventilacija3,
     ventilacija4,
+    ventilacija5,
+    ventilacija6,
+    ventilacija7,
+    ventilacija8,
+    ventilacija9,
     ventilacijaGalerija,
     vesMasina,
     maintenance,
@@ -169,6 +201,13 @@ const images = {
     centralni3,
     centralni4,
     centralni5,
+    centralni6,
+    centralni7,
+    centralni8,
+    centralni9,
+    kanalski1,
+    kanalski2,
+    kanalski3,
     kernovanje1,
     kernovanje2,
     kernovanje3,
@@ -179,6 +218,21 @@ const images = {
     kernovanje8,
     kernovanje9,
     kernovanje10,
+    podnoGrejanje1,
+    podnoGrejanje2,
+    podnoGrejanje3,
+    podnoGrejanje4,
+    podnoGrejanje5,
+    podnoGrejanje6,
+    podnoGrejanje7,
+    podnoGrejanje8,
+    podnoGrejanje9,
+    radijator1,
+    radijator2,
+    radijator3,
+    radijator4,
+    radijator5,
+    radijator6,
 }
 
 export default images
