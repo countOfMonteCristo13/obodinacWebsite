@@ -85,7 +85,7 @@
     background: var(--color-blue);
     transition: 0.5s ease;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     z-index: 5;
 }
 
