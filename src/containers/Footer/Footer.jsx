@@ -39,10 +39,8 @@ const Footer = () => {
         <div className='o__footer_info-phone info'>
             <img src={images.phoneIcon} alt='phone'/>
 			<div className="o__footer_info-phone_numbers">
-				<a href="tel:+38163507585"><h5 className='cursor-pointer'>+38163507585</h5></a>
 				<a href="tel:+381655075855"><h5 className='cursor-pointer'>+381655075855</h5></a>
 				<a href="tel:+381631285041"><h5 className='cursor-pointer'>+381631285041</h5></a>
-				<a href="tel:+381695075855"><h5 className='cursor-pointer'>+381695075855</h5></a>
 			</div>
         </div>
 
@@ -58,7 +56,7 @@ const Footer = () => {
 
 		<div className="info">
 			<img src={images.homeIcon} alt='home'/>
-			<h5>Braće Dronjak 17, Novi Sad</h5>
+			<h5>Novi Sad</h5>
 		</div>
 
 

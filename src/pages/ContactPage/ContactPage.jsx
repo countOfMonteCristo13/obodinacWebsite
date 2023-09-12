@@ -191,11 +191,9 @@ const ContactPage = () => {
                 </div>
 
                 <div className="o__contactPage_options-call d-none" id="option-call">
-                    <ObodinacLik id='nenad' name='Nenad Buzadzija' phone='+38163507585' email='nenad.buzadzija@gmail.com' jobDesc='Majstor bele tehnike/klimatizacije' img={images.user} />
                     <ObodinacLik id='ninoslav' name='Ninoslav Buzadzija' phone='+381655075855' email='klimatizacijagrejanje@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
                     <ObodinacLik id='nemanja' name='Nemanja Buzadzija' phone='+381695075855' email='nemanja.buzadzija@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
-                    <ObodinacLik id='nikola' name='Nikola Buzadzija' phone='+381631282041' email='buzadzija.nikola13@gmail.com' jobDesc='Lagan Lik' img={images.user} />
-                </div>
+                    </div>
             </div>
         </div>
     </>
