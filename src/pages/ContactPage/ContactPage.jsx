@@ -48,10 +48,8 @@ const ContactPage = () => {
     }
 
     const emailRefs = {
-        'nenad': useRef(null),
         'ninoslav': useRef(null),
         'nemanja': useRef(null),
-        'nikola': useRef(null)
     };
 
     const ObodinacLik = ({id,name,jobDesc,phone,email,img}) => {
@@ -191,9 +189,11 @@ const ContactPage = () => {
                 </div>
 
                 <div className="o__contactPage_options-call d-none" id="option-call">
+                    
                     <ObodinacLik id='ninoslav' name='Ninoslav Buzadzija' phone='+381655075855' email='klimatizacijagrejanje@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
                     <ObodinacLik id='nemanja' name='Nemanja Buzadzija' phone='+381695075855' email='nemanja.buzadzija@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
-                    </div>
+                    
+                </div>
             </div>
         </div>
     </>
