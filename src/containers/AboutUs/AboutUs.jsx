@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className='o__aboutUs  section__padding'>
 
         <div className='o__aboutUs_img'>
-            <img src={images.family} alt="family" />
+            <img src={images.aboutUs} alt="family" />
         </div>
 
         <div className='o__aboutUs_details'>

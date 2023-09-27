@@ -114,6 +114,7 @@ import radijator3 from '../obodinacPhotos/radijator3.png';
 import radijator4 from '../obodinacPhotos/radijator4.png';
 import radijator5 from '../obodinacPhotos/radijator5.png';
 import radijator6 from '../obodinacPhotos/radijator6.png';
+import aboutUs from '../assets/aboutUs.png'
 
 
 const images = {
@@ -233,6 +234,7 @@ const images = {
     radijator4,
     radijator5,
     radijator6,
+    aboutUs,
 }
 
 export default images

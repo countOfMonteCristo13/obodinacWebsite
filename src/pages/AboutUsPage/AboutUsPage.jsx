@@ -20,7 +20,7 @@ const AboutUsPage = () => {
         <NavbarSection activeLink='nav__about'/>
         <div className='o__aboutPage_section'>
           <div className='o__aboutPage_section-img'>
-              <img src={images.familybg} alt="" />
+              <img src={images.aboutUs} alt="o nama" />
           </div>
           <div className='o__aboutPage_section-description flex__center'>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere laborum! Autem, ratione eveniet sequi perspiciatis saepe labore quo doloremque dolorem nihil id corporis, commodi laudantium error. Odio, porro tempore?</p>
