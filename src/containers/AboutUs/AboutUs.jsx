@@ -1,10 +1,19 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import { images } from '../../constants'
 import './aboutus.css'
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate,useLocation } from 'react-router-dom'
 
 const AboutUs = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+
+    console.log('Trenutna ruta:', location.pathname);
+  }, [location]);
+
   return (
     <div className='o__aboutUs  section__padding'>
 
