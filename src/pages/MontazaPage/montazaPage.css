@@ -1,0 +1,74 @@
+
+.tipovi__klima-headtext,
+.sistemi__klima-headtext{
+    padding: 0 3rem;
+}
+.sistemi__klima-headtext h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 100%;
+    color: var(--color-white);
+    background: var(--color-blue);
+    border-radius: 10px;
+}
+
+
+.sistemi__klima-headtext{
+    color: var(--color-blue);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.sistemi__klima-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.sistemi__klima-card{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: var(--color-blue);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 220px;
+}
+
+.sistemi__klima-card__img{
+    width: 150px;
+    height: 150px;
+}
+
+.sistemi__klima-card__img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.sistemi__klima-card__title{
+    color: var(--color-white);
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .tipovi__klima-headtext,
+    .sistemi__klima-headtext{
+        padding: 0 2rem;
+    }
+
+    .sistemi__klima-headtext{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .tipovi__klima-headtext h2,
+    .sistemi__klima-headtext h2{
+        font-size: 1.5rem;
+    }
+
+}

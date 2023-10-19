@@ -19,6 +19,8 @@ const ContactPage = () => {
 
     const [isEmailValid,setIsEmailValid] = useState(false);
 
+    const emailRef = useRef(null);
+
 
     const handleEmailChange = (e) =>{
         const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
@@ -47,32 +49,8 @@ const ContactPage = () => {
         }
     }
 
-    const emailRefs = {
-        'ninoslav': useRef(null),
-        'nemanja': useRef(null),
-    };
 
-    const ObodinacLik = ({id,name,jobDesc,phone,email,img}) => {
-        return(
-            <div className="o__contactPage_options_call-person">
-                            
-                <div className="o__contactPage_options_call-person_info">
-                    <h3 className="podatak kontakt-ime">{name}</h3>
-                    <p className="podatak kontakt-profesija">{jobDesc}</p>
-                    <p className="podatak kontakt-broj">Broj: <a href={`tel:${phone}`}>{phone}</a></p>
-                    <div className='kontakt-email-wrapper'>
-                        <div className='o__contactPage_options_call-person_info-copy'>
-                            <p>Kopirano</p>
-                        </div>
-                        <p className="podatak kontakt-email">Email: <span className='profile-email' ref={emailRefs[id]} onClick={(e) => ispis(e.currentTarget)}>{email}</span></p>                         
-                    </div>
-                </div>
-                <div className="o__contactPage_options_call-person_img">
-                    <img src={img} alt="slika osobe" />
-                </div>
-            </div>
-        );
-    }
+
     
     const ispis = (e) =>{
         console.log(e);
@@ -86,66 +64,27 @@ const ContactPage = () => {
     }
 
     useEffect(()=>{
-        const dugmePoruka = document.querySelector('.viaMessage');
-        const dugmePoziv = document.querySelector('.viaCall');
-        const porukaProzor = document.querySelector('#option-message');
-        const pozivProzor = document.querySelector('#option-call');
-        const contactSection = document.querySelector('.o__contactPage_section');
+        window.scrollTo(0, 0);
 
         const body = document.querySelector('body');
         body.classList.remove('overflow-hidden');
 
-        const clipboardInstances = Object.values(emailRefs).map((ref) => new ClipboardJS(ref.current, {
-            text: () => ref.current.innerText,
-          }));
+        const clipboardInstances = new ClipboardJS(emailRef.current, {
+            text: () => emailRef.current.innerText,
+        });
 
 
-        clipboardInstances.forEach((clipboard, index) => {
-            clipboard.on('success', (e) => {
+        clipboardInstances.on('success', (e) => {
               console.log(`Email ${e.text} is copied`);
-            });
-        
-            clipboard.on('error', (e) => {
-              console.log('Failed to copy email:', e.text);
-            });
-          });
-        
-        
-        let prozorPorukaPrikazan = false;
-        let prozorPozivPrikazan = false;
-        
-        const pojavljivanjeProzora = (prozor) =>{
-            prozor.classList.remove('d-none');
-        }
-        
-        const sakrivanjeProzora = (prozor) =>{
-            prozor.classList.add('d-none');
-        }
-        
-        const ispitivanjeVidljivostiProzora = (prozorZaIspitivanje,prozorZaSakrivanje) =>{
-            if(prozorZaIspitivanje){
-                sakrivanjeProzora(prozorZaSakrivanje);
-                prozorZaIspitivanje = false;
-            }
-        }
-        
-        
-        dugmePoruka.addEventListener('click', () =>{
-            ispitivanjeVidljivostiProzora(prozorPozivPrikazan,pozivProzor);
-            pojavljivanjeProzora(porukaProzor);
-            prozorPorukaPrikazan = true;
-            contactSection.classList.add('height-auto');
         });
         
-        dugmePoziv.addEventListener('click',()=>{
-            ispitivanjeVidljivostiProzora(prozorPorukaPrikazan,porukaProzor);
-            pojavljivanjeProzora(pozivProzor);
-            prozorPozivPrikazan=true;
-            contactSection.classList.add('height-auto');
-        })
+        clipboardInstances.on('error', (e) => {
+              console.log('Failed to copy email:', e.text);
+        });
+        
 
         return () => {
-            clipboardInstances.forEach(clipboard => clipboard.destroy());
+            clipboardInstances.destroy();
         };
 
     },[])
@@ -155,19 +94,18 @@ const ContactPage = () => {
         <ScrollUp image={images.upArrow}/>
         <div className='o__contactPage slide-enterance1'>
         <NavbarSection activeLink='nav__contact'/>
+        <div className='headtext flex__center'>
+          <h2>Uvek na raspolaganju</h2>
+          <p>
+          U svakom trenutku smo dostupni i dolazimo na intervenciju u vreme koje Vama lično najviše odgovara. 
+          Naši majstori pokrivaju celu teritoriju grada. Intervenciju možete zakazati putem telefonskog poziva ili putem online zakazivanja, odnosno kontakt forme. 
+          Takođe, na oba navedena načina nas možete kontaktirati ukoliko Vam je potreban savet ili imate neku nedoumicu, kao i ukoliko imate pohvale ili kritike na naš rad, radi smo da saslušamo i na taj način dodatno unapredimo naše poslovanje. 
+          Poslujte sa ovlašćenim klima servisom, koji se klima uređajima bavi 24h!
+          </p>
+        </div>
         <div className='o__contactPage_section flex__center'>
 
-                <div className="o__contactPage_options">
-                    <div className="o__contactPage_options-button viaMessage">
-                        <img src={images.emailIcon} alt="message-icon" className="o__contactPage_options-button_img"/>
-                    </div>
-                    <div className="o__contactPage_options-button viaCall">
-                        <img src={images.phoneIcon} alt="phone-icon" className="o__contactPage_options-button_img"/>
-                    </div>
-            
-                </div>
-
-                <div className="o__contactPage_options-window d-none" id="option-message">
+                <div className="o__contactPage_options-window" id="option-message">
                     <form onSubmit={handleSubmit} className="kontakt-inputi">
 
                         <label htmlFor="ime">Ime i prezime</label>
@@ -188,11 +126,22 @@ const ContactPage = () => {
                     </form>
                 </div>
 
-                <div className="o__contactPage_options-call d-none" id="option-call">
-                    
-                    <ObodinacLik id='ninoslav' name='Ninoslav Buzadzija' phone='+381655075855' email='klimatizacijagrejanje@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
-                    <ObodinacLik id='nemanja' name='Nemanja Buzadzija' phone='+381695075855' email='nemanja.buzadzija@gmail.com' jobDesc='Majstor klimatizacije' img={images.user} />
-                    
+                <div className="o__contactPage_options-call" id="option-call">
+                    <div className='opcija-poziv'>
+                        <img src={images.phoneIcon} alt="phone" />
+                        <div>
+                            <a href="tel:+381655075855">+381655075855</a>
+                            <a href="tel:+381635075855">+381655075855</a>
+                        </div>
+                    </div>
+                    <div className='opcija-poziv opcija-email'>
+                        <img src={images.emailIcon} alt="email" />
+                        <p ref={emailRef}>klimatizacijagrejanje@gmail.com</p>
+                    </div>
+                    <div className='opcija-poziv opcija-instagram'>
+                        <img src={images.instagramIcon} alt="instagram" />
+                        <a href="">@obodinac_klimatizacija</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -12,9 +12,9 @@ import { setOffersPageScroll } from '../../actions'
 import { scroller } from 'react-scroll'
 
 
-import { Link } from 'react-router-dom'
-
 import { tekst,tekstPodnaslov } from '../../constants/tekst'
+import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import BlueLine from '../../components/BlueLine/BlueLine'
 
 
 const mapStateToProps = (state) => {
@@ -69,15 +69,6 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
     )
   };
 
-  const BlueLine = () =>{
-    return(
-      <div className='o__offersPage_blueline-wrapper'>
-        <div className='o__offersPage_blueline'/>
-      </div>
-      
-    );
-  }
-
 
   return (
     <>
@@ -115,9 +106,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <OffersSection title='Mehanička ventilacija' description={tekst.ventilacijaD} alt='ventilacija' image={images.vent}/>
         <OffersSection title='Rekuperatorska ventilacija' description={tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine/>
-        <div className='o__offersPage_button-wrapper flex__center section__padding'>
-          <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
-        </div>
+        <KontaktDugme/>
       </div>
     </>  
   )

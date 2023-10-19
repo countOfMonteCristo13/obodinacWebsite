@@ -1,9 +1,10 @@
-.o__nav{
+/* .o__nav{
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    right: 0;
     z-index: 1100;
-}
+} */
 
 
 .o__navbarSection{
@@ -12,7 +13,7 @@
     align-items: center;
     background: var(--color-blue);
     color: var(--color-white);
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem;
     font-size: 1.2rem;
     width: 100%;
     transition: all 0.2s ease-in-out;
@@ -28,11 +29,11 @@
 .o__navbarSection p{
     transition: all 0.3s;
     cursor: pointer;
-    border: 2px solid var(--color-blue);
 }
 
 .o__navbarSection p:hover{
-    border-bottom: 2px solid var(--color-white);
+    /* border-bottom: 2px solid var(--color-white); */
+    color: var(--color-darkgrey);
 }
 
 
@@ -41,7 +42,15 @@
     padding-bottom: 0.3rem;
 }
 
+.o__navbarSection-link{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+.nav__dropdown{
+    position: relative;
+}
 
 
 .o__header_menu-button{
@@ -71,9 +80,6 @@
     backdrop-filter: blur(10.1px);
     -webkit-backdrop-filter: blur(10.1px);
 }
-
-
-
 
 
 .o__header_menu-overlay{
@@ -119,14 +125,14 @@
 
 
 .o__navbarSection .btm-border{
-    border-bottom: 2px solid var(--color-white);
-    cursor: default;
+    color: var(--color-darkgrey);
+    /* cursor: default; */
 }
 
 .o__header_menu-overlay-links .menu__shadow-link{
     color: var(--color-darkgrey);
     font-weight: bold;
-    cursor: default;
+    /* cursor: default; */
 }
 
 .o__header_menu-overlay-links .menu__shadow-link:hover{
@@ -138,7 +144,7 @@
 @media screen and (min-width:1600px){
     .o__navbarSection{
         font-size: 1.8rem;
-        padding: 1rem 2rem;
+        padding: 1rem 3rem;
     }
 
     .o__navbarSection img{
@@ -163,15 +169,18 @@
 
 
 
-@media screen and (max-width:1025px) {
+@media screen and (max-width:1024px) {
     .o__navbarSection{
         font-size: 1rem;
+        padding: 0.5rem 2rem;
     }
 
     .o__navbarSection img{
         max-width: 150px;
         padding-bottom: 0.25rem;
     }
+
+    
 }
 
 
@@ -191,7 +200,7 @@
 
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:425px) {
     
     .o__header_menu-button{
         padding: 0.2rem;

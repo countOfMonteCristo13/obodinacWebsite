@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div>
 
-      <header className='o__header section__padding'>
+      <header className='o__header'>
         <div className="o__header_logo" >
           <img src={images.obodinac2} alt='obodinac logo'/>
         </div>

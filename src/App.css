@@ -35,7 +35,7 @@
 
 .submit__btn{
     font-size: 1.5rem;
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     color: #284280;
     cursor: pointer;
     border: 2px solid var(--color-grey);
@@ -91,6 +91,33 @@
   height: 100vh;
 }
 
+.headtext{
+  padding: 2rem 3rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.headtext h2{
+  font-size: 3.5rem;
+  color: var(--color-blue);
+  text-align: center;
+}
+
+.headtext p {
+  color: var(--color-blue);
+  text-align: justify;
+  line-height: 2rem;
+}
+
+@media screen and (min-width:1440px){
+
+    
+  .headtext p{
+      font-size: 1.2rem;
+      line-height: 2.4rem;
+  }
+}
+
 
 @media screen and (max-width:768px) {
   .section__head{
@@ -115,8 +142,20 @@
     padding: 0.6rem 1.1rem;
   }
 
+  .headtext{
+    padding: 1rem 2rem;
+  }
+
+  .headtext h2{
+    font-size: 2.8rem;
 }
 
+  .headtext p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+}
+
+}
 
 
 @media screen and (max-width:425px) {
@@ -130,5 +169,14 @@
   .custom__button{
     padding: 0.5rem 1rem;
   }
+
+  .headtext h2{
+    font-size: 2.2rem;
+}
+
+  .headtext p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+}
 
 }

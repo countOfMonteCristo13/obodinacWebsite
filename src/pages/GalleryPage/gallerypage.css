@@ -96,6 +96,14 @@
     .o__galleryPage_button-wrapper button{
         font-size: 1rem;
     }
+
+    .o__galleryPage_button-wrapper{
+        padding: 2rem 0;
+    }
+    
+    .margint{
+        margin-top: 2rem;
+    }
 }
 
 

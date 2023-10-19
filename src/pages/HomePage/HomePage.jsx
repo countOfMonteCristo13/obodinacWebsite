@@ -33,8 +33,8 @@ const HomePage = () => {
 		    </div>
         <AboutUs/>
         <Offers/>
-        <Gallery />
         <AdditionalOffers />
+        <Gallery />
         <Footer/>
       </div>
     </>

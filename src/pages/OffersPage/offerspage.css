@@ -6,7 +6,6 @@
 
 .o__offersPage_headtext{
     padding: 2rem 3rem;
-    display: flex;
     flex-direction: column;
     gap: 1rem;
 }
@@ -45,9 +44,6 @@
     border-radius: 10px;
 }
 
-
-
-
 .o__offersPage_types-headtext {
     margin-bottom: 2rem;
 }
@@ -82,9 +78,6 @@
 
 @media screen and (max-width:768px) {
 
-    .o__offersPage_types-cards{
-        gap: 3rem;
-    } 
 
     .o__offersPage_headtext h2{
         font-size: 3rem;
@@ -127,10 +120,3 @@
 
 }
 
-
-
-@media screen and (max-width:300px) {
-    .o__offersPage_button-wrapper button{
-        font-size: 1.0rem;
-    }
-}

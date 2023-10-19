@@ -4,46 +4,14 @@
 }
 
 .o__contactPage_section{
-    padding: 3rem 4rem;
     background: var(--color-darkgrey);
-    height: 90vh;
-    flex-direction: column;
+    padding: 0 2rem 2rem 2rem;
+    gap: 2rem;
 }
 
 .height-auto{
     height: auto;
 }
-
-.o__contactPage_options{
-	display: flex;
-	justify-content: center;
-	gap: 5rem;
-}
-
-
-.o__contactPage_options-button{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-    max-width: 120px;
-	padding: 1rem;
-	border-radius: 15px;
-	border: 2px solid #284280;
-	background-color: #284280;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-
-.o__contactPage_options-button img{
-	width: 100%;
-    object-fit: cover;
-}
-
-.o__contactPage_options-button:hover{
-	transform: scale(1.1);
-}
-
 
 
 /* PROZOR */
@@ -52,23 +20,20 @@
 .o__contactPage_options-window{
 	
 	background-color: #284280;
-	padding: 3rem;
-	margin-top: 2rem;
+	padding: 1.5rem 2rem;
 	border-radius: 20px;
+    width: 100%;
 }
 
 /* PROZOR PORUKA */
 
-#option-message{
-    width: 100%;
-}
 
 .kontakt-inputi{
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	text-align: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 
@@ -96,82 +61,53 @@
 
 
 .o__contactPage_options_message-submit{
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
 }
 
 /* PROZOR POZIV */
 
 #option-call{
     gap: 3rem;
-    margin-top: 2rem;
     width: 100%;
 }
 
 .o__contactPage_options-call{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.o__contactPage_options_call-person{
-	display: flex;
-	justify-content: space-between;
+.opcija-poziv{
+    padding: 1rem 2rem;
+    background-color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+    border-radius: 20px;
     gap: 1rem;
-	padding: 2rem;
-	background-color: #284280;
-	border-radius: 20px;
-}
-
-.o__contactPage_options_call-person_img{
-	background-color: white;
-    max-width: 250px;
-    padding: 2rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 20px;
-}
-
-.o__contactPage_options_call-person_img img{
+    align-items: center;
     width: 100%;
-    object-fit: cover;
+    max-width: 400px;
 }
 
-.o__contactPage_options_call-person_info{
-	color: white;
-	display: flex;
-	flex-direction: column;
-    justify-content: center;
-	gap: 1rem;
+.opcija-poziv img{
+    max-height: 100px;
 }
 
-.o__contactPage_options_call-person_info p,
-.o__contactPage_options_call-person_info h3{
-	letter-spacing:0.5px;
+.opcija-poziv p:hover{
+    cursor: copy;
 }
 
-.profile-email{
-    cursor: pointer;
-}
-
-.kontakt-broj a,
-.profile-email{
-    font-weight: bold;
-}
-
-.kontakt-broj a:hover,
-.profile-email:hover{
+.opcija-poziv a:hover,
+.opcija-poziv p:hover{
     color: var(--color-darkgrey);
 }
 
-.podatak{
-    z-index: 100;
+.opcija-poziv div{
+    display: flex;
+    flex-direction: column;
 }
 
-.kontakt-email-wrapper{
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
 
 .o__contactPage_options_call-person_info-copy{
     position: absolute;
@@ -196,13 +132,7 @@
 }
 
 
-
-.d-none{
-	display: none;
-}
-
 @media screen and (min-width:1440px){
-    #option-message,
     #option-call{
         max-width: 1400px;
     }
@@ -210,45 +140,54 @@
 }
 
 
+@media screen and (max-width:1024px) {
+   .opcija-poziv a{
+    font-size: 0.95rem;
+   } 
+
+   .kontakt-inputi label{
+    font-size: 1.2rem;
+}
+}
+
 @media screen and (max-width:768px) {
-
-    .o__contactPage_options-window{
-        padding: 2rem;
-    }
-
     
-    .o__contactPage_options{
-        gap: 4rem;
-    }
-
-    .o__contactPage_options_call-person{
-        padding: 3rem 1.5rem;
-    }
 
     .o__contactPage_section{
-        padding: 3rem 2rem;
+        flex-direction: column;
     }
 
-    .o__contactPage_options_call-person{
-        flex-direction: column-reverse;
-        align-items: center;
+    #option-call{
         gap: 2rem;
     }
 
-    .o__contactPage_options_call-person_info{
-        align-items: center;
+    .o__contactPage_options-window{
+        max-width: 400px;
     }
 
-    .o__contactPage_options_call-person_info p{
-        text-align: center;
-    }
 
-    .kontakt-email-wrapper:hover .o__contactPage_options_call-person_info-copy{
-        transform: translateY(26px);
-    }
 
     .o__contactPage_options-button{
         max-width: 110px;
+    }
+
+    .o__contactPage_options_message-submit input{
+        padding: 0.8rem 1.6rem;
+    }
+
+
+    .kontakt-inputi label{
+        font-size: 1.1rem;
+    }
+
+    .kontakt-inputi input, 
+    .kontakt-inputi textarea{
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+
+    #submitButton input{
+        font-size: 1.2rem;
     }
 
     
@@ -264,26 +203,6 @@
         font-size: 1rem;
     }
 
-
-    .o__contactPage_options_message-submit input{
-        padding: 0.8rem 1.6rem;
-    }
-
-
-    .kontakt-inputi label{
-        font-size: 1.1rem;
-    }
-
-    .kontakt-inputi input, 
-    .kontakt-inputi textarea{
-        font-size: 0.8rem;
-    }
-
-    #submitButton input{
-        font-size: 1.2rem;
-    }
-
-    
 }
 
 
@@ -312,7 +231,7 @@
 
 
     .kontakt-inputi label{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .kontakt-inputi input, 
@@ -329,21 +248,14 @@
         padding: 0.6rem 1.2rem;
     }
 
+    .opcija-poziv a, p{
+        font-size: 0.8rem;
+    }
 
-
+    .opcija-poziv img{
+        max-height: 80px;
+    }
     
 }
 
-@media screen and (max-width:350px) {
-
-    .o__contactPage_options_call-person_info p{
-        font-size: 0.6rem;
-    }
-
-    .kontakt-inputi input:not(:last-child),.kontakt-inputi textarea{
-        padding: 0.7rem;
-    }
-
-
-}
 

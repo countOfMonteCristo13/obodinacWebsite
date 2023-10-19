@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom'
 
 import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
 import { tekstDodatno } from '../../constants/tekst'
+import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 
 const AdditionalPage = () => {
   
@@ -53,9 +54,7 @@ const AdditionalPage = () => {
           <SpareAC/>
           
           <BlueLine/>
-          <div className='o__addoffersPage_button-wrapper section__padding flex__center'>
-            <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
-          </div>
+          <KontaktDugme/>
       </div>
     </div>
   )

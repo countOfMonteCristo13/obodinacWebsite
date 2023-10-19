@@ -13,6 +13,7 @@ import { connect } from 'react-redux'
 import { setGalleryPageScroll } from '../../actions'
 
 import {ventilacija, klimatizacija, grejanje } from '../../constants/galleryImages'
+import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 
 const mapStateToProps = (state) => {
     return {
@@ -112,9 +113,7 @@ const GalleryPage = ({ setGalleryPageScroll, galleryPageScroll }) => {
                 <div className='o__galleryPage_blueline margint'>
                     <div/>
                 </div>
-                <div className='o__galleryPage_button-wrapper flex__center'>
-                    <Link to={'/contact'}><button type='button' className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
-                </div>
+                <KontaktDugme/>
 
             </div>
         </div>

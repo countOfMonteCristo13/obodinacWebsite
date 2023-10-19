@@ -59,6 +59,10 @@
         align-items: center;
         text-align: justify;
     }
+
+    .o__aboutUs_details h2{
+        text-align: center;
+    }
 }
 
 
