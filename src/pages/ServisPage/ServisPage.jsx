@@ -15,22 +15,22 @@ const ServisPage = () => {
 
   const kSistemi = [
     {
-        img: images.klimaUredjajFooter,
+        img: images.pranje,
         title: 'Cišćenje klime',
         url:'/usluge/servis-klima-uredjaja/ciscenje-klime'
     },
     {
-        img: images.klimaUredjajFooter,
+        img: images.elektronika,
         title: 'Popravka elektronike',
         url:'/usluge/servis-klima-uredjaja/popravka-elektronike'
     },
     {
-        img: images.klimaUredjajFooter,
+        img: images.freon,
         title: 'Punjenje/Dopuna freona',
         url:'/usluge/servis-klima-uredjaja/freon'
     },
     {
-        img: images.klimaUredjajFooter,
+        img: images.kondezator,
         title: 'Zamena kondezatora',
         url:'/usluge/servis-klima-uredjaja/zamena-kondezatora'
     }

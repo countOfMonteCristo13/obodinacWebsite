@@ -16,27 +16,27 @@ const KernovanjePage = () => {
 
     const kSistemi = [
         {
-            img: images.klimaUredjajFooter,
+            img: images.burgija102,
             title: 'Ø 102',
             url:'#'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.burgija112,
             title: 'Ø 112',
             url:'#'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.burgija162,
             title: 'Ø 162',
             url:'#'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.burgija202,
             title: 'Ø 202',
             url:'#'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.burgija252,
             title: 'Ø 252',
             url:'#'
         },

@@ -114,7 +114,17 @@ import radijator3 from '../obodinacPhotos/radijator3.png';
 import radijator4 from '../obodinacPhotos/radijator4.png';
 import radijator5 from '../obodinacPhotos/radijator5.png';
 import radijator6 from '../obodinacPhotos/radijator6.png';
-import aboutUs from '../assets/aboutUs.png'
+import aboutUs from '../assets/aboutUs.png';
+import kondezator from '../assets/kondezator.png'
+import freon from '../assets/freon.png'
+import elektronika from '../assets/elektronika.png'
+import pranje from '../assets/pranje.png'
+import burgija102 from '../assets/burgija102.png'
+import burgija112 from '../assets/burgija112.png'
+import burgija162 from '../assets/burgija162.png'
+import burgija202 from '../assets/burgija202.png'
+import burgija252 from '../assets/burgija252.png'
+
 
 
 const images = {
@@ -235,6 +245,15 @@ const images = {
     radijator5,
     radijator6,
     aboutUs,
+    kondezator,
+    freon,
+    elektronika,
+    pranje,
+    burgija102,
+    burgija112,
+    burgija162,
+    burgija202,
+    burgija252
 }
 
 export default images
