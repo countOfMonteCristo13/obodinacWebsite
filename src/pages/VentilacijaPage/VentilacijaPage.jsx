@@ -14,12 +14,12 @@ const VentilacijaPage = () => {
     
       const kSistemi = [
         {
-            img: images.klimaUredjajFooter,
+            img: images.ventWhite,
             title: 'Mehanička ventilacija',
-            url:'/usluge/ventilacija/mehanicka-ventilacija'
+            url:'/usluge/ventilacija/mehanička-ventilacija'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.rekuperatorKartica,
             title: 'Rekuperatorska ventilacija',
             url:'/usluge/ventilacija/rekuperatorska-ventilacija'
         }

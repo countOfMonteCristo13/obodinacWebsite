@@ -51,7 +51,7 @@ const NajcescaPitanjaPage = () => {
                     <div className='faq__questions'>
                         {
                             pitanja.map((question, index) => (
-                                <NajcescePitanje question={question} index={index + 1} />
+                                <NajcescePitanje question={question} index={index + 1} key={index}/>
                             ))
                         }
                     </div>

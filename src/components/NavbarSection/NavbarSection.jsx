@@ -80,7 +80,7 @@ const NavbarSection = ({ activeLink }) => {
           <img src={images.obodinacFooter2} alt="obodinac logo" />
         }
         <div className='nav__dropdown'>
-          <p className="o__navbarSection-link" id='nav__addoffers' onClick={() => {
+          <p className="o__navbarSection-link" id='nav__gallery' onClick={() => {
             setAddOffersDropdownToggleButton(!addOffersDropdownToggleButton);
             setOffersDropdownToggleButton(false);
           }}>

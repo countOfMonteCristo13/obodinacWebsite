@@ -37,6 +37,11 @@
     border-radius: 10px;
     width: 100%;
     max-width: 220px;
+    transition: all 0.2s;
+}
+
+.sistemi__klima-card:hover{
+    background-color: #152E69;
 }
 
 .sistemi__klima-card__img{

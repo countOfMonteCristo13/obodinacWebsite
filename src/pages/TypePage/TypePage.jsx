@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import BlueLine from '../../components/BlueLine/BlueLine'
@@ -7,6 +7,11 @@ import OffersSection from '../../components/OffersSection/OffersSection'
 import { images } from '../../constants'
 
 const ServiceTypePage = ({type}) => {
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  })
+
   return (
     <>
       <ScrollUp image={images.upArrow}/>

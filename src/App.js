@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
-import OffersPage from './pages/OffersPage/OffersPage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ContactPage from './pages/ContactPage/ContactPage';
-import AdditionalPage from './pages/AdditionalPage/AdditionalPage';
 import HomePage from './pages/HomePage/HomePage';
 
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
@@ -27,6 +25,7 @@ import TypePage from './pages/TypePage/TypePage';
 import { serviceTypes } from './constants/serviceTypes';
 import { heatingTypes } from './constants/heatingTypes';
 import { ventilationTypes } from './constants/ventilationTypes';
+import { grejanje, kernovanjeImages, klimatizacija, servisKlimaImages, ventilacija } from './constants/galleryImages';
 
 function App() {
 
@@ -78,12 +77,12 @@ function App() {
 
                   <Route path="/usluge/dijamantsko-bušenje-rupa" element={<KernovanjePage/>} />
                   
-                  <Route path="/galerija/montaza-klima-uređaja" element={<AdditionalPage/>} />
-                  <Route path="/galerija/servis-klima-uređaja" element={<GalleryPage/>} />
-                  <Route path="/galerija/polovni-klima-uređaji" element={<GalleryPage/>} />
-                  <Route path="/galerija/grejanje" element={<GalleryPage/>} />
-                  <Route path="/galerija/ventilacija" element={<GalleryPage/>} />
-                  <Route path="/galerija/dijamantsko-bušenje-rupa" element={<GalleryPage/>} />
+                  <Route path="/galerija/montaža-klima-uređaja" element={<GalleryPage gImages={klimatizacija.Sve} title='Montaža klima uređaja'/>} />
+                  <Route path="/galerija/servis-klima-uređaja" element={<GalleryPage gImages={servisKlimaImages} title='Servis klima uređaja'/>} />
+                  <Route path="/galerija/polovni-klima-uređaji" element={<GalleryPage gImages={klimatizacija.Sve} title='Polovni klima uređaji'/>} />
+                  <Route path="/galerija/grejanje" element={<GalleryPage gImages={grejanje.Sve} title='Grejanje'/>} />
+                  <Route path="/galerija/ventilacija" element={<GalleryPage gImages={ventilacija.Sve} title='Ventilacija'/>} />
+                  <Route path="/galerija/dijamantsko-bušenje-rupa" element={<GalleryPage gImages={kernovanjeImages} title={'Dijamantsko bušenje rupa'}/>} />
 
                   <Route path="/najčešća-pitanja" element={<NajcescaPitanjaPage/>} />
                   <Route path="/kontakt" element={<ContactPage/>} />

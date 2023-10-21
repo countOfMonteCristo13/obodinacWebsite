@@ -15,22 +15,22 @@ const MontazaPage = () => {
         {
             img: images.klimaUredjajFooter,
             title: 'Split sistem',
-            url:'/usluge/montaza-klima-uredjaja/split-sistem'
+            url:'/usluge/montaža-klima-uređaja/split-sistem'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.multiSistemKartica,
             title: 'Multi sistem',
-            url:'/usluge/montaza-klima-uredjaja/multi-sistem'
+            url:'/usluge/montaža-klima-uređaja/multi-sistem'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.centralniSistemKartica,
             title: 'Centralni (VRF) sistem',
-            url:'/usluge/montaza-klima-uredjaja/centralni-sistem'
+            url:'/usluge/montaža-klima-uređaja/centralni-sistem'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.kanalskiSistemKartica,
             title: 'Kanalski sistem',
-            url:'/usluge/montaza-klima-uredjaja/kanalski-sistem'
+            url:'/usluge/montaža-klima-uređaja/kanalski-sistem'
         }
     ];
 

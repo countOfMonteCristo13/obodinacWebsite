@@ -124,6 +124,11 @@ import burgija112 from '../assets/burgija112.png'
 import burgija162 from '../assets/burgija162.png'
 import burgija202 from '../assets/burgija202.png'
 import burgija252 from '../assets/burgija252.png'
+import multiSistemKartica from '../assets/multiSistemKartica.png'
+import centralniSistemKartica from '../assets/centralniSistemKartica.png'
+import kanalskiSistemKartica from '../assets/kanalskiSistemKartica.png'
+import rekuperatorKartica from '../assets/rekuperatorKartica.png'
+import podnoGrejanjeKartica from '../assets/podnoGrejanjeKartica.png'
 
 
 
@@ -253,7 +258,12 @@ const images = {
     burgija112,
     burgija162,
     burgija202,
-    burgija252
+    burgija252,
+    multiSistemKartica,
+    kanalskiSistemKartica,
+    centralniSistemKartica,
+    rekuperatorKartica,
+    podnoGrejanjeKartica,
 }
 
 export default images

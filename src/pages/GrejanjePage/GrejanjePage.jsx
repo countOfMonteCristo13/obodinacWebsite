@@ -15,12 +15,12 @@ const GrejanjePage = () => {
     
       const kSistemi = [
         {
-            img: images.klimaUredjajFooter,
+            img: images.radiatorFooter,
             title: 'Radijatorsko grejanje',
             url:'/usluge/grejanje/radijatorsko-grejanje'
         },
         {
-            img: images.klimaUredjajFooter,
+            img: images.podnoGrejanjeKartica,
             title: 'Podno grejanje',
             url:'/usluge/grejanje/podno-grejanje'
         }

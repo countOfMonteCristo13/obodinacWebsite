@@ -95,27 +95,26 @@ const ventilacija = {
 
 //Kernovanje
 
-const kernovanjeImages = {
-    kernovanje1:images.kernovanje1,
-    kernovanje2:images.kernovanje2,
-    kernovanje3:images.kernovanje3,
-    kernovanje4:images.kernovanje4,
-    kernovanje5:images.kernovanje5,
-    kernovanje6:images.kernovanje6,
-    kernovanje7:images.kernovanje7,
-    kernovanje8:images.kernovanje8,
-    kernovanje9:images.kernovanje9,
-    kernovanje10:images.kernovanje10,
-
-}
+const kernovanjeImages = [
+    images.kernovanje1,
+    images.kernovanje2,
+    images.kernovanje3,
+    images.kernovanje4,
+    images.kernovanje5,
+    images.kernovanje6,
+    images.kernovanje7,
+    images.kernovanje8,
+    images.kernovanje9,
+    images.kernovanje10,
+]
 
 //Servis klima uredjaja
 
-const servisKlimaImages = {
-    servisKlime1:images.servisKlime1,
-    servisKlime2:images.servisKlime2,
-    servisKlime3:images.servisKlime3,
-}
+const servisKlimaImages = [
+    images.servisKlime1,
+    images.servisKlime2,
+    images.servisKlime3,
+]
 
 
 const computeSveCategory = (categoryObject) => {
