@@ -7,7 +7,6 @@ import OffersSection from '../../components/OffersSection/OffersSection'
 import ImageSlider from '../../components/ImageSlider/ImageSlider'
 import SpareAC from '../../components/SpareAC/SpareAC'
 
-import { Link } from 'react-router-dom'
 
 import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
 import { tekstDodatno } from '../../constants/tekst'
@@ -32,7 +31,7 @@ const AdditionalPage = () => {
     <div className='o__addoffersPage-wrapper'>
       <ScrollUp image={images.upArrow}/>
       <div className='o__addoffersPage slide-enterance1'>
-          <NavbarSection activeLink='nav__addoffers'/>
+          <NavbarSection activeLink='nav__faq'/>
           <OffersSection title='Dijamantsko bušenje rupa' description={tekstDodatno.dijamatnskoD} alt='kernovanje' image={images.kirnerica}/>
           <div className='o__addoffersPage_slider-wrapper'>
             <ImageSlider images={kernovanjeImages}/>

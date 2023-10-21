@@ -22,7 +22,11 @@ import KernovanjePage from './pages/KernovanjePage/KernovanjePage';
 import GrejanjePage from './pages/GrejanjePage/GrejanjePage';
 import VentilacijaPage from './pages/VentilacijaPage/VentilacijaPage';
 import PolovneKlimePage from './pages/PolovneKlimePage/PolovneKlimePage';
-
+import NajcescaPitanjaPage from './pages/NajcescaPitanjaPage/NajcescaPitanjaPage';
+import TypePage from './pages/TypePage/TypePage';
+import { serviceTypes } from './constants/serviceTypes';
+import { heatingTypes } from './constants/heatingTypes';
+import { ventilationTypes } from './constants/ventilationTypes';
 
 function App() {
 
@@ -49,25 +53,39 @@ function App() {
                   <Route path="/" element={<HomePage/>} />
                   <Route path="/o-nama" element={<AboutUsPage/>} />
 
-                  <Route path="/usluge/montaza-klima-uredjaja" element={<MontazaPage/>} />
-                  <Route path="/usluge/montaza-klima-uredjaja/split-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.splitSistem}/>} />
-                  <Route path="/usluge/montaza-klima-uredjaja/multi-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.multiSistem}/>} />
-                  <Route path="/usluge/montaza-klima-uredjaja/centralni-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.centralniSistem}/>} />
-                  <Route path="/usluge/montaza-klima-uredjaja/kanalski-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.kanalskiSistem}/>} />
+                  <Route path="/usluge/montaža-klima-uređaja" element={<MontazaPage/>} />
+                  <Route path="/usluge/montaža-klima-uređaja/split-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.splitSistem}/>} />
+                  <Route path="/usluge/montaža-klima-uređaja/multi-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.multiSistem}/>} />
+                  <Route path="/usluge/montaža-klima-uređaja/centralni-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.centralniSistem}/>} />
+                  <Route path="/usluge/montaža-klima-uređaja/kanalski-sistem" element={<KlimatizacioniSistem sistem={klimatizacioniSistemi.kanalskiSistem}/>} />
                   
-                  <Route path="/usluge/servis-klima-uredjaja" element={<ServisPage/>} />
-                  <Route path="/usluge/servis-klima-uredjaja/ciscenje-klime" element={<ServisPage/>} />
-                  <Route path="/usluge/servis-klima-uredjaja/popravka-elektronike" element={<ServisPage/>} />
-                  <Route path="/usluge/servis-klima-uredjaja/freon" element={<ServisPage/>} />
-                  <Route path="/usluge/servis-klima-uredjaja/zamena-kondezatora" element={<ServisPage/>} />
+                  <Route path="/usluge/servis-klima-uređaja" element={<ServisPage/>} />
+                  <Route path="/usluge/servis-klima-uređaja/čišćenje-klima-uređaja" element={<TypePage type={serviceTypes.ciscenjeKlime}/>} />
+                  <Route path="/usluge/servis-klima-uređaja/popravka-elektronike" element={<TypePage type={serviceTypes.popravkaElektronike}/>} />
+                  <Route path="/usluge/servis-klima-uređaja/freon" element={<TypePage type={serviceTypes.punjenjeDopunaFreona}/>} />
+                  <Route path="/usluge/servis-klima-uređaja/zamena-kondezatora" element={<TypePage type={serviceTypes.zamenaKondezatora}/>} />
                   
-                  <Route path="/usluge/polovni-klima-uredjaji" element={<PolovneKlimePage/>} />
-                  
-                  <Route path="/usluge/dijamantsko-busenje-rupa" element={<KernovanjePage/>} />
-                  <Route path="/usluge/ventilacija" element={<VentilacijaPage/>} />
+                  <Route path="/usluge/polovni-klima-uređaji" element={<PolovneKlimePage/>} />
+
                   <Route path="/usluge/grejanje" element={<GrejanjePage/>} />
+                  <Route path="/usluge/grejanje/radijatorsko-grejanje" element={<TypePage type={heatingTypes.radijatorskoGrejanje}/>} />
+                  <Route path="/usluge/grejanje/podno-grejanje" element={<TypePage type={heatingTypes.podnoGrejanje}/>} />
                   
-                  <Route path="/galerija" element={<AdditionalPage/>} />
+                  <Route path="/usluge/ventilacija" element={<VentilacijaPage/>} />
+                  <Route path="/usluge/ventilacija/mehanička-ventilacija" element={<TypePage type={ventilationTypes.mehaničkaVentilacija}/>}/>
+                  <Route path="/usluge/ventilacija/rekuperatorska-ventilacija" element={<TypePage type={ventilationTypes.rekuperatorskaVentilacija}/>} />
+
+
+                  <Route path="/usluge/dijamantsko-bušenje-rupa" element={<KernovanjePage/>} />
+                  
+                  <Route path="/galerija/montaza-klima-uređaja" element={<AdditionalPage/>} />
+                  <Route path="/galerija/servis-klima-uređaja" element={<GalleryPage/>} />
+                  <Route path="/galerija/polovni-klima-uređaji" element={<GalleryPage/>} />
+                  <Route path="/galerija/grejanje" element={<GalleryPage/>} />
+                  <Route path="/galerija/ventilacija" element={<GalleryPage/>} />
+                  <Route path="/galerija/dijamantsko-bušenje-rupa" element={<GalleryPage/>} />
+
+                  <Route path="/najčešća-pitanja" element={<NajcescaPitanjaPage/>} />
                   <Route path="/kontakt" element={<ContactPage/>} />
                 </Routes>
               </Router>

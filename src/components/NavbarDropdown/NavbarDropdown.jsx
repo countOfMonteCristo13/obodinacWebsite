@@ -25,7 +25,7 @@ const NavbarDropdown = ({ options,galerija }) => {
   }
 
   return (
-    <div className='slide-bottom dropdown'>
+    <div className='slide-bottom-dropdown dropdown'>
       {options.map((option) => (
         <div key={option.title}>
           <div className='dropdown-link-wrapper'>
@@ -40,14 +40,14 @@ const NavbarDropdown = ({ options,galerija }) => {
                 (
                   !optionsDropdown
                     ?
-                    <BsChevronDown strokeWidth={1} onClick={(e) => handleButtonClick(e.target)} />
+                    <BsChevronDown strokeWidth={1} className='dropdown-btn' onClick={(e) => handleButtonClick(e.target)} />
                     :
                     (
                       option.title === optionClicked 
                       ?
-                      <BsChevronUp strokeWidth={1} onClick={(e) => handleButtonClick(e.target)}/>
+                      <BsChevronUp strokeWidth={1} className='dropdown-btn'  onClick={(e) => handleButtonClick(e.target)}/>
                       :
-                      <BsChevronDown strokeWidth={1} onClick={(e) => handleButtonClick(e.target)} />
+                      <BsChevronDown strokeWidth={1} className='dropdown-btn'  onClick={(e) => handleButtonClick(e.target)} />
                     )
                 )
               }

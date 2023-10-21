@@ -16,7 +16,7 @@ const ServisPage = () => {
   const kSistemi = [
     {
         img: images.pranje,
-        title: 'Cišćenje klime',
+        title: 'Čišćenje klima uređaja',
         url:'/usluge/servis-klima-uredjaja/ciscenje-klime'
     },
     {

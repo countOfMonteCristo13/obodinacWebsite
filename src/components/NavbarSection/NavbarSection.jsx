@@ -89,7 +89,7 @@ const NavbarSection = ({ activeLink }) => {
           {addOffersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true}/>}
         </div>
 
-        <Link to={'/galerija'}><p className="o__navbarSection-link" id='nav__gallery'>Najčešća pitanja</p></Link>
+        <Link to={'/najčešća-pitanja'}><p className="o__navbarSection-link" id='nav__faq'>Najčešća pitanja</p></Link>
         <Link to={'/kontakt'}><p className="o__navbarSection-link" id='nav__contact'>Kontakt</p></Link>
 
       </div>

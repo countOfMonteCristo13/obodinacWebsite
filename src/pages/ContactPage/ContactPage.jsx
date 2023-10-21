@@ -103,7 +103,7 @@ const ContactPage = () => {
           Poslujte sa ovlašćenim klima servisom, koji se klima uređajima bavi 24h!
           </p>
         </div>
-        <div className='o__contactPage_section flex__center'>
+        <div className='o__contactPage_section'>
 
                 <div className="o__contactPage_options-window" id="option-message">
                     <form onSubmit={handleSubmit} className="kontakt-inputi">
@@ -131,7 +131,7 @@ const ContactPage = () => {
                         <img src={images.phoneIcon} alt="phone" />
                         <div>
                             <a href="tel:+381655075855">+381655075855</a>
-                            <a href="tel:+381635075855">+381655075855</a>
+                            <a href="tel:+381631282041">+381631282041</a>
                         </div>
                     </div>
                     <div className='opcija-poziv opcija-email'>
@@ -140,7 +140,7 @@ const ContactPage = () => {
                     </div>
                     <div className='opcija-poziv opcija-instagram'>
                         <img src={images.instagramIcon} alt="instagram" />
-                        <a href="">@obodinac_klimatizacija</a>
+                        <a href="https://www.instagram.com/obodinacplus_klimatizacija/">@obodinac_klimatizacija</a>
                     </div>
                 </div>
             </div>

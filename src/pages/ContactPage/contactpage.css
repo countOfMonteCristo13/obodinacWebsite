@@ -7,6 +7,9 @@
     background: var(--color-darkgrey);
     padding: 0 2rem 2rem 2rem;
     gap: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .height-auto{
@@ -22,7 +25,7 @@
 	background-color: #284280;
 	padding: 1.5rem 2rem;
 	border-radius: 20px;
-    width: 100%;
+    width: 60%;
 }
 
 /* PROZOR PORUKA */
@@ -67,14 +70,21 @@
 /* PROZOR POZIV */
 
 #option-call{
-    gap: 3rem;
-    width: 100%;
+    gap: 2rem;
+    width: 40%;
 }
 
 .o__contactPage_options-call{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.o__contactPage_options-call h2{
+    color: var(--color-blue);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
 }
 
 .opcija-poziv{
@@ -91,7 +101,7 @@
 }
 
 .opcija-poziv img{
-    max-height: 100px;
+    max-height: 90px;
 }
 
 .opcija-poziv p:hover{
@@ -105,7 +115,7 @@
 
 .opcija-poziv div{
     display: flex;
-    flex-direction: column;
+    gap: 1rem;
 }
 
 
@@ -155,14 +165,16 @@
 
     .o__contactPage_section{
         flex-direction: column;
+        align-items: center;
     }
 
     #option-call{
-        gap: 2rem;
+        width: 100%;
     }
 
     .o__contactPage_options-window{
         max-width: 400px;
+        width: 100%;
     }
 
 

@@ -10,6 +10,7 @@
     background: var(--color-blue);
     padding: 1rem 0;
     width: 310px;
+    z-index: 500;
 }
 
 .dropdown-link-wrapper{
@@ -52,4 +53,8 @@
 
 .dropdown-options p:hover{
     color: var(--color-white);
+}
+
+.dropdown-btn{
+    height: fit-content;
 }
