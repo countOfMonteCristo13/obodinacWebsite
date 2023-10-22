@@ -46,9 +46,9 @@ const NajcescaPitanjaPage = () => {
                         Potrudili smo se da ih sva izdvojimo, kako biste što bolje upoznali principe rada Vašeg klima uređaja.
                     </p>
                 </div>
-                <div className='faq__section'>
+                <div className='faq-page__section'>
 
-                    <div className='faq__questions'>
+                    <div className='faq-page__questions'>
                         {
                             pitanja.map((question, index) => (
                                 <NajcescePitanje question={question} index={index + 1} key={index}/>

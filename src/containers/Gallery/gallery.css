@@ -5,7 +5,7 @@
 .o__gallery_cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
     
@@ -13,17 +13,14 @@
 
 .o__gallery_cards-card{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding: 2rem;
 }
 
 .o__gallery_cards-card_wrapper{
-    background: var(--color-white);
-    padding: 2.5rem;
     border-radius: 15px;
-    border: 7px solid var(--color-blue);
     width: 100%;
     max-width: 250px;
     height: 100%;
@@ -58,7 +55,6 @@
 
 @media screen and (max-width:768px) {
     .o__gallery_cards{
-        flex-direction: column;
         gap: 1.5rem;
     }
 

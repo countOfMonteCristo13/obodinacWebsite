@@ -10,8 +10,8 @@ const NajcescePitanje = ({question,index}) => {
     }
 
   return (
-    <div className='faq__wrapper'>
-        <div className={`faq__question ${toggleButton ? 'faq__question-border' : ''}`} onClick={handleClick}>
+    <div className='faq-page__wrapper'>
+        <div className={`faq-page__question ${toggleButton ? 'faq__question-border' : ''}`} onClick={handleClick}>
             <h4>{`${index}. ${question.question}`}</h4>
             {
                 !toggleButton
@@ -21,7 +21,7 @@ const NajcescePitanje = ({question,index}) => {
                 <BsChevronUp strokeWidth={3}/>
             }
         </div>
-        <div className={`faq__answer ${toggleButton ? 'd-block' : 'd-none'}`}>
+        <div className={`faq-page__answer ${toggleButton ? 'd-block' : 'd-none'}`}>
             <p>{question.answer}</p>
         </div>
     </div>

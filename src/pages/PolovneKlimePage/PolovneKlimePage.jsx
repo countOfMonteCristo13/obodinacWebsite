@@ -19,7 +19,7 @@ const PolovneKlimePage = () => {
           <div className='slide-enterance1'>
             <NavbarSection activeLink='nav__offers' />
             <div className='headtext flex__center'>
-              <h2>Polovni Klima Uredjaji</h2>
+              <h2>Polovni klima uređaji</h2>
               <p>
                 {tekstDodatno.polovneD}
               </p>

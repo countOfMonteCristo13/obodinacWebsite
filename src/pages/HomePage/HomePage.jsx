@@ -9,6 +9,7 @@ import './homepage.css'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import { images } from '../../constants'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
+import FAQ from '../../containers/FAQ/FAQ'
 
 const HomePage = () => {
 
@@ -34,6 +35,7 @@ const HomePage = () => {
         <Offers/>
         {/* <AdditionalOffers /> */}
         <Gallery />
+        <FAQ/>
         <Footer/>
       </div>
     </>

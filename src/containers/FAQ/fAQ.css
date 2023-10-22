@@ -1,0 +1,36 @@
+.faq__section{
+    background: var(--color-grey);
+}
+
+.faq__cta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    gap: 2rem;
+}
+
+.faq__cta p{
+    /* font-size: 1.2rem; */
+    font-weight: bold;
+    color: var(--color-blue);
+    width: 50%;
+    line-height: 2rem;
+}
+
+
+.faq__cta a{
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .faq__cta{
+        flex-direction: column;
+    }
+
+    .faq__cta p{
+        width: 100%;
+    }
+}

@@ -2,50 +2,55 @@ import React from 'react'
 import './gallery.css'
 import HeadTitle from '../../components/HeadTitle/HeadTitle'
 import { images } from '../../constants'
-
-import { Link } from 'react-router-dom'
-
-import { connect } from 'react-redux'
-
-
+import KSistemiCard from '../../pages/MontazaPage/KSistemiCard/KSistemiCard'
 
 
 const Gallery = () => {
 
+  const galleryCards = [
+    {
+      img: images.klimaUredjajFooter,
+      title: 'Montaža klima uređaja',
+      url: '/galerija/montaža-klima-uređaja'
+    },
+    {
+      img: images.klimaUredjajFooter,
+      title: 'Servis klima uređaja',
+      url: '/galerija/servis-klima-uređaja'
+    },
+    {
+      img: images.klimaUredjajFooter,
+      title: 'Polovni klima uređaji',
+      url: '/galerija/polovni-klima-uređaji'
+    },
+    {
+      img: images.radiatorFooter,
+      title: 'Grejanje',
+      url: '/galerija/grejanje'
+    },
+    {
+      img: images.ventWhite,
+      title: 'Ventilacija',
+      url: '/galerija/ventilacija'
+    },
+    {
+      img: images.burgija202,
+      title: 'Dijamantsko bušenje rupa',
+      url: '/galerija/dijamantsko-bušenje-rupa'
+    },
+  ];
+
 
   return (
     <div className='o__gallery'>
-      <HeadTitle title='Galerija'/>
-      <div className='o__gallery_cards section__padding'>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.klimaUredjajHeader} alt="klima uredjaj" />
-            </div>
-        </div>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.klimaUredjajHeader} alt="radiator" />
-            </div>
-        </div>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.klimaUredjajHeader} alt="ventilacija" />
-            </div>
-        </div>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.radiator} alt="ventilacija" />
-            </div>
-        </div>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.vent} alt="ventilacija" />
-            </div>
-        </div>
-        <div className='o__gallery_cards-card'>
-            <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.burgija} alt="ventilacija" />
-            </div>
+      <HeadTitle title='Galerija' />
+      <div className='sistemi__klima section__padding'>
+        <div className='sistemi__klima-cards'>
+          {
+            galleryCards.map((card) => (
+              <KSistemiCard sistem={card} key={card.title} />
+            ))
+          }
         </div>
       </div>
     </div>
