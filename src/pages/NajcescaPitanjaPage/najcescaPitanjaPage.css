@@ -34,7 +34,7 @@
 }
 
 .faq__question:hover{
-    background-color: #152E69;
+    background-color: var(--color-darkblue);
 }
 
 .faq__question-border{

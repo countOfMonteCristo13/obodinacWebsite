@@ -6,24 +6,12 @@ import { images } from '../../constants'
 import { Link } from 'react-router-dom'
 
 import { connect } from 'react-redux'
-import { setGalleryPageScroll } from '../../actions'
 
-// const mapStateToProps = state => {
-//   return {
-//     galleryPageScroll: state.galleryPageScroll  // state se tako zove
-//   }
-// }
 
-const mapDispatchToProps = {
-  setGalleryPageScroll,
-}
 
-const Gallery = ({setGalleryPageScroll}) => {
 
-  const changeGalleryScrollSection = (section) =>{
-    const scrollValue = section;
-    setGalleryPageScroll(scrollValue);
-  }
+const Gallery = () => {
+
 
   return (
     <div className='o__gallery'>
@@ -33,29 +21,35 @@ const Gallery = ({setGalleryPageScroll}) => {
             <div className='o__gallery_cards-card_wrapper'>
                 <img src={images.klimaUredjajHeader} alt="klima uredjaj" />
             </div>
-            <Link to={`/gallery`}>
-              <button onClick={() => changeGalleryScrollSection('gp__klimatizacija')} type='button' className='custom__button'>Pogledaj...</button>
-            </Link>
         </div>
         <div className='o__gallery_cards-card'>
             <div className='o__gallery_cards-card_wrapper'>
-                <img src={images.radiator} alt="radiator" />
+                <img src={images.klimaUredjajHeader} alt="radiator" />
             </div>
-            <Link to={`/gallery`}>
-              <button onClick={() => changeGalleryScrollSection('gp__grejanje')} type='button' className='custom__button'>Pogledaj...</button>
-            </Link>
+        </div>
+        <div className='o__gallery_cards-card'>
+            <div className='o__gallery_cards-card_wrapper'>
+                <img src={images.klimaUredjajHeader} alt="ventilacija" />
+            </div>
+        </div>
+        <div className='o__gallery_cards-card'>
+            <div className='o__gallery_cards-card_wrapper'>
+                <img src={images.radiator} alt="ventilacija" />
+            </div>
         </div>
         <div className='o__gallery_cards-card'>
             <div className='o__gallery_cards-card_wrapper'>
                 <img src={images.vent} alt="ventilacija" />
             </div>
-            <Link to={`/gallery`}>
-              <button onClick={() => changeGalleryScrollSection('gp__ventilacija')} type='button' className='custom__button'>Pogledaj...</button>
-            </Link>
+        </div>
+        <div className='o__gallery_cards-card'>
+            <div className='o__gallery_cards-card_wrapper'>
+                <img src={images.burgija} alt="ventilacija" />
+            </div>
         </div>
       </div>
     </div>
   )
 }
 
-export default connect(null,mapDispatchToProps)(Gallery);
+export default Gallery;

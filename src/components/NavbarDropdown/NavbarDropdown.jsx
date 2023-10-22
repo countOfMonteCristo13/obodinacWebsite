@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './navbarDropdown.css'
 import { BsChevronDown, BsChevronRight, BsChevronUp } from 'react-icons/bs'
 
-const NavbarDropdown = ({ options,galerija }) => {
+const NavbarDropdown = ({ options,galerija,visibility }) => {
 
   const [optionsDropdown, setOptionsDropdown] = useState(false);
   const [optionClicked,setOptionClicked] = useState('');
@@ -25,7 +25,7 @@ const NavbarDropdown = ({ options,galerija }) => {
   }
 
   return (
-    <div className='slide-bottom-dropdown dropdown'>
+    <div className={`slide-bottom-dropdown dropdown ${visibility}`}>
       {options.map((option) => (
         <div key={option.title}>
           <div className='dropdown-link-wrapper'>

@@ -12,7 +12,7 @@ const NavbarSection = ({ activeLink }) => {
   const [homePage, setHomePage] = useState(false);
 
   const [offersDropdownToggleButton, setOffersDropdownToggleButton] = useState(false);
-  const [addOffersDropdownToggleButton, setAddOffersDropdownToggleButton] = useState(false);
+  const [galleryDropdownToggleButton, setGalleryDropdownToggleButton] = useState(false);
 
 
   const closeWindow = () => {
@@ -55,6 +55,9 @@ const NavbarSection = ({ activeLink }) => {
 
     window.addEventListener('scroll', handleScroll);
 
+    setGalleryDropdownToggleButton(false);
+    setOffersDropdownToggleButton(false);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -69,11 +72,11 @@ const NavbarSection = ({ activeLink }) => {
         <div className='nav__dropdown'>
           <p className="o__navbarSection-link" id='nav__offers' onClick={() => {
             setOffersDropdownToggleButton(!offersDropdownToggleButton);
-            setAddOffersDropdownToggleButton(false);
+            setGalleryDropdownToggleButton(false);
           }}>
             Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {offersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={false}/>}
+          {offersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={false} />}
         </div>
         {
           !homePage &&
@@ -81,12 +84,12 @@ const NavbarSection = ({ activeLink }) => {
         }
         <div className='nav__dropdown'>
           <p className="o__navbarSection-link" id='nav__gallery' onClick={() => {
-            setAddOffersDropdownToggleButton(!addOffersDropdownToggleButton);
+            setGalleryDropdownToggleButton(!galleryDropdownToggleButton);
             setOffersDropdownToggleButton(false);
           }}>
-            Galerija {!addOffersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
+            Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {addOffersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true}/>}
+          {galleryDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true} />}
         </div>
 
         <Link to={'/najčešća-pitanja'}><p className="o__navbarSection-link" id='nav__faq'>Najčešća pitanja</p></Link>
@@ -108,9 +111,25 @@ const NavbarSection = ({ activeLink }) => {
               <ul className={`o__header_menu-overlay-links`}>
                 <Link to={'/'}><li className='menu-link' id='nav__home-menu'>Početna</li></Link>
                 <Link to={'/o-nama'}><li className='menu-link' id='nav__about-menu'>O nama</li></Link>
-                <Link to={'/usluge'}><li className='menu-link' id='nav__offers-menu'>Usluge</li></Link>
-                <Link to={'/dodatne-usluge'}><li className='menu-link' id='nav__addoffers-menu'>Dodatne usluge</li></Link>
-                <Link to={'/galerija'}><li className='menu-link' id='nav__gallery-menu'>Galerija</li></Link>
+                <div className='nav__dropdown menu__dropdown'>
+                  <p className="menu-link" id='nav__offers-menu' onClick={() => {
+                    setOffersDropdownToggleButton(!offersDropdownToggleButton);
+                    setGalleryDropdownToggleButton(false);
+                  }}>
+                    Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
+                  </p>
+                  {offersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={false} />}
+                </div>
+                <div className='nav__dropdown menu__dropdown'>
+                  <p className="menu-link" id='nav__gallery-menu' onClick={() => {
+                    setGalleryDropdownToggleButton(!galleryDropdownToggleButton);
+                    setOffersDropdownToggleButton(false);
+                  }}>
+                    Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
+                  </p>
+                  {galleryDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true} />}
+                </div>
+                <Link to={'/najčešća-pitanja'}><li className='menu-link' id='nav__faq-menu'>Najčešća pitanja</li></Link>
                 <Link to={'/kontakt'}><li className='menu-link' id='nav__contact-menu'>Kontakt</li></Link>
               </ul>
             </div>

@@ -22,10 +22,21 @@ const AboutUsPage = () => {
           <div className='o__aboutPage_section-img'>
             <img src={images.aboutUs} alt="o nama" />
           </div>
-          <div className='o__aboutPage_section-description flex__center'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere laborum! Autem, ratione eveniet sequi perspiciatis saepe labore quo doloremque dolorem nihil id corporis, commodi laudantium error. Odio, porro tempore?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, facere laborum! Autem, ratione eveniet sequi perspiciatis saepe labore quo doloremque dolorem nihil id corporis, commodi laudantium error. Odio, porro tempore?</p>
-          </div>
+          <div className='o__aboutPage_section-description'>
+            <p>
+              "Obodinac" je porodična firma koja je u ovom poslu već dugo godina.
+              Osnovana je davne 1991. godine u Novom Sadu.
+            </p>
+            <p>
+              Našim dugogodišnjim iskustvom, predanim radom, znanjem i trudom postali smo
+              jedna od vodećih firmi koja se bavi klimatizacijom, grejanjem i ventilacijom.
+              Posedujemo najsavremeniju opremu koja nam omogućava da kvalitetno, brzo
+              i bezbedno obavimo posao.
+            </p>
+            <p>
+              Dokaz našeg kvalitetnog rada su
+              naši zadovoljni stalni klijenti koji su naša najbolja preporuka
+            </p></div>
           <div className='o__aboutPage_section-description_line-wrapper'>
             <div className='o__aboutPage_section-description_line' />
           </div>

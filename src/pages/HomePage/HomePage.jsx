@@ -3,7 +3,6 @@ import Header from '../../containers/Header/Header'
 import AboutUs from '../../containers/AboutUs/AboutUs'
 import Offers from '../../containers/Offers/Offers'
 import Gallery from '../../containers/Gallery/Gallery'
-import AdditionalOffers from '../../containers/AdditionalOffers/AdditionalOffers'
 import Footer from '../../containers/Footer/Footer'
 
 import './homepage.css'
@@ -33,7 +32,7 @@ const HomePage = () => {
 		    </div>
         <AboutUs/>
         <Offers/>
-        <AdditionalOffers />
+        {/* <AdditionalOffers /> */}
         <Gallery />
         <Footer/>
       </div>

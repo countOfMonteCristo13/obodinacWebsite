@@ -20,10 +20,8 @@
 .o__aboutUs_details{
     height: 100%;
     width: 42%;
-    text-align: right;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     gap: 2rem;
 }
 
@@ -35,6 +33,9 @@
 .o__aboutUs_details p{
     line-height: 2rem;
     color: var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 

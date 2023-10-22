@@ -129,6 +129,10 @@ import centralniSistemKartica from '../assets/centralniSistemKartica.png'
 import kanalskiSistemKartica from '../assets/kanalskiSistemKartica.png'
 import rekuperatorKartica from '../assets/rekuperatorKartica.png'
 import podnoGrejanjeKartica from '../assets/podnoGrejanjeKartica.png'
+import polovnaKlimatizacija from '../assets/polovnaKlimatizacija.png'
+import dijamantskoBusenjeRupa from '../assets/dijamantskoBusenjeRupa.png'
+import servisKlimaUredjaja from '../assets/servisKlimaUredjaja.png'
+import burgija from '../assets/burgija.png'
 
 
 
@@ -264,6 +268,10 @@ const images = {
     centralniSistemKartica,
     rekuperatorKartica,
     podnoGrejanjeKartica,
+    polovnaKlimatizacija,
+    dijamantskoBusenjeRupa,
+    servisKlimaUredjaja,
+    burgija
 }
 
 export default images

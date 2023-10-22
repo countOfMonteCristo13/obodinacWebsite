@@ -4,7 +4,7 @@ import { images } from '../../constants'
 import HeadTitle from '../../components/HeadTitle/HeadTitle'
 import Section from '../../components/Section/Section'
 
-import { tekstNaslovna } from '../../constants/tekst'
+import { tekstDodatno, tekstNaslovna } from '../../constants/tekst'
 
 
 const Offers = () => {
@@ -12,9 +12,12 @@ const Offers = () => {
   return (
     <div className='o__offers'>
         <HeadTitle title='Usluge'/> 
-        <Section route='op__klimatizacija' title="Montaža klima uredjaja" description={tekstNaslovna.klimatizacijaD} image={images.klimatizacija} alt='klima uredjaj'/>
-        <Section route='op__grejanje' className="o__offers_grejanje" title="Servis klima uredjaja" description={tekstNaslovna.grejanjeD} image={images.grejanje} alt='servis klima uredjaja' odd='odd'/>
-        <Section route='op__ventilacija' title="Polovni klima uredjaji" description={tekstNaslovna.ventilacijaD} image={images.ventilacija} alt='polovni klima uredjaji'/>
+        <Section route='/usluge/montaža-klima-uređaja' title="Montaža klima uređaja" description={tekstNaslovna.klimatizacijaD} image={images.klimatizacija} alt='klima uredjaj'/>
+        <Section route='/usluge/servis-klima-uređaja' className="o__offers_grejanje" title="Servis klima uređaja" description={tekstDodatno.servisD} image={images.servisKlimaUredjaja} alt='servis klima uredjaja' odd='odd'/>
+        <Section route='/usluge/polovni-klima-uređaji' title="Polovni klima uređaji" description={tekstDodatno.polovneD} image={images.polovnaKlimatizacija} alt='polovni klima uredjaji'/>
+        <Section route='/usluge/grejanje' className="o__offers_grejanje" title="Grejanje" description={tekstNaslovna.grejanjeD} image={images.grejanje} alt='grejanje' odd='odd'/>
+        <Section route='/usluge/ventilacija' title="Ventilacija" description={tekstNaslovna.ventilacijaD} image={images.ventilacija} alt='ventilacija'/>
+        <Section route='/usluge/dijamantsko-bušenje-rupa' className="o__offers_grejanje" title="Dijamantsko bušenje rupa" description={tekstDodatno.dijamatnskoD} image={images.dijamantskoBusenjeRupa} alt='servis klima uredjaja' odd='odd'/>
     </div>
 
 

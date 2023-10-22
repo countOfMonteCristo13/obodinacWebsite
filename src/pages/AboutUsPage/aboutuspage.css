@@ -20,7 +20,8 @@
     padding: 3rem 4rem 2rem 4rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    text-align: justify;
 }
 
 .o__aboutPage_section-description p{
