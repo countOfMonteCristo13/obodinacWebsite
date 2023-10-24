@@ -28,7 +28,7 @@ const AboutUs = () => {
               </span> 
                 
             </p>
-            <Link to={'/about'}> <button className='custom__button more-btn' type='button'>Detaljnije...</button></Link>
+            <Link to={'/o-nama'}> <button className='custom__button more-btn' type='button'>Detaljnije...</button></Link>
         </div>
 
         <div className='o__aboutUs_img'>

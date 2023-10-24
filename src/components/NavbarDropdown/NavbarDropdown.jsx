@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './navbarDropdown.css'
 import { BsChevronDown, BsChevronRight, BsChevronUp } from 'react-icons/bs'
 
-const NavbarDropdown = ({ options,galerija,visibility }) => {
+const NavbarDropdown = ({ options,galerija,closeDropdown }) => {
 
   const [optionsDropdown, setOptionsDropdown] = useState(false);
   const [optionClicked,setOptionClicked] = useState('');
@@ -25,13 +25,13 @@ const NavbarDropdown = ({ options,galerija,visibility }) => {
   }
 
   return (
-    <div className={`slide-bottom-dropdown dropdown ${visibility}`}>
+    <div className={`slide-bottom-dropdown dropdown`}>
       {options.map((option) => (
         <div key={option.title}>
-          <div className='dropdown-link-wrapper'>
-            <div className='dropdown-link'>
+          <div className='dropdown__link-wrapper'>
+            <div className='dropdown__link'>
               <Link to={galerija ? `${option.urlGalerija}`  : `${option.urlUsluge}`}>
-                <p>
+                <p onClick={closeDropdown}>
                   {option.title}
                 </p>
               </Link>
@@ -40,14 +40,14 @@ const NavbarDropdown = ({ options,galerija,visibility }) => {
                 (
                   !optionsDropdown
                     ?
-                    <BsChevronDown strokeWidth={1} className='dropdown-btn' onClick={(e) => handleButtonClick(e.target)} />
+                    <BsChevronDown strokeWidth={1} className='dropdown__btn' onClick={(e) => handleButtonClick(e.target)} />
                     :
                     (
                       option.title === optionClicked 
                       ?
-                      <BsChevronUp strokeWidth={1} className='dropdown-btn'  onClick={(e) => handleButtonClick(e.target)}/>
+                      <BsChevronUp strokeWidth={1} className='dropdown__btn'  onClick={(e) => handleButtonClick(e.target)}/>
                       :
-                      <BsChevronDown strokeWidth={1} className='dropdown-btn'  onClick={(e) => handleButtonClick(e.target)} />
+                      <BsChevronDown strokeWidth={1} className='dropdown__btn'  onClick={(e) => handleButtonClick(e.target)} />
                     )
                 )
               }
@@ -56,11 +56,11 @@ const NavbarDropdown = ({ options,galerija,visibility }) => {
             {
               option.title === optionClicked 
               &&
-              <div className='dropdown-options'>
+              <div className='dropdown__options'>
                 {
                   option.options.map((dropdownOption) => (
-                    <Link to={dropdownOption.url} key={dropdownOption.title}>
-                      <p><BsChevronRight strokeWidth={1}/> {dropdownOption.title}</p>
+                    <Link onClick={closeDropdown} to={dropdownOption.url} key={dropdownOption.title}>
+                      <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
                     </Link>
                   ))
                 }

@@ -1,6 +1,6 @@
 .cardFlip__scene{
-    width: 340px;
-    height: 380px;
+    width: 310px;
+    height: 350px;
     perspective: 600px;
 }
 
@@ -28,10 +28,16 @@
     border-radius: 20px;
     background: var(--color-grey);
     width: 100%;
-    height: 350px;
+    height: 320px;
     position: absolute;
     backface-visibility: hidden;
 }
+
+.cardFlip__card-back{
+    background: var(--color-blue);
+    border: 7px solid var(--color-white);
+}
+
 
 .cardFlip__card-back{
     transform: rotateY( 180deg );
@@ -40,7 +46,7 @@
 .cardFlip__card-front img,
 .cardFlip__card-back img{
     max-width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .cardFlip__card-description{
@@ -54,13 +60,23 @@
 
 
 .cardFlip__card-description h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-blue);
+    font-weight: 600;
 }
 
+.cardFlip__card-back .cardFlip__card-description h3{
+    color: var(--color-white);
+}
+
+
 .cardFlip__card-description img{
-    max-width: 2rem;
+    max-width: 1.8rem;
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+
 }
 
 @media screen and (max-width:425px) {
@@ -71,9 +87,6 @@
         max-width: 340px;
     }
 
-    .cardFlip__card-description h3{
-        font-size: 1.8rem;
-    }
     .cardFlip__card-description img{
         max-width: 1.8rem;
     }

@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
 import { navbarDropdownLinks } from '../../constants/navbarDropdownLinks';
+import NavbarMenuDropdown from '../NavbarMenuDropdown/NavbarMenuDropdown';
 
 const NavbarSection = ({ activeLink }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -16,7 +17,7 @@ const NavbarSection = ({ activeLink }) => {
 
 
   const closeWindow = () => {
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 768) {
       setToggleMenu(false);
     }
   }
@@ -55,13 +56,17 @@ const NavbarSection = ({ activeLink }) => {
 
     window.addEventListener('scroll', handleScroll);
 
-    setGalleryDropdownToggleButton(false);
-    setOffersDropdownToggleButton(false);
+
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [activeLink, toggleMenu])
+
+  const closeDropdown = () => {
+    setGalleryDropdownToggleButton(false);
+    setOffersDropdownToggleButton(false);
+  }
 
 
   return (
@@ -76,7 +81,7 @@ const NavbarSection = ({ activeLink }) => {
           }}>
             Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {offersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={false} />}
+          {(offersDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={false} closeDropdown={closeDropdown}/>}
         </div>
         {
           !homePage &&
@@ -89,7 +94,7 @@ const NavbarSection = ({ activeLink }) => {
           }}>
             Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {galleryDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true} />}
+          {(galleryDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={true} closeDropdown={closeDropdown}/>}
         </div>
 
         <Link to={'/najčešća-pitanja'}><p className="o__navbarSection-link" id='nav__faq'>Najčešća pitanja</p></Link>
@@ -118,7 +123,7 @@ const NavbarSection = ({ activeLink }) => {
                   }}>
                     Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
                   </p>
-                  {offersDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={false} />}
+                  {(offersDropdownToggleButton && toggleMenu) && <NavbarMenuDropdown options={navbarDropdownLinks} galerija={false} />}
                 </div>
                 <div className='nav__dropdown menu__dropdown'>
                   <p className="menu-link" id='nav__gallery-menu' onClick={() => {
@@ -127,7 +132,7 @@ const NavbarSection = ({ activeLink }) => {
                   }}>
                     Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
                   </p>
-                  {galleryDropdownToggleButton && <NavbarDropdown options={navbarDropdownLinks} galerija={true} />}
+                  {(galleryDropdownToggleButton && toggleMenu) && <NavbarMenuDropdown options={navbarDropdownLinks} galerija={true} />}
                 </div>
                 <Link to={'/najčešća-pitanja'}><li className='menu-link' id='nav__faq-menu'>Najčešća pitanja</li></Link>
                 <Link to={'/kontakt'}><li className='menu-link' id='nav__contact-menu'>Kontakt</li></Link>

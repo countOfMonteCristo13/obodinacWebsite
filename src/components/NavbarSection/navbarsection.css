@@ -94,7 +94,8 @@
     transition: 0.5s ease;
     flex-direction: column;
     justify-content: space-evenly;
-    z-index: 5;
+    gap: 1rem;
+    z-index: 999;
 }
 
 .o__header_menu-overlay_logo{
@@ -106,23 +107,21 @@
     width: 100%;
 }
 
-.o__header_menu-overlay-links li,
-.menu__dropdown p{
+.menu-link{
     cursor: pointer;
     color: var(--color-white);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: var(--font-base);
     transition: all 0.3s;
-    padding: 0.2rem 1rem;
     width: 100%;
     display: flex;
     align-items: center;
     gap: 1rem;
+    padding: 0.5rem 2rem;
 }
 
 
-.o__header_menu-overlay-links li:hover,
-.menu__dropdown p:hover{
+.menu-link:hover{
     background: var(--color-darkblue);
 }
 

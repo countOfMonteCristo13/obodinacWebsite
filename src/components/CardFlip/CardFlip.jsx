@@ -37,7 +37,7 @@ const CardFlip = ({imageF, imageB, opis,klasa}) => {
             <img src={imageB} alt="unutrasnja zidna" />
             <div className='cardFlip__card-description'>
               <h3>{opis}</h3>
-              <img src={images.refresh} alt="turn"  onClick={handleClick}/>
+              <img src={images.refreshWhite} alt="turn"  onClick={handleClick}/>
             </div>
           </div>
     </div>

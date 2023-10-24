@@ -260,7 +260,8 @@
         padding: 0.6rem 1.2rem;
     }
 
-    .opcija-poziv a, p{
+    .opcija-poziv a,
+    .opcija-poziv p{
         font-size: 0.8rem;
     }
 

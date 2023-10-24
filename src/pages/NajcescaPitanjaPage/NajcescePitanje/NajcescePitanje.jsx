@@ -11,7 +11,7 @@ const NajcescePitanje = ({question,index}) => {
 
   return (
     <div className='faq-page__wrapper'>
-        <div className={`faq-page__question ${toggleButton ? 'faq__question-border' : ''}`} onClick={handleClick}>
+        <div className={`faq-page__question ${toggleButton ? 'faq-page__question-border' : ''}`} onClick={handleClick}>
             <h4>{`${index}. ${question.question}`}</h4>
             {
                 !toggleButton

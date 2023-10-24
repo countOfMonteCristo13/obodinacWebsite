@@ -1,4 +1,4 @@
-import belatehnika from '../assets/belatehnika.png';
+
 import centralniSistem from '../assets/centralniSistem.png';
 import whiteArrowDown from '../assets/dole-strelica-bela.png';
 import BlueArrowDown from '../assets/dole-strelica-plava.png';
@@ -40,14 +40,13 @@ import family from '../assets/family.jpg'
 import upArrow from '../assets/upArrow.png'
 import familybg from '../assets/familybg.jpg'
 import refresh from '../assets/refresh.png'
+import refreshWhite from '../assets/refreshWhite.png'
 import unutrasnjaKlimaP from '../assets/unutrasnjaKlimaP.png'
 import plafonskaKlimaP from '../assets/plafonskaKlimaP.png'
 import kanalskaKlimaP from '../assets/kanalskaKlimaP.png'
 import parapetnaKlimaP from '../assets/parapetnaKlimaP.png'
 import podplafonskaKlima from '../assets/podplafonskaKlima.png'
 import podplafonskaKlimaP from '../assets/podplafonskaKlimaP.png'
-import sun from '../assets/sun.png'
-import snowflake from '../assets/snowflake.png'
 import fan from '../assets/fan.png'
 import split1 from '../assets/split1.jpg'
 import split2 from '../assets/split2.jpg'
@@ -118,7 +117,7 @@ import aboutUs from '../assets/aboutUs.png';
 import kondezator from '../assets/kondezator.png'
 import freon from '../assets/freon.png'
 import elektronika from '../assets/elektronika.png'
-import pranje from '../assets/pranje.png'
+import ciscenjeKlimaUredjajaKartica from '../assets/ciscenjeKlimaUredjajaKartica.png'
 import burgija102 from '../assets/burgija102.png'
 import burgija112 from '../assets/burgija112.png'
 import burgija162 from '../assets/burgija162.png'
@@ -133,11 +132,12 @@ import polovnaKlimatizacija from '../assets/polovnaKlimatizacija.png'
 import dijamantskoBusenjeRupa from '../assets/dijamantskoBusenjeRupa.png'
 import servisKlimaUredjaja from '../assets/servisKlimaUredjaja.png'
 import burgija from '../assets/burgija.png'
+import polovniKlimaUredjajiKartica from '../assets/polovniKlimaUredjajiKartica.png'
+import servisKlimaUredjajaKartica from '../assets/servisKlimaUredjajaKartica.png'
 
 
 
 const images = {
-    belatehnika,
     centralniSistem,
     whiteArrowDown,
     WhiteArrowUp,
@@ -194,8 +194,6 @@ const images = {
     parapetnaKlimaP,
     podplafonskaKlima,
     podplafonskaKlimaP,
-    sun,
-    snowflake,
     fan,
     split1,
     split2,
@@ -257,7 +255,7 @@ const images = {
     kondezator,
     freon,
     elektronika,
-    pranje,
+    ciscenjeKlimaUredjajaKartica,
     burgija102,
     burgija112,
     burgija162,
@@ -271,7 +269,10 @@ const images = {
     polovnaKlimatizacija,
     dijamantskoBusenjeRupa,
     servisKlimaUredjaja,
-    burgija
+    burgija,
+    polovniKlimaUredjajiKartica,
+    servisKlimaUredjajaKartica,
+    refreshWhite
 }
 
 export default images

@@ -14,12 +14,12 @@ const Gallery = () => {
       url: '/galerija/montaža-klima-uređaja'
     },
     {
-      img: images.klimaUredjajFooter,
+      img: images.servisKlimaUredjajaKartica,
       title: 'Servis klima uređaja',
       url: '/galerija/servis-klima-uređaja'
     },
     {
-      img: images.klimaUredjajFooter,
+      img: images.polovniKlimaUredjajiKartica,
       title: 'Polovni klima uređaji',
       url: '/galerija/polovni-klima-uređaji'
     },
@@ -34,7 +34,7 @@ const Gallery = () => {
       url: '/galerija/ventilacija'
     },
     {
-      img: images.burgija202,
+      img: images.burgija,
       title: 'Dijamantsko bušenje rupa',
       url: '/galerija/dijamantsko-bušenje-rupa'
     },

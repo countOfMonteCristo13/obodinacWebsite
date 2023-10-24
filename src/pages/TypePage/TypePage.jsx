@@ -6,16 +6,18 @@ import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 import OffersSection from '../../components/OffersSection/OffersSection'
 import { images } from '../../constants'
 
-const ServiceTypePage = ({type}) => {
+const TypePage = ({type}) => {
 
   useEffect(() => {
     window.scrollTo(0,0);
-  })
+    
+
+  },[])
 
   return (
     <>
       <ScrollUp image={images.upArrow}/>
-      <div>
+      <div className='slide-enterance1'>
         <NavbarSection activeLink='nav__offers'/>
         <div className='headtext flex__center'>
             <h2>{type.title}</h2>
@@ -30,4 +32,4 @@ const ServiceTypePage = ({type}) => {
   )
 }
 
-export default ServiceTypePage
+export default TypePage
