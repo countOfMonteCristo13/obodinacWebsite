@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import BlueLine from '../../utils/BlueLine/BlueLine'
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
-import OffersSection from '../../utils/OffersSection/OffersSection'
+import {NavbarSection,OffersSection} from '../../components'
+import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images } from '../../data'
 
 const TypePage = ({ type }) => {
@@ -23,7 +20,7 @@ const TypePage = ({ type }) => {
         <BlueLine />
         <OffersSection description={type.text} alt={type.title} image={type.img} />
         <BlueLine />
-        <KontaktDugme />
+        <ContactUsButton />
       </div>
     </>
   )

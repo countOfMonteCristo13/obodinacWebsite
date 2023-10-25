@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp';
-import NavbarSection from '../../utils/NavbarSection/NavbarSection';
+import {NavbarSection} from '../../components'
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard';
-import BlueLine from '../../utils/BlueLine/BlueLine';
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme';
+import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images , texts} from '../../data';
 
 const VentilacijaPage = () => {
@@ -50,7 +48,7 @@ const VentilacijaPage = () => {
           </div>
         </div>
         <BlueLine />
-        <KontaktDugme />
+        <ContactUsButton />
       </div>
     </>
   )

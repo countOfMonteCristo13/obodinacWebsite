@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
-import BlueLine from '../../utils/BlueLine/BlueLine'
+import {NavbarSection} from '../../components'
+import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images } from '../../data'
 
 import './montazaPage.css'
@@ -67,7 +65,7 @@ const MontazaPage = () => {
                 </div>
                 <TipoviKlima />
                 <BlueLine />
-                <KontaktDugme />
+                <ContactUsButton />
             </div>
         </>
     )

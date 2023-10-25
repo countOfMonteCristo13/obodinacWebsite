@@ -1,19 +1,14 @@
 import React, { useEffect } from 'react'
 import './offerspage.css'
 import { images,texts } from '../../data'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import OffersSection from '../../utils/OffersSection/OffersSection'
+import {NavbarSection,OffersSection} from '../../components'
 import CardFlip from '../../utils/CardFlip/CardFlip'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 
 import { connect } from 'react-redux'
 import { setOffersPageScroll } from '../../actions'
 
 import { scroller } from 'react-scroll'
-
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
-import BlueLine from '../../utils/BlueLine/BlueLine'
-
 
 const mapStateToProps = (state) => {
   return {

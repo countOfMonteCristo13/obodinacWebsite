@@ -1,15 +1,8 @@
 import React, { useEffect } from 'react'
-import Header from '../../containers/Header/Header'
-import AboutUs from '../../containers/AboutUs/AboutUs'
-import Offers from '../../containers/Offers/Offers'
-import Gallery from '../../containers/Gallery/Gallery'
-import Footer from '../../containers/Footer/Footer'
-
+import {Header,AboutUs,Offers,Gallery,Footer,NavbarSection,FAQ} from '../../components'
 import './homepage.css'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import {ScrollUp} from '../../utils'
 import { images } from '../../data'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import FAQ from '../../containers/FAQ/FAQ'
 
 const HomePage = () => {
 

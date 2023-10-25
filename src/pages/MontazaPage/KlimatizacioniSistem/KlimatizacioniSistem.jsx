@@ -1,13 +1,9 @@
 import React, { useEffect } from 'react'
 import './klimatizacioniSistem.css'
-import ScrollUp from '../../../utils/ScrollUp/ScrollUp'
-import NavbarSection from '../../../utils/NavbarSection/NavbarSection';
-import BlueLine from '../../../utils/BlueLine/BlueLine';
-import KontaktDugme from '../../../utils/KontaktDugme/KontaktDugme';
+import {NavbarSection,OffersSection} from '../../../components'
+import {ScrollUp,ContactUsButton,BlueLine,CardFlip} from '../../../utils'
 import TipoviKlima from '../TipoviKlima/TipoviKlima';
-import OffersSection from '../../../utils/OffersSection/OffersSection';
 import { images } from '../../../data';
-import CardFlip from '../../../utils/CardFlip/CardFlip';
 
 const KlimatizacioniSistem = ({ sistem }) => {
 
@@ -40,7 +36,7 @@ const KlimatizacioniSistem = ({ sistem }) => {
                     </>
                 }
                 <BlueLine />
-                <KontaktDugme />
+                <ContactUsButton />
             </div>
         </>
     )

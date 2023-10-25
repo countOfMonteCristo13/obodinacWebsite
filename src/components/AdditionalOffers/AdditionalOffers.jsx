@@ -1,7 +1,6 @@
 import React from 'react'
 import './additionaloffers.css'
-import { images } from '../../data'
-import { tekstNaslovna } from '../../data/Texts/texts'
+import { images,texts } from '../../data'
 import HeadTitle from '../../utils/HeadTitle/HeadTitle'
 import { Link } from 'react-router-dom'
 
@@ -18,7 +17,7 @@ const AdditionalOffers = () => {
                         </div>
                     </div>
                     <div className='o__additional_container-part part_2'>
-                        <p>{tekstNaslovna.dodatneUslugeD}</p>
+                        <p>{texts.tekstNaslovna.dodatneUslugeD}</p>
                         <Link to={`/addoffers`}>
                             <button className='custom__button more-btn' type='button'>Detaljnije...</button>
                         </Link>

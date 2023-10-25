@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import {NavbarSection} from '../../components'
 import { images } from '../../data'
 import './aboutuspage.css'
 
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
+import {ScrollUp,ContactUsButton} from '../../utils'
 
 const AboutUsPage = () => {
 
@@ -40,7 +39,7 @@ const AboutUsPage = () => {
           <div className='o__aboutPage_section-description_line-wrapper'>
             <div className='o__aboutPage_section-description_line' />
           </div>
-          <KontaktDugme />
+          <ContactUsButton />
         </div>
       </div>
     </>

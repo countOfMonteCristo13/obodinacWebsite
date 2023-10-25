@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
-import SpareAC from '../../utils/SpareAC/SpareAC';
-import BlueLine from '../../utils/BlueLine/BlueLine';
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme';
-import NavbarSection from '../../utils/NavbarSection/NavbarSection';
-import ScrollUp from '../../utils/ScrollUp/ScrollUp';
+import {ScrollUp,ContactUsButton,SpareAC,BlueLine} from '../../utils'
+import {NavbarSection} from '../../components'
 import { images,texts } from '../../data';
 
 const PolovneKlimePage = () => {
@@ -28,7 +25,7 @@ const PolovneKlimePage = () => {
         </div>
         <SpareAC />
         <BlueLine />
-        <KontaktDugme />
+        <ContactUsButton />
       </div>
     </>
   )

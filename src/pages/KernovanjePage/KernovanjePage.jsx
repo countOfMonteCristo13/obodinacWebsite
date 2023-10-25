@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react'
 import { images,texts } from '../../data'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import BlueLine from '../../utils/BlueLine/BlueLine'
-import OffersSection from '../../utils/OffersSection/OffersSection'
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
+import {NavbarSection,OffersSection} from '../../components'
+import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
 
 const KernovanjePage = () => {
@@ -65,7 +62,7 @@ const KernovanjePage = () => {
                     </div>
                 </div>
                 <BlueLine />
-                <KontaktDugme />
+                <ContactUsButton />
 
             </div>
         </>

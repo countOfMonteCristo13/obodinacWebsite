@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './contactpage.css'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import {NavbarSection} from '../../components'
 import { images } from '../../data'
-
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import {ScrollUp} from '../../utils'
 
 import ClipboardJS from 'clipboard'
 import axios from 'axios'

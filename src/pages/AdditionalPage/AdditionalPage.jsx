@@ -1,28 +1,15 @@
 import React, {useEffect} from 'react'
 import './additionalpage.css'
 import { images,galleryImages,texts } from '../../data'
-import NavbarSection from '../../utils/NavbarSection/NavbarSection'
-import ScrollUp from '../../utils/ScrollUp/ScrollUp'
-import OffersSection from '../../utils/OffersSection/OffersSection'
-import ImageSlider from '../../utils/ImageSlider/ImageSlider'
-import SpareAC from '../../utils/SpareAC/SpareAC'
+import {NavbarSection, OffersSection} from '../../components'
+import {ScrollUp,ContactUsButton,ImageSlider,SpareAC,BlueLine} from '../../utils'
 
-import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 
 const AdditionalPage = () => {
   
   useEffect(() =>{
     window.scrollTo(0,0);
   },[])
-
-  const BlueLine = () =>{
-    return(
-      <div className='o__addoffersPage_blueline-wrapper'>
-        <div className='o__addoffersPage_blueline'/>
-      </div>
-      
-    );
-  }
 
   return (
     <div className='o__addoffersPage-wrapper'>
@@ -50,7 +37,7 @@ const AdditionalPage = () => {
           <SpareAC/>
           
           <BlueLine/>
-          <KontaktDugme/>
+          <ContactUsButton/>
       </div>
     </div>
   )
