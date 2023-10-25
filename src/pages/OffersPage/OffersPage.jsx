@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import './offerspage.css'
 import { images,texts } from '../../data'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import OffersSection from '../../components/OffersSection/OffersSection'
-import CardFlip from '../../components/CardFlip/CardFlip'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import OffersSection from '../../utils/OffersSection/OffersSection'
+import CardFlip from '../../utils/CardFlip/CardFlip'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
 
 import { connect } from 'react-redux'
 import { setOffersPageScroll } from '../../actions'
 
 import { scroller } from 'react-scroll'
 
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
-import BlueLine from '../../components/BlueLine/BlueLine'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
+import BlueLine from '../../utils/BlueLine/BlueLine'
 
 
 const mapStateToProps = (state) => {

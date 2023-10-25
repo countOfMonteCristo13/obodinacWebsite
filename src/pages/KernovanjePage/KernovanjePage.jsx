@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { images,texts } from '../../data'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import BlueLine from '../../components/BlueLine/BlueLine'
-import OffersSection from '../../components/OffersSection/OffersSection'
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import BlueLine from '../../utils/BlueLine/BlueLine'
+import OffersSection from '../../utils/OffersSection/OffersSection'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
 
 const KernovanjePage = () => {

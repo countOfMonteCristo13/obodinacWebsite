@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import './najcescaPitanjaPage.css'
-import ScrollUp from '../../components/ScrollUp/ScrollUp';
-import NavbarSection from '../../components/NavbarSection/NavbarSection';
+import ScrollUp from '../../utils/ScrollUp/ScrollUp';
+import NavbarSection from '../../utils/NavbarSection/NavbarSection';
 import { images,faQuestions } from '../../data';
 import NajcescePitanje from './NajcescePitanje/NajcescePitanje';
 import ClipboardJS from 'clipboard';

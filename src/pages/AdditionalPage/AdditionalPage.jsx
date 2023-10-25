@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react'
 import './additionalpage.css'
 import { images,galleryImages,texts } from '../../data'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import OffersSection from '../../components/OffersSection/OffersSection'
-import ImageSlider from '../../components/ImageSlider/ImageSlider'
-import SpareAC from '../../components/SpareAC/SpareAC'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import OffersSection from '../../utils/OffersSection/OffersSection'
+import ImageSlider from '../../utils/ImageSlider/ImageSlider'
+import SpareAC from '../../utils/SpareAC/SpareAC'
 
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 
 const AdditionalPage = () => {
   

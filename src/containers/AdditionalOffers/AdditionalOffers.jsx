@@ -2,7 +2,7 @@ import React from 'react'
 import './additionaloffers.css'
 import { images } from '../../data'
 import { tekstNaslovna } from '../../data/Texts/texts'
-import HeadTitle from '../../components/HeadTitle/HeadTitle'
+import HeadTitle from '../../utils/HeadTitle/HeadTitle'
 import { Link } from 'react-router-dom'
 
 

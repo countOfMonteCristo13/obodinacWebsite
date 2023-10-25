@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import './gallerypage.css'
 import { images } from '../../data'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import BlueLine from '../../components/BlueLine/BlueLine'
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import BlueLine from '../../utils/BlueLine/BlueLine'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 
 
 const GalleryPage = ({ gImages, title }) => {

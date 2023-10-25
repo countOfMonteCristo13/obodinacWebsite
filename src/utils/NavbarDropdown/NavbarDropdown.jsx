@@ -16,8 +16,6 @@ const NavbarDropdown = ({ options,galerija,closeDropdown }) => {
     } else {
       setOptionHeight(0);
     }
-    console.log(optionHeight);
-    console.log(optionRef)
 }, [optionClicked]);
 
   const handleButtonClick = (e) => {

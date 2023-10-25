@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import BlueLine from '../../components/BlueLine/BlueLine'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import BlueLine from '../../utils/BlueLine/BlueLine'
 import { images } from '../../data'
 
 import './montazaPage.css'

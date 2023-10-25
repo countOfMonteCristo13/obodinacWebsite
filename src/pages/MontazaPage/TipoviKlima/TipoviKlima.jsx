@@ -1,6 +1,6 @@
 import React from 'react'
 import './tipoviKlima.css'
-import CardFlip from '../../../components/CardFlip/CardFlip'
+import CardFlip from '../../../utils/CardFlip/CardFlip'
 import { images } from '../../../data'
 
 const TipoviKlima = () => {

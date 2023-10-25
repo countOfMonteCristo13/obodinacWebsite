@@ -6,9 +6,9 @@ import Gallery from '../../containers/Gallery/Gallery'
 import Footer from '../../containers/Footer/Footer'
 
 import './homepage.css'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
 import { images } from '../../data'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
 import FAQ from '../../containers/FAQ/FAQ'
 
 const HomePage = () => {

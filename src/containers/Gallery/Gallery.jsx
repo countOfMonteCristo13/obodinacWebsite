@@ -1,6 +1,6 @@
 import React from 'react'
 import './gallery.css'
-import HeadTitle from '../../components/HeadTitle/HeadTitle'
+import HeadTitle from '../../utils/HeadTitle/HeadTitle'
 import { images } from '../../data'
 import KSistemiCard from '../../pages/MontazaPage/KSistemiCard/KSistemiCard'
 

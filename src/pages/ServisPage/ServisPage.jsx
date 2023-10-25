@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './servisPage.css'
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
-import BlueLine from '../../components/BlueLine/BlueLine'
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
+import BlueLine from '../../utils/BlueLine/BlueLine'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 import { images } from '../../data'
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
 

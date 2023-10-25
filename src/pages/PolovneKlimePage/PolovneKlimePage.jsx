@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import SpareAC from '../../components/SpareAC/SpareAC';
-import BlueLine from '../../components/BlueLine/BlueLine';
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme';
-import NavbarSection from '../../components/NavbarSection/NavbarSection';
-import ScrollUp from '../../components/ScrollUp/ScrollUp';
+import SpareAC from '../../utils/SpareAC/SpareAC';
+import BlueLine from '../../utils/BlueLine/BlueLine';
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme';
+import NavbarSection from '../../utils/NavbarSection/NavbarSection';
+import ScrollUp from '../../utils/ScrollUp/ScrollUp';
 import { images,texts } from '../../data';
 
 const PolovneKlimePage = () => {

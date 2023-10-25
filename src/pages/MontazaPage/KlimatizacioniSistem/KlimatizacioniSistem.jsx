@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
 import './klimatizacioniSistem.css'
-import ScrollUp from '../../../components/ScrollUp/ScrollUp'
-import NavbarSection from '../../../components/NavbarSection/NavbarSection';
-import BlueLine from '../../../components/BlueLine/BlueLine';
-import KontaktDugme from '../../../components/KontaktDugme/KontaktDugme';
+import ScrollUp from '../../../utils/ScrollUp/ScrollUp'
+import NavbarSection from '../../../utils/NavbarSection/NavbarSection';
+import BlueLine from '../../../utils/BlueLine/BlueLine';
+import KontaktDugme from '../../../utils/KontaktDugme/KontaktDugme';
 import TipoviKlima from '../TipoviKlima/TipoviKlima';
-import OffersSection from '../../../components/OffersSection/OffersSection';
+import OffersSection from '../../../utils/OffersSection/OffersSection';
 import { images } from '../../../data';
-import CardFlip from '../../../components/CardFlip/CardFlip';
+import CardFlip from '../../../utils/CardFlip/CardFlip';
 
 const KlimatizacioniSistem = ({ sistem }) => {
 

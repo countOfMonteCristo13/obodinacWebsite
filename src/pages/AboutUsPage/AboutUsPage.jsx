@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import NavbarSection from '../../components/NavbarSection/NavbarSection'
+import NavbarSection from '../../utils/NavbarSection/NavbarSection'
 import { images } from '../../data'
 import './aboutuspage.css'
 
-import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
+import ScrollUp from '../../utils/ScrollUp/ScrollUp'
+import KontaktDugme from '../../utils/KontaktDugme/KontaktDugme'
 
 const AboutUsPage = () => {
 

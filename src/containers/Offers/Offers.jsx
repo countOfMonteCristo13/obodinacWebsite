@@ -1,8 +1,8 @@
 import React from 'react'
 import './offers.css'
 import { images,texts } from '../../data'
-import HeadTitle from '../../components/HeadTitle/HeadTitle'
-import Section from '../../components/Section/Section'
+import HeadTitle from '../../utils/HeadTitle/HeadTitle'
+import Section from '../../utils/Section/Section'
 
 
 
