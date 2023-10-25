@@ -7,7 +7,7 @@ import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
 
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import {Routes, Route  } from 'react-router-dom';
 
 import obodinacLoading from './assets/obodinacLoading.json'
 
@@ -43,7 +43,7 @@ function App() {
     {
       !isLoading && (
         <div >
-              <Router>
+              
                 <Routes>
                   <Route path="/" element={<HomePage/>} />
                   <Route path="/o-nama" element={<AboutUsPage/>} />
@@ -83,7 +83,7 @@ function App() {
                   <Route path="/najčešća-pitanja" element={<NajcescaPitanjaPage/>} />
                   <Route path="/kontakt" element={<ContactPage/>} />
                 </Routes>
-              </Router>
+              
         </div>
       )
     }
