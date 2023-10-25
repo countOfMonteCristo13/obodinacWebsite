@@ -37,8 +37,6 @@ const SpareAC = ({ setScrollUpBtn }) => {
         const acCard = event.target.parentNode.parentNode;
 
         const imgElement = acCard.querySelector('.ac');
-
-        // const srcValue = imgElement.getAttribute('src');
         const titleValue = imgElement.getAttribute('alt');
 
         setImgTitle(titleValue);
