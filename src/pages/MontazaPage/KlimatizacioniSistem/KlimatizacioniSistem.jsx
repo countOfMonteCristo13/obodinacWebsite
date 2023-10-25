@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './klimatizacioniSistem.css'
 import ScrollUp from '../../../components/ScrollUp/ScrollUp'
 import NavbarSection from '../../../components/NavbarSection/NavbarSection';
@@ -6,7 +6,7 @@ import BlueLine from '../../../components/BlueLine/BlueLine';
 import KontaktDugme from '../../../components/KontaktDugme/KontaktDugme';
 import TipoviKlima from '../TipoviKlima/TipoviKlima';
 import OffersSection from '../../../components/OffersSection/OffersSection';
-import { images } from '../../../constants';
+import { images } from '../../../data';
 import CardFlip from '../../../components/CardFlip/CardFlip';
 
 const KlimatizacioniSistem = ({ sistem }) => {
@@ -31,7 +31,6 @@ const KlimatizacioniSistem = ({ sistem }) => {
                     <TipoviKlima />
                     :
                     <>
-
                         <div className='tipovi__klima-headtext flex__center'>
                             <h2>Unutrašnja jedinica</h2>
                         </div>
@@ -42,7 +41,6 @@ const KlimatizacioniSistem = ({ sistem }) => {
                 }
                 <BlueLine />
                 <KontaktDugme />
-
             </div>
         </>
     )

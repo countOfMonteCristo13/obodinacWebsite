@@ -1,7 +1,5 @@
 import images from './images'
 
-
-
 //Klimatizacija
 
 // const splitImages = {

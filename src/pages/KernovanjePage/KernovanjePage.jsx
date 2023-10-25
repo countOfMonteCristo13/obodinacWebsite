@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import {tekstDodatno } from '../../constants/tekst'
-import { images } from '../../constants'
+import { tekstDodatno } from '../../data/tekst'
+import { images } from '../../data'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import BlueLine from '../../components/BlueLine/BlueLine'
@@ -11,34 +11,34 @@ import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
 const KernovanjePage = () => {
 
     useEffect(() => {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     })
 
     const kSistemi = [
         {
             img: images.burgija102,
             title: 'Ø 102',
-            url:'#'
+            url: '#'
         },
         {
             img: images.burgija112,
             title: 'Ø 112',
-            url:'#'
+            url: '#'
         },
         {
             img: images.burgija162,
             title: 'Ø 162',
-            url:'#'
+            url: '#'
         },
         {
             img: images.burgija202,
             title: 'Ø 202',
-            url:'#'
+            url: '#'
         },
         {
             img: images.burgija252,
             title: 'Ø 252',
-            url:'#'
+            url: '#'
         },
 
 
@@ -54,17 +54,17 @@ const KernovanjePage = () => {
                 <BlueLine />
                 <OffersSection description={tekstDodatno.dijamatnskoD} alt='Dijamantsko bušenje rupa' image={images.kirnerica} />
                 <div className='sistemi__klima-headtext flex__center'>
-                        <h2>Prečnici burgija</h2>
+                    <h2>Prečnici burgija</h2>
+                </div>
+                <div className='sistemi__klima section__padding'>
+                    <div className='sistemi__klima-cards'>
+                        {
+                            kSistemi.map((sistem) => (
+                                <KSistemiCard sistem={sistem} key={sistem.title} />
+                            ))
+                        }
                     </div>
-                    <div className='sistemi__klima section__padding'>
-                        <div className='sistemi__klima-cards'>
-                            {
-                                kSistemi.map((sistem) => (
-                                    <KSistemiCard sistem={sistem} key={sistem.title}/>
-                                ))
-                            }
-                        </div>
-                    </div>
+                </div>
                 <BlueLine />
                 <KontaktDugme />
 

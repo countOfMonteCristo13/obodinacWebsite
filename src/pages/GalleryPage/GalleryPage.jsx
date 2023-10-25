@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './gallerypage.css'
-import { images } from '../../constants'
+import { images } from '../../data'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import BlueLine from '../../components/BlueLine/BlueLine'
@@ -9,13 +9,10 @@ import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 
 const GalleryPage = ({ gImages, title }) => {
 
-
-
   useEffect(() => {
     window.scrollTo(0, 0);
 
   }, []);
-
 
   return (
     <>
@@ -33,8 +30,8 @@ const GalleryPage = ({ gImages, title }) => {
             </div>
           ))}
         </div>
-        <BlueLine/>
-        <KontaktDugme/>
+        <BlueLine />
+        <KontaktDugme />
       </div>
     </>
   )

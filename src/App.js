@@ -14,7 +14,7 @@ import obodinacLoading from './assets/obodinacLoading.json'
 import Lottie from 'lottie-react';
 import MontazaPage from './pages/MontazaPage/MontazaPage';
 import KlimatizacioniSistem from './pages/MontazaPage/KlimatizacioniSistem/KlimatizacioniSistem';
-import { klimatizacioniSistemi } from './constants/klimatizacioniSistemi';
+import { klimatizacioniSistemi } from './data/klimatizacioniSistemi';
 import ServisPage from './pages/ServisPage/ServisPage';
 import KernovanjePage from './pages/KernovanjePage/KernovanjePage';
 import GrejanjePage from './pages/GrejanjePage/GrejanjePage';
@@ -22,10 +22,10 @@ import VentilacijaPage from './pages/VentilacijaPage/VentilacijaPage';
 import PolovneKlimePage from './pages/PolovneKlimePage/PolovneKlimePage';
 import NajcescaPitanjaPage from './pages/NajcescaPitanjaPage/NajcescaPitanjaPage';
 import TypePage from './pages/TypePage/TypePage';
-import { serviceTypes } from './constants/serviceTypes';
-import { heatingTypes } from './constants/heatingTypes';
-import { ventilationTypes } from './constants/ventilationTypes';
-import { grejanje, kernovanjeImages, klimatizacija, servisKlimaImages, ventilacija } from './constants/galleryImages';
+import { serviceTypes } from './data/serviceTypes';
+import { heatingTypes } from './data/heatingTypes';
+import { ventilationTypes } from './data/ventilationTypes';
+import { grejanje, kernovanjeImages, klimatizacija, servisKlimaImages, ventilacija } from './data/galleryImages';
 
 function App() {
 

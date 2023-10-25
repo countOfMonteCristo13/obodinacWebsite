@@ -1,10 +1,8 @@
 import React, { useEffect} from 'react'
 import './slider.css'
-import { images } from '../../constants'
+import { images } from '../../data'
 
 const Slider = ({sliderImg,id}) => {
-
-
 
   const Imgs = ({galleryImages}) =>{
     const slideImg = galleryImages.map((image,i) =>{
@@ -21,8 +19,6 @@ const Slider = ({sliderImg,id}) => {
           </li>
         )
       }
-
-
     })
 
     return(
@@ -31,8 +27,6 @@ const Slider = ({sliderImg,id}) => {
       </ul>
     );
   }
-  
-
 
   useEffect(() => {
     const buttons = document.querySelectorAll(`[data-slider="${id}"]`);
@@ -61,10 +55,6 @@ const Slider = ({sliderImg,id}) => {
     });
   }, [id]);
   
-
-
-
-
   return (
     <div className="o__slides">
 

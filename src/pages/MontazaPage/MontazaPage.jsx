@@ -3,7 +3,7 @@ import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import BlueLine from '../../components/BlueLine/BlueLine'
-import { images } from '../../constants'
+import { images } from '../../data'
 
 import './montazaPage.css'
 import KSistemiCard from './KSistemiCard/KSistemiCard'
@@ -15,27 +15,27 @@ const MontazaPage = () => {
         {
             img: images.klimaUredjajFooter,
             title: 'Split sistem',
-            url:'/usluge/montaža-klima-uređaja/split-sistem'
+            url: '/usluge/montaža-klima-uređaja/split-sistem'
         },
         {
             img: images.multiSistemKartica,
             title: 'Multi sistem',
-            url:'/usluge/montaža-klima-uređaja/multi-sistem'
+            url: '/usluge/montaža-klima-uređaja/multi-sistem'
         },
         {
             img: images.centralniSistemKartica,
             title: 'Centralni (VRF) sistem',
-            url:'/usluge/montaža-klima-uređaja/centralni-sistem'
+            url: '/usluge/montaža-klima-uređaja/centralni-sistem'
         },
         {
             img: images.kanalskiSistemKartica,
             title: 'Kanalski sistem',
-            url:'/usluge/montaža-klima-uređaja/kanalski-sistem'
+            url: '/usluge/montaža-klima-uređaja/kanalski-sistem'
         }
     ];
 
     useEffect(() => {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     })
 
     return (
@@ -60,12 +60,12 @@ const MontazaPage = () => {
                     <div className='sistemi__klima-cards'>
                         {
                             kSistemi.map((sistem) => (
-                                <KSistemiCard sistem={sistem} key={sistem.title}/>
+                                <KSistemiCard sistem={sistem} key={sistem.title} />
                             ))
                         }
                     </div>
                 </div>
-                <TipoviKlima/>
+                <TipoviKlima />
                 <BlueLine />
                 <KontaktDugme />
             </div>

@@ -24,7 +24,13 @@
   font-family: var(--font-base);
 }
 
+.cursor-pointer{
+  cursor: pointer;
+}
 
+.cursor-copy{
+  cursor: copy;
+}
 
 .custom__button{
   font-family: var(--font-base);

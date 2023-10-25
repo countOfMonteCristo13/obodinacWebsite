@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react'
 import './cardflip.css'
-import { images } from '../../constants'
+import { images } from '../../data'
 
 const CardFlip = ({imageF, imageB, opis,klasa}) => {
 

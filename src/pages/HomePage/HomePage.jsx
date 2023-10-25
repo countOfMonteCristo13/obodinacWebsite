@@ -7,36 +7,30 @@ import Footer from '../../containers/Footer/Footer'
 
 import './homepage.css'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
-import { images } from '../../constants'
+import { images } from '../../data'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import FAQ from '../../containers/FAQ/FAQ'
 
 const HomePage = () => {
 
-
-  useEffect(() =>{
-    window.scrollTo(0,0);
-    
-
-  },[]);
-
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <ScrollUp image={images.upArrow}/>
+      <ScrollUp image={images.upArrow} />
       <div className='hp slide-enterance1'>
-        <Header/>
-        <NavbarSection activeLink='nav__home'/>
+        <Header />
+        <NavbarSection activeLink='nav__home' />
         <div className='o__line o__line-hidden flex__center'>
-			      <div />
-		    </div>
-        <AboutUs/>
-        <Offers/>
-        {/* <AdditionalOffers /> */}
+          <div />
+        </div>
+        <AboutUs />
+        <Offers />
         <Gallery />
-        <FAQ/>
-        <Footer/>
+        <FAQ />
+        <Footer />
       </div>
     </>
   )

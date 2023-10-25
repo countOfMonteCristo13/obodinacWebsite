@@ -1,4 +1,4 @@
-import { SET_OFFERS_PAGE_SCROLL,SET_GALLERY_PAGE_SCROLL,SET_SCROLL_UP } from './constantss';
+import { SET_OFFERS_PAGE_SCROLL,SET_GALLERY_PAGE_SCROLL,SET_SCROLL_UP } from './constants';
 
 import { legacy_createStore as createStore} from 'redux'
 

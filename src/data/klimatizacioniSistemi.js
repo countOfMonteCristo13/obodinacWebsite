@@ -1,8 +1,6 @@
 import images from "./images";
 import { tekst } from "./tekst";
 
-
-
 export const klimatizacioniSistemi = {
     splitSistem: {
         title:'Split Sistem',

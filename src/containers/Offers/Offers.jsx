@@ -1,10 +1,10 @@
 import React from 'react'
 import './offers.css'
-import { images } from '../../constants'
+import { images } from '../../data'
 import HeadTitle from '../../components/HeadTitle/HeadTitle'
 import Section from '../../components/Section/Section'
 
-import { tekstDodatno, tekstNaslovna } from '../../constants/tekst'
+import { tekstDodatno, tekstNaslovna } from '../../data/tekst'
 
 
 const Offers = () => {

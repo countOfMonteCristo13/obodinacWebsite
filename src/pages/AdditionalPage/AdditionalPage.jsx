@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import './additionalpage.css'
-import { images } from '../../constants'
+import { images } from '../../data'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import OffersSection from '../../components/OffersSection/OffersSection'
@@ -8,8 +8,8 @@ import ImageSlider from '../../components/ImageSlider/ImageSlider'
 import SpareAC from '../../components/SpareAC/SpareAC'
 
 
-import { servisKlimaImages,kernovanjeImages } from '../../constants/galleryImages'
-import { tekstDodatno } from '../../constants/tekst'
+import { servisKlimaImages,kernovanjeImages } from '../../data/galleryImages'
+import { tekstDodatno } from '../../data/tekst'
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 
 const AdditionalPage = () => {

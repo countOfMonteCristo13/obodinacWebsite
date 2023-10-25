@@ -2,15 +2,14 @@ import React, { useEffect, useRef } from 'react'
 import './najcescaPitanjaPage.css'
 import ScrollUp from '../../components/ScrollUp/ScrollUp';
 import NavbarSection from '../../components/NavbarSection/NavbarSection';
-import { images } from '../../constants';
+import { images } from '../../data';
 import NajcescePitanje from './NajcescePitanje/NajcescePitanje';
-import { pitanja } from '../../constants/pitanja';
+import { pitanja } from '../../data/pitanja';
 import ClipboardJS from 'clipboard';
 
 const NajcescaPitanjaPage = () => {
 
     const emailRef = useRef(null);
-
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -19,15 +18,12 @@ const NajcescaPitanjaPage = () => {
             text: () => emailRef.current.innerText,
         });
 
-
         clipboardInstances.on('success', (e) => {
-              console.log(`Email ${e.text} is copied`);
+            console.log(`Email ${e.text} is copied`);
         });
-        
         clipboardInstances.on('error', (e) => {
-              console.log('Failed to copy email:', e.text);
+            console.log('Failed to copy email:', e.text);
         });
-        
 
         return () => {
             clipboardInstances.destroy();
@@ -51,7 +47,7 @@ const NajcescaPitanjaPage = () => {
                     <div className='faq-page__questions'>
                         {
                             pitanja.map((question, index) => (
-                                <NajcescePitanje question={question} index={index + 1} key={index}/>
+                                <NajcescePitanje question={question} index={index + 1} key={index} />
                             ))
                         }
                     </div>
