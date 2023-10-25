@@ -3,11 +3,11 @@ import {NavbarSection} from '../../components'
 import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images } from '../../data'
 
-import './montazaPage.css'
-import KSistemiCard from './KSistemiCard/KSistemiCard'
-import TipoviKlima from './TipoviKlima/TipoviKlima'
+import './aCInstallationPage.css'
+import ACSystemsCard from './ACSystemsCard/ACSystemsCard'
+import IndoorUnitTypes from './IndoorUnitTypes/IndoorUnitTypes'
 
-const MontazaPage = () => {
+const ACInstallationPage = () => {
 
     const kSistemi = [
         {
@@ -58,12 +58,12 @@ const MontazaPage = () => {
                     <div className='sistemi__klima-cards'>
                         {
                             kSistemi.map((sistem) => (
-                                <KSistemiCard sistem={sistem} key={sistem.title} />
+                                <ACSystemsCard sistem={sistem} key={sistem.title} />
                             ))
                         }
                     </div>
                 </div>
-                <TipoviKlima />
+                <IndoorUnitTypes />
                 <BlueLine />
                 <ContactUsButton />
             </div>
@@ -71,4 +71,4 @@ const MontazaPage = () => {
     )
 }
 
-export default MontazaPage
+export default ACInstallationPage

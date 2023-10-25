@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
-import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard';
+import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard';
 import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images,texts } from '../../data';
 
 
-const GrejanjePage = () => {
+const HeatingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   })
@@ -43,7 +43,7 @@ const GrejanjePage = () => {
           <div className='sistemi__klima-cards'>
             {
               kSistemi.map((sistem) => (
-                <KSistemiCard sistem={sistem} key={sistem.title} />
+                <ACSystemsCard sistem={sistem} key={sistem.title} />
               ))
             }
           </div>
@@ -56,4 +56,4 @@ const GrejanjePage = () => {
   )
 }
 
-export default GrejanjePage
+export default HeatingPage

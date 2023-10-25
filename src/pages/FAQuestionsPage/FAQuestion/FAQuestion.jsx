@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 
-const NajcescePitanje = ({ question, index }) => {
+const FAQuestion = ({ question, index }) => {
     const [toggleButton, setToggleButton] = useState(false);
     const answerRef = useRef(null);
     const [answerHeight, setAnswerHeight] = useState(0);
@@ -39,4 +39,4 @@ const NajcescePitanje = ({ question, index }) => {
     )
 }
 
-export default NajcescePitanje;
+export default FAQuestion;

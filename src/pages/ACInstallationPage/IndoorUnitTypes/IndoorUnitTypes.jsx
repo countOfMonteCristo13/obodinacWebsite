@@ -1,9 +1,9 @@
 import React from 'react'
-import './tipoviKlima.css'
+import './indoorUnitTypes.css'
 import CardFlip from '../../../utils/CardFlip/CardFlip'
 import { images } from '../../../data'
 
-const TipoviKlima = () => {
+const IndoorUnitTypes = () => {
     return (
         <>
             <div className='tipovi__klima-headtext flex__center'>
@@ -22,4 +22,4 @@ const TipoviKlima = () => {
     )
 }
 
-export default TipoviKlima
+export default IndoorUnitTypes

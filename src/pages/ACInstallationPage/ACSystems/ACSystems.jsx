@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import './klimatizacioniSistem.css'
+import './aCSystems.css'
 import {NavbarSection,OffersSection} from '../../../components'
 import {ScrollUp,ContactUsButton,BlueLine,CardFlip} from '../../../utils'
-import TipoviKlima from '../TipoviKlima/TipoviKlima';
+import IndoorUnitTypes from '../IndoorUnitTypes/IndoorUnitTypes';
 import { images } from '../../../data';
 
-const KlimatizacioniSistem = ({ sistem }) => {
+const ACSystems = ({ sistem }) => {
 
     const currentSistem = sistem.title;
 
@@ -24,7 +24,7 @@ const KlimatizacioniSistem = ({ sistem }) => {
                 <BlueLine />
                 <OffersSection description={sistem.text} alt={sistem.title} image={sistem.img} />
                 {currentSistem !== 'Kanalski Sistem' ?
-                    <TipoviKlima />
+                    <IndoorUnitTypes />
                     :
                     <>
                         <div className='tipovi__klima-headtext flex__center'>
@@ -42,4 +42,4 @@ const KlimatizacioniSistem = ({ sistem }) => {
     )
 }
 
-export default KlimatizacioniSistem
+export default ACSystems

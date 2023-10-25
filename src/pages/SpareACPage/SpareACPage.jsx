@@ -3,7 +3,7 @@ import {ScrollUp,ContactUsButton,SpareAC,BlueLine} from '../../utils'
 import {NavbarSection} from '../../components'
 import { images,texts } from '../../data';
 
-const PolovneKlimePage = () => {
+const SpareACPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   })
@@ -31,4 +31,4 @@ const PolovneKlimePage = () => {
   )
 }
 
-export default PolovneKlimePage
+export default SpareACPage

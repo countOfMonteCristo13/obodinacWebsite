@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react'
-import './najcescaPitanjaPage.css'
+import './fAQuestionsPage.css'
 import {ScrollUp} from '../../utils'
 import {NavbarSection} from '../../components'
 import { images,faQuestions } from '../../data';
-import NajcescePitanje from './NajcescePitanje/NajcescePitanje';
+import NajcescePitanje from './FAQuestion/FAQuestion';
 import ClipboardJS from 'clipboard';
 
-const NajcescaPitanjaPage = () => {
+const FAQuestionsPage = () => {
 
     const emailRef = useRef(null);
 
@@ -74,4 +74,4 @@ const NajcescaPitanjaPage = () => {
     )
 }
 
-export default NajcescaPitanjaPage
+export default FAQuestionsPage

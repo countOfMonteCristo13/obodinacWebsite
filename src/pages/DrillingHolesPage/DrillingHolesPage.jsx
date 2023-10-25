@@ -2,9 +2,9 @@ import React, { useEffect } from 'react'
 import { images,texts } from '../../data'
 import {NavbarSection,OffersSection} from '../../components'
 import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
-import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
+import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard'
 
-const KernovanjePage = () => {
+const DrillingHolesPage = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -56,7 +56,7 @@ const KernovanjePage = () => {
                     <div className='sistemi__klima-cards'>
                         {
                             kSistemi.map((sistem) => (
-                                <KSistemiCard sistem={sistem} key={sistem.title} />
+                                <ACSystemsCard sistem={sistem} key={sistem.title} />
                             ))
                         }
                     </div>
@@ -69,4 +69,4 @@ const KernovanjePage = () => {
     )
 }
 
-export default KernovanjePage
+export default DrillingHolesPage

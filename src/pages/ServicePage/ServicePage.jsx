@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
-import './servisPage.css'
+import './servicePage.css'
 import {NavbarSection} from '../../components'
 import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
 import { images } from '../../data'
-import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard'
+import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard';
 
-const ServisPage = () => {
+const ServicePage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -59,7 +59,7 @@ const ServisPage = () => {
           <div className='sistemi__klima-cards'>
             {
               kSistemi.map((sistem) => (
-                <KSistemiCard sistem={sistem} key={sistem.title} />
+                <ACSystemsCard sistem={sistem} key={sistem.title} />
               ))
             }
           </div>
@@ -71,4 +71,4 @@ const ServisPage = () => {
   )
 }
 
-export default ServisPage
+export default ServicePage

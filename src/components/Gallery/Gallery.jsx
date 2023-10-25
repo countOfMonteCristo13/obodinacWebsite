@@ -2,7 +2,7 @@ import React from 'react'
 import './gallery.css'
 import HeadTitle from '../../utils/HeadTitle/HeadTitle'
 import { images } from '../../data'
-import KSistemiCard from '../../pages/MontazaPage/KSistemiCard/KSistemiCard'
+import ACSystemsCard from '../../pages/ACInstallationPage/ACSystemsCard/ACSystemsCard'
 
 
 const Gallery = () => {
@@ -48,7 +48,7 @@ const Gallery = () => {
         <div className='sistemi__klima-cards'>
           {
             galleryCards.map((card) => (
-              <KSistemiCard sistem={card} key={card.title} />
+              <ACSystemsCard sistem={card} key={card.title} />
             ))
           }
         </div>

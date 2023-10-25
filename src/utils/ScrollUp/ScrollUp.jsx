@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import './scrollup.css'
 
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
-  return {
-    scrollUpBtn: state.scrollUpBtn,
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     scrollUpBtn: state.scrollUpBtn,
+//   }
+// }
 
-const ScrollUp = ({ image, scrollUpBtn }) => {
+// const ScrollUp = ({ image, scrollUpBtn }) => {
+  const ScrollUp = ({ image }) => {
 
   const [buttonUp, setButtonUp] = useState(false);
 
@@ -40,7 +41,8 @@ const ScrollUp = ({ image, scrollUpBtn }) => {
   return (
     <div>
       {
-        (buttonUp && scrollUpBtn) &&
+        // (buttonUp && scrollUpBtn) &&
+        (buttonUp) &&
         <div onClick={scrollUp} className='o__scrollUp flex__center'>
           <img src={image} alt="up arrow" />
         </div>
@@ -49,4 +51,5 @@ const ScrollUp = ({ image, scrollUpBtn }) => {
   )
 }
 
-export default connect(mapStateToProps)(ScrollUp);
+export default ScrollUp;
+// export default connect(mapStateToProps)(ScrollUp);

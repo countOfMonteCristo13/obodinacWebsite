@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const KSistemiCard = ({ sistem }) => {
+const ACSystemsCard = ({ sistem }) => {
     return (
         <Link to={sistem.url} className='sistemi__klima-card'>
             <div className='sistemi__klima-card__img'>
@@ -14,4 +14,4 @@ const KSistemiCard = ({ sistem }) => {
     )
 }
 
-export default KSistemiCard
+export default ACSystemsCard
