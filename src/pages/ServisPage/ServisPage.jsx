@@ -17,22 +17,22 @@ const ServisPage = () => {
     {
         img: images.ciscenjeKlimaUredjajaKartica,
         title: 'Čišćenje klima uređaja',
-        url:'/usluge/servis-klima-uredjaja/ciscenje-klime'
+        url:'/usluge/servis-klima-uređaja/čišćenje-klime'
     },
     {
         img: images.elektronika,
         title: 'Popravka elektronike',
-        url:'/usluge/servis-klima-uredjaja/popravka-elektronike'
+        url:'/usluge/servis-klima-uređaja/popravka-elektronike'
     },
     {
         img: images.freon,
         title: 'Punjenje/Dopuna freona',
-        url:'/usluge/servis-klima-uredjaja/freon'
+        url:'/usluge/servis-klima-uređaja/freon'
     },
     {
         img: images.kondezator,
         title: 'Zamena kondezatora',
-        url:'/usluge/servis-klima-uredjaja/zamena-kondezatora'
+        url:'/usluge/servis-klima-uređaja/zamena-kondezatora'
     }
 ];
 

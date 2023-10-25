@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbarDropdown.css'
 import { BsChevronDown, BsChevronRight, BsChevronUp } from 'react-icons/bs'
@@ -7,20 +7,27 @@ const NavbarDropdown = ({ options,galerija,closeDropdown }) => {
 
   const [optionsDropdown, setOptionsDropdown] = useState(false);
   const [optionClicked,setOptionClicked] = useState('');
+  const [optionHeight,setOptionHeight] = useState(0);
+  const optionRef = useRef(null);
 
   useEffect(() => {
-    
-  })
+    if (optionClicked !== '') {
+      setOptionHeight(optionRef.current.offsetTop);
+    } else {
+      setOptionHeight(0);
+    }
+    console.log(optionHeight);
+    console.log(optionRef)
+}, [optionClicked]);
 
   const handleButtonClick = (e) => {
-    const div = e.parentNode.parentNode.querySelector('a').querySelector('p').innerText;
+    const uslugeOption = e.parentNode.parentNode.querySelector('a').querySelector('p').innerText;
 
     if(optionClicked !== ''){
       setOptionClicked('');
     }else{
-      setOptionClicked(div);
+      setOptionClicked(uslugeOption);
     }
-    console.log(div);
     setOptionsDropdown(!optionsDropdown)
   }
 
@@ -47,25 +54,27 @@ const NavbarDropdown = ({ options,galerija,closeDropdown }) => {
                       ?
                       <BsChevronUp strokeWidth={1} className='dropdown__btn'  onClick={(e) => handleButtonClick(e.target)}/>
                       :
-                      <BsChevronDown strokeWidth={1} className='dropdown__btn'  onClick={(e) => handleButtonClick(e.target)} />
+                      <BsChevronDown strokeWidth={1} className='dropdown__btn' onClick={(e) => handleButtonClick(e.target)} />
                     )
                 )
               }
             </div>
 
-            {
-              option.title === optionClicked 
-              &&
-              <div className='dropdown__options'>
+
+              <div className={`dropdown__options ${option.title === optionClicked ? 'show' : ''}`}
+                style={{ height: option.title === optionClicked ? optionHeight*(option.options.length) + 'px' : '0px' }}
+              >
                 {
                   option.options.map((dropdownOption) => (
-                    <Link onClick={closeDropdown} to={dropdownOption.url} key={dropdownOption.title}>
-                      <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
-                    </Link>
+                    <div ref={optionRef} className='dropdown__option' key={dropdownOption.title}>
+                      <Link onClick={closeDropdown} to={dropdownOption.url}>
+                        <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
+                      </Link>
+                    </div>
                   ))
                 }
               </div>
-            }
+            
           </div>
         </div>
       ))}
@@ -74,3 +83,20 @@ const NavbarDropdown = ({ options,galerija,closeDropdown }) => {
 }
 
 export default NavbarDropdown
+
+
+            /* {
+              option.title === optionClicked 
+              &&
+              <div className='dropdown__options'>
+                {
+                  option.options.map((dropdownOption) => (
+                    <div className='dropdown__option'>
+                      <Link onClick={closeDropdown} to={dropdownOption.url} key={dropdownOption.title}>
+                        <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
+                      </Link>
+                    </div>
+                  ))
+                }
+              </div>
+            } */

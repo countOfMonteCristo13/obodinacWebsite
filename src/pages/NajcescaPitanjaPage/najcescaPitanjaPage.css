@@ -29,26 +29,38 @@
     border-radius: 10px;
     z-index: 10;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s,border-radius 0.4s 0.27s;
 }
 
-.faq__question:hover{
+.faq-page__question:hover{
     background-color: var(--color-darkblue);
 }
 
-.faq-page__question-border{
+.faq-page__question.border{
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
+    transition: background-color 0.2s,border-radius 0.1s;
 }
 
 .faq-page__answer{
-    padding: 1rem;
     background: var(--color-white);
     color: var(--color-blue);
     font-weight: bold;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     z-index: 1;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.faq-page__answer > p{
+    padding: 1rem;
+}
+
+.faq-page__answer.show{
+    height: auto;
 }
 
 @media screen and (max-width:768px) {
