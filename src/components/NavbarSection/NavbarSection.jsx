@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { images } from '../../data';
+import { images, navbarDropdownLinks } from '../../data';
 import './navbarsection.css'
 
 import { Link } from 'react-router-dom';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs'
 import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
-import { navbarDropdownLinks } from '../../data/navbarDropdownLinks';
 import NavbarMenuDropdown from '../NavbarMenuDropdown/NavbarMenuDropdown';
 
 const NavbarSection = ({ activeLink }) => {

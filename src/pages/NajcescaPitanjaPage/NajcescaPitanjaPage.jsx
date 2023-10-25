@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import './najcescaPitanjaPage.css'
 import ScrollUp from '../../components/ScrollUp/ScrollUp';
 import NavbarSection from '../../components/NavbarSection/NavbarSection';
-import { images } from '../../data';
+import { images,faQuestions } from '../../data';
 import NajcescePitanje from './NajcescePitanje/NajcescePitanje';
-import { pitanja } from '../../data/pitanja';
 import ClipboardJS from 'clipboard';
 
 const NajcescaPitanjaPage = () => {
@@ -46,7 +45,7 @@ const NajcescaPitanjaPage = () => {
 
                     <div className='faq-page__questions'>
                         {
-                            pitanja.map((question, index) => (
+                            faQuestions.map((question, index) => (
                                 <NajcescePitanje question={question} index={index + 1} key={index} />
                             ))
                         }

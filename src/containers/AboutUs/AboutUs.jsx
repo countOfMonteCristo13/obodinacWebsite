@@ -1,7 +1,6 @@
 import { React } from 'react'
 import { images } from '../../data'
 import './aboutus.css'
-
 import { Link } from 'react-router-dom'
 
 const AboutUs = () => {

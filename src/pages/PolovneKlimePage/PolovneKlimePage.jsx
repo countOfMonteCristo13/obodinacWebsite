@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
-import { tekstDodatno } from '../../data/tekst';
 import SpareAC from '../../components/SpareAC/SpareAC';
 import BlueLine from '../../components/BlueLine/BlueLine';
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme';
 import NavbarSection from '../../components/NavbarSection/NavbarSection';
 import ScrollUp from '../../components/ScrollUp/ScrollUp';
-import { images } from '../../data';
+import { images,texts } from '../../data';
 
 const PolovneKlimePage = () => {
   useEffect(() => {
@@ -20,7 +19,7 @@ const PolovneKlimePage = () => {
         <div className='headtext flex__center'>
           <h2>Polovni klima uređaji</h2>
           <p>
-            {tekstDodatno.polovneD}
+            {texts.tekstDodatno.polovneD}
           </p>
         </div>
 

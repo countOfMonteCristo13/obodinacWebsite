@@ -1,4 +1,4 @@
-export const pitanja = [
+export const faQuestions = [
     {
         question:'Razlika između standarde (obicne) i inverter klime?',
         answer:'Obicna je dobra, a Inverter je jos bolji!!!',

@@ -1,25 +1,24 @@
-import images from "./images";
-import { tekst } from "./tekst";
+import {texts,images }from '../../data'
 
-export const klimatizacioniSistemi = {
+export const acTypes = {
     splitSistem: {
         title:'Split Sistem',
         img:images.klimaUredjajHeader,
-        text:tekst.splitD
+        text:texts.tekst.splitD
     },
     multiSistem: {
         title:'Multi Sistem',
         img:images.multiSistem,
-        text:tekst.multiD
+        text:texts.tekst.multiD
     },
     centralniSistem: {
         title:'Centralni (VRF) Sistem',
         img:images.centralniSistem,
-        text:tekst.vrfD
+        text:texts.tekst.vrfD
     },
     kanalskiSistem: {
         title:'Kanalski Sistem',
         img:images.kanalskiSistem,
-        text:tekst.kanalskiD
+        text:texts.tekst.kanalskiD
     }
 }

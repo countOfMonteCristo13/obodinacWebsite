@@ -1,15 +1,15 @@
-import images from "./images";
-import { tekst } from "./tekst";
+import {texts,images }from '../../data'
+
 
 export const heatingTypes = {
     radijatorskoGrejanje: {
         title: "Radijatorsko grejanje",
-        text: tekst.radijatorD,
+        text: texts.tekst.radijatorD,
         img: images.radiator
     },
     podnoGrejanje: {
         title: "Podno grejanje",
-        text: tekst.podnoD,
+        text: texts.tekst.podnoD,
         img: images.podnoGrejanje
     },
 }

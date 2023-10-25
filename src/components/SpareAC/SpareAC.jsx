@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react'
-
 import './spareac.css'
-
-import { images } from '../../data'
-
-import { polovneKlime } from '../../data'
+import { images, spareAC,galleryImages } from '../../data'
 import { Link } from 'react-router-dom'
 
 import ImageSlider from '../ImageSlider/ImageSlider'
-
 import { connect } from 'react-redux'
 import { setScrollUpBtn } from '../../actions'
 
-import { servisKlimaImages } from '../../data/galleryImages'
 
 const mapDispatchToProps = {
     setScrollUpBtn,
@@ -57,7 +51,7 @@ const SpareAC = ({ setScrollUpBtn }) => {
         <div className='o__spareAC-wrapper section__padding'>
 
             <div className='o__spareAC'>
-                {polovneKlime.map((klima, index) => (
+                {spareAC.map((klima, index) => (
                     <div className='o__spareAC-klima' key={index}>
                         <div className='o__spareAC-klima-img'>
                             <img src={klima.image} alt={klima.name} className='ac' />
@@ -88,7 +82,7 @@ const SpareAC = ({ setScrollUpBtn }) => {
                         </div>
                     </div>
                     <div className='o__spareAC-menu-slider'>
-                        <ImageSlider images={servisKlimaImages} />
+                        <ImageSlider images={galleryImages.servisKlimaImages} />
                     </div>
                 </div>
             }

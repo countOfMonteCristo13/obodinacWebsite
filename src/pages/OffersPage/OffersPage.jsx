@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './offerspage.css'
-import { images } from '../../data'
+import { images,texts } from '../../data'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import OffersSection from '../../components/OffersSection/OffersSection'
 import CardFlip from '../../components/CardFlip/CardFlip'
@@ -11,8 +11,6 @@ import { setOffersPageScroll } from '../../actions'
 
 import { scroller } from 'react-scroll'
 
-
-import { tekst, tekstPodnaslov } from '../../data/tekst'
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 import BlueLine from '../../components/BlueLine/BlueLine'
 
@@ -76,12 +74,12 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
       <div className='o__offersPage slide-enterance1' id='op__top'>
         <NavbarSection activeLink='nav__offers' />
-        <HeadText id='op__klimatizacija' title="Klimatizacija" desc={tekstPodnaslov.klimatizacijaP} />
+        <HeadText id='op__klimatizacija' title="Klimatizacija" desc={texts.tekstPodnaslov.klimatizacijaP} />
         <BlueLine />
-        <OffersSection title='Split klima uređaji' description={tekst.splitD} alt='split klima' image={images.klimaUredjajHeader} />
-        <OffersSection title='Multi klima uređaji' description={tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd' />
-        <OffersSection title='VRF sistem' description={tekst.vrfD} alt='vrf sistem' image={images.centralniSistem} />
-        <OffersSection title='Kanalski klima uređaji' description={tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd' />
+        <OffersSection title='Split klima uređaji' description={texts.tekst.splitD} alt='split klima' image={images.klimaUredjajHeader} />
+        <OffersSection title='Multi klima uređaji' description={texts.tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd' />
+        <OffersSection title='VRF sistem' description={texts.tekst.vrfD} alt='vrf sistem' image={images.centralniSistem} />
+        <OffersSection title='Kanalski klima uređaji' description={texts.tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd' />
 
         <div className='o__offersPage_types section__padding'>
           <div className='o__offersPage_types-headtext flex__center'>
@@ -96,15 +94,15 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
           </div>
         </div>
 
-        <HeadText id='op__grejanje' title='Grejanje' wrapper='wrapper' desc={tekstPodnaslov.grejanjeP} />
+        <HeadText id='op__grejanje' title='Grejanje' wrapper='wrapper' desc={texts.tekstPodnaslov.grejanjeP} />
 
-        <OffersSection title='Radijatorsko grejanje' description={tekst.radijatorD} alt='radijator' image={images.radiator} />
-        <OffersSection title='Podno grejanje' description={tekst.podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
+        <OffersSection title='Radijatorsko grejanje' description={texts.tekst.radijatorD} alt='radijator' image={images.radiator} />
+        <OffersSection title='Podno grejanje' description={texts.tekst.podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
 
-        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper' desc={tekstPodnaslov.ventilacijaP} />
+        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper' desc={texts.tekstPodnaslov.ventilacijaP} />
 
-        <OffersSection title='Mehanička ventilacija' description={tekst.ventilacijaD} alt='ventilacija' image={images.vent} />
-        <OffersSection title='Rekuperatorska ventilacija' description={tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
+        <OffersSection title='Mehanička ventilacija' description={texts.tekst.ventilacijaD} alt='ventilacija' image={images.vent} />
+        <OffersSection title='Rekuperatorska ventilacija' description={texts.tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine />
         <KontaktDugme />
       </div>

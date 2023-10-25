@@ -1,7 +1,7 @@
-import images from "./images"
+import images from "../Images/images"
 
 
-const polovneKlime = [
+export const spareAC = [
     {
         name:'Vox 12BTU',
         image: images.polovnaKlima1,
@@ -23,5 +23,3 @@ const polovneKlime = [
         image: images.polovnaKlima5,
     },
 ];
-
-export default polovneKlime;

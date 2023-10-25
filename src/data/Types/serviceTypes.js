@@ -1,4 +1,4 @@
-import images from "./images";
+import {images} from "../../data";
 
 export const serviceTypes = {
     ciscenjeKlime : {

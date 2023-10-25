@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { tekstDodatno } from '../../data/tekst'
-import { images } from '../../data'
+import { images,texts } from '../../data'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import BlueLine from '../../components/BlueLine/BlueLine'
@@ -52,7 +51,7 @@ const KernovanjePage = () => {
                     <h2>Dijamantsko bušenje rupa</h2>
                 </div>
                 <BlueLine />
-                <OffersSection description={tekstDodatno.dijamatnskoD} alt='Dijamantsko bušenje rupa' image={images.kirnerica} />
+                <OffersSection description={texts.tekstDodatno.dijamatnskoD} alt='Dijamantsko bušenje rupa' image={images.kirnerica} />
                 <div className='sistemi__klima-headtext flex__center'>
                     <h2>Prečnici burgija</h2>
                 </div>

@@ -4,8 +4,7 @@ import NavbarSection from '../../components/NavbarSection/NavbarSection';
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard';
 import BlueLine from '../../components/BlueLine/BlueLine';
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme';
-import { images } from '../../data';
-import { tekstNaslovna } from '../../data/tekst';
+import { images,texts } from '../../data';
 
 
 const GrejanjePage = () => {
@@ -35,7 +34,7 @@ const GrejanjePage = () => {
         <div className='headtext flex__center'>
           <h2>Grejanje</h2>
           <p>
-            {tekstNaslovna.grejanjeD}
+            {texts.tekstNaslovna.grejanjeD}
           </p>
         </div>
 

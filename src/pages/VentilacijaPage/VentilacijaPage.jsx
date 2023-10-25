@@ -4,8 +4,7 @@ import NavbarSection from '../../components/NavbarSection/NavbarSection';
 import KSistemiCard from '../MontazaPage/KSistemiCard/KSistemiCard';
 import BlueLine from '../../components/BlueLine/BlueLine';
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme';
-import { tekstNaslovna } from '../../data/tekst';
-import { images } from '../../data';
+import { images , texts} from '../../data';
 
 const VentilacijaPage = () => {
   useEffect(() => {
@@ -34,7 +33,7 @@ const VentilacijaPage = () => {
         <div className='headtext flex__center'>
           <h2>Ventilacija</h2>
           <p>
-            {tekstNaslovna.ventilacijaD}
+            {texts.tekstNaslovna.ventilacijaD}
           </p>
         </div>
 

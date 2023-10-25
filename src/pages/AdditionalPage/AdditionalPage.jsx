@@ -1,15 +1,12 @@
 import React, {useEffect} from 'react'
 import './additionalpage.css'
-import { images } from '../../data'
+import { images,galleryImages,texts } from '../../data'
 import NavbarSection from '../../components/NavbarSection/NavbarSection'
 import ScrollUp from '../../components/ScrollUp/ScrollUp'
 import OffersSection from '../../components/OffersSection/OffersSection'
 import ImageSlider from '../../components/ImageSlider/ImageSlider'
 import SpareAC from '../../components/SpareAC/SpareAC'
 
-
-import { servisKlimaImages,kernovanjeImages } from '../../data/galleryImages'
-import { tekstDodatno } from '../../data/tekst'
 import KontaktDugme from '../../components/KontaktDugme/KontaktDugme'
 
 const AdditionalPage = () => {
@@ -32,14 +29,14 @@ const AdditionalPage = () => {
       <ScrollUp image={images.upArrow}/>
       <div className='o__addoffersPage slide-enterance1'>
           <NavbarSection activeLink='nav__faq'/>
-          <OffersSection title='Dijamantsko bušenje rupa' description={tekstDodatno.dijamatnskoD} alt='kernovanje' image={images.kirnerica}/>
+          <OffersSection title='Dijamantsko bušenje rupa' description={texts.tekstDodatno.dijamatnskoD} alt='kernovanje' image={images.kirnerica}/>
           <div className='o__addoffersPage_slider-wrapper'>
-            <ImageSlider images={kernovanjeImages}/>
+            <ImageSlider images={galleryImages.kernovanjeImages}/>
           </div>
           <BlueLine/>
-          <OffersSection title='Servis klima uređaja' description={tekstDodatno.servisD} alt='servis klime' image={images.servisKlime} odd='odd'/>
+          <OffersSection title='Servis klima uređaja' description={texts.tekstDodatno.servisD} alt='servis klime' image={images.servisKlime} odd='odd'/>
           <div className='o__addoffersPage_slider-wrapper'>
-            <ImageSlider images={servisKlimaImages}/>
+            <ImageSlider images={galleryImages.servisKlimaImages}/>
           </div>
           <BlueLine/>
           <div className='o__addoffersPage_polovne-klime section__padding'>
@@ -47,7 +44,7 @@ const AdditionalPage = () => {
               <h2>Polovni klima uređaji</h2>
             </div>
             <div className='o__addoffersPage_polovne-klime-desc'>
-              <p>{tekstDodatno.polovneD}</p>
+              <p>{texts.tekstDodatno.polovneD}</p>
             </div>
           </div>          
           <SpareAC/>
