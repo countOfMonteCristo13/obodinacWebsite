@@ -1,5 +1,6 @@
 import React from 'react'
 import './offerssection.css'
+import { Link } from 'react-router-dom'
 
 const OffersSection = ({ description, image, alt, odd }) => {
   return (
@@ -7,6 +8,9 @@ const OffersSection = ({ description, image, alt, odd }) => {
 
       <div className='o__offersSection_details'>
         <p>{description}</p>
+        <Link to='#'>
+          <button className='custom__button checkout-btn'>Galerija</button>
+        </Link>
       </div>
       <div className='o__offersSection_img flex__center'>
         <div className='o__offersSection_img-wrapper'>

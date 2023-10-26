@@ -23,9 +23,9 @@
 .o__offersSection_details{
     height: 100%;
     width: 60%;
-    text-align: right;
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
+    flex-direction: column;
     gap: 2rem;
     text-align: justify;
 }
