@@ -3,7 +3,7 @@ import {texts,images }from '../../data'
 export const acTypes = {
     splitSistem: {
         title:'Split Sistem',
-        img:images.klimaUredjajHeader,
+        img:images.splitSistem,
         text:texts.textTypePages.splitD
     },
     multiSistem: {

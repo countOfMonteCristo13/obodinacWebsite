@@ -4,7 +4,7 @@ export const ventilationTypes = {
     mehaničkaVentilacija: {
         title: "Mehanička ventilacija",
         text: texts.textTypePages.ventD,
-        img: images.ventWhite
+        img: images.vent
     },
     rekuperatorskaVentilacija: {
         title: "Rekuperatorska ventilacija",

@@ -1,52 +1,4 @@
-
-import centralniSistem from '../../assets/centralniSistem.png';
-import emailIcon from '../../assets/email-icon.png';
-import grejanje from '../../assets/grejanje.png';
-import kanalskaKlima from '../../assets/kanalskaKlima.png';
-import homeIcon from '../../assets/home-icon.png';
-import instagramIcon from '../../assets/instagram-icon.png';
-import phoneIcon from '../../assets/phone-icon.png';
-import kanalskiSistem from '../../assets/kanalskiSistem.png';
-import kirnerica from '../../assets/kirnerica.png';
-import klimatizacija from '../../assets/klimatizacija.png';
-import klimaUredjajHeader from '../../assets/klimaUredjajHeader.png';
-import klimaUredjajFooter from '../../assets/klimaUredjajFooter.png';
-import multiSistem from '../../assets/multiSistem.png';
-import obodinac from '../../assets/obodinac.png';
-import obodinac2 from '../../assets/obodinac2.png';
-import obodinacFooter from '../../assets/obodinacFooter.png';
-import obodinacFooter2 from '../../assets/obodinacFooter2.png';
-import parapetnaKlima from '../../assets/parapetnaKlima.png';
-import plafonskaKlima from '../../assets/plafonskaKlima.png';
-import podnoGrejanje from '../../assets/podnoGrejanje.png';
-import radiator from '../../assets/radiator.png';
-import radiatorFooter from '../../assets/radiatorFooter.png';
-import rekuperator from '../../assets/rekuperator.png';
-import solarniPanel from '../../assets/solarniPanel.png';
-import unutrasnjaKlima from '../../assets/unutrasnjaKlima.png';
-import user from '../../assets/user.png';
-import vent from '../../assets/vent.png';
-import ventilacija from '../../assets/ventilacija.png';
-import ventilacijaGalerija from '../../assets/ventilacijaGalerija.png';
-import vesMasina from '../../assets/vesMasina.png';
-import ventWhite from '../../assets/ventWhite.png';
-import maintenance from '../../assets/maintenance.png'
-import maintenanceWhite from '../../assets/maintenanceWhite.png'
-import refresh from '../../assets/refresh.png'
-import refreshWhite from '../../assets/refreshWhite.png'
-import unutrasnjaKlimaP from '../../assets/unutrasnjaKlimaP.png'
-import plafonskaKlimaP from '../../assets/plafonskaKlimaP.png'
-import kanalskaKlimaP from '../../assets/kanalskaKlimaP.png'
-import parapetnaKlimaP from '../../assets/parapetnaKlimaP.png'
-import podplafonskaKlima from '../../assets/podplafonskaKlima.png'
-import podplafonskaKlimaP from '../../assets/podplafonskaKlimaP.png'
-import burger from '../../assets/burger.png'
-import servisKlime from '../../assets/servisKlime.png'
-import polovnaKlima1 from '../../assets/polovnaKlima1.png'
-import polovnaKlima2 from '../../assets/polovnaKlima2.png'
-import polovnaKlima3 from '../../assets/polovnaKlima3.png'
-import polovnaKlima4 from '../../assets/polovnaKlima4.png'
-import polovnaKlima5 from '../../assets/polovnaKlima5.png'
+//Gallery Images
 import split5 from '../../assets/galleryImages/split1.png'
 import split6 from '../../assets/galleryImages/split2.png'
 import split7 from '../../assets/galleryImages/split3.jpg'
@@ -99,27 +51,91 @@ import radijator3 from '../../assets/galleryImages/radijator3.png';
 import radijator4 from '../../assets/galleryImages/radijator4.png';
 import radijator5 from '../../assets/galleryImages/radijator5.png';
 import radijator6 from '../../assets/galleryImages/radijator6.png';
-import aboutUs from '../../assets/aboutUs.png';
-import kondezator from '../../assets/kondezator.png'
-import freon from '../../assets/freon.png'
-import elektronika from '../../assets/elektronika.png'
-import ciscenjeKlimaUredjajaKartica from '../../assets/ciscenjeKlimaUredjajaKartica.png'
-import burgija102 from '../../assets/burgija102.png'
-import burgija112 from '../../assets/burgija112.png'
-import burgija162 from '../../assets/burgija162.png'
-import burgija202 from '../../assets/burgija202.png'
-import burgija252 from '../../assets/burgija252.png'
-import multiSistemKartica from '../../assets/multiSistemKartica.png'
-import centralniSistemKartica from '../../assets/centralniSistemKartica.png'
-import kanalskiSistemKartica from '../../assets/kanalskiSistemKartica.png'
-import rekuperatorKartica from '../../assets/rekuperatorKartica.png'
-import podnoGrejanjeKartica from '../../assets/podnoGrejanjeKartica.png'
-import polovnaKlimatizacija from '../../assets/polovnaKlimatizacija.png'
-import dijamantskoBusenjeRupa from '../../assets/dijamantskoBusenjeRupa.png'
-import servisKlimaUredjaja from '../../assets/servisKlimaUredjaja.png'
-import burgija from '../../assets/burgija.png'
-import polovniKlimaUredjajiKartica from '../../assets/polovniKlimaUredjajiKartica.png'
-import servisKlimaUredjajaKartica from '../../assets/servisKlimaUredjajaKartica.png'
+
+
+//HomePage Images
+import klimatizacija from '../../assets/homePage/klimatizacija.png';
+import grejanje from '../../assets/homePage/grejanje.png';
+import polovnaKlimatizacija from '../../assets/homePage/polovnaKlimatizacija.png'
+import dijamantskoBusenjeRupa from '../../assets/homePage/dijamantskoBusenjeRupa.png'
+import servisKlimaUredjaja from '../../assets/homePage/servisKlimaUredjaja.png'
+import ventilacija from '../../assets/homePage/ventilacija.png';
+import aboutUs from '../../assets/homePage/aboutUs.png';
+//
+
+//Type Cards Images
+import kondezator from '../../assets/typeCards/kondezator.png'
+import freon from '../../assets/typeCards/freon.png'
+import elektronika from '../../assets/typeCards/elektronika.png'
+import ciscenjeKlimaUredjajaKartica from '../../assets/typeCards/ciscenjeKlimaUredjajaKartica.png'
+import burgijaKartica from '../../assets/typeCards/burgijaKartica.png'
+import burgija102 from '../../assets/typeCards/burgija102.png'
+import burgija112 from '../../assets/typeCards/burgija112.png'
+import burgija162 from '../../assets/typeCards/burgija162.png'
+import burgija202 from '../../assets/typeCards/burgija202.png'
+import burgija252 from '../../assets/typeCards/burgija252.png'
+import multiSistemKartica from '../../assets/typeCards/multiSistemKartica.png'
+import centralniSistemKartica from '../../assets/typeCards/centralniSistemKartica.png'
+import kanalskiSistemKartica from '../../assets/typeCards/kanalskiSistemKartica.png'
+import rekuperatorKartica from '../../assets/typeCards/rekuperatorKartica.png'
+import podnoGrejanjeKartica from '../../assets/typeCards/podnoGrejanjeKartica.png'
+import polovniKlimaUredjajiKartica from '../../assets/typeCards/polovniKlimaUredjajiKartica.png'
+import servisKlimaUredjajaKartica from '../../assets/typeCards/servisKlimaUredjajaKartica.png'
+import ventKartica from '../../assets/typeCards/ventKartica.png';
+import radiatorKartica from '../../assets/typeCards/radiatorKartica.png';
+import klimaUredjajKartica from '../../assets/typeCards/klimaUredjajKartica.png';
+//
+
+//Indoor Unit Types Images
+import kanalskaKlima from '../../assets/indoorUnitTypes/kanalskaKlima.png';
+import parapetnaKlima from '../../assets/indoorUnitTypes/parapetnaKlima.png';
+import plafonskaKlima from '../../assets/indoorUnitTypes/plafonskaKlima.png';
+import unutrasnjaKlimaP from '../../assets/indoorUnitTypes/unutrasnjaKlimaP.png'
+import plafonskaKlimaP from '../../assets/indoorUnitTypes/plafonskaKlimaP.png'
+import kanalskaKlimaP from '../../assets/indoorUnitTypes/kanalskaKlimaP.png'
+import parapetnaKlimaP from '../../assets/indoorUnitTypes/parapetnaKlimaP.png'
+import podplafonskaKlimaP from '../../assets/indoorUnitTypes/podplafonskaKlimaP.png'
+import unutrasnjaKlima from '../../assets/indoorUnitTypes/unutrasnjaKlima.png';
+//
+
+//Icons Images
+import emailIcon from '../../assets/icons/email-icon.png';
+import homeIcon from '../../assets/icons/home-icon.png';
+import instagramIcon from '../../assets/icons/instagram-icon.png';
+import phoneIcon from '../../assets/icons/phone-icon.png';
+import burger from '../../assets/icons/burger.png'
+import maintenance from '../../assets/icons/maintenance.png'
+import maintenanceWhite from '../../assets/icons/maintenanceWhite.png'
+import refresh from '../../assets/icons/refresh.png'
+import refreshWhite from '../../assets/icons/refreshWhite.png'
+//
+
+//Offers Images
+import centralniSistem from '../../assets/offersImages/centralniSistem.png';
+import kanalskiSistem from '../../assets/offersImages/kanalskiSistem.png';
+import kirnerica from '../../assets/offersImages/kirnerica.png';
+import splitSistem from '../../assets/offersImages/splitSistem.png';
+import multiSistem from '../../assets/offersImages/multiSistem.png';
+import podnoGrejanje from '../../assets/offersImages/podnoGrejanje.png';
+import radiator from '../../assets/offersImages/radiator.png';
+import rekuperator from '../../assets/offersImages/rekuperator.png';
+import vent from '../../assets/offersImages/vent.png';
+//
+
+//Logo Images
+
+import obodinac from '../../assets/logos/obodinac.png';
+import obodinac2 from '../../assets/logos/obodinac2.png';
+import obodinacFooter2 from '../../assets/logos/obodinacFooter2.png';
+//
+import servisKlime from '../../assets/servisKlime.png'
+
+
+import polovnaKlima1 from '../../assets/polovnaKlima1.png'
+import polovnaKlima2 from '../../assets/polovnaKlima2.png'
+import polovnaKlima3 from '../../assets/polovnaKlima3.png'
+import polovnaKlima4 from '../../assets/polovnaKlima4.png'
+import polovnaKlima5 from '../../assets/polovnaKlima5.png'
 
 
 
@@ -133,25 +149,22 @@ const images = {
     kanalskiSistem,
     phoneIcon,
     kirnerica,
-    klimaUredjajFooter,
-    klimaUredjajHeader,
+    klimaUredjajKartica,
+    splitSistem,
     klimatizacija,
     multiSistem,
     obodinac,
     obodinac2,
-    obodinacFooter,
     obodinacFooter2,
     parapetnaKlima,
     plafonskaKlima,
     podnoGrejanje,
     radiator,
-    radiatorFooter,
+    radiatorKartica,
     rekuperator,
-    solarniPanel,
     unutrasnjaKlima,
-    user,
     vent,
-    ventWhite,
+    ventKartica,
     ventilacija,
     ventilacija1,
     ventilacija2,
@@ -162,8 +175,6 @@ const images = {
     ventilacija7,
     ventilacija8,
     ventilacija9,
-    ventilacijaGalerija,
-    vesMasina,
     maintenance,
     maintenanceWhite,
     refresh,
@@ -171,7 +182,6 @@ const images = {
     plafonskaKlimaP,
     kanalskaKlimaP,
     parapetnaKlimaP,
-    podplafonskaKlima,
     podplafonskaKlimaP,
     burger,
     servisKlime,
@@ -241,7 +251,7 @@ const images = {
     polovnaKlimatizacija,
     dijamantskoBusenjeRupa,
     servisKlimaUredjaja,
-    burgija,
+    burgijaKartica,
     polovniKlimaUredjajiKartica,
     servisKlimaUredjajaKartica,
     refreshWhite

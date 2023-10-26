@@ -11,7 +11,7 @@ const HeatingPage = () => {
 
   const heatingTypes = [
     {
-      img: images.radiatorFooter,
+      img: images.radiatorKartica,
       title: 'Radijatorsko grejanje',
       url: '/usluge/grejanje/radijatorsko-grejanje'
     },

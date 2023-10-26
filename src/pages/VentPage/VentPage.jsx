@@ -10,7 +10,7 @@ const VentPage = () => {
 
   const ventTypes = [
     {
-      img: images.ventWhite,
+      img: images.ventKartica,
       title: 'Mehanička ventilacija',
       url: '/usluge/ventilacija/mehanička-ventilacija'
     },

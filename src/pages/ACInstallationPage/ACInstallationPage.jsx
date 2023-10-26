@@ -10,7 +10,7 @@ const ACInstallationPage = () => {
 
     const acTypes = [
         {
-            img: images.klimaUredjajFooter,
+            img: images.klimaUredjajKartica,
             title: 'Split sistem',
             url: '/usluge/montaža-klima-uređaja/split-sistem'
         },

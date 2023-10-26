@@ -9,7 +9,7 @@ const Gallery = () => {
 
   const galleryCards = [
     {
-      img: images.klimaUredjajFooter,
+      img: images.klimaUredjajKartica,
       title: 'Montaža klima uređaja',
       url: '/galerija/montaža-klima-uređaja'
     },
@@ -24,17 +24,17 @@ const Gallery = () => {
       url: '/galerija/polovni-klima-uređaji'
     },
     {
-      img: images.radiatorFooter,
+      img: images.radiatorKartica,
       title: 'Grejanje',
       url: '/galerija/grejanje'
     },
     {
-      img: images.ventWhite,
+      img: images.ventKartica,
       title: 'Ventilacija',
       url: '/galerija/ventilacija'
     },
     {
-      img: images.burgija,
+      img: images.burgijaKartica,
       title: 'Dijamantsko bušenje rupa',
       url: '/galerija/dijamantsko-bušenje-rupa'
     },
