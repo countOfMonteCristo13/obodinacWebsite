@@ -10,6 +10,7 @@ import SpareACPage from "./SpareACPage/SpareACPage";
 import ServicePage from "./ServicePage/ServicePage";
 import TypePage from "./TypePage/TypePage";
 import VentPage from "./VentPage/VentPage";
+import ACSystemPage from "./ACSystemPage/ACSystemPage";
 
 export {
     AboutUsPage,
@@ -23,5 +24,6 @@ export {
     ServicePage,
     TypePage,
     VentPage,
-    HeatingPage
+    HeatingPage,
+    ACSystemPage
 }

@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import './servicePage.css'
 import {NavbarSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
 import { images } from '../../data'
-import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard';
 
 const ServicePage = () => {
 
@@ -11,7 +10,7 @@ const ServicePage = () => {
     window.scrollTo(0, 0);
   })
 
-  const kSistemi = [
+  const serviceTypes = [
     {
       img: images.ciscenjeKlimaUredjajaKartica,
       title: 'Čišćenje klima uređaja',
@@ -58,8 +57,8 @@ const ServicePage = () => {
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
             {
-              kSistemi.map((sistem) => (
-                <ACSystemsCard sistem={sistem} key={sistem.title} />
+              serviceTypes.map((sistem) => (
+                <TypeCard sistem={sistem} key={sistem.title} />
               ))
             }
           </div>

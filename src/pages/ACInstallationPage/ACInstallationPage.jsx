@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
 import { images } from '../../data'
 
 import './aCInstallationPage.css'
-import ACSystemsCard from './ACSystemsCard/ACSystemsCard'
 import IndoorUnitTypes from './IndoorUnitTypes/IndoorUnitTypes'
 
 const ACInstallationPage = () => {
 
-    const kSistemi = [
+    const acTypes = [
         {
             img: images.klimaUredjajFooter,
             title: 'Split sistem',
@@ -57,8 +56,8 @@ const ACInstallationPage = () => {
                 <div className='sistemi__klima section__padding'>
                     <div className='sistemi__klima-cards'>
                         {
-                            kSistemi.map((sistem) => (
-                                <ACSystemsCard sistem={sistem} key={sistem.title} />
+                            acTypes.map((sistem) => (
+                                <TypeCard sistem={sistem} key={sistem.title} />
                             ))
                         }
                     </div>

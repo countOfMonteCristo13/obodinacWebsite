@@ -7,5 +7,6 @@ import ScrollUp from './ScrollUp/ScrollUp';
 import Section from './Section/Section';
 import Slider from './Slider/Slider';
 import SpareAC from './SpareAC/SpareAC';
+import TypeCard from'./TypeCard/TypeCard';
 
-export {BlueLine,CardFlip,HeadTitle,ImageSlider,ContactUsButton,ScrollUp,Section,Slider,SpareAC}
+export {BlueLine,CardFlip,HeadTitle,ImageSlider,ContactUsButton,ScrollUp,Section,Slider,SpareAC,TypeCard}

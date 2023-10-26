@@ -2,8 +2,7 @@ import React, { useEffect } from 'react'
 import './offerspage.css'
 import { images,texts } from '../../data'
 import {NavbarSection,OffersSection} from '../../components'
-import CardFlip from '../../utils/CardFlip/CardFlip'
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,ContactUsButton,BlueLine,CardFlip} from '../../utils'
 
 import { connect } from 'react-redux'
 import { setOffersPageScroll } from '../../actions'
@@ -99,7 +98,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         <OffersSection title='Mehanička ventilacija' description={texts.tekst.ventilacijaD} alt='ventilacija' image={images.vent} />
         <OffersSection title='Rekuperatorska ventilacija' description={texts.tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine />
-        <KontaktDugme />
+        <ContactUsButton />
       </div>
     </>
   )

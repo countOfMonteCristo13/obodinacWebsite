@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
-import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard';
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
 import { images,texts } from '../../data';
 
 
@@ -10,7 +9,7 @@ const HeatingPage = () => {
     window.scrollTo(0, 0);
   })
 
-  const kSistemi = [
+  const heatingTypes = [
     {
       img: images.radiatorFooter,
       title: 'Radijatorsko grejanje',
@@ -42,8 +41,8 @@ const HeatingPage = () => {
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
             {
-              kSistemi.map((sistem) => (
-                <ACSystemsCard sistem={sistem} key={sistem.title} />
+              heatingTypes.map((sistem) => (
+                <TypeCard sistem={sistem} key={sistem.title} />
               ))
             }
           </div>

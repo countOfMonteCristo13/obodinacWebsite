@@ -3,7 +3,7 @@ import './fAQuestionsPage.css'
 import {ScrollUp} from '../../utils'
 import {NavbarSection} from '../../components'
 import { images,faQuestions } from '../../data';
-import NajcescePitanje from './FAQuestion/FAQuestion';
+import FAQuestion from './FAQuestion/FAQuestion';
 import ClipboardJS from 'clipboard';
 
 const FAQuestionsPage = () => {
@@ -46,7 +46,7 @@ const FAQuestionsPage = () => {
                     <div className='faq-page__questions'>
                         {
                             faQuestions.map((question, index) => (
-                                <NajcescePitanje question={question} index={index + 1} key={index} />
+                                <FAQuestion question={question} index={index + 1} key={index} />
                             ))
                         }
                     </div>

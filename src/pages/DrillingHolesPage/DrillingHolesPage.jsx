@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import { images,texts } from '../../data'
 import {NavbarSection,OffersSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
-import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard'
+import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
 
 const DrillingHolesPage = () => {
 
@@ -10,7 +9,7 @@ const DrillingHolesPage = () => {
         window.scrollTo(0, 0);
     })
 
-    const kSistemi = [
+    const drillTypes = [
         {
             img: images.burgija102,
             title: 'Ø 102',
@@ -55,8 +54,8 @@ const DrillingHolesPage = () => {
                 <div className='sistemi__klima section__padding'>
                     <div className='sistemi__klima-cards'>
                         {
-                            kSistemi.map((sistem) => (
-                                <ACSystemsCard sistem={sistem} key={sistem.title} />
+                            drillTypes.map((sistem) => (
+                                <TypeCard sistem={sistem} key={sistem.title} />
                             ))
                         }
                     </div>

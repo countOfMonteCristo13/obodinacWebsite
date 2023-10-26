@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
-import ACSystemsCard from '../ACInstallationPage/ACSystemsCard/ACSystemsCard';
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
 import { images , texts} from '../../data';
 
 const VentPage = () => {
@@ -9,7 +8,7 @@ const VentPage = () => {
     window.scrollTo(0, 0);
   })
 
-  const kSistemi = [
+  const ventTypes = [
     {
       img: images.ventWhite,
       title: 'Mehanička ventilacija',
@@ -41,8 +40,8 @@ const VentPage = () => {
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
             {
-              kSistemi.map((sistem) => (
-                <ACSystemsCard sistem={sistem} key={sistem.title} />
+              ventTypes.map((sistem) => (
+                <TypeCard sistem={sistem} key={sistem.title} />
               ))
             }
           </div>

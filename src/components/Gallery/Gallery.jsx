@@ -2,7 +2,7 @@ import React from 'react'
 import './gallery.css'
 import HeadTitle from '../../utils/HeadTitle/HeadTitle'
 import { images } from '../../data'
-import ACSystemsCard from '../../pages/ACInstallationPage/ACSystemsCard/ACSystemsCard'
+import ACSystemsCard from '../../utils/TypeCard/TypeCard'
 
 
 const Gallery = () => {

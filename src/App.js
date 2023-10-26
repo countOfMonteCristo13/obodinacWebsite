@@ -5,8 +5,7 @@ import Lottie from 'lottie-react';
 import obodinacLoading from './assets/obodinacLoading.json'
 
 import {HomePage,AboutUsPage,GalleryPage,ContactPage,ACInstallationPage,ServicePage,DrillingHolesPage,HeatingPage,
-  VentPage,SpareACPage,FAQuestionsPage,TypePage} from './pages';
-import ACSystems from './pages/ACInstallationPage/ACSystems/ACSystems';
+  VentPage,SpareACPage,FAQuestionsPage,TypePage,ACSystemPage} from './pages';
 import { acTypes, serviceTypes, ventilationTypes, heatingTypes, galleryImages } from './data';
 
 
@@ -36,10 +35,10 @@ function App() {
               <Route path="/o-nama" element={<AboutUsPage />} />
 
               <Route path="/usluge/montaža-klima-uređaja" element={<ACInstallationPage />} />
-              <Route path="/usluge/montaža-klima-uređaja/split-sistem" element={<ACSystems sistem={acTypes.splitSistem} />} />
-              <Route path="/usluge/montaža-klima-uređaja/multi-sistem" element={<ACSystems sistem={acTypes.multiSistem} />} />
-              <Route path="/usluge/montaža-klima-uređaja/centralni-sistem" element={<ACSystems sistem={acTypes.centralniSistem} />} />
-              <Route path="/usluge/montaža-klima-uređaja/kanalski-sistem" element={<ACSystems sistem={acTypes.kanalskiSistem} />} />
+              <Route path="/usluge/montaža-klima-uređaja/split-sistem" element={<ACSystemPage sistem={acTypes.splitSistem} />} />
+              <Route path="/usluge/montaža-klima-uređaja/multi-sistem" element={<ACSystemPage sistem={acTypes.multiSistem} />} />
+              <Route path="/usluge/montaža-klima-uređaja/centralni-sistem" element={<ACSystemPage sistem={acTypes.centralniSistem} />} />
+              <Route path="/usluge/montaža-klima-uređaja/kanalski-sistem" element={<ACSystemPage sistem={acTypes.kanalskiSistem} />} />
 
               <Route path="/usluge/servis-klima-uređaja" element={<ServicePage />} />
               <Route path="/usluge/servis-klima-uređaja/čišćenje-klima-uređaja" element={<TypePage type={serviceTypes.ciscenjeKlime} />} />

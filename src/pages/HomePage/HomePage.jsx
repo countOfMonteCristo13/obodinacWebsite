@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import {Header,AboutUs,Offers,Gallery,Footer,NavbarSection,FAQ} from '../../components'
 import './homepage.css'
+import {Header,AboutUs,Offers,Gallery,Footer,NavbarSection,FAQ} from '../../components'
 import {ScrollUp} from '../../utils'
 import { images } from '../../data'
 
