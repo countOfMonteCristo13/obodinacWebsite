@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { images, navbarDropdownLinks } from '../../data';
 import './navbarsection.css'
 
@@ -13,7 +13,11 @@ const NavbarSection = ({ activeLink }) => {
 
   const [offersDropdownToggleButton, setOffersDropdownToggleButton] = useState(false);
   const [galleryDropdownToggleButton, setGalleryDropdownToggleButton] = useState(false);
+  const [offersDropdownHeight,setOffersDropdownHeight] = useState(0);
+  const [galleryDropdownHeight,setGalleryDropdownHeight] = useState(0);
 
+  const menuOffersDropdownRef = useRef(null);
+  const menuGalleryDropdownRef = useRef(null);
 
   const closeWindow = () => {
     if (window.innerWidth > 768) {
@@ -24,16 +28,27 @@ const NavbarSection = ({ activeLink }) => {
 
   useEffect(() => {
     const activeNavLink = document.querySelector(`#${activeLink}`);
-    // const navbar = document.querySelector('.o__navbarSection');
     const burgerBtn = document.querySelector('.burger');
 
+    if(offersDropdownToggleButton && window.innerWidth < 769){
+      console.log(menuOffersDropdownRef.current.firstChild.scrollHeight,'sta ima')
+      setOffersDropdownHeight(menuOffersDropdownRef.current.firstChild.scrollHeight);
+    }else{
+      setOffersDropdownHeight(0);
+    }
+    if(galleryDropdownToggleButton && window.innerWidth < 769){
+      console.log(menuGalleryDropdownRef.current.firstChild.scrollHeight,'sta ima')
+      setGalleryDropdownHeight(menuGalleryDropdownRef.current.firstChild.scrollHeight);
+    }else{
+      setGalleryDropdownHeight(0);
+    }
 
     if (toggleMenu) {
       const menuId = activeLink + '-menu';
       const activeNavLinkMenu = document.querySelector(`#${menuId}`)
       activeNavLinkMenu.classList.add('menu__shadow-link');
-      console.log(activeLink + '-menu');
-      console.log(activeNavLinkMenu)
+      // console.log(activeLink + '-menu');
+      // console.log(activeNavLinkMenu)
     }
 
     if (activeLink === 'nav__home') {
@@ -42,31 +57,25 @@ const NavbarSection = ({ activeLink }) => {
 
     activeNavLink.classList.add('btm-border');
 
-
     const handleScroll = () => {
       if (window.scrollY > 0) {
         burgerBtn.classList.add('burger-shadow');
-        // navbar.classList.add('o__navbarSection-shadow');
       } else {
         burgerBtn.classList.remove('burger-shadow');
-        // navbar.classList.remove('o__navbarSection-shadow');
       }
     }
 
     window.addEventListener('scroll', handleScroll);
 
-
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [activeLink, toggleMenu])
+  }, [activeLink, toggleMenu,offersDropdownToggleButton,galleryDropdownToggleButton])
 
   const closeDropdown = () => {
     setGalleryDropdownToggleButton(false);
     setOffersDropdownToggleButton(false);
   }
-
 
   return (
     <nav className='o__nav'>
@@ -80,7 +89,7 @@ const NavbarSection = ({ activeLink }) => {
           }}>
             Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {(offersDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={false} closeDropdown={closeDropdown}/>}
+          {(offersDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={false} closeDropdown={closeDropdown} />}
         </div>
         {
           !homePage &&
@@ -93,7 +102,7 @@ const NavbarSection = ({ activeLink }) => {
           }}>
             Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
           </p>
-          {(galleryDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={true} closeDropdown={closeDropdown}/>}
+          {(galleryDropdownToggleButton && !toggleMenu) && <NavbarDropdown options={navbarDropdownLinks} galerija={true} closeDropdown={closeDropdown} />}
         </div>
 
         <Link to={'/najčešća-pitanja'}><p className="o__navbarSection-link" id='nav__faq'>Najčešća pitanja</p></Link>
@@ -111,27 +120,40 @@ const NavbarSection = ({ activeLink }) => {
               <div className='o__header_menu-button wrench' id={`${!toggleMenu ? 'hide-btn' : ''}`} onClick={() => setToggleMenu(false)}>
                 <img src={images.maintenanceWhite} alt="wrench and screwdriver" />
               </div>
-              <img className='o__header_menu-overlay_logo' src={images.obodinacFooter2} alt="obodinac logo" />
+              <div className='o__header_menu-overlay_logo'>
+                <img src={images.obodinacFooter2} alt="obodinac logo" />
+              </div>
               <ul className={`o__header_menu-overlay-links`}>
                 <Link to={'/'}><li className='menu-link' id='nav__home-menu'>Početna</li></Link>
                 <Link to={'/o-nama'}><li className='menu-link' id='nav__about-menu'>O nama</li></Link>
-                <div className='nav__dropdown menu__dropdown'>
+                <div className='menu-link-wrapper'>
                   <p className="menu-link" id='nav__offers-menu' onClick={() => {
                     setOffersDropdownToggleButton(!offersDropdownToggleButton);
                     setGalleryDropdownToggleButton(false);
                   }}>
                     Usluge {!offersDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
                   </p>
-                  {(offersDropdownToggleButton && toggleMenu) && <NavbarMenuDropdown options={navbarDropdownLinks} galerija={false} />}
+
+                  <div ref={menuOffersDropdownRef} className={`nav-menu__dropdown ${(offersDropdownToggleButton && toggleMenu) ? 'show' : ''}`}
+                    style={{height: offersDropdownHeight + 'px'}}
+                  >
+                    <NavbarMenuDropdown options={navbarDropdownLinks} galerija={false} />
+                  </div>
+
                 </div>
-                <div className='nav__dropdown menu__dropdown'>
+                <div className='menu-link-wrapper'>
                   <p className="menu-link" id='nav__gallery-menu' onClick={() => {
                     setGalleryDropdownToggleButton(!galleryDropdownToggleButton);
                     setOffersDropdownToggleButton(false);
                   }}>
                     Galerija {!galleryDropdownToggleButton ? <BsChevronDown strokeWidth={1} /> : <BsChevronUp strokeWidth={1} />}
                   </p>
-                  {(galleryDropdownToggleButton && toggleMenu) && <NavbarMenuDropdown options={navbarDropdownLinks} galerija={true} />}
+                    <div ref={menuGalleryDropdownRef} className={`nav-menu__dropdown ${(galleryDropdownToggleButton && toggleMenu) ? 'show' : ''}`}
+                    style={{height: galleryDropdownHeight + 'px'}}
+                    >
+                      <NavbarMenuDropdown options={navbarDropdownLinks} galerija={true} />
+                    </div>
+                  
                 </div>
                 <Link to={'/najčešća-pitanja'}><li className='menu-link' id='nav__faq-menu'>Najčešća pitanja</li></Link>
                 <Link to={'/kontakt'}><li className='menu-link' id='nav__contact-menu'>Kontakt</li></Link>

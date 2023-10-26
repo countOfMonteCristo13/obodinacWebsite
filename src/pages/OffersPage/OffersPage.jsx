@@ -68,12 +68,12 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
 
       <div className='o__offersPage slide-enterance1' id='op__top'>
         <NavbarSection activeLink='nav__offers' />
-        <HeadText id='op__klimatizacija' title="Klimatizacija" desc={texts.tekstPodnaslov.klimatizacijaP} />
+        <HeadText id='op__klimatizacija' title="Klimatizacija" desc={texts.textOfferPagesSubHeading.acD} />
         <BlueLine />
-        <OffersSection title='Split klima uređaji' description={texts.tekst.splitD} alt='split klima' image={images.klimaUredjajHeader} />
-        <OffersSection title='Multi klima uređaji' description={texts.tekst.multiD} alt='split klima' image={images.multiSistem} odd='odd' />
-        <OffersSection title='VRF sistem' description={texts.tekst.vrfD} alt='vrf sistem' image={images.centralniSistem} />
-        <OffersSection title='Kanalski klima uređaji' description={texts.tekst.kanalskiD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd' />
+        <OffersSection title='Split klima uređaji' description={texts.textTypePages.splitD} alt='split klima' image={images.klimaUredjajHeader} />
+        <OffersSection title='Multi klima uređaji' description={texts.textTypePages.multiD} alt='split klima' image={images.multiSistem} odd='odd' />
+        <OffersSection title='VRF sistem' description={texts.textTypePages.vrfD} alt='vrf sistem' image={images.centralniSistem} />
+        <OffersSection title='Kanalski klima uređaji' description={texts.textTypePages.ductedD} alt='kanalska klima' image={images.kanalskiSistem} odd='odd' />
 
         <div className='o__offersPage_types section__padding'>
           <div className='o__offersPage_types-headtext flex__center'>
@@ -88,15 +88,15 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
           </div>
         </div>
 
-        <HeadText id='op__grejanje' title='Grejanje' wrapper='wrapper' desc={texts.tekstPodnaslov.grejanjeP} />
+        <HeadText id='op__grejanje' title='Grejanje' wrapper='wrapper' desc={texts.textOfferPagesSubHeading.heatingD} />
 
-        <OffersSection title='Radijatorsko grejanje' description={texts.tekst.radijatorD} alt='radijator' image={images.radiator} />
-        <OffersSection title='Podno grejanje' description={texts.tekst.podnoD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
+        <OffersSection title='Radijatorsko grejanje' description={texts.textTypePages.radiatorD} alt='radijator' image={images.radiator} />
+        <OffersSection title='Podno grejanje' description={texts.textTypePages.floorHeatingD} alt='podno grejanje' image={images.podnoGrejanje} odd='odd' />
 
-        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper' desc={texts.tekstPodnaslov.ventilacijaP} />
+        <HeadText id='op__ventilacija' title='Ventilacija' wrapper='wrapper' desc={texts.textOfferPagesSubHeading.ventD} />
 
-        <OffersSection title='Mehanička ventilacija' description={texts.tekst.ventilacijaD} alt='ventilacija' image={images.vent} />
-        <OffersSection title='Rekuperatorska ventilacija' description={texts.tekst.rekuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
+        <OffersSection title='Mehanička ventilacija' description={texts.textTypePages.ventD} alt='ventilacija' image={images.vent} />
+        <OffersSection title='Rekuperatorska ventilacija' description={texts.textTypePages.recuperatorD} alt='rekuperator' image={images.rekuperator} odd='odd' />
         <BlueLine />
         <ContactUsButton />
       </div>

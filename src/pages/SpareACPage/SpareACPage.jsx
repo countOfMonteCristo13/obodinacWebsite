@@ -16,7 +16,7 @@ const SpareACPage = () => {
         <div className='headtext flex__center'>
           <h2>Polovni klima uređaji</h2>
           <p>
-            {texts.tekstDodatno.polovneD}
+            {texts.textOfferPagesSubHeading.spareACD}
           </p>
         </div>
 

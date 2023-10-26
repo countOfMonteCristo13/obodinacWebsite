@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { BsChevronDown, BsChevronRight, BsChevronUp } from 'react-icons/bs';
 import './navbarMenuDropdown.css'
 import { Link } from 'react-router-dom';
@@ -7,10 +7,16 @@ const NavbarMenuDropdown = ({ options,galerija,closeDropdown }) => {
   
     const [optionsDropdown, setOptionsDropdown] = useState(false);
     const [optionClicked,setOptionClicked] = useState('');
+    const [optionHeight,setOptionHeight] = useState(0);
+    const optionRef = useRef(null);
   
     useEffect(() => {
-      
-    })
+      if (optionClicked !== '') {
+        setOptionHeight(optionRef.current.offsetTop);
+      } else {
+        setOptionHeight(0);
+      }
+  }, [optionClicked]);
   
     const handleButtonClick = (e) => {
       const div = e.parentNode.parentNode.querySelector('a').querySelector('p').innerText;
@@ -52,20 +58,20 @@ const NavbarMenuDropdown = ({ options,galerija,closeDropdown }) => {
                   )
                 }
               </div>
-  
-              {
-                option.title === optionClicked 
-                &&
-                <div className='dropdown-menu__options'>
-                  {
-                    option.options.map((dropdownOption) => (
-                      <Link onClick={closeDropdown} to={dropdownOption.url} key={dropdownOption.title}>
-                        <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
+              <div className={`dropdown-menu__options ${option.title === optionClicked ? 'show' : ''}`}
+                style={{ height: option.title === optionClicked ? optionHeight*(option.options.length) + 'px' : '0px' }}
+              >
+                {
+                  option.options.map((dropdownOption) => (
+                    <div ref={optionRef} className='dropdown-menu__option' key={dropdownOption.title}>
+                      <Link onClick={closeDropdown} to={dropdownOption.url}>
+                        <BsChevronRight strokeWidth={1} size={16}/> {dropdownOption.title}
                       </Link>
-                    ))
-                  }
-                </div>
-              }
+                    </div>
+                  ))
+                }
+              </div>
+  
             </div>
           </div>
         ))}

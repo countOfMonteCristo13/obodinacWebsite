@@ -31,7 +31,7 @@ const HeatingPage = () => {
         <div className='headtext flex__center'>
           <h2>Grejanje</h2>
           <p>
-            {texts.tekstNaslovna.grejanjeD}
+            {texts.textOfferPagesSubHeading.heatingD}
           </p>
         </div>
 

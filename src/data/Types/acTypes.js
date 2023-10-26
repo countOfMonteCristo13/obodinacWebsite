@@ -4,21 +4,21 @@ export const acTypes = {
     splitSistem: {
         title:'Split Sistem',
         img:images.klimaUredjajHeader,
-        text:texts.tekst.splitD
+        text:texts.textTypePages.splitD
     },
     multiSistem: {
         title:'Multi Sistem',
         img:images.multiSistem,
-        text:texts.tekst.multiD
+        text:texts.textTypePages.multiD
     },
     centralniSistem: {
         title:'Centralni (VRF) Sistem',
         img:images.centralniSistem,
-        text:texts.tekst.vrfD
+        text:texts.textTypePages.vrfD
     },
     kanalskiSistem: {
         title:'Kanalski Sistem',
         img:images.kanalskiSistem,
-        text:texts.tekst.kanalskiD
+        text:texts.textTypePages.ductedD
     }
 }

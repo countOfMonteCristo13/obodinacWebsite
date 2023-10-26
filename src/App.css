@@ -157,7 +157,7 @@
   }
 
   .headtext{
-    padding: 1rem 2rem;
+    padding: 2rem;
   }
 
   .headtext h2{
@@ -182,6 +182,10 @@
 
   .custom__button{
     padding: 0.5rem 1rem;
+  }
+
+  .headtext{
+    padding: 1.5rem 2rem;
   }
 
   .headtext h2{

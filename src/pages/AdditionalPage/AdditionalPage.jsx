@@ -31,7 +31,7 @@ const AdditionalPage = () => {
               <h2>Polovni klima uređaji</h2>
             </div>
             <div className='o__addoffersPage_polovne-klime-desc'>
-              <p>{texts.tekstDodatno.polovneD}</p>
+              <p>{texts.textOfferPagesSubHeading.spareACD}</p>
             </div>
           </div>          
           <SpareAC/>

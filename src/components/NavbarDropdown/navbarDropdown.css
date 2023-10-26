@@ -33,14 +33,6 @@
     padding: 0.5rem 0 0.5rem 1rem;
 }
 
-.dropdown__option{
-    background: var(--color-darkgrey);
-    color: var(--color-blue);
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
 .dropdown__options{
     width: 100%;
@@ -52,6 +44,15 @@
 
 .dropdown__options.show{
     height: auto;
+}
+
+.dropdown__option{
+    background: var(--color-darkgrey);
+    color: var(--color-blue);
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown__option a{

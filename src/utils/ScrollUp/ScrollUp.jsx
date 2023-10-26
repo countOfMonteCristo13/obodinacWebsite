@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './scrollup.css'
+import { BsChevronUp } from 'react-icons/bs';
 
 // import { connect } from 'react-redux';
 
@@ -44,7 +45,7 @@ import './scrollup.css'
         // (buttonUp && scrollUpBtn) &&
         (buttonUp) &&
         <div onClick={scrollUp} className='o__scrollUp flex__center'>
-          <img src={image} alt="up arrow" />
+          <BsChevronUp strokeWidth={1} size={32}/>
         </div>
       }
     </div>

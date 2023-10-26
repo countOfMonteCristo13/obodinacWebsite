@@ -47,7 +47,7 @@ const DrillingHolesPage = () => {
                     <h2>Dijamantsko bušenje rupa</h2>
                 </div>
                 <BlueLine />
-                <OffersSection description={texts.tekstDodatno.dijamatnskoD} alt='Dijamantsko bušenje rupa' image={images.kirnerica} />
+                <OffersSection description={texts.textOfferPagesSubHeading.drillingD} alt='Dijamantsko bušenje rupa' image={images.kirnerica} />
                 <div className='sistemi__klima-headtext flex__center'>
                     <h2>Prečnici burgija</h2>
                 </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
 import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
-import { images } from '../../data'
+import { images,texts } from '../../data'
 
 import './aCInstallationPage.css'
 import IndoorUnitTypes from './IndoorUnitTypes/IndoorUnitTypes'
@@ -43,11 +43,7 @@ const ACInstallationPage = () => {
                 <div className='headtext flex__center'>
                     <h2>Montaža klima uredjaja</h2>
                     <p>
-                        Klimatizacija je proces kontrolisanja temperature, vlažnosti i kvaliteta vazduha u zatvorenim prostorima
-                        radi postizanja udobnosti i optimalnih uslova za život, rad ili skladištenje uz pomoć rashladnih fluida
-                        kao što su freon ili toplotna pumpa. Naša kompanija vrši montažu klimatizacionih sistema kao što su
-                        split, multi, kanalski i VRF. U slučaju split, multi i VRF sistema postoje različiti tipovi unutrašnjih jedinica
-                        koje možete da izaberete u skladu sa vašim potrebama, dok se za kanalski sistem koristi kanalska unutrašnja jedinica.
+                        {texts.textOfferPagesSubHeading.acD}
                     </p>
                 </div>
                 <div className='sistemi__klima-headtext flex__center'>

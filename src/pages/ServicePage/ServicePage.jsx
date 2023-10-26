@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './servicePage.css'
 import {NavbarSection} from '../../components'
 import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
-import { images } from '../../data'
+import { images, texts } from '../../data'
 
 const ServicePage = () => {
 
@@ -14,7 +14,7 @@ const ServicePage = () => {
     {
       img: images.ciscenjeKlimaUredjajaKartica,
       title: 'Čišćenje klima uređaja',
-      url: '/usluge/servis-klima-uređaja/čišćenje-klime'
+      url: '/usluge/servis-klima-uređaja/čišćenje-klima-uređaja'
     },
     {
       img: images.elektronika,
@@ -41,13 +41,7 @@ const ServicePage = () => {
         <div className='headtext flex__center'>
           <h2>Servis klima uredjaja</h2>
           <p>
-            Servis klima uređaja je važan postupak koji se preporučuje, bar jednom godišnje,
-            kako bi se održala optimalna funkcionalnost i produžio vek trajanja klima uređaja.
-            Ovo podrazumeva proveru i čišćenje maske, filtera i turbine unutrašnje jedinice, kao i proveru i čišćenje spoljne jedinice.
-            U slučaju da se otkrije kvar, servis klima uređaja obuhvata popravke i zamene oštećenih ili neispravnih delova.
-            Ukoliko vam je potreban servis ili održavanje klima uređaja, kontaktirajte nas.
-            Naša ekipa će vam pružiti profesionalne usluge i brinuti se o vašem klima uređaju kako biste uživali u
-            udobnom i kvalitetnom vazduhu u vašem prostoru.
+            {texts.textOfferPagesSubHeading.serviceD}
           </p>
         </div>
 

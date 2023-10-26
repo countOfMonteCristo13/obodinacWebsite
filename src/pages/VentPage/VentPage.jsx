@@ -30,7 +30,7 @@ const VentPage = () => {
         <div className='headtext flex__center'>
           <h2>Ventilacija</h2>
           <p>
-            {texts.tekstNaslovna.ventilacijaD}
+            {texts.textOfferPagesSubHeading.ventD}
           </p>
         </div>
 
