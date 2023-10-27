@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './servicePage.css'
 import {NavbarSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
+import {ScrollUp,TypeCard} from '../../utils'
 import { images, texts } from '../../data'
 
 const ServicePage = () => {
@@ -57,8 +57,6 @@ const ServicePage = () => {
             }
           </div>
         </div>
-        <BlueLine />
-        <ContactUsButton />
       </div>
     </>
   )

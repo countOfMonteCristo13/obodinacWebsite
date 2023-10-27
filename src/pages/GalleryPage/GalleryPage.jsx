@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './gallerypage.css'
 import { images } from '../../data'
 import {NavbarSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine} from '../../utils'
+import {ScrollUp,BlueLine} from '../../utils'
 
 
 const GalleryPage = ({ gImages, title }) => {
@@ -28,8 +28,6 @@ const GalleryPage = ({ gImages, title }) => {
             </div>
           ))}
         </div>
-        <BlueLine />
-        <ContactUsButton />
       </div>
     </>
   )

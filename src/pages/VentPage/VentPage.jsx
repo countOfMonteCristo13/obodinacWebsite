@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import {NavbarSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
+import {ScrollUp,TypeCard} from '../../utils'
 import { images , texts} from '../../data';
 
 const VentPage = () => {
@@ -46,8 +46,6 @@ const VentPage = () => {
             }
           </div>
         </div>
-        <BlueLine />
-        <ContactUsButton />
       </div>
     </>
   )

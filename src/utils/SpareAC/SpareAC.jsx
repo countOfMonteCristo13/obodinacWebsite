@@ -4,14 +4,6 @@ import { images, spareAC,galleryImages } from '../../data'
 import { Link } from 'react-router-dom'
 
 import ImageSlider from '../ImageSlider/ImageSlider'
-import { connect } from 'react-redux'
-import { setScrollUpBtn } from '../../actions'
-
-
-const mapDispatchToProps = {
-    setScrollUpBtn,
-}
-
 
 
 const SpareAC = ({ setScrollUpBtn }) => {
@@ -25,11 +17,9 @@ const SpareAC = ({ setScrollUpBtn }) => {
 
         if (toggleMenu) {
             body.classList.add('overflow-hidden');
-            setScrollUpBtn(false);
 
         } else {
             body.classList.remove('overflow-hidden');
-            setScrollUpBtn(true);
         }
     })
 
@@ -91,4 +81,4 @@ const SpareAC = ({ setScrollUpBtn }) => {
 
 }
 
-export default connect(null, mapDispatchToProps)(SpareAC);
+export default SpareAC;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { images,texts } from '../../data'
 import {NavbarSection,OffersSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine,TypeCard} from '../../utils'
+import {ScrollUp,BlueLine,TypeCard} from '../../utils'
 
 const DrillingHolesPage = () => {
 
@@ -60,9 +60,6 @@ const DrillingHolesPage = () => {
                         }
                     </div>
                 </div>
-                <BlueLine />
-                <ContactUsButton />
-
             </div>
         </>
     )

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './homepage.css'
-import {Header,AboutUs,Offers,Gallery,Footer,NavbarSection,FAQ} from '../../components'
+import {Header,AboutUs,Offers,Gallery,NavbarSection,FAQ} from '../../components'
 import {ScrollUp} from '../../utils'
 import { images } from '../../data'
 
@@ -23,7 +23,6 @@ const HomePage = () => {
         <Offers />
         <Gallery />
         <FAQ />
-        <Footer />
       </div>
     </>
   )

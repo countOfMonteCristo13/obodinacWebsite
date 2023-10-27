@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './acSystemPage.css'
 import {NavbarSection,OffersSection} from '../../components'
-import {ScrollUp,ContactUsButton,BlueLine,CardFlip} from '../../utils'
+import {ScrollUp,BlueLine,CardFlip} from '../../utils'
 import IndoorUnitTypes from '../ACInstallationPage/IndoorUnitTypes/IndoorUnitTypes';
 import { images } from '../../data';
 
@@ -35,8 +35,6 @@ const ACSystemPage = ({ sistem }) => {
                         </div>
                     </>
                 }
-                <BlueLine />
-                <ContactUsButton />
             </div>
         </>
     )

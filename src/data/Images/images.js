@@ -120,6 +120,9 @@ import podnoGrejanje from '../../assets/offersImages/podnoGrejanje.png';
 import radiator from '../../assets/offersImages/radiator.png';
 import rekuperator from '../../assets/offersImages/rekuperator.png';
 import vent from '../../assets/offersImages/vent.png';
+import punjenjeFreona from '../../assets/offersImages/freon.png'
+import popravkaElektronike from '../../assets/offersImages/elektronika.png'
+import zamenaKondezatora from '../../assets/offersImages/zamenaKondezatora.png'
 //
 
 //Logo Images
@@ -254,7 +257,10 @@ const images = {
     burgijaKartica,
     polovniKlimaUredjajiKartica,
     servisKlimaUredjajaKartica,
-    refreshWhite
+    refreshWhite,
+    punjenjeFreona,
+    popravkaElektronike,
+    zamenaKondezatora
 }
 
 export default images;

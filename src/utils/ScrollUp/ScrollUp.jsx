@@ -11,7 +11,7 @@ import { BsChevronUp } from 'react-icons/bs';
 // }
 
 // const ScrollUp = ({ image, scrollUpBtn }) => {
-  const ScrollUp = ({ image }) => {
+  const ScrollUp = () => {
 
   const [buttonUp, setButtonUp] = useState(false);
 

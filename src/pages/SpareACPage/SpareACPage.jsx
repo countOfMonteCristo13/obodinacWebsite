@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {ScrollUp,ContactUsButton,SpareAC,BlueLine} from '../../utils'
+import {ScrollUp,SpareAC} from '../../utils'
 import {NavbarSection} from '../../components'
 import { images,texts } from '../../data';
 
@@ -24,8 +24,6 @@ const SpareACPage = () => {
           <h2>Ponuda</h2>
         </div>
         <SpareAC />
-        <BlueLine />
-        <ContactUsButton />
       </div>
     </>
   )

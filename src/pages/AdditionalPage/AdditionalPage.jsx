@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import './additionalpage.css'
 import { images,galleryImages,texts } from '../../data'
 import {NavbarSection, OffersSection} from '../../components'
-import {ScrollUp,ContactUsButton,ImageSlider,SpareAC,BlueLine} from '../../utils'
+import {ScrollUp,ImageSlider,SpareAC,BlueLine} from '../../utils'
 
 
 const AdditionalPage = () => {
@@ -35,9 +35,6 @@ const AdditionalPage = () => {
             </div>
           </div>          
           <SpareAC/>
-          
-          <BlueLine/>
-          <ContactUsButton/>
       </div>
     </div>
   )

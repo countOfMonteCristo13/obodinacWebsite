@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import {NavbarSection} from '../../components'
+import { NavbarSection } from '../../components'
 import { images } from '../../data'
 import './aboutuspage.css'
 
-import {ScrollUp,ContactUsButton} from '../../utils'
+import { ScrollUp } from '../../utils'
 
 const AboutUsPage = () => {
 
@@ -14,7 +14,7 @@ const AboutUsPage = () => {
 
   return (
     <>
-      <ScrollUp image={images.upArrow} />
+      <ScrollUp />
       <div className='o__aboutPage slide-enterance1'>
         <NavbarSection activeLink='nav__about' />
         <div className='o__aboutPage_section'>
@@ -35,11 +35,9 @@ const AboutUsPage = () => {
             <p>
               Dokaz našeg kvalitetnog rada su
               naši zadovoljni stalni klijenti koji su naša najbolja preporuka
-            </p></div>
-          <div className='o__aboutPage_section-description_line-wrapper'>
-            <div className='o__aboutPage_section-description_line' />
+            </p>
           </div>
-          <ContactUsButton />
+
         </div>
       </div>
     </>

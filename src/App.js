@@ -7,6 +7,7 @@ import obodinacLoading from './assets/obodinacLoading.json'
 import {HomePage,AboutUsPage,GalleryPage,ContactPage,ACInstallationPage,ServicePage,DrillingHolesPage,HeatingPage,
   VentPage,SpareACPage,FAQuestionsPage,TypePage,ACSystemPage} from './pages';
 import { acTypes, serviceTypes, ventilationTypes, heatingTypes, galleryImages } from './data';
+import { Footer } from './components';
 
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
               <Route path="/najčešća-pitanja" element={<FAQuestionsPage />} />
               <Route path="/kontakt" element={<ContactPage />} />
             </Routes>
+            <Footer/>
 
           </div>
         )

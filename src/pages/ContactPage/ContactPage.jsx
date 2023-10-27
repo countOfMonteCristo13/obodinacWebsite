@@ -123,6 +123,7 @@ const ContactPage = () => {
                     </div>
 
                     <div className="o__contactPage_options-call" id="option-call">
+                        <h2>Možete da nas kontaktirate i putem:</h2>
                         <div className='opcija-poziv'>
                             <img src={images.phoneIcon} alt="phone" />
                             <div>

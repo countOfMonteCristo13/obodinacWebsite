@@ -26,10 +26,10 @@
 .info{
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .info img{
-    margin-right: 1.5rem;
     width: 50px;
 }
 

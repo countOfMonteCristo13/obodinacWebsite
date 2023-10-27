@@ -78,7 +78,7 @@
 @media screen and (max-width:1200px){
 
     .o__offersSection{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     #odd{
@@ -87,7 +87,7 @@
 
     .o__offersSection_details,
     #odd .o__offersSection_details{
-        width: 90%;
+        width: 100%;
         align-items: center;
         text-align: justify;
     }
@@ -116,7 +116,7 @@
     }
 
     .o__offersSection_img{
-        width: 80%;
+        width: 100%;
     }
 
 }
