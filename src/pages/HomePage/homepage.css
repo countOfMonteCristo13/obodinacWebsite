@@ -1,29 +1,25 @@
-.hp{
-    scroll-behavior: smooth;
+.hp {
+  scroll-behavior: smooth;
 }
 
-.o__line{
-    padding: 0rem 2rem;
-    background: white;
+.o__line {
+  padding: 0rem 2rem;
+  background: white;
 }
 
-
-.o__line-hidden{
-    display: none;
+.o__line-hidden {
+  display: none;
 }
 
-
-.o__line div{
-    
-    height: 4px;
-    border-radius: 10px;
-    background: var(--color-blue);
-    width: 100%;
+.o__line div {
+  height: 4px;
+  border-radius: 10px;
+  background: var(--color-blue);
+  width: 100%;
 }
 
-@media screen and (max-width:768px) {
-
-    .o__line-hidden{
-        display: block;
-    }
+@media screen and (max-width: 768px) {
+  .o__line-hidden {
+    display: block;
+  }
 }

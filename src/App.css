@@ -1,67 +1,73 @@
-.section__padding{
+.section__padding {
   padding: 3rem;
 }
 
-.flex__center{
+.flex__center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section__head{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 140px;
-    background-color: #f5f7fa;
-    padding: 0 2rem;
+.section__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  background-color: #f5f7fa;
+  padding: 0 2rem;
 }
 
-.section__head h2{
+.section__head h2 {
   font-size: 4rem;
-	color: var(--color-blue);
-	font-weight: 300;
+  color: var(--color-blue);
+  font-weight: 300;
   font-family: var(--font-base);
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 
-.cursor-copy{
+.cursor-copy {
   cursor: copy;
 }
 
-.custom__button{
+.custom__button {
   font-family: var(--font-base);
   border-radius: 7px;
   padding: 0.7rem 1.2rem;
   border: none;
 }
 
-.submit__btn{
-    font-size: 1.5rem;
-    color: #284280;
-    cursor: pointer;
-    border: 2px solid var(--color-grey);
-    box-shadow: 0 0 40px 40px var(--color-grey) inset, 0 0 0 0 var(--color-grey);
-    transition: all 150ms ease-in-out;
+.submit__btn {
+  font-size: 1.5rem;
+  color: #284280;
+  cursor: pointer;
+  border: 2px solid var(--color-grey);
+  box-shadow:
+    0 0 40px 40px var(--color-grey) inset,
+    0 0 0 0 var(--color-grey);
+  transition: all 150ms ease-in-out;
 }
 
 .submit__btn:hover {
-  box-shadow: 0 0 5px 0 var(--color-grey) inset, 0 0 3px 2px var(--color-grey);
+  box-shadow:
+    0 0 5px 0 var(--color-grey) inset,
+    0 0 3px 2px var(--color-grey);
   background: var(--color-blue);
   color: var(--color-grey);
 }
 
-.submit__btn:disabled{
-  box-shadow: 0 0 40px 40px var(--color-grey) inset, 0 0 0 0 var(--color-grey);
+.submit__btn:disabled {
+  box-shadow:
+    0 0 40px 40px var(--color-grey) inset,
+    0 0 0 0 var(--color-grey);
   color: #284280;
   background: var(--color-grey);
   cursor: auto;
 }
 
-.more-btn{
+.more-btn {
   font-size: 1.1rem;
   font-weight: 300;
   background: var(--color-darkgrey);
@@ -71,13 +77,13 @@
   transition: all 0.15s ease-in;
 }
 
-.more-btn:hover{
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
-  box-shadow: 2px 2px 5px 0px rgba(40,66,128,1);
+.more-btn:hover {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(40, 66, 128, 1);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(40, 66, 128, 1);
+  box-shadow: 2px 2px 5px 0px rgba(40, 66, 128, 1);
 }
 
-.checkout-btn{
+.checkout-btn {
   font-size: 1.1rem;
   color: var(--color-white);
   background: var(--color-blue);
@@ -86,23 +92,23 @@
   transition: all 0.15s ease-in;
 }
 
-.checkout-btn:hover{
-    background-color: var(--color-white);
-    color: var(--color-blue);
-    font-weight: bold;
+.checkout-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  font-weight: bold;
 }
 
-.loadingScreen{
+.loadingScreen {
   height: 100vh;
 }
 
-.headtext{
+.headtext {
   padding: 2rem 3rem;
   flex-direction: column;
   gap: 1rem;
 }
 
-.headtext h2{
+.headtext h2 {
   font-size: 3.5rem;
   color: var(--color-blue);
   text-align: center;
@@ -114,86 +120,79 @@
   line-height: 2rem;
 }
 
-.d-none{
+.d-none {
   display: none;
 }
 
-.d-block{
+.d-block {
   display: block;
 }
 
-@media screen and (min-width:1440px){
-
-    
-  .headtext p{
-      font-size: 1.2rem;
-      line-height: 2.4rem;
+@media screen and (min-width: 1440px) {
+  .headtext p {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
   }
 }
 
-
-@media screen and (max-width:768px) {
-  .section__head{
+@media screen and (max-width: 768px) {
+  .section__head {
     background-color: var(--color-blue);
   }
 
-  .section__head h2{
+  .section__head h2 {
     color: var(--color-white);
   }
 
-  .section__padding{
+  .section__padding {
     padding: 2rem;
   }
 
   .more-btn,
   .checkout-btn,
-  .submit__btn{
+  .submit__btn {
     font-size: 1rem;
   }
 
-  .custom__button{
+  .custom__button {
     padding: 0.6rem 1.1rem;
   }
 
-  .headtext{
+  .headtext {
     padding: 2rem;
   }
 
-  .headtext h2{
+  .headtext h2 {
     font-size: 2.8rem;
-}
+  }
 
   .headtext p {
     font-size: 0.9rem;
     line-height: 1.8rem;
+  }
 }
 
-}
-
-
-@media screen and (max-width:425px) {
-
+@media screen and (max-width: 425px) {
   .more-btn,
   .checkout-btn,
-  .submit__btn{
+  .submit__btn {
     font-size: 0.9rem;
   }
 
-  .custom__button{
+  .custom__button {
     padding: 0.5rem 1rem;
   }
 
-  .headtext{
+  .headtext {
     padding: 1.5rem 2rem;
   }
 
-  .headtext h2{
+  .headtext h2 {
     font-size: 2.2rem;
-}
+  }
 
   .headtext p {
     font-size: 0.8rem;
     line-height: 1.6rem;
-}
-
+  }
 }

@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react'
 import './homepage.css'
-import {Header,AboutUs,Offers,Gallery,NavbarSection,FAQ} from '../../components'
-import {ScrollUp} from '../../utils'
+import {
+  Header,
+  AboutUs,
+  Offers,
+  Gallery,
+  NavbarSection,
+  FAQ,
+} from '../../components'
+import { ScrollUp } from '../../utils'
 import { images } from '../../data'
 
 const HomePage = () => {
-
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <>

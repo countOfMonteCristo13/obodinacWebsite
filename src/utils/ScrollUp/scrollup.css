@@ -1,36 +1,29 @@
-.o__scrollUp{
-    padding: 0.3rem;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.09);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10.1px);
-    -webkit-backdrop-filter: blur(10.1px);
-    position: fixed;
-    right: 0.4rem;
-    bottom: 0.4rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    z-index: 800;
+.o__scrollUp {
+  padding: 0.3rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.1px);
+  -webkit-backdrop-filter: blur(10.1px);
+  position: fixed;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  z-index: 800;
 }
 
-
-.o__scrollUp svg{
-    color: var(--color-blue);
+.o__scrollUp svg {
+  color: var(--color-blue);
 }
 
-
-.o__scrollUp:hover svg{
-    transform: scale(1.05);
+.o__scrollUp:hover svg {
+  transform: scale(1.05);
 }
 
-
-
-@media screen and (max-width:425px) {
-
-    .o__scrollUp svg{
-        max-width: 28px;
-        max-height: 28px;
-    }
-    
-
+@media screen and (max-width: 425px) {
+  .o__scrollUp svg {
+    max-width: 28px;
+    max-height: 28px;
+  }
 }

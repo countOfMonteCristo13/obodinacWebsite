@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 const OffersSection = ({ description, image, alt, odd }) => {
   return (
     <div className='o__offersSection section__padding' id={odd}>
-
       <div className='o__offersSection_details'>
         <p>{description}</p>
         <Link to='#'>
@@ -17,7 +16,6 @@ const OffersSection = ({ description, image, alt, odd }) => {
           <img src={image} alt={alt} />
         </div>
       </div>
-
     </div>
   )
 }

@@ -2,13 +2,11 @@ import React from 'react'
 import './header.css'
 import { images } from '../../data'
 
-
 const Header = () => {
-
   return (
     <div>
       <header className='o__header'>
-        <div className="o__header_logo" >
+        <div className='o__header_logo'>
           <img src={images.obodinac} alt='obodinac logo' />
         </div>
 

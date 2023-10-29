@@ -1,36 +1,35 @@
-import React, { useEffect } from 'react'
-import './servicePage.css'
-import {NavbarSection} from '../../components'
-import {ScrollUp,TypeCard} from '../../utils'
-import { images, texts } from '../../data'
+import React, { useEffect } from 'react';
+import './servicePage.css';
+import { NavbarSection } from '../../components';
+import { ScrollUp, TypeCard } from '../../utils';
+import { images, texts } from '../../data';
 
 const ServicePage = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  })
+  });
 
   const serviceTypes = [
     {
-      img: images.ciscenjeKlimaUredjajaKartica,
+      img: images.ciscenjeKlimaUredjaja,
       title: 'Čišćenje klima uređaja',
-      url: '/usluge/servis-klima-uređaja/čišćenje-klima-uređaja'
+      url: '/usluge/servis-klima-uređaja/čišćenje-klima-uređaja',
     },
     {
       img: images.elektronika,
       title: 'Popravka elektronike',
-      url: '/usluge/servis-klima-uređaja/popravka-elektronike'
+      url: '/usluge/servis-klima-uređaja/popravka-elektronike',
     },
     {
       img: images.freon,
       title: 'Punjenje/Dopuna freona',
-      url: '/usluge/servis-klima-uređaja/freon'
+      url: '/usluge/servis-klima-uređaja/freon',
     },
     {
       img: images.kondezator,
       title: 'Zamena kondezatora',
-      url: '/usluge/servis-klima-uređaja/zamena-kondezatora'
-    }
+      url: '/usluge/servis-klima-uređaja/zamena-kondezatora',
+    },
   ];
 
   return (
@@ -40,9 +39,7 @@ const ServicePage = () => {
         <NavbarSection activeLink='nav__offers' />
         <div className='headtext flex__center'>
           <h2>Servis klima uredjaja</h2>
-          <p>
-            {texts.textOfferPagesSubHeading.serviceD}
-          </p>
+          <p>{texts.textOfferPagesSubHeading.serviceD}</p>
         </div>
 
         <div className='sistemi__klima-headtext flex__center'>
@@ -50,16 +47,14 @@ const ServicePage = () => {
         </div>
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
-            {
-              serviceTypes.map((sistem) => (
-                <TypeCard sistem={sistem} key={sistem.title} />
-              ))
-            }
+            {serviceTypes.map(sistem => (
+              <TypeCard sistem={sistem} key={sistem.title} />
+            ))}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ServicePage
+export default ServicePage;

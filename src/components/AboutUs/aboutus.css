@@ -1,97 +1,89 @@
-.o__aboutUs{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    background-color: var(--color-white);
+.o__aboutUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--color-white);
 }
 
-.o__aboutUs_img{
-    width: 50%;
+.o__aboutUs_img {
+  width: 50%;
 }
 
-.o__aboutUs_img img{
+.o__aboutUs_img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.o__aboutUs_details {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.o__aboutUs_details h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+}
+
+.o__aboutUs_details p {
+  line-height: 2rem;
+  color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .o__aboutUs {
+    flex-direction: column;
+  }
+
+  .o__aboutUs_img {
+    width: 80%;
+  }
+
+  .o__aboutUs_img img {
+    height: auto;
+    max-height: 650px;
+  }
+
+  .o__aboutUs_details {
     width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .o__aboutUs_details h2 {
+    text-align: center;
+  }
 }
 
-.o__aboutUs_details{
-    height: 100%;
-    width: 45%;
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 768px) {
+  .o__aboutUs {
     gap: 1.5rem;
+  }
+
+  .o__aboutUs_details {
+    gap: 1.5rem;
+  }
+
+  .o__aboutUs_img {
+    width: 100%;
+  }
 }
 
-.o__aboutUs_details h2{
-    font-size: 2.5rem;
-    color: var(--color-blue);
-}
+@media screen and (max-width: 425px) {
+  .o__aboutUs_details h2 {
+    font-size: 1.5rem;
+  }
 
-.o__aboutUs_details p{
-    line-height: 2rem;
-    color: var(--color-blue);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-
-
-@media screen and (max-width:1200px) {
-    .o__aboutUs{
-        flex-direction: column;
-    }
-
-    .o__aboutUs_img{
-        width: 80%;
-    }
-
-    .o__aboutUs_img img{
-        height: auto;
-        max-height: 650px;
-    }
-
-    .o__aboutUs_details{
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-    }
-
-    .o__aboutUs_details h2{
-        text-align: center;
-    }
-}
-
-
-@media screen and (max-width:768px){
-    .o__aboutUs{
-        gap: 1.5rem;
-    }
-
-    .o__aboutUs_details{
-        gap: 1.5rem;
-    }
-
-    .o__aboutUs_img{
-        width: 100%;
-    }
-
-
-}
-
-@media screen and (max-width:425px){
-
-
-    .o__aboutUs_details h2{
-        font-size: 1.5rem;
-    }
-
-    .o__aboutUs_details p{
-        line-height: 1.8rem;
-        font-size: 0.9rem;
-    }
-
+  .o__aboutUs_details p {
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+  }
 }

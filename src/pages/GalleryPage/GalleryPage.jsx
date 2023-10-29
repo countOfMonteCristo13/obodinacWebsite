@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react'
-import './gallerypage.css'
-import { images } from '../../data'
-import {NavbarSection} from '../../components'
-import {ScrollUp,BlueLine} from '../../utils'
-
+import React, { useEffect } from 'react';
+import './gallerypage.css';
+import { images } from '../../data';
+import { NavbarSection } from '../../components';
+import { ScrollUp, BlueLine } from '../../utils';
 
 const GalleryPage = ({ gImages, title }) => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
-
   }, []);
 
   return (
@@ -21,20 +18,16 @@ const GalleryPage = ({ gImages, title }) => {
           <h2>{title}</h2>
         </div>
         <BlueLine />
-        <div className="gallery__grid section__padding">
+        <div className='gallery__grid section__padding'>
           {gImages.map((image, index) => (
-            <div key={index} className="gallery__img">
+            <div key={image} className='gallery__img'>
               <img src={image} alt={`Slika ${index}`} />
             </div>
           ))}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default GalleryPage;
-
-
-
-

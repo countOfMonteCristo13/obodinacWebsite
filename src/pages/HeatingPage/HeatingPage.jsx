@@ -1,27 +1,25 @@
 import React, { useEffect } from 'react'
-import {NavbarSection} from '../../components'
-import {ScrollUp,TypeCard} from '../../utils'
-import { images,texts } from '../../data';
-
+import { NavbarSection } from '../../components'
+import { ScrollUp, TypeCard } from '../../utils'
+import { images, texts } from '../../data'
 
 const HeatingPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
   })
 
   const heatingTypes = [
     {
       img: images.radiatorKartica,
       title: 'Radijatorsko grejanje',
-      url: '/usluge/grejanje/radijatorsko-grejanje'
+      url: '/usluge/grejanje/radijatorsko-grejanje',
     },
     {
       img: images.podnoGrejanjeKartica,
       title: 'Podno grejanje',
-      url: '/usluge/grejanje/podno-grejanje'
-    }
-  ];
-
+      url: '/usluge/grejanje/podno-grejanje',
+    },
+  ]
 
   return (
     <>
@@ -30,9 +28,7 @@ const HeatingPage = () => {
         <NavbarSection activeLink='nav__offers' />
         <div className='headtext flex__center'>
           <h2>Grejanje</h2>
-          <p>
-            {texts.textOfferPagesSubHeading.heatingD}
-          </p>
+          <p>{texts.textOfferPagesSubHeading.heatingD}</p>
         </div>
 
         <div className='sistemi__klima-headtext flex__center'>
@@ -40,11 +36,9 @@ const HeatingPage = () => {
         </div>
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
-            {
-              heatingTypes.map((sistem) => (
-                <TypeCard sistem={sistem} key={sistem.title} />
-              ))
-            }
+            {heatingTypes.map((sistem) => (
+              <TypeCard sistem={sistem} key={sistem.title} />
+            ))}
           </div>
         </div>
       </div>

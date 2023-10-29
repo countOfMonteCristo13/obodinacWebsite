@@ -1,12 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const KontaktDugme = () => {
-    return (
-        <div className='flex__center section__padding'>
-            <Link to={'/kontakt'}><button className='custom__button checkout-btn'>Kontaktirajte Nas</button></Link>
-        </div>
-    )
-}
+  return (
+    <div className='flex__center section__padding'>
+      <Link to='/kontakt'>
+        <button className='custom__button checkout-btn'>Kontaktirajte Nas</button>
+      </Link>
+    </div>
+  );
+};
 
-export default KontaktDugme
+export default KontaktDugme;

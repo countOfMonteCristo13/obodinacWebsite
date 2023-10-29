@@ -1,74 +1,71 @@
-.dropdown-menu{
-    background: var(--color-darkgrey);
+.dropdown-menu {
+  background: var(--color-darkgrey);
 }
 
-
-.dropdown-menu__link-wrapper{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 100%;
-
+.dropdown-menu__link-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
 }
 
-
-.dropdown-menu__link{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    padding: 0.3rem 1rem 0.3rem 0;
-    margin-left: 4rem;
-    cursor: pointer;
-    color: var(--color-blue);
-    font-size: 1.2rem;
-    font-weight: bold;
-    width: 100%;
+.dropdown-menu__link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.3rem 1rem 0.3rem 0;
+  margin-left: 4rem;
+  cursor: pointer;
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
 }
 
-.dropdown-menu__link:hover{
-    color: var(--color-white);
+.dropdown-menu__link:hover {
+  color: var(--color-white);
 }
 
-.dropdown-menu__options{
-    color: var(--color-blue);
-    font-weight: bold;
-    width: 100%;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.5s ease, border 0.5s ease ;
-
+.dropdown-menu__options {
+  color: var(--color-blue);
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition:
+    height 0.5s ease,
+    border 0.5s ease;
 }
 
-.dropdown-menu__options.show{
-    height: auto;
+.dropdown-menu__options.show {
+  height: auto;
 }
 
-.dropdown-menu__option{
-    background: var(--color-white);
-    color: var(--color-blue);
-    font-weight: bold;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    box-sizing:content-box;
+.dropdown-menu__option {
+  background: var(--color-white);
+  color: var(--color-blue);
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
 }
 
-
-.dropdown-menu__option a{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.3rem 1rem 0.3rem 6rem;
+.dropdown-menu__option a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 1rem 0.3rem 6rem;
 }
 
-.dropdown-menu__option a:hover{
-    color: var(--color-darkgrey);
+.dropdown-menu__option a:hover {
+  color: var(--color-darkgrey);
 }
 
-.dropdown-menu__btn{
-    height: fit-content;
+.dropdown-menu__btn {
+  height: fit-content;
 }

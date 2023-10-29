@@ -1,115 +1,82 @@
-
-.o__header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5rem;
-    background-color: var(--color-white);
-    padding: 2rem 3rem;
+.o__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  background-color: var(--color-white);
+  padding: 2rem 3rem;
 }
 
-.o__header_logo{
-    display: flex;
-    align-items: center;
+.o__header_logo {
+  display: flex;
+  align-items: center;
 }
 
-.o__header_logo img{
+.o__header_logo img {
+  max-width: 400px;
+}
+
+.o__header_images {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.o__header_images img {
+  max-height: 130px;
+}
+
+@media screen and (min-width: 1600px) {
+  .o__header_logo img {
+    min-width: 500px;
+  }
+
+  .o__header_images img {
+    max-height: 170px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .o__header_logo img {
+    min-width: 600px;
+  }
+
+  .o__header_images img {
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .o__header {
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  .o__header_logo img {
+    max-width: 330px;
+  }
+
+  .o__header_images img {
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .o__header {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .o__header_logo {
     max-width: 400px;
-}
+  }
 
-.o__header_images{
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-}
+  .o__header_logo img {
+    max-width: 100%;
+    object-fit: cover;
+  }
 
-.o__header_images img{
-    max-height: 130px;
-}
-
-
-
-/* @media screen and (min-width:1600px) {
-    .o__header_logo img{
-        min-width: 600px;
-    }
-
-    .o__header_images img{
-        max-height: 200px;
-    }
-
-    .o__header_logo{
-        margin-right: 5rem;
-    }
-}
-
-@media screen and (min-width:2000px) {
-    .o__header_logo img{
-        min-width: 700px;
-    }
-
-    .o__header_images img{
-        max-height: 250px;
-    }
-
-    .o__header_logo{
-        margin-right: 5rem;
-    }
-
-
-} */
-
-
-
-
-@media screen and (max-width:1024px) {
-
-    .o__header{
-        gap: 3rem;
-        padding: 2rem;
-    }
-
-    .o__header_logo img{
-        max-width: 330px;
-    }
-
-    .o__header_images img{
-        max-height: 100px;
-    }
-
-}
-
-
-/* @media screen and (max-width:920px) {
-    .o__header_logo img{
-        max-width: 300px;
-    }
-
-    .o__header_images img{
-        max-height: 100px;
-    }
-} */
-
-
-@media screen and (max-width:768px) {
-  
-
-    .o__header{
-        justify-content: center;
-        gap: 0;
-    }
-
-    .o__header_logo{
-        max-width: 400px;
-    }
-
-    .o__header_logo img{
-        max-width: 100%;
-        object-fit: cover;
-    }
-
-    .o__header_images{
-       display: none;
-    }
-
+  .o__header_images {
+    display: none;
+  }
 }

@@ -1,11 +1,17 @@
-import {grejanje,klimatizacija,ventilacija,servisKlimaImages,kernovanjeImages} from './allGalleryImages'
+import {
+  grejanje,
+  klimatizacija,
+  ventilacija,
+  servisKlimaImages,
+  kernovanjeImages,
+} from './allGalleryImages'
 
 const galleryImages = {
-    grejanje,
-    klimatizacija,
-    ventilacija,
-    servisKlimaImages,
-    kernovanjeImages
+  grejanje,
+  klimatizacija,
+  ventilacija,
+  servisKlimaImages,
+  kernovanjeImages,
 }
 
-export default galleryImages;
+export default galleryImages

@@ -1,56 +1,51 @@
-.title{
-    background: var(--color-blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title {
+  background: var(--color-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.title h2{
-    font-size: 3rem;
-    color: var(--color-white);
-    padding: 1rem 0;
-    text-align: center;
+.title h2 {
+  font-size: 3rem;
+  color: var(--color-white);
+  padding: 1rem 0;
+  text-align: center;
 }
 
-#gray{
-    background: var(--color-darkgrey);
+#gray {
+  background: var(--color-darkgrey);
 }
 
-#gray h2{
-    color: var(--color-blue);
+#gray h2 {
+  color: var(--color-blue);
 }
 
-#transparent{
-    background: transparent;
-    justify-content: flex-start;
+#transparent {
+  background: transparent;
+  justify-content: flex-start;
 }
-#transparent h2{
-    text-decoration: underline;
-}
-
-
-#blue{
-    background: transparent;
+#transparent h2 {
+  text-decoration: underline;
 }
 
-#blue h2{
-    color: var(--color-blue);
-    font-size: 3rem;
-    padding: unset;
+#blue {
+  background: transparent;
 }
 
-@media screen and (max-width:768px) {
-    .title h2{
-        font-size: 2.5rem;
-    }
-
+#blue h2 {
+  color: var(--color-blue);
+  font-size: 3rem;
+  padding: unset;
 }
 
+@media screen and (max-width: 768px) {
+  .title h2 {
+    font-size: 2.5rem;
+  }
+}
 
-
-@media screen and (max-width:425px) {
-    .title h2{
-        font-size: 2rem;
-    }
-
+@media screen and (max-width: 425px) {
+  .title h2 {
+    font-size: 2rem;
+  }
 }
