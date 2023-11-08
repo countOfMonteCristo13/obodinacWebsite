@@ -1,8 +1,8 @@
-import React from 'react'
-import './gallery.css'
-import HeadTitle from '../../utils/HeadTitle/HeadTitle'
-import { images } from '../../data'
-import ACSystemsCard from '../../utils/TypeCard/TypeCard'
+import React from 'react';
+import './gallery.css';
+import HeadTitle from '../../utils/HeadTitle/HeadTitle';
+import images from '../../data/Images/images';
+import ACSystemsCard from '../../utils/TypeCard/TypeCard';
 
 const Gallery = () => {
   const galleryCards = [
@@ -36,20 +36,20 @@ const Gallery = () => {
       title: 'Dijamantsko bušenje rupa',
       url: '/galerija/dijamantsko-bušenje-rupa',
     },
-  ]
+  ];
 
   return (
     <div className='o__gallery'>
       <HeadTitle title='Galerija' />
       <div className='sistemi__klima section__padding'>
         <div className='sistemi__klima-cards'>
-          {galleryCards.map((card) => (
+          {galleryCards.map(card => (
             <ACSystemsCard sistem={card} key={card.title} />
           ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

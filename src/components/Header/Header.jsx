@@ -1,6 +1,6 @@
-import React from 'react'
-import './header.css'
-import { images } from '../../data'
+import React from 'react';
+import './header.css';
+import images from '../../data/Images/images';
 
 const Header = () => {
   return (
@@ -17,7 +17,7 @@ const Header = () => {
         </div>
       </header>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

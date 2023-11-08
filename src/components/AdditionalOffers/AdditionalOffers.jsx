@@ -1,8 +1,9 @@
-import React from 'react'
-import './additionaloffers.css'
-import { Link } from 'react-router-dom'
-import { images, texts } from '../../data'
-import HeadTitle from '../../utils/HeadTitle/HeadTitle'
+import React from 'react';
+import './additionaloffers.css';
+import { Link } from 'react-router-dom';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
+import HeadTitle from '../../utils/HeadTitle/HeadTitle';
 
 const AdditionalOffers = () => {
   return (
@@ -32,7 +33,7 @@ const AdditionalOffers = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdditionalOffers
+export default AdditionalOffers;

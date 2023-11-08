@@ -19,7 +19,7 @@ import {
   TypePage,
   ACSystemPage,
 } from './pages';
-import { galleryImages } from './data';
+import galleryImages from './data/GalleryImages/galleryImages';
 import { acTypes } from './pages/TypePage/Types/acTypes';
 import { ventilationTypes } from './pages/TypePage/Types/ventilationTypes';
 import { heatingTypes } from './pages/TypePage/Types/heatingTypes';

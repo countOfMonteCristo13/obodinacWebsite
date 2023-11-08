@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './slider.css';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 
 const Imgs = ({ galleryImages, id }) => {
   const slideImg = galleryImages.map((image, i) => {

@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import { images, navbarDropdownLinks } from '../../data';
+import images from '../../data/Images/images';
+import navbarDropdownLinks from '../../data/navbarDropdownLinks/navbarDropdownLinks';
 import './navbarsection.css';
 
 import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
@@ -31,20 +32,20 @@ const NavbarSection = ({ activeLink }) => {
     const burgerBtn = document.querySelector('.burger');
 
     if (offersDropdownToggleButton && window.innerWidth < 769) {
-      console.log(menuOffersDropdownRef.current.firstChild.scrollHeight);
+      // console.log(menuOffersDropdownRef.current.firstChild.scrollHeight);
       setOffersDropdownHeight(menuOffersDropdownRef.current.firstChild.scrollHeight);
     } else {
       setOffersDropdownHeight(0);
     }
     if (galleryDropdownToggleButton && window.innerWidth < 769) {
-      console.log(menuGalleryDropdownRef.current.firstChild.scrollHeight);
+      // console.log(menuGalleryDropdownRef.current.firstChild.scrollHeight);
       setGalleryDropdownHeight(menuGalleryDropdownRef.current.firstChild.scrollHeight);
     } else {
       setGalleryDropdownHeight(0);
     }
 
     if (toggleMenu) {
-      const menuId = activeLink + '-menu';
+      const menuId = `${activeLink}-menu`;
       const activeNavLinkMenu = document.querySelector(`#${menuId}`);
       activeNavLinkMenu.classList.add('menu__shadow-link');
     }

@@ -3,7 +3,8 @@ import './fAQuestionsPage.css';
 import ClipboardJS from 'clipboard';
 import { ScrollUp } from '../../utils';
 import { NavbarSection } from '../../components';
-import { images, faQuestions } from '../../data';
+import images from '../../data/Images/images';
+import faQuestions from '../../data/FAQuestions/faQuestions';
 import FAQuestion from './FAQuestion/FAQuestion';
 
 const FAQuestionsPage = () => {

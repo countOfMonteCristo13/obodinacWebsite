@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './cardflip.css';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 
 const CardFlip = ({ imageF, imageB, opis, klasa }) => {
   const [isFlipped, setIsFlipped] = useState(false);

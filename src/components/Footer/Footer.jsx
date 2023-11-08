@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import ClipboardJS from 'clipboard';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 import './footer.css';
 
 const Footer = () => {
@@ -9,13 +9,13 @@ const Footer = () => {
   useEffect(() => {
     const clipboard = new ClipboardJS(textToCopyRef.current);
 
-    clipboard.on('success', e => {
-      console.log('Text copied to clipboard:', e.text);
-    });
+    // clipboard.on('success', e => {
+    //   console.log('Text copied to clipboard:', e.text);
+    // });
 
-    clipboard.on('error', e => {
-      console.error('Error copying text to clipboard:', e.text);
-    });
+    // clipboard.on('error', e => {
+    //   console.error('Error copying text to clipboard:', e.text);
+    // });
 
     return () => {
       clipboard.destroy();

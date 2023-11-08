@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
-import { images, texts } from '../../data'
-import { NavbarSection, OffersSection } from '../../components'
-import { ScrollUp, BlueLine, TypeCard } from '../../utils'
+import React, { useEffect } from 'react';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
+import { NavbarSection, OffersSection } from '../../components';
+import { ScrollUp, BlueLine, TypeCard } from '../../utils';
 
 const DrillingHolesPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   const drillTypes = [
     {
@@ -34,7 +35,7 @@ const DrillingHolesPage = () => {
       title: 'Ø 252',
       url: '#',
     },
-  ]
+  ];
   return (
     <>
       <ScrollUp image={images.upArrow} />
@@ -54,14 +55,14 @@ const DrillingHolesPage = () => {
         </div>
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
-            {drillTypes.map((sistem) => (
+            {drillTypes.map(sistem => (
               <TypeCard sistem={sistem} key={sistem.title} />
             ))}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default DrillingHolesPage
+export default DrillingHolesPage;

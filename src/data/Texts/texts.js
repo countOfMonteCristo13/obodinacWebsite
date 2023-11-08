@@ -1,4 +1,4 @@
-export const texts = {
+const texts = {
   textTypePages: {
     splitD:
       'Split klima uređaji su vrsta klimatizacijskih sistema koji se sastoje od dva glavna dela: unutrašnje jedinice i spoljne jedinice. Većina modernih modela koristi invertersku tehnologiju, koja omogućava prilagođavanje brzine kompresora i održavanje stabilne temperature sa manjom potrošnjom energije. Ovo može rezultirati smanjenim računima za struju u poređenju sa neefikasnim sistemima. Postoje različiti stilovi i veličine unutrašnjih jedinica, tako da možete izabrati onu koja odgovara vašim preferencijama i enterijeru prostorije. Ovi uređaji se često koriste za klimatizaciju pojedinačnih prostorija ili manjih prostorija.',
@@ -42,9 +42,6 @@ export const texts = {
     spareACD:
       'Naše usluge obuhvataju i prodaju i montažu polovnih klima uređaja. Svi naši polovni klima uređaji su pažljivo pregledani i testirani kako bismo osigurali njihovu funkcionalnost i kvalitet. Polovni klima uređaji pružaju pristupačniju opciju u poređenju s novim uređajima, a istovremeno obezbeđuju adekvatnu klimatizaciju prostora. Ako želite polovni klima uređaj za vaš prostor, kontaktirajte nas. Naš tim će vam pružiti stručno savetovanje, ponuditi odgovarajući izbor i profesionalnu montažu kako biste imali udoban i kvalitetan vazduh u vašem prostoru, po povoljnoj ceni.',
   },
-  // tekstPodnaslov : {
-  //     klimatizacijaP: 'Klimatizacija je proces kontrolisanja temperature, vlažnosti i kvaliteta vazduha u zatvorenim prostorima radi postizanja udobnosti i optimalnih uslova za život, rad ili skladištenje uz pomoć rashladnih fluida kao što su freon ili toplotna pumpa. Naša kompanija vrši montažu klimatizacionih sistema kao što su split, multi, kanalski i VRF. U slučaju split, multi i VRF sistema postoje različiti tipovi unutrašnjih jedinica koje možete da izaberete u skladu sa vašim potrebama, dok se za kanalski sistem koristi kanalska unutrašnja jedinica.',
-  //     grejanjeP: 'Grejanje je proces zagrevanja prostora kako bi se postigla prijatna temperatura i udobnost tokom hladnih perioda. Naša kompanija vrši montažu grejnog sistema, uključujući radijatorsko i podno grejanje.',
-  //     ventilacijaP: 'Ventilacija je proces obezbeđivanja svežeg vazduha u zatvorenim prostorima, kao i uklanjanja zagađenog vazduha i neprijatnih mirisa. Ovaj proces se ostvaruje kroz sistem ventilacije koji omogućava protok vazduha između spoljnog okruženja i unutrašnjosti prostorija. Naša kompanija vrši montažu ventilacionih sistema kao što je mehanička ventilacija i rekuperatorska ventilacija.',
-  // }
-}
+};
+
+export default texts;

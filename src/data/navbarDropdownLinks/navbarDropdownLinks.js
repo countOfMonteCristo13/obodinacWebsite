@@ -1,4 +1,4 @@
-export const navbarDropdownLinks = [
+const navbarDropdownLinks = [
   {
     id: 'montaža',
     urlUsluge: '/usluge/montaža-klima-uređaja',
@@ -111,4 +111,6 @@ export const navbarDropdownLinks = [
     dropdown: false,
     options: [],
   },
-]
+];
+
+export default navbarDropdownLinks;

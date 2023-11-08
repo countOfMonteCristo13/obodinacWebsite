@@ -1,8 +1,9 @@
-import React from 'react'
-import './offers.css'
-import { images, texts } from '../../data'
-import HeadTitle from '../../utils/HeadTitle/HeadTitle'
-import Section from '../../utils/Section/Section'
+import React from 'react';
+import './offers.css';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
+import HeadTitle from '../../utils/HeadTitle/HeadTitle';
+import Section from '../../utils/Section/Section';
 
 const Offers = () => {
   return (
@@ -57,7 +58,7 @@ const Offers = () => {
         odd='odd'
       />
     </div>
-  )
-}
+  );
+};
 
-export default Offers
+export default Offers;

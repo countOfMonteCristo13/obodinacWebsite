@@ -3,7 +3,7 @@ import './acSystemPage.css';
 import { NavbarSection, OffersSection } from '../../components';
 import { ScrollUp, BlueLine, CardFlip } from '../../utils';
 import IndoorUnitTypes from '../ACInstallationPage/IndoorUnitTypes/IndoorUnitTypes';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 import { useScrollToTop } from '../../hooks/useScrollToTop';
 
 const ACSystemPage = ({ sistem }) => {

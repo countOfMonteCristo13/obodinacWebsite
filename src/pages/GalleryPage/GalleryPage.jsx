@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './gallerypage.css';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 import { NavbarSection } from '../../components';
 import { ScrollUp, BlueLine } from '../../utils';
 

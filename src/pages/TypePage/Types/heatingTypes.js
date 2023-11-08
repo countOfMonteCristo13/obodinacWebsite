@@ -1,4 +1,5 @@
-import { texts, images } from '../../../data';
+import images from '../../../data/Images/images';
+import texts from '../../../data/Texts/texts';
 
 export const heatingTypes = {
   radijatorskoGrejanje: {

@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
-import { ScrollUp, SpareAC } from '../../utils'
-import { NavbarSection } from '../../components'
-import { images, texts } from '../../data'
+import React, { useEffect } from 'react';
+import { ScrollUp, SpareAC } from '../../utils';
+import { NavbarSection } from '../../components';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
 
 const SpareACPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   return (
     <>
@@ -24,7 +25,7 @@ const SpareACPage = () => {
         <SpareAC />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SpareACPage
+export default SpareACPage;

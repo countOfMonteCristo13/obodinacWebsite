@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
-import { NavbarSection } from '../../components'
-import { ScrollUp, TypeCard } from '../../utils'
-import { images, texts } from '../../data'
+import React, { useEffect } from 'react';
+import { NavbarSection } from '../../components';
+import { ScrollUp, TypeCard } from '../../utils';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
 
 const HeatingPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   const heatingTypes = [
     {
@@ -19,7 +20,7 @@ const HeatingPage = () => {
       title: 'Podno grejanje',
       url: '/usluge/grejanje/podno-grejanje',
     },
-  ]
+  ];
 
   return (
     <>
@@ -36,14 +37,14 @@ const HeatingPage = () => {
         </div>
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
-            {heatingTypes.map((sistem) => (
+            {heatingTypes.map(sistem => (
               <TypeCard sistem={sistem} key={sistem.title} />
             ))}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default HeatingPage
+export default HeatingPage;

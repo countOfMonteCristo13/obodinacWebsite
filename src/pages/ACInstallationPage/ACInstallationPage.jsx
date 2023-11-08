@@ -1,16 +1,13 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { NavbarSection } from '../../components';
 import { ScrollUp, TypeCard } from '../../utils';
-import { images, texts } from '../../data';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
 
 import './aCInstallationPage.css';
 import IndoorUnitTypes from './IndoorUnitTypes/IndoorUnitTypes';
 
 const ACInstallationPage = () => {
-  const params = useParams();
-  console.log(params);
-
   const acTypes = [
     {
       img: images.klimaUredjajKartica,

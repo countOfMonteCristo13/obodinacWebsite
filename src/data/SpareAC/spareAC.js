@@ -1,6 +1,6 @@
-import images from '../Images/images'
+import images from '../Images/images';
 
-export const spareAC = [
+const spareAC = [
   {
     name: 'Vox 12BTU',
     image: images.polovnaKlima1,
@@ -21,4 +21,6 @@ export const spareAC = [
     name: 'TCL 12BTU',
     image: images.polovnaKlima5,
   },
-]
+];
+
+export default spareAC;

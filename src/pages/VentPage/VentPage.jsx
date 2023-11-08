@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react'
-import { NavbarSection } from '../../components'
-import { ScrollUp, TypeCard } from '../../utils'
-import { images, texts } from '../../data'
+import React, { useEffect } from 'react';
+import { NavbarSection } from '../../components';
+import { ScrollUp, TypeCard } from '../../utils';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
 
 const VentPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  })
+    window.scrollTo(0, 0);
+  });
 
   const ventTypes = [
     {
@@ -19,7 +20,7 @@ const VentPage = () => {
       title: 'Rekuperatorska ventilacija',
       url: '/usluge/ventilacija/rekuperatorska-ventilacija',
     },
-  ]
+  ];
 
   return (
     <>
@@ -36,14 +37,14 @@ const VentPage = () => {
         </div>
         <div className='sistemi__klima section__padding'>
           <div className='sistemi__klima-cards'>
-            {ventTypes.map((sistem) => (
+            {ventTypes.map(sistem => (
               <TypeCard sistem={sistem} key={sistem.title} />
             ))}
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default VentPage
+export default VentPage;

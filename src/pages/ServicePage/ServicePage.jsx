@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import './servicePage.css';
 import { NavbarSection } from '../../components';
 import { ScrollUp, TypeCard } from '../../utils';
-import { images, texts } from '../../data';
+import images from '../../data/Images/images';
+import texts from '../../data/Texts/texts';
 
 const ServicePage = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const ServicePage = () => {
 
   const serviceTypes = [
     {
-      img: images.ciscenjeKlimaUredjaja,
+      img: images.ciscenjeKlimaUredjajaKartica,
       title: 'Čišćenje klima uređaja',
       url: '/usluge/servis-klima-uređaja/čišćenje-klima-uređaja',
     },

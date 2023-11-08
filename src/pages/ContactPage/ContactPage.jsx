@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import ClipboardJS from 'clipboard';
 import axios from 'axios';
 import { NavbarSection } from '../../components';
-import { images } from '../../data';
+import images from '../../data/Images/images';
 import { ScrollUp } from '../../utils';
 import './contactpage.css';
 
@@ -37,9 +37,8 @@ const ContactPage = () => {
     const data = { name, email, phone, message };
     try {
       await axiosInstance.post('/send-email', data);
-      console.log('mail was sent');
     } catch (error) {
-      console.log(error);
+      alert(error.message);
     }
   };
 
@@ -63,13 +62,13 @@ const ContactPage = () => {
       text: () => emailRef.current.innerText,
     });
 
-    clipboardInstances.on('success', e => {
-      console.log(`Email ${e.text} is copied`);
-    });
+    // clipboardInstances.on('success', e => {
+    //   console.log(`Email ${e.text} is copied`);
+    // });
 
-    clipboardInstances.on('error', e => {
-      console.log('Failed to copy email:', e.text);
-    });
+    // clipboardInstances.on('error', e => {
+    //   console.log('Failed to copy email:', e.text);
+    // });
 
     return () => {
       clipboardInstances.destroy();

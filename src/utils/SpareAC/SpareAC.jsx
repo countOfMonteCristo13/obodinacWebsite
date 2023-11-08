@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { images, spareAC, galleryImages } from '../../data';
+import images from '../../data/Images/images';
+import spareAC from '../../data/SpareAC/spareAC';
+import galleryImages from '../../data/GalleryImages/galleryImages';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import './spareac.css';
 

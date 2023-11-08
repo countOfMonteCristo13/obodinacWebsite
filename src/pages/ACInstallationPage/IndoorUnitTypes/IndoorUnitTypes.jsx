@@ -1,7 +1,7 @@
-import React from 'react'
-import './indoorUnitTypes.css'
-import CardFlip from '../../../utils/CardFlip/CardFlip'
-import { images } from '../../../data'
+import React from 'react';
+import './indoorUnitTypes.css';
+import CardFlip from '../../../utils/CardFlip/CardFlip';
+import images from '../../../data/Images/images';
 
 const IndoorUnitTypes = () => {
   return (
@@ -44,7 +44,7 @@ const IndoorUnitTypes = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default IndoorUnitTypes
+export default IndoorUnitTypes;
