@@ -167,7 +167,6 @@
   }
 
   .headtext p {
-    font-size: 0.9rem;
     line-height: 1.8rem;
   }
 }
@@ -189,10 +188,5 @@
 
   .headtext h2 {
     font-size: 2.2rem;
-  }
-
-  .headtext p {
-    font-size: 0.8rem;
-    line-height: 1.6rem;
   }
 }

@@ -89,16 +89,17 @@ const NavbarSection = ({ activeLink }) => {
             O nama
           </p>
         </Link>
-        <div className='nav__dropdown'>
-          <div
-            className='o__navbarSection-link'
-            id='nav__offers'
-            onClick={() => {
-              setOffersDropdownToggleButton(!offersDropdownToggleButton);
-              setGalleryDropdownToggleButton(false);
-            }}
-          >
-            Usluge{' '}
+        <div
+          className='nav__dropdown'
+          onMouseEnter={() => {
+            setOffersDropdownToggleButton(true);
+          }}
+          onMouseLeave={() => {
+            setOffersDropdownToggleButton(false);
+          }}
+        >
+          <div className='o__navbarSection-link' id='nav__offers'>
+            Usluge
             {!offersDropdownToggleButton ? (
               <BsChevronDown strokeWidth={1} />
             ) : (
@@ -113,17 +114,22 @@ const NavbarSection = ({ activeLink }) => {
             />
           )}
         </div>
-        {!homePage && <img src={images.obodinacFooter2} alt='obodinac logo' />}
-        <div className='nav__dropdown'>
-          <div
-            className='o__navbarSection-link'
-            id='nav__gallery'
-            onClick={() => {
-              setGalleryDropdownToggleButton(!galleryDropdownToggleButton);
-              setOffersDropdownToggleButton(false);
-            }}
-          >
-            Galerija{' '}
+        {!homePage && (
+          <div className='nav-logo flex__center'>
+            <img src={images.obodinacFooter2} alt='obodinac logo' />
+          </div>
+        )}
+        <div
+          className='nav__dropdown'
+          onMouseEnter={() => {
+            setGalleryDropdownToggleButton(true);
+          }}
+          onMouseLeave={() => {
+            setGalleryDropdownToggleButton(false);
+          }}
+        >
+          <div className='o__navbarSection-link' id='nav__gallery'>
+            Galerija
             {!galleryDropdownToggleButton ? (
               <BsChevronDown strokeWidth={1} />
             ) : (

@@ -18,8 +18,8 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
   }, [optionClicked]);
 
   const handleButtonClick = e => {
-    const uslugeOption = e.parentNode.parentNode.querySelector('a').querySelector('p').innerText;
-
+    const uslugeOption = e.parentNode.querySelector('a div').innerText;
+    console.log(uslugeOption);
     if (optionClicked !== '') {
       setOptionClicked('');
     } else {
@@ -29,7 +29,7 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
   };
 
   return (
-    <div className='slide-bottom-dropdown dropdown'>
+    <div className=' dropdown'>
       {options.map(option => (
         <div key={option.title}>
           <div className='dropdown__link-wrapper'>
@@ -43,19 +43,19 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
                   <BsChevronDown
                     strokeWidth={1}
                     className='dropdown__btn'
-                    onClick={e => handleButtonClick(e.target)}
+                    onClick={e => handleButtonClick(e.currentTarget)}
                   />
                 ) : option.title === optionClicked ? (
                   <BsChevronUp
                     strokeWidth={1}
                     className='dropdown__btn'
-                    onClick={e => handleButtonClick(e.target)}
+                    onClick={e => handleButtonClick(e.currentTarget)}
                   />
                 ) : (
                   <BsChevronDown
                     strokeWidth={1}
                     className='dropdown__btn'
-                    onClick={e => handleButtonClick(e.target)}
+                    onClick={e => handleButtonClick(e.currentTarget)}
                   />
                 ))}
             </div>

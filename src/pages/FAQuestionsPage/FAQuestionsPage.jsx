@@ -44,7 +44,7 @@ const FAQuestionsPage = () => {
         <div className='faq-page__section'>
           <div className='faq-page__questions'>
             {faQuestions.map((question, index) => (
-              <FAQuestion question={question} index={index + 1} key={question} />
+              <FAQuestion question={question} index={index + 1} key={question.question} />
             ))}
           </div>
           <div className='o__contactPage_options-call' id='option-call'>

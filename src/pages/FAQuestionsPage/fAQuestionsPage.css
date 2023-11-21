@@ -33,6 +33,10 @@
     border-radius 0.4s 0.27s;
 }
 
+.faq-page__question h4 {
+  width: 100%;
+}
+
 .faq-page__question:hover {
   background-color: var(--color-darkblue);
 }

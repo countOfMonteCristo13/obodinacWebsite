@@ -64,8 +64,7 @@ a {
 }
 
 .slide-enterance1 {
-  -webkit-animation: slide-enterance1 1s cubic-bezier(0.39, 0.575, 0.565, 1)
-    both;
+  -webkit-animation: slide-enterance1 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: slide-enterance1 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
@@ -87,31 +86,23 @@ a {
 }
 
 .slide-bottom-dropdown {
-  -webkit-animation: slide-bottom-dropdown 0.3s both;
-  animation: slide-bottom-dropdown 0.3s both;
+  -webkit-animation: slide-bottom-dropdown 0.5s both;
+  animation: slide-bottom-dropdown 0.5s both;
 }
 
 @-webkit-keyframes slide-bottom-dropdown {
   0% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
-    opacity: 0;
+    height: 0px;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    height: 260px;
   }
 }
 @keyframes slide-bottom-dropdown {
   0% {
-    -webkit-transform: translateY(-5%);
-    transform: translateY(-5%);
-    opacity: 0;
+    height: 0px;
   }
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    height: 260px;
   }
 }
