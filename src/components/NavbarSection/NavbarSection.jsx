@@ -138,7 +138,7 @@ const NavbarSection = ({ activeLink }) => {
           </div>
           {galleryDropdownToggleButton && !toggleMenu && (
             <NavbarDropdown
-              options={navbarDropdownLinks}
+              options={navbarDropdownLinks.filter(option => option.id !== 'polovne')}
               galerija={true}
               closeDropdown={closeDropdown}
             />

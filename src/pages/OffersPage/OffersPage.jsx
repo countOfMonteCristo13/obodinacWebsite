@@ -1,23 +1,33 @@
-import React, { useEffect } from 'react'
-import './offerspage.css'
-import { images, texts } from '../../data'
-import { NavbarSection, OffersSection } from '../../components'
-import { ScrollUp, BlueLine, CardFlip } from '../../utils'
+import React, { useEffect } from 'react';
+import './offerspage.css';
+import { connect } from 'react-redux';
+import { scroller } from 'react-scroll';
+import { images, texts } from '../../data';
+import { NavbarSection, OffersSection } from '../../components';
+import { ScrollUp, BlueLine, CardFlip } from '../../utils';
 
-import { connect } from 'react-redux'
-import { setOffersPageScroll } from '../../actions'
+import { setOffersPageScroll } from '../../actions';
 
-import { scroller } from 'react-scroll'
+const HeadText = ({ title, desc, wrapper, id }) => {
+  return (
+    <div className={`${wrapper} flex__center`} id={id}>
+      <div className='o__offersPage_headtext flex__center'>
+        <h2>{title}</h2>
+        <p>{desc}</p>
+      </div>
+    </div>
+  );
+};
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     offersPageScroll: state.offersPageScroll,
-  }
-}
+  };
+};
 
 const mapDispatchToProps = {
   setOffersPageScroll,
-}
+};
 
 const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
   useEffect(() => {
@@ -27,9 +37,9 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
           duration: 0,
           delay: 0,
           smooth: 'easeInOutQuart',
-        })
-      }
-      scrollToSection()
+        });
+      };
+      scrollToSection();
     } else {
       const scrollToSection = () => {
         scroller.scrollTo(offersPageScroll, {
@@ -37,23 +47,12 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
           delay: 0,
           smooth: 'easeInOutQuart',
           offset: -40,
-        })
-      }
-      scrollToSection()
+        });
+      };
+      scrollToSection();
     }
-    setOffersPageScroll('op__top')
-  }, [])
-
-  const HeadText = ({ title, desc, wrapper, id }) => {
-    return (
-      <div className={`${wrapper} flex__center`} id={id}>
-        <div className='o__offersPage_headtext flex__center'>
-          <h2>{title}</h2>
-          <p>{desc}</p>
-        </div>
-      </div>
-    )
-  }
+    setOffersPageScroll('op__top');
+  }, []);
 
   return (
     <>
@@ -175,7 +174,7 @@ const OffersPage = ({ offersPageScroll, setOffersPageScroll }) => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(OffersPage)
+export default connect(mapStateToProps, mapDispatchToProps)(OffersPage);

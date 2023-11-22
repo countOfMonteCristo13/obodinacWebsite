@@ -54,7 +54,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  row-gap: 1rem;
+  gap: 0.5rem;
 }
 
 .cardFlip__card-description h3 {
@@ -78,7 +78,7 @@
 @media screen and (max-width: 425px) {
   .cardFlip__scene {
     width: 100%;
-    max-width: 340px;
+    max-width: 310px;
   }
 
   .cardFlip__card-description img {
@@ -92,14 +92,5 @@
   }
   .cardFlip__card-description img {
     max-width: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .cardFlip__card-description h3 {
-    font-size: 1.3rem;
-  }
-  .cardFlip__card-description img {
-    max-width: 1.3rem;
   }
 }

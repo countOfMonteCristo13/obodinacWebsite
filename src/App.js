@@ -130,15 +130,6 @@ function App() {
               }
             />
             <Route
-              path='/galerija/polovni-klima-uređaji'
-              element={
-                <GalleryPage
-                  gImages={galleryImages.klimatizacija.Sve}
-                  title='Polovni klima uređaji'
-                />
-              }
-            />
-            <Route
               path='/galerija/grejanje'
               element={<GalleryPage gImages={galleryImages.grejanje.Sve} title='Grejanje' />}
             />

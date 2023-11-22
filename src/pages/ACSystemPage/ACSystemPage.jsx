@@ -19,7 +19,12 @@ const ACSystemPage = ({ sistem }) => {
           <h2>{sistem.title}</h2>
         </div>
         <BlueLine />
-        <OffersSection description={sistem.text} alt={sistem.title} image={sistem.img} />
+        <OffersSection
+          description={sistem.text}
+          alt={sistem.title}
+          image={sistem.img}
+          href={sistem.galleryUrl}
+        />
         {currentSistem !== 'Kanalski Sistem' ? (
           <IndoorUnitTypes />
         ) : (

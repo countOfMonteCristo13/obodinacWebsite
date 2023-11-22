@@ -49,6 +49,7 @@ const DrillingHolesPage = () => {
           description={texts.textOfferPagesSubHeading.drillingD}
           alt='Dijamantsko bušenje rupa'
           image={images.kirnerica}
+          href='/galerija/dijamantsko-bušenje-rupa'
         />
         <div className='sistemi__klima-headtext flex__center'>
           <h2>Prečnici burgija</h2>

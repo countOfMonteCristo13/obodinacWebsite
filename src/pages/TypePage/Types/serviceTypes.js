@@ -5,6 +5,7 @@ export const serviceTypes = {
     title: 'Čišćenje klima uređaja',
     text: 'Čišćenje klima uređaja započinjemo skidanjem poklopca. Zatim vadimo filtere, skidamo krilca i skidamo kompletne plastike. U zavisnosti od stanja klime skidamo i turbinu (ne ulazi u osnovnu cenu servisa). Komplet plastike, filtere i turbine peremo i vraćamo u fabričko stanje. Dok se to suši peremo i dezinfikujemo kompletno saće (isparivač) unutrašnje jedinice sredstvom koje u sebi ima visok procenat asepsola. Nakon što to uradimo sklapamo klima uređaj. Naša je obaveza da Vam dodatno skrenemo pažnju da ukoliko se klima uređaj koristi u poslovnim prostorijama, prostorijama u kojima radi veliki broj zaposlenih, bolnicama, frizerskim salonima, prodavnicama i slično, servisiranje je potrebno izvršiti nekoliko puta godišnje, po mogućstvu na tri meseca. Na taj način sprečavate širenje virusa i bakterija na isparivaču i turbini unutrašnje jedinice preko kojih se paraziti raspršuju u prostor. Budite odgovorni i redovno servisirajte klima uređaj kako bi Vas isti dobro služio dugi niz godina i kako bi očuvali zdravlje Vaše porodice ili Vaših kolega.',
     img: images.ciscenjeKlimaUredjaja,
+    galleryUrl: '/galerija/servis-klima-uređaja',
   },
   popravkaElektronike: {
     title: 'Popravka elektronike',

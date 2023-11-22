@@ -6,7 +6,6 @@ const TypePage = ({ type }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <>
       <ScrollUp />
@@ -16,7 +15,12 @@ const TypePage = ({ type }) => {
           <h2>{type.title}</h2>
         </div>
         <BlueLine />
-        <OffersSection description={type.text} alt={type.title} image={type.img} />
+        <OffersSection
+          description={type.text}
+          alt={type.title}
+          image={type.img}
+          href={type.galleryUrl}
+        />
       </div>
     </>
   );

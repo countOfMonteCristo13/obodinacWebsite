@@ -6,10 +6,12 @@ export const ventilationTypes = {
     title: 'Mehanička ventilacija',
     text: texts.textTypePages.ventD,
     img: images.vent,
+    galleryUrl: '/galerija/ventilacija',
   },
   rekuperatorskaVentilacija: {
     title: 'Rekuperatorska ventilacija',
     text: texts.textTypePages.recuperatorD,
     img: images.rekuperator,
+    galleryUrl: '/galerija/ventilacija',
   },
 };

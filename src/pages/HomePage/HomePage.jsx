@@ -11,7 +11,7 @@ const HomePage = () => {
 
   return (
     <>
-      <ScrollUp image={images.upArrow} />
+      <ScrollUp />
       <div className='hp slide-enterance1'>
         <Header />
         <NavbarSection activeLink='nav__home' />

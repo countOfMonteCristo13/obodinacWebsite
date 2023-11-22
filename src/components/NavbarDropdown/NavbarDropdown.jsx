@@ -19,7 +19,6 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
 
   const handleButtonClick = e => {
     const uslugeOption = e.parentNode.querySelector('a div').innerText;
-    console.log(uslugeOption);
     if (optionClicked !== '') {
       setOptionClicked('');
     } else {
