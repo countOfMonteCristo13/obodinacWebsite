@@ -174,9 +174,9 @@ const NavbarSection = ({ activeLink }) => {
             >
               <img src={images.maintenanceWhite} alt='wrench and screwdriver' />
             </div>
-            <div className='o__header_menu-overlay_logo'>
+            {/* <div className='o__header_menu-overlay_logo'>
               <img src={images.obodinacFooter2} alt='obodinac logo' />
-            </div>
+            </div> */}
             <ul className='o__header_menu-overlay-links'>
               <Link to='/'>
                 <li className='menu-link' id='nav__home-menu'>
