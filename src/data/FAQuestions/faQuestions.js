@@ -1,7 +1,12 @@
 const faQuestions = [
   {
-    question: 'Razlika između standarde (obicne) i inverter klime?',
-    answer: 'Obicna je dobra, a Inverter je jos bolji!!!',
+    question: 'Razlika između standarde (obične) i inverter klime?',
+    answer:
+      'Razlika između obične split klime i inverter split klime odnosi se na način rada kompresora, što ima uticaja na efikasnost i potrošnju energije.\n' +
+      'Kompresor "obične" klime radi u dva režima - ili je uključen i radi punom snagom ili je isključen. ' +
+      'Za razliku od "obične" klime, kompresor inverter klime radi kontinuirano' +
+      ', što mu omogućava i prilagodljivu brzinu rada, a sve ovo dovodi do smanjenja potrošnje energije, jer nema čestih ciklusa uključivanja/isključivanja. ' +
+      'Iako su inverter klime obično skuplje od "običnih" klima, dugoročno mogu rezultirati uštedom energije i novca zbog svoje efikasnije upotrebe energije.',
   },
   {
     question: 'Zašto klima uređaj neće da se uključi?',
@@ -11,12 +16,12 @@ const faQuestions = [
   {
     question: 'Zašto klima uređaj pušta vodu na unutrašnjoj jedinici?',
     answer:
-      'Nekoliko razloga može uticati na pojavu ovog problema. Može biti zapušeno kondenz crevo, turbina može biti zaprljana ili začepljena kadica. Takođe i ukoliko klima nije montirana u libeli ili nije izbušena rupa pod padom, postoji i mogućnost da se napravio "stomak" na crevu za odvod kondenzata.',
+      'Nekoliko razloga može uticati na pojavu ovog problema. Može biti zapušeno kondenz crevo, turbina ili filter mogu biti zaprljani ili je začepljena kadica. Takođe i ukoliko klima nije montirana u libeli ili nije izbušena rupa pod padom, postoji i mogućnost da se napravio "stomak" na crevu za odvod kondenzata.',
   },
   {
     question: 'Zašto klima uređaj duva toplo na opciji hlađenja - ne uključuje se kompresor?',
     answer:
-      'Vrlo verovatno da je došlo do kvara na kompresoru spoljašnje jedinice. Takođe, postoji i opcija da klima uređaj nema gas (freon), samim tim kompresor se greje i izbacuje topao vazduh.',
+      'Vrlo verovatno da je došlo do kvara na kompresoru spoljašnje jedinice. Takođe, postoji i opcija da klima uređaj nema gas (freon).',
   },
   {
     question: 'Zašto klima uređaj ne hladi, a kompresor na spoljašnjoj jedinici radi?',
@@ -26,7 +31,7 @@ const faQuestions = [
   {
     question: 'Zašto klima uređaj slabo hladi?',
     answer:
-      'Na ovaj problem utiče zaprljano saće unutrašnje ili spoljašnje jedinice, kao i prljavi filteri. Takođe postoji i opcija da fali gasa (freona) u samom sistemu.',
+      'Na ovaj problem utiče zaprljano saće unutrašnje ili spoljašnje jedinice, kao i prljavi filteri i turbina. Takođe postoji i opcija da fali gasa (freona) u samom sistemu.',
   },
   {
     question:
@@ -46,7 +51,7 @@ const faQuestions = [
   },
   {
     question: 'Zašto unutrašnja jedinica zvrči kada radi?',
-    answer: 'Najverovatnije problem predstavlja ležaj turbine, kao i prljava turbina i peraja.',
+    answer: 'Najverovatnije problem predstavlja ležaj turbine, kao i prljava turbina.',
   },
   {
     question: 'Zašto je spoljna jedinica bučna?',
