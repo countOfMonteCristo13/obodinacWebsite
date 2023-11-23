@@ -1,58 +1,3 @@
-.o__navbarSection {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--color-blue);
-  color: var(--color-white);
-  padding: 0 3rem;
-  font-size: 1.2rem;
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-  height: 45px;
-}
-
-.o__navbarSection-shadow {
-  -webkit-box-shadow: 0px 7px 10px 0px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 7px 10px 0px rgba(255, 255, 255, 0.75);
-  box-shadow: 0px 7px 10px 0px rgba(255, 255, 255, 0.75);
-}
-
-.o__navbarSection p {
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.o__navbarSection p:hover {
-  color: var(--color-darkgrey);
-}
-
-.nav__dropdown {
-  position: relative;
-}
-
-.nav-logo {
-  max-width: 180px;
-  height: 100%;
-  padding-bottom: 0.3rem;
-}
-
-.nav-logo img {
-  width: 100%;
-  object-fit: contain;
-}
-
-.o__navbarSection-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.o__navbarSection-link:hover {
-  color: var(--color-darkgrey);
-}
-
 .o__header_menu-button {
   padding: 0.3rem;
   position: fixed;
@@ -86,9 +31,13 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 0;
+  min-height: 100vh;
+  height: 100%;
   background: var(--color-blue);
   transition: 0.5s ease;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
   z-index: 999;
 }
 
@@ -101,8 +50,8 @@
   object-fit: cover;
 }
 
-.o__header_menu-overlay-links {
-  list-style: none;
+.o__header_menu-overlay_links {
+  position: relative;
   width: 100%;
 }
 
@@ -126,61 +75,32 @@
   background: var(--color-darkblue);
 }
 
-.o__navbarSection .btm-border {
-  color: var(--color-darkgrey);
-  /* cursor: default; */
-}
-
 .o__header_menu-overlay-links .menu__shadow-link {
   color: var(--color-darkgrey);
   font-weight: bold;
-  /* cursor: default; */
 }
 
 .nav-menu__dropdown {
-  position: relative;
-  height: 0;
-  overflow: hidden;
+  position: absolute;
+  display: none;
+  left: 150px;
   transition:
     height 0.5s ease,
     border 0.5s ease;
 }
 
 .nav-menu__dropdown.show {
-  height: auto;
+  display: block;
 }
 
-@media screen and (min-width: 1600px) {
-  .nav-logo img {
-    max-width: 250px;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .o__navbarSection img {
-    max-width: 450px;
-    padding-bottom: 1rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .o__navbarSection {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .nav-logo img {
-    max-width: 150px;
-  }
+.menu__link-active {
+  color: var(--color-darkgrey);
+  cursor: default;
 }
 
 @media screen and (max-width: 768px) {
   .o__header_menu-button {
     display: flex;
-  }
-
-  .o__navbarSection {
-    display: none;
   }
 
   .o__navbar_line {

@@ -42,16 +42,6 @@ const ContactPage = () => {
     }
   };
 
-  // const ispis = (e) => {
-  //     const emailWrapper = e.parentNode.parentNode;
-  //     const emailCopied = emailWrapper.querySelector('.o__contactPage_options_call-person_info-copy');
-  //     emailCopied.classList.add('showCopied');
-
-  //     setTimeout(() => {
-  //         emailCopied.classList.remove('showCopied');
-  //     }, 1000)
-  // }
-
   useEffect(() => {
     window.scrollTo(0, 0);
 

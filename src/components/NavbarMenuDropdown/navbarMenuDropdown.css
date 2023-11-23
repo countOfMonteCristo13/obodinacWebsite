@@ -1,5 +1,6 @@
 .dropdown-menu {
   background: var(--color-darkgrey);
+  position: absolute;
 }
 
 .dropdown-menu__link-wrapper {

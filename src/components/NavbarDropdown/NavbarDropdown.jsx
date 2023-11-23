@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './navbarDropdown.css';
 import { BsChevronDown, BsChevronRight, BsChevronUp } from 'react-icons/bs';
 
-const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
+const NavbarDropdown = ({ options, galerija }) => {
   const [optionsDropdown, setOptionsDropdown] = useState(false);
   const [optionClicked, setOptionClicked] = useState('');
   const [optionHeight, setOptionHeight] = useState(0);
@@ -34,7 +34,7 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
           <div className='dropdown__link-wrapper'>
             <div className='dropdown__link'>
               <Link to={galerija ? `${option.urlGalerija}` : `${option.urlUsluge}`}>
-                <div onClick={closeDropdown}>{option.title}</div>
+                <div>{option.title}</div>
               </Link>
               {option.dropdown &&
                 !galerija &&
@@ -68,7 +68,7 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
             >
               {option.options.map(dropdownOption => (
                 <div ref={optionRef} className='dropdown__option' key={dropdownOption.title}>
-                  <Link onClick={closeDropdown} to={dropdownOption.url}>
+                  <Link to={dropdownOption.url}>
                     <BsChevronRight strokeWidth={1} /> {dropdownOption.title}
                   </Link>
                 </div>
@@ -82,19 +82,3 @@ const NavbarDropdown = ({ options, galerija, closeDropdown }) => {
 };
 
 export default NavbarDropdown;
-
-/* {
-              option.title === optionClicked 
-              &&
-              <div className='dropdown__options'>
-                {
-                  option.options.map((dropdownOption) => (
-                    <div className='dropdown__option'>
-                      <Link onClick={closeDropdown} to={dropdownOption.url} key={dropdownOption.title}>
-                        <BsChevronRight strokeWidth={1}/> {dropdownOption.title}
-                      </Link>
-                    </div>
-                  ))
-                }
-              </div>
-            } */

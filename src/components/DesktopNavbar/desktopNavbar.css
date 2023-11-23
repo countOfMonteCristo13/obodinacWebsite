@@ -1,0 +1,83 @@
+.o__desktop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-blue);
+  color: var(--color-white);
+  padding: 0 3rem;
+  font-size: 1.2rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  height: 45px;
+}
+
+.o__desktop-nav p {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.o__desktop-nav p:hover {
+  color: var(--color-darkgrey);
+}
+
+.o__desktop-nav__dropdown {
+  position: relative;
+}
+
+.o__desktop-nav-logo {
+  max-width: 180px;
+  height: 100%;
+  padding-bottom: 0.3rem;
+}
+
+.o__desktop-nav-logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.o__desktop-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.o__desktop-nav-link:hover {
+  color: var(--color-darkgrey);
+}
+
+.o__desktop-nav .active {
+  color: var(--color-darkgrey);
+  cursor: default;
+}
+
+@media screen and (min-width: 1600px) {
+  .o__desktop-nav-logo img {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .o__desktop-nav-logo img {
+    max-width: 450px;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .o__desktop-nav {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .o__desktop-nav-logo img {
+    max-width: 135px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .o__desktop-nav {
+    display: none;
+  }
+}

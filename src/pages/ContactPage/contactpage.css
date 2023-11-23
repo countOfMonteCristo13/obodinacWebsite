@@ -151,6 +151,7 @@
   .o__contactPage_section {
     flex-direction: column;
     align-items: center;
+    padding: 0 2rem 2rem 2rem;
   }
 
   #option-call {
