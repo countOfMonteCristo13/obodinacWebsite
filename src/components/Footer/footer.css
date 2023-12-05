@@ -44,7 +44,7 @@
   letter-spacing: 0.5px;
 }
 
-.info h5:hover {
+.info:not(:last-child) h5:hover {
   color: var(--color-darkgrey);
 }
 

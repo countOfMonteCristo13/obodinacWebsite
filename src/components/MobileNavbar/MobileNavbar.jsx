@@ -67,7 +67,7 @@ const MobileNavbar = () => {
         <BsChevronLeft
           size={32}
           strokeWidth={2}
-          className='dropdown-menu__btn'
+          className='dropdown-menu__btn go-back-btn'
           onClick={e => closeDropdown(e.currentTarget)}
         />
         <ul className='o__mobile-nav-list'>
@@ -99,9 +99,10 @@ const MobileNavbar = () => {
         <BsChevronLeft
           size={32}
           strokeWidth={2}
-          className='dropdown-menu__btn'
+          className='dropdown-menu__btn go-back-btn'
           onClick={e => closeDropdown(e.currentTarget)}
         />
+
         <ul className='o__mobile-nav-list'>
           {optionOptions.map(option => (
             <Link to={option.url} key={option.id}>

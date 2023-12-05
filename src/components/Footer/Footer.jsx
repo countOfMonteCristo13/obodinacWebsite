@@ -38,7 +38,7 @@ const Footer = () => {
               <h5 className='cursor-pointer'>+381655075855</h5>
             </a>
             <a href='tel:+381631285041'>
-              <h5 className='cursor-pointer'>+381631285041</h5>
+              <h5 className='cursor-pointer'>+381631282041</h5>
             </a>
           </div>
         </div>

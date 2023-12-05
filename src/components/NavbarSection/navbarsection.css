@@ -43,6 +43,7 @@
 
 .o__header_menu-overlay_logo {
   max-width: 300px;
+  margin-inline: 1rem;
 }
 
 .o__header_menu-overlay_logo img {
