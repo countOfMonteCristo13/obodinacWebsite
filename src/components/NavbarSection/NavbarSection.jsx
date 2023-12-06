@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 import images from '../../data/Images/images';
 import navbarDropdownLinks from '../../data/navbarDropdownLinks/navbarDropdownLinks';
-import NavbarMenuDropdown from '../NavbarMenuDropdown/NavbarMenuDropdown';
 import DesktopNavbar from '../DesktopNavbar/DesktopNavbar';
 import './navbarsection.css';
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
@@ -14,11 +11,6 @@ const NavbarSection = ({ activeLink }) => {
 
   const [offersDropdownToggleButton, setOffersDropdownToggleButton] = useState(false);
   const [galleryDropdownToggleButton, setGalleryDropdownToggleButton] = useState(false);
-  const [offersDropdownHeight, setOffersDropdownHeight] = useState(0);
-  const [galleryDropdownHeight, setGalleryDropdownHeight] = useState(0);
-
-  const menuOffersDropdownRef = useRef(null);
-  const menuGalleryDropdownRef = useRef(null);
 
   const closeWindow = () => {
     if (window.innerWidth > 768) {

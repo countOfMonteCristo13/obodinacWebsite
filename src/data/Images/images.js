@@ -45,13 +45,6 @@ import refresh from '../../assets/icons/refresh.png';
 import refreshWhite from '../../assets/icons/refreshWhite.png';
 //
 
-//Logo Images
-
-import obodinac from '../../assets/logos/obodinac.png';
-import obodinac2 from '../../assets/logos/obodinac2.png';
-import obodinacFooter2 from '../../assets/logos/obodinacFooter2.png';
-//
-
 import servisKlime from '../../assets/servisKlime.png';
 import polovnaKlima1 from '../../assets/polovnaKlima1.png';
 import polovnaKlima2 from '../../assets/polovnaKlima2.png';
@@ -139,6 +132,12 @@ const ventilacija = 'Obodinac/homePage/ventilacija.png';
 const aboutUs = 'Obodinac/homePage/aboutUs.png';
 //
 
+//Logo Images
+const obodinac = 'Obodinac/logos/obodinac.png';
+const obodinacFooter2 = 'Obodinac/logos/obodinacFooter2.png';
+// import obodinac2 from '../../assets/logos/obodinac2.png';
+//
+
 const images = {
   centralniSistem,
   emailIcon,
@@ -154,7 +153,7 @@ const images = {
   klimatizacija,
   multiSistem,
   obodinac,
-  obodinac2,
+  // obodinac2,
   obodinacFooter2,
   parapetnaKlima,
   plafonskaKlima,

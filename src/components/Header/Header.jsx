@@ -11,7 +11,7 @@ const Header = () => {
       <IKContext urlEndpoint={urlEndpoint}>
         <header className='o__header'>
           <div className='o__header_logo'>
-            <img src={images.obodinac} alt='obodinac logo' />
+            <IKImage path={images.obodinac} />
           </div>
 
           <div className='o__header_images'>

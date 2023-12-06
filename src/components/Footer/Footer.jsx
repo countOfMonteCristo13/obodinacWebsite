@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import ClipboardJS from 'clipboard';
+import { IKImage } from 'imagekitio-react';
 import images from '../../data/Images/images';
 import './footer.css';
+
+const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const Footer = () => {
   const textToCopyRef = useRef(null);
@@ -25,7 +28,7 @@ const Footer = () => {
   return (
     <div className='o__footer'>
       <div className='o__footer_logo flex__center'>
-        <img src={images.obodinacFooter2} alt='obodinac logo' />
+        <IKImage urlEndpoint={urlEndpoint} path={images.obodinacFooter2} />
       </div>
 
       <div className='o__footer_line' />

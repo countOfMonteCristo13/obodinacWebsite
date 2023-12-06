@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
+import { IKImage } from 'imagekitio-react';
 import { NavbarSection } from '../../components';
 import images from '../../data/Images/images';
 import './aboutuspage.css';
 
 import { ScrollUp } from '../../utils';
+
+const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const AboutUsPage = () => {
   useEffect(() => {
@@ -17,7 +20,7 @@ const AboutUsPage = () => {
         <NavbarSection activeLink='nav__about' />
         <div className='o__aboutPage_section'>
           <div className='o__aboutPage_section-img'>
-            <img src={images.aboutUs} alt='o nama' />
+            <IKImage urlEndpoint={urlEndpoint} path={images.aboutUs} />
           </div>
           <div className='o__aboutPage_section-description'>
             <p>
