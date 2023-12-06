@@ -11,7 +11,7 @@ const Header = () => {
       <IKContext urlEndpoint={urlEndpoint}>
         <header className='o__header'>
           <div className='o__header_logo'>
-            <IKImage path={images.obodinac} />
+            <IKImage path={images.obodinac} loading='lazy' lqip={{ active: true }} />
           </div>
 
           <div className='o__header_images'>
