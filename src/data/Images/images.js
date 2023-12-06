@@ -1,13 +1,3 @@
-//HomePage Images
-import klimatizacija from '../../assets/homePage/klimatizacija.png';
-import grejanje from '../../assets/homePage/grejanje.png';
-import polovnaKlimatizacija from '../../assets/homePage/polovnaKlimatizacija.png';
-import dijamantskoBusenjeRupa from '../../assets/homePage/dijamantskoBusenjeRupa.png';
-import servisKlimaUredjaja from '../../assets/homePage/servisKlimaUredjaja.png';
-import ventilacija from '../../assets/homePage/ventilacija.png';
-import aboutUs from '../../assets/homePage/aboutUs.png';
-//
-
 //Type Cards Images
 import kondezator from '../../assets/typeCards/kondezator.png';
 import freon from '../../assets/typeCards/freon.png';
@@ -55,36 +45,37 @@ import refresh from '../../assets/icons/refresh.png';
 import refreshWhite from '../../assets/icons/refreshWhite.png';
 //
 
-//Offers Images
-import centralniSistem from '../../assets/offersImages/centralniSistem.png';
-import kanalskiSistem from '../../assets/offersImages/kanalskiSistem.png';
-import kirnerica from '../../assets/offersImages/kirnerica.png';
-import splitSistem from '../../assets/offersImages/splitSistem.png';
-import multiSistem from '../../assets/offersImages/multiSistem.png';
-import podnoGrejanje from '../../assets/offersImages/podnoGrejanje.png';
-import radiator from '../../assets/offersImages/radiator.png';
-import rekuperator from '../../assets/offersImages/rekuperator.png';
-import vent from '../../assets/offersImages/vent.png';
-import punjenjeFreona from '../../assets/offersImages/freon.png';
-import popravkaElektronike from '../../assets/offersImages/elektronika.png';
-import zamenaKondezatora from '../../assets/offersImages/zamenaKondezatora.png';
-import ciscenjeKlimaUredjaja from '../../assets/offersImages/ciscenjeKlimaUredjaja.png';
-//
-
 //Logo Images
 
 import obodinac from '../../assets/logos/obodinac.png';
 import obodinac2 from '../../assets/logos/obodinac2.png';
 import obodinacFooter2 from '../../assets/logos/obodinacFooter2.png';
 //
-import servisKlime from '../../assets/servisKlime.png';
 
+import servisKlime from '../../assets/servisKlime.png';
 import polovnaKlima1 from '../../assets/polovnaKlima1.png';
 import polovnaKlima2 from '../../assets/polovnaKlima2.png';
 import polovnaKlima3 from '../../assets/polovnaKlima3.png';
 import polovnaKlima4 from '../../assets/polovnaKlima4.png';
 import polovnaKlima5 from '../../assets/polovnaKlima5.png';
 
+//Offers Images
+const centralniSistem = 'Obodinac/offersImages/centralniSistem.png';
+const kanalskiSistem = 'Obodinac/offersImages/kanalskiSistem.png';
+const kirnerica = 'Obodinac/offersImages/kirnerica.png';
+const splitSistem = 'Obodinac/offersImages/splitSistem.png';
+const multiSistem = 'Obodinac/offersImages/multiSistem.png';
+const podnoGrejanje = 'Obodinac/offersImages/podnoGrejanje.png';
+const radiator = 'Obodinac/offersImages/radiator.png';
+const rekuperator = 'Obodinac/offersImages/rekuperator.png';
+const vent = 'Obodinac/offersImages/vent.png';
+const punjenjeFreona = 'Obodinac/offersImages/freon.png';
+const popravkaElektronike = 'Obodinac/offersImages/elektronika.png';
+const zamenaKondezatora = 'Obodinac/offersImages/zamenaKondezatora.png';
+const ciscenjeKlimaUredjaja = 'Obodinac/offersImages/ciscenjeKlimaUredjaja.png';
+//
+
+//GALLERY IMGS - MONTAZA
 const split5 = 'Obodinac/galleryImages/split1.png';
 const split6 = 'Obodinac/galleryImages/split2.png';
 const split7 = 'Obodinac/galleryImages/split3.jpg';
@@ -100,7 +91,6 @@ const centralni9 = 'Obodinac/galleryImages/centralni9.jpg';
 const kanalski1 = 'Obodinac/galleryImages/kanalski1.jpg';
 const kanalski2 = 'Obodinac/galleryImages/kanalski2.png';
 const kanalski3 = 'Obodinac/galleryImages/kanalski3.jpg';
-
 const servisKlime1 = 'Obodinac/galleryImages/servisKlime1.png';
 const servisKlime2 = 'Obodinac/galleryImages/servisKlime2.png';
 const servisKlime3 = 'Obodinac/galleryImages/servisKlime3.png';
@@ -138,6 +128,16 @@ const radijator3 = 'Obodinac/galleryImages/radijator3.png';
 const radijator4 = 'Obodinac/galleryImages/radijator4.png';
 const radijator5 = 'Obodinac/galleryImages/radijator5.png';
 const radijator6 = 'Obodinac/galleryImages/radijator6.png';
+
+//HomePage Images
+const klimatizacija = 'Obodinac/homePage/klimatizacija.png';
+const grejanje = 'Obodinac/homePage/grejanje.png';
+const polovnaKlimatizacija = 'Obodinac/homePage/polovnaKlimatizacija.png';
+const dijamantskoBusenjeRupa = 'Obodinac/homePage/dijamantskoBusenjeRupa.png';
+const servisKlimaUredjaja = 'Obodinac/homePage/servisKlimaUredjaja.png';
+const ventilacija = 'Obodinac/homePage/ventilacija.png';
+const aboutUs = 'Obodinac/homePage/aboutUs.png';
+//
 
 const images = {
   centralniSistem,

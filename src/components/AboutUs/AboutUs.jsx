@@ -1,7 +1,10 @@
 import { React } from 'react';
 import { Link } from 'react-router-dom';
+import { IKImage } from 'imagekitio-react';
 import images from '../../data/Images/images';
 import './aboutus.css';
+
+const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const AboutUs = () => {
   return (
@@ -32,7 +35,7 @@ const AboutUs = () => {
       </div>
 
       <div className='o__aboutUs_img'>
-        <img src={images.aboutUs} alt='family' />
+        <IKImage urlEndpoint={urlEndpoint} path={images.aboutUs} />
       </div>
     </div>
   );

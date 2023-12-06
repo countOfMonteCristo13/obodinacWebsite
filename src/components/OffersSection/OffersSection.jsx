@@ -1,6 +1,9 @@
 import React from 'react';
 import './offerssection.css';
 import { Link } from 'react-router-dom';
+import { IKImage } from 'imagekitio-react';
+
+const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const OffersSection = ({ description, image, alt, odd, href }) => {
   return (
@@ -15,7 +18,8 @@ const OffersSection = ({ description, image, alt, odd, href }) => {
       </div>
       <div className='o__offersSection_img flex__center'>
         <div className='o__offersSection_img-wrapper'>
-          <img src={image} alt={alt} />
+          {/* <img src={image} alt={alt} /> */}
+          <IKImage urlEndpoint={urlEndpoint} path={image} />
         </div>
       </div>
     </div>
