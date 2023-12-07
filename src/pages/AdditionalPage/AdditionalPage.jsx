@@ -1,17 +1,16 @@
-import React, { useEffect } from 'react'
-import './additionalpage.css'
-import { images, galleryImages, texts } from '../../data'
-import { NavbarSection, OffersSection } from '../../components'
-import { ScrollUp, ImageSlider, SpareAC, BlueLine } from '../../utils'
+import React, { useEffect } from 'react';
+import './additionalpage.css';
+import { images, galleryImages, texts } from '../../data';
+import { NavbarSection, OffersSection } from '../../components';
+import { ImageSlider, SpareAC, BlueLine } from '../../utils';
 
 const AdditionalPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className='o__addoffersPage-wrapper'>
-      <ScrollUp image={images.upArrow} />
       <div className='o__addoffersPage slide-enterance1'>
         <NavbarSection activeLink='nav__faq' />
         <OffersSection
@@ -46,7 +45,7 @@ const AdditionalPage = () => {
         <SpareAC />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdditionalPage
+export default AdditionalPage;

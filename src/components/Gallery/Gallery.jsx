@@ -2,7 +2,7 @@ import React from 'react';
 import './gallery.css';
 import HeadTitle from '../../utils/HeadTitle/HeadTitle';
 import images from '../../data/Images/images';
-import ACSystemsCard from '../../utils/TypeCard/TypeCard';
+import TypeCard from '../../utils/TypeCard/TypeCard';
 
 const Gallery = () => {
   const galleryCards = [
@@ -15,11 +15,6 @@ const Gallery = () => {
       img: images.servisKlimaUredjajaKartica,
       title: 'Servis klima uređaja',
       url: '/galerija/servis-klima-uređaja',
-    },
-    {
-      img: images.polovniKlimaUredjajiKartica,
-      title: 'Polovni klima uređaji',
-      url: '/galerija/polovni-klima-uređaji',
     },
     {
       img: images.radiatorKartica,
@@ -44,7 +39,7 @@ const Gallery = () => {
       <div className='sistemi__klima section__padding'>
         <div className='sistemi__klima-cards'>
           {galleryCards.map(card => (
-            <ACSystemsCard sistem={card} key={card.title} />
+            <TypeCard sistem={card} key={card.title} />
           ))}
         </div>
       </div>

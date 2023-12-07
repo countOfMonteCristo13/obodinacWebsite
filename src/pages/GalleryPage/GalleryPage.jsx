@@ -1,41 +1,78 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './gallerypage.css';
 import { IKImage } from 'imagekitio-react';
-import images from '../../data/Images/images';
 import { NavbarSection } from '../../components';
-import { ScrollUp, BlueLine } from '../../utils';
+import { BlueLine } from '../../utils';
 
 const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const GalleryPage = ({ gImages, title }) => {
+  const [filterGalleryImages, setFilterGalleryImages] = useState('Sve');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    setFilterGalleryImages('Sve');
+  }, [title]);
+
   return (
-    <>
-      <ScrollUp image={images.upArrow} />
-      <div className='slide-enterance1'>
-        <NavbarSection activeLink='nav__gallery' />
-        <div className='headtext flex__center'>
-          <h2>{title}</h2>
-        </div>
-        <BlueLine />
-        <div className='gallery__grid section__padding'>
-          {gImages.map((image, index) => (
-            <div key={image} className='gallery__img'>
-              {/* <img src={image} alt={`Slika ${index}`} /> */}
-              <IKImage
-                urlEndpoint={urlEndpoint}
-                path={image}
-                lqip={{ active: true }}
-                loading='lazy'
-              />
-            </div>
-          ))}
-        </div>
+    <div className='slide-enterance1'>
+      <NavbarSection activeLink='nav__gallery' />
+      <div className='headtext flex__center'>
+        <h2>{title}</h2>
       </div>
-    </>
+      <BlueLine />
+      <div className='gallery-filter-types flex__center'>
+        {Object.keys(gImages).map(filterType => {
+          return (
+            <div
+              key={filterType}
+              className={`gallery-filter-type ${filterType === filterGalleryImages && 'active'}`}
+              onClick={() => setFilterGalleryImages(filterType)}
+            >
+              {filterType}
+            </div>
+          );
+        })}
+      </div>
+      <div className='gallery__grid'>
+        {gImages.Sve.map(image => {
+          const lowerFilter = filterGalleryImages.toLowerCase();
+          // console.log(lowerFilter);
+          // if (image.includes(lowerFilter)) {
+          //   console.log(image);
+          // }
+          if (lowerFilter === 'sve') {
+            return (
+              <div key={image} className='gallery__img'>
+                <IKImage
+                  urlEndpoint={urlEndpoint}
+                  path={image}
+                  lqip={{ active: true, quality: 20 }}
+                  loading='lazy'
+                />
+              </div>
+            );
+          }
+          if (image.includes(lowerFilter)) {
+            return (
+              <div key={image} className='gallery__img'>
+                <IKImage
+                  urlEndpoint={urlEndpoint}
+                  path={image}
+                  lqip={{ active: true }}
+                  loading='lazy'
+                />
+              </div>
+            );
+          }
+
+          return null;
+        })}
+      </div>
+    </div>
   );
 };
 

@@ -25,6 +25,7 @@ import { ventilationTypes } from './pages/TypePage/Types/ventilationTypes';
 import { heatingTypes } from './pages/TypePage/Types/heatingTypes';
 import { serviceTypes } from './pages/TypePage/Types/serviceTypes';
 import { Footer } from './components';
+import { ScrollUp } from './utils';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -42,6 +43,7 @@ function App() {
       )}
       {!isLoading && (
         <div>
+          <ScrollUp />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/o-nama' element={<AboutUsPage />} />
@@ -114,10 +116,7 @@ function App() {
             <Route
               path='/galerija/montaža-klima-uređaja'
               element={
-                <GalleryPage
-                  gImages={galleryImages.klimatizacija.Sve}
-                  title='Montaža klima uređaja'
-                />
+                <GalleryPage gImages={galleryImages.klimatizacija} title='Montaža klima uređaja' />
               }
             />
             <Route
@@ -131,11 +130,11 @@ function App() {
             />
             <Route
               path='/galerija/grejanje'
-              element={<GalleryPage gImages={galleryImages.grejanje.Sve} title='Grejanje' />}
+              element={<GalleryPage gImages={galleryImages.grejanje} title='Grejanje' />}
             />
             <Route
               path='/galerija/ventilacija'
-              element={<GalleryPage gImages={galleryImages.ventilacija.Sve} title='Ventilacija' />}
+              element={<GalleryPage gImages={galleryImages.ventilacija} title='Ventilacija' />}
             />
             <Route
               path='/galerija/dijamantsko-bušenje-rupa'

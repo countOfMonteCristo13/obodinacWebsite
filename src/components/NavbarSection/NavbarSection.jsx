@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { IKImage } from 'imagekitio-react';
 import images from '../../data/Images/images';
 import navbarDropdownLinks from '../../data/navbarDropdownLinks/navbarDropdownLinks';
 import DesktopNavbar from '../DesktopNavbar/DesktopNavbar';
 import './navbarsection.css';
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
+
+const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const NavbarSection = ({ activeLink }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -79,7 +82,7 @@ const NavbarSection = ({ activeLink }) => {
               <img src={images.maintenanceWhite} alt='wrench and screwdriver' />
             </div>
             <div className='o__header_menu-overlay_logo'>
-              <img src={images.obodinacFooter2} alt='obodinac logo' />
+              <IKImage urlEndpoint={urlEndpoint} path={images.obodinacFooter2} />
             </div>
             <div className='o__header_menu-overlay_links flex__center'>
               <MobileNavbar />

@@ -2,6 +2,7 @@ import images from '../Images/images';
 
 const galleryImages = {
   klimatizacija: {
+    Sve: [],
     Split: [images.split5, images.split6, images.split7],
     Centralni: [
       images.centralni1,
@@ -14,12 +15,12 @@ const galleryImages = {
       images.centralni8,
       images.centralni9,
     ],
-    Kanalske: [images.kanalski1, images.kanalski2, images.kanalski3],
+    Kanalski: [images.kanalski1, images.kanalski2, images.kanalski3],
     Multi: [],
-    Sve: [],
   },
 
   grejanje: {
+    Sve: [],
     Radijator: [
       images.radijator1,
       images.radijator2,
@@ -39,28 +40,29 @@ const galleryImages = {
       images.podnoGrejanje8,
       images.podnoGrejanje9,
     ],
-    Sve: [],
   },
 
   ventilacija: {
-    Mehanička: [images.ventilacija1, images.ventilacija2],
-    Rekuperator: [images.ventilacija3, images.ventilacija4],
     Sve: [],
+    Mehanička: [images.ventilacija1, images.ventilacija2],
+    Rekuperatorska: [images.ventilacija3, images.ventilacija4],
   },
 
-  kernovanjeImages: [
-    images.kernovanje1,
-    images.kernovanje2,
-    images.kernovanje3,
-    images.kernovanje4,
-    images.kernovanje5,
-    images.kernovanje6,
-    images.kernovanje7,
-    images.kernovanje8,
-    images.kernovanje9,
-    images.kernovanje10,
-  ],
-  servisKlimaImages: [images.servisKlime1, images.servisKlime2, images.servisKlime3],
+  kernovanjeImages: {
+    Sve: [
+      images.kernovanje1,
+      images.kernovanje2,
+      images.kernovanje3,
+      images.kernovanje4,
+      images.kernovanje5,
+      images.kernovanje6,
+      images.kernovanje7,
+      images.kernovanje8,
+      images.kernovanje9,
+      images.kernovanje10,
+    ],
+  },
+  servisKlimaImages: { Sve: [images.servisKlime1, images.servisKlime2, images.servisKlime3] },
 };
 
 const computeSveCategory = categoryObject => {

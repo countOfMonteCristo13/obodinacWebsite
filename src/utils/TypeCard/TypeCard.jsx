@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ACSystemsCard = ({ sistem }) => {
+const TypeCard = ({ sistem }) => {
   return (
     <Link to={sistem.url} className='sistemi__klima-card'>
       <div className='sistemi__klima-card__img'>
@@ -9,7 +9,7 @@ const ACSystemsCard = ({ sistem }) => {
       </div>
       <div className='sistemi__klima-card__title'>{sistem.title}</div>
     </Link>
-  )
-}
+  );
+};
 
-export default ACSystemsCard
+export default TypeCard;

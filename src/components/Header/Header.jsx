@@ -15,9 +15,9 @@ const Header = () => {
           </div>
 
           <div className='o__header_images'>
-            <IKImage path={images.splitSistem} />
-            <IKImage path={images.radiator} />
-            <IKImage path={images.vent} />
+            <IKImage path={images.splitSistem} loading='lazy' lqip={{ active: true }} />
+            <IKImage path={images.radiator} loading='lazy' lqip={{ active: true }} />
+            <IKImage path={images.vent} loading='lazy' lqip={{ active: true }} />
           </div>
         </header>
       </IKContext>

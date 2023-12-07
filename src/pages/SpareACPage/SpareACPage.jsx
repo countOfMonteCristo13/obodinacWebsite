@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { ScrollUp, SpareAC } from '../../utils';
+import { SpareAC } from '../../utils';
 import { NavbarSection } from '../../components';
-import images from '../../data/Images/images';
 import texts from '../../data/Texts/texts';
 
 const SpareACPage = () => {
@@ -10,21 +9,18 @@ const SpareACPage = () => {
   });
 
   return (
-    <>
-      <ScrollUp image={images.upArrow} />
-      <div className='slide-enterance1'>
-        <NavbarSection activeLink='nav__offers' />
-        <div className='headtext flex__center'>
-          <h2>Polovni klima uređaji</h2>
-          <p>{texts.textOfferPagesSubHeading.spareACD}</p>
-        </div>
-
-        <div className='sistemi__klima-headtext flex__center'>
-          <h2>Ponuda</h2>
-        </div>
-        <SpareAC />
+    <div className='slide-enterance1'>
+      <NavbarSection activeLink='nav__offers' />
+      <div className='headtext flex__center'>
+        <h2>Polovni klima uređaji</h2>
+        <p>{texts.textOfferPagesSubHeading.spareACD}</p>
       </div>
-    </>
+
+      <div className='sistemi__klima-headtext flex__center'>
+        <h2>Ponuda</h2>
+      </div>
+      <SpareAC />
+    </div>
   );
 };
 

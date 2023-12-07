@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import images from '../../data/Images/images';
 import texts from '../../data/Texts/texts';
 import { NavbarSection, OffersSection } from '../../components';
-import { ScrollUp, BlueLine, TypeCard } from '../../utils';
+import { BlueLine, TypeCard } from '../../utils';
 
 const DrillingHolesPage = () => {
   useEffect(() => {
@@ -37,32 +37,29 @@ const DrillingHolesPage = () => {
     },
   ];
   return (
-    <>
-      <ScrollUp image={images.upArrow} />
-      <div className='slide-enterance1'>
-        <NavbarSection activeLink='nav__offers' />
-        <div className='headtext flex__center'>
-          <h2>Dijamantsko bušenje rupa</h2>
-        </div>
-        <BlueLine />
-        <OffersSection
-          description={texts.textOfferPagesSubHeading.drillingD}
-          alt='Dijamantsko bušenje rupa'
-          image={images.kirnerica}
-          href='/galerija/dijamantsko-bušenje-rupa'
-        />
-        <div className='sistemi__klima-headtext flex__center'>
-          <h2>Prečnici burgija</h2>
-        </div>
-        <div className='sistemi__klima section__padding'>
-          <div className='sistemi__klima-cards'>
-            {drillTypes.map(sistem => (
-              <TypeCard sistem={sistem} key={sistem.title} />
-            ))}
-          </div>
+    <div className='slide-enterance1'>
+      <NavbarSection activeLink='nav__offers' />
+      <div className='headtext flex__center'>
+        <h2>Dijamantsko bušenje rupa</h2>
+      </div>
+      <BlueLine />
+      <OffersSection
+        description={texts.textOfferPagesSubHeading.drillingD}
+        alt='Dijamantsko bušenje rupa'
+        image={images.kirnerica}
+        href='/galerija/dijamantsko-bušenje-rupa'
+      />
+      <div className='sistemi__klima-headtext flex__center'>
+        <h2>Prečnici burgija</h2>
+      </div>
+      <div className='sistemi__klima section__padding'>
+        <div className='sistemi__klima-cards'>
+          {drillTypes.map(sistem => (
+            <TypeCard sistem={sistem} key={sistem.title} />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
