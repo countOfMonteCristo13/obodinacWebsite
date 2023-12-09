@@ -5,6 +5,7 @@
   gap: 5rem;
   background-color: var(--color-white);
   padding: 2rem 3rem;
+  min-height: 194px;
 }
 
 .o__header_logo {
@@ -34,9 +35,16 @@
   .o__header_images img {
     max-height: 170px;
   }
+
+  .o__header {
+    min-height: 234px;
+  }
 }
 
 @media screen and (min-width: 2000px) {
+  .o__header {
+    min-height: 264px;
+  }
   .o__header_logo img {
     min-width: 600px;
   }
@@ -50,6 +58,7 @@
   .o__header {
     gap: 3rem;
     padding: 2rem;
+    min-height: 164px;
   }
 
   .o__header_logo img {
