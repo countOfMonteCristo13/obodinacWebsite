@@ -1,3 +1,14 @@
+/* eslint-disable camelcase */
+//Header Logos
+import logoHeader from '../../assets/headerImages/obodinac.png';
+import logoHeader_small from '../../assets/headerImages/obodinac_small.png';
+import ventilacijaHeader from '../../assets/headerImages/vent.png';
+import ventilacijaHeader_small from '../../assets/headerImages/vent_small.png';
+import grejanjeHeader from '../../assets/headerImages/radiator.png';
+import grejanjeHeader_small from '../../assets/headerImages/radiator_small.png';
+import klimatizacijaHeader from '../../assets/headerImages/splitSistem.png';
+import klimatizacijaHeader_small from '../../assets/headerImages/splitSistem_small.png';
+
 //Type Cards Images
 import kondezator from '../../assets/typeCards/kondezator.png';
 import freon from '../../assets/typeCards/freon.png';
@@ -68,60 +79,6 @@ const zamenaKondezatora = 'Obodinac/offersImages/zamenaKondezatora.png';
 const ciscenjeKlimaUredjaja = 'Obodinac/offersImages/ciscenjeKlimaUredjaja.png';
 //
 
-//GALLERY IMGS - MONTAZA
-const split5 = 'Obodinac/galleryImages/split1.png';
-const split6 = 'Obodinac/galleryImages/split2.png';
-const split7 = 'Obodinac/galleryImages/split3.jpg';
-const centralni1 = 'Obodinac/galleryImages/centralni1.jpg';
-const centralni2 = 'Obodinac/galleryImages/centralni2.jpg';
-const centralni3 = 'Obodinac/galleryImages/centralni3.jpg';
-const centralni4 = 'Obodinac/galleryImages/centralni4.jpg';
-const centralni5 = 'Obodinac/galleryImages/centralni5.jpg';
-const centralni6 = 'Obodinac/galleryImages/centralni6.jpg';
-const centralni7 = 'Obodinac/galleryImages/centralni7.jpg';
-const centralni8 = 'Obodinac/galleryImages/centralni8.jpg';
-const centralni9 = 'Obodinac/galleryImages/centralni9.jpg';
-const kanalski1 = 'Obodinac/galleryImages/kanalski1.jpg';
-const kanalski2 = 'Obodinac/galleryImages/kanalski2.png';
-const kanalski3 = 'Obodinac/galleryImages/kanalski3.jpg';
-const servisKlime1 = 'Obodinac/galleryImages/servisKlime1.png';
-const servisKlime2 = 'Obodinac/galleryImages/servisKlime2.png';
-const servisKlime3 = 'Obodinac/galleryImages/servisKlime3.png';
-const ventilacija1 = 'Obodinac/galleryImages/ventilacija1.jpg';
-const ventilacija2 = 'Obodinac/galleryImages/ventilacija2.jpg';
-const ventilacija3 = 'Obodinac/galleryImages/ventilacija3.jpg';
-const ventilacija4 = 'Obodinac/galleryImages/ventilacija4.jpg';
-const ventilacija5 = 'Obodinac/galleryImages/ventilacija5.png';
-const ventilacija6 = 'Obodinac/galleryImages/ventilacija6.png';
-const ventilacija7 = 'Obodinac/galleryImages/ventilacija7.png';
-const ventilacija8 = 'Obodinac/galleryImages/ventilacija8.jpg';
-const ventilacija9 = 'Obodinac/galleryImages/ventilacija9.jpg';
-const kernovanje1 = 'Obodinac/galleryImages/kernovanje1.png';
-const kernovanje2 = 'Obodinac/galleryImages/kernovanje2.png';
-const kernovanje3 = 'Obodinac/galleryImages/kernovanje3.png';
-const kernovanje4 = 'Obodinac/galleryImages/kernovanje4.png';
-const kernovanje5 = 'Obodinac/galleryImages/kernovanje5.png';
-const kernovanje6 = 'Obodinac/galleryImages/kernovanje6.png';
-const kernovanje7 = 'Obodinac/galleryImages/kernovanje7.png';
-const kernovanje8 = 'Obodinac/galleryImages/kernovanje8.png';
-const kernovanje9 = 'Obodinac/galleryImages/kernovanje9.png';
-const kernovanje10 = 'Obodinac/galleryImages/kernovanje10.png';
-const podnoGrejanje1 = 'Obodinac/galleryImages/podnoGrejanje1.png';
-const podnoGrejanje2 = 'Obodinac/galleryImages/podnoGrejanje2.png';
-const podnoGrejanje3 = 'Obodinac/galleryImages/podnoGrejanje3.png';
-const podnoGrejanje4 = 'Obodinac/galleryImages/podnoGrejanje4.png';
-const podnoGrejanje5 = 'Obodinac/galleryImages/podnoGrejanje5.png';
-const podnoGrejanje6 = 'Obodinac/galleryImages/podnoGrejanje6.png';
-const podnoGrejanje7 = 'Obodinac/galleryImages/podnoGrejanje7.png';
-const podnoGrejanje8 = 'Obodinac/galleryImages/podnoGrejanje8.png';
-const podnoGrejanje9 = 'Obodinac/galleryImages/podnoGrejanje9.png';
-const radijator1 = 'Obodinac/galleryImages/radijator1.png';
-const radijator2 = 'Obodinac/galleryImages/radijator2.png';
-const radijator3 = 'Obodinac/galleryImages/radijator3.png';
-const radijator4 = 'Obodinac/galleryImages/radijator4.png';
-const radijator5 = 'Obodinac/galleryImages/radijator5.png';
-const radijator6 = 'Obodinac/galleryImages/radijator6.png';
-
 //HomePage Images
 const klimatizacija = 'Obodinac/homePage/klimatizacija.png';
 const grejanje = 'Obodinac/homePage/grejanje.png';
@@ -135,8 +92,6 @@ const aboutUs = 'Obodinac/homePage/aboutUs.png';
 //Logo Images
 const obodinac = 'Obodinac/logos/obodinac.png';
 const obodinacFooter2 = 'Obodinac/logos/obodinacFooter2.png';
-// import obodinac2 from '../../assets/logos/obodinac2.png';
-//
 
 const images = {
   centralniSistem,
@@ -153,7 +108,6 @@ const images = {
   klimatizacija,
   multiSistem,
   obodinac,
-  // obodinac2,
   obodinacFooter2,
   parapetnaKlima,
   plafonskaKlima,
@@ -165,15 +119,6 @@ const images = {
   vent,
   ventKartica,
   ventilacija,
-  ventilacija1,
-  ventilacija2,
-  ventilacija3,
-  ventilacija4,
-  ventilacija5,
-  ventilacija6,
-  ventilacija7,
-  ventilacija8,
-  ventilacija9,
   maintenance,
   maintenanceWhite,
   refresh,
@@ -189,49 +134,6 @@ const images = {
   polovnaKlima3,
   polovnaKlima4,
   polovnaKlima5,
-  split5,
-  split6,
-  split7,
-  servisKlime1,
-  servisKlime2,
-  servisKlime3,
-  centralni1,
-  centralni2,
-  centralni3,
-  centralni4,
-  centralni5,
-  centralni6,
-  centralni7,
-  centralni8,
-  centralni9,
-  kanalski1,
-  kanalski2,
-  kanalski3,
-  kernovanje1,
-  kernovanje2,
-  kernovanje3,
-  kernovanje4,
-  kernovanje5,
-  kernovanje6,
-  kernovanje7,
-  kernovanje8,
-  kernovanje9,
-  kernovanje10,
-  podnoGrejanje1,
-  podnoGrejanje2,
-  podnoGrejanje3,
-  podnoGrejanje4,
-  podnoGrejanje5,
-  podnoGrejanje6,
-  podnoGrejanje7,
-  podnoGrejanje8,
-  podnoGrejanje9,
-  radijator1,
-  radijator2,
-  radijator3,
-  radijator4,
-  radijator5,
-  radijator6,
   aboutUs,
   kondezator,
   freon,
@@ -258,6 +160,14 @@ const images = {
   popravkaElektronike,
   zamenaKondezatora,
   ciscenjeKlimaUredjaja,
+  logoHeader,
+  logoHeader_small,
+  klimatizacijaHeader,
+  klimatizacijaHeader_small,
+  ventilacijaHeader,
+  ventilacijaHeader_small,
+  grejanjeHeader,
+  grejanjeHeader_small,
 };
 
 export default images;

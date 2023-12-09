@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './gallerypage.css';
-import { IKImage } from 'imagekitio-react';
 import { NavbarSection } from '../../components';
 import { BlueLine } from '../../utils';
-
-const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const GalleryPage = ({ gImages, title }) => {
   const [filterGalleryImages, setFilterGalleryImages] = useState('Sve');
@@ -15,7 +12,38 @@ const GalleryPage = ({ gImages, title }) => {
 
   useEffect(() => {
     setFilterGalleryImages('Sve');
+    // console.log(allImages);
+    const allImages = document.querySelectorAll('.gallery__img');
+    allImages.forEach(div => {
+      const img = div.querySelector('img');
+      function loaded() {
+        div.classList.add('loaded');
+      }
+      if (img.complete) {
+        // ako je istina slika je vec skinuta
+        loaded();
+      } else {
+        img.addEventListener('load', loaded);
+      }
+    });
   }, [title]);
+
+  useEffect(() => {
+    const allImages = document.querySelectorAll('.gallery__img');
+    console.log(allImages);
+    allImages.forEach(div => {
+      const img = div.querySelector('img');
+      function loaded() {
+        div.classList.add('loaded');
+      }
+      if (img.complete) {
+        loaded();
+      } else {
+        img.addEventListener('load', loaded);
+      }
+    });
+    console.log(gImages[filterGalleryImages]);
+  }, [filterGalleryImages]);
 
   return (
     <div className='gallery-page slide-enterance1' key={title}>
@@ -38,34 +66,18 @@ const GalleryPage = ({ gImages, title }) => {
         })}
       </div>
       <div className='gallery__grid'>
-        {gImages.Sve.map(image => {
-          const lowerFilter = filterGalleryImages.toLowerCase();
-          if (lowerFilter === 'sve') {
-            return (
-              <div key={image} className='gallery__img'>
-                <IKImage
-                  urlEndpoint={urlEndpoint}
-                  path={image}
-                  lqip={{ active: true, quality: 20 }}
-                  loading='lazy'
-                />
-              </div>
-            );
-          }
-          if (image.includes(lowerFilter)) {
-            return (
-              <div key={image} className='gallery__img'>
-                <IKImage
-                  urlEndpoint={urlEndpoint}
-                  path={image}
-                  lqip={{ active: true }}
-                  loading='lazy'
-                />
-              </div>
-            );
-          }
-
-          return null;
+        {gImages[
+          !Object.keys(gImages).includes(filterGalleryImages) ? 'Sve' : filterGalleryImages
+        ].map((image, index) => {
+          return (
+            <div
+              key={image.full}
+              className='gallery__img blur-load'
+              style={{ backgroundImage: `url(${image.blur})` }}
+            >
+              <img src={image.full} alt={`#${index} img`} loading='lazy' />
+            </div>
+          );
         })}
       </div>
     </div>
