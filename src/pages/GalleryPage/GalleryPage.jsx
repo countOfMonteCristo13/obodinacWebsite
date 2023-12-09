@@ -18,7 +18,7 @@ const GalleryPage = ({ gImages, title }) => {
   }, [title]);
 
   return (
-    <div className='slide-enterance1'>
+    <div className='gallery-page slide-enterance1' key={title}>
       <NavbarSection activeLink='nav__gallery' />
       <div className='headtext flex__center'>
         <h2>{title}</h2>
@@ -40,10 +40,6 @@ const GalleryPage = ({ gImages, title }) => {
       <div className='gallery__grid'>
         {gImages.Sve.map(image => {
           const lowerFilter = filterGalleryImages.toLowerCase();
-          // console.log(lowerFilter);
-          // if (image.includes(lowerFilter)) {
-          //   console.log(image);
-          // }
           if (lowerFilter === 'sve') {
             return (
               <div key={image} className='gallery__img'>

@@ -62,8 +62,8 @@ a {
 }
 
 .slide-enterance1 {
-  -webkit-animation: slide-enterance1 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: slide-enterance1 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: slide-enterance1 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: slide-enterance1 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 @-webkit-keyframes slide-enterance1 {
