@@ -3,13 +3,9 @@
   position: fixed;
   top: 0.4rem;
   right: 0.4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   cursor: pointer;
   display: none;
-  z-index: 1000;
+  z-index: 800;
   transition: all 0.2s ease-in-out;
 }
 
@@ -102,6 +98,9 @@
 @media screen and (max-width: 768px) {
   .o__header_menu-button {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .o__navbar_line {

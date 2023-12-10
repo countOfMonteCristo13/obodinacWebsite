@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import './gallerypage.css';
 import { NavbarSection } from '../../components';
 import { BlueLine } from '../../utils';
+import images from '../../data/Images/images';
 
 const GalleryPage = ({ gImages, title }) => {
   const [filterGalleryImages, setFilterGalleryImages] = useState('Sve');
+  const [overlayImg, setOverlayImg] = useState('');
+  const [overlay, setOverlay] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,7 +15,7 @@ const GalleryPage = ({ gImages, title }) => {
 
   useEffect(() => {
     setFilterGalleryImages('Sve');
-    // console.log(allImages);
+    setOverlay(false);
     const allImages = document.querySelectorAll('.gallery__img');
     allImages.forEach(div => {
       const img = div.querySelector('img');
@@ -30,7 +33,6 @@ const GalleryPage = ({ gImages, title }) => {
 
   useEffect(() => {
     const allImages = document.querySelectorAll('.gallery__img');
-    console.log(allImages);
     allImages.forEach(div => {
       const img = div.querySelector('img');
       function loaded() {
@@ -42,7 +44,6 @@ const GalleryPage = ({ gImages, title }) => {
         img.addEventListener('load', loaded);
       }
     });
-    console.log(gImages[filterGalleryImages]);
   }, [filterGalleryImages]);
 
   return (
@@ -74,12 +75,26 @@ const GalleryPage = ({ gImages, title }) => {
               key={image.full}
               className='gallery__img blur-load'
               style={{ backgroundImage: `url(${image.blur})` }}
+              onClick={() => {
+                setOverlay(true);
+                setOverlayImg(image.full);
+              }}
             >
               <img src={image.full} alt={`#${index} img`} loading='lazy' />
             </div>
           );
         })}
       </div>
+      {overlay && (
+        <div className='gallery-img-overlay flex__center'>
+          <div className='overlay-exit' onClick={() => setOverlay(false)}>
+            <img src={images.maintenanceWhite} alt='wrench and screwdriver' />
+          </div>
+          <div className='overlay-img-wrapper'>
+            <img src={overlayImg} alt='overlay img' />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
