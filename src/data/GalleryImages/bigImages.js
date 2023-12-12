@@ -2,21 +2,30 @@
 import split1 from '../../assets/galleryImages/split1.png';
 import split2 from '../../assets/galleryImages/split2.png';
 import split3 from '../../assets/galleryImages/split3.png';
+import split4 from '../../assets/galleryImages/split4.png';
+import split5 from '../../assets/galleryImages/split5.png';
+import multi1 from '../../assets/galleryImages/multi1.png';
+import multi2 from '../../assets/galleryImages/multi2.png';
+import multi3 from '../../assets/galleryImages/multi3.png';
 import centralni1 from '../../assets/galleryImages/centralni1.jpg';
-import centralni2 from '../../assets/galleryImages/centralni2.jpg';
+// import centralni2 from '../../assets/galleryImages/centralni2.jpg';
 import centralni3 from '../../assets/galleryImages/centralni3.jpg';
-import centralni4 from '../../assets/galleryImages/centralni4.jpg';
+// import centralni4 from '../../assets/galleryImages/centralni4.jpg';
 import centralni5 from '../../assets/galleryImages/centralni5.jpg';
-import centralni6 from '../../assets/galleryImages/centralni6.jpg';
+// import centralni6 from '../../assets/galleryImages/centralni6.jpg';
 import centralni7 from '../../assets/galleryImages/centralni7.jpg';
 import centralni8 from '../../assets/galleryImages/centralni8.jpg';
 import centralni9 from '../../assets/galleryImages/centralni9.jpg';
-import kanalski1 from '../../assets/galleryImages/kanalski1.jpg';
+import kanalski1 from '../../assets/galleryImages/kanalski1.png';
 import kanalski2 from '../../assets/galleryImages/kanalski2.png';
-import kanalski3 from '../../assets/galleryImages/kanalski3.jpg';
+import kanalski3 from '../../assets/galleryImages/kanalski3.png';
+import kanalski4 from '../../assets/galleryImages/kanalski4.png';
+import kanalski5 from '../../assets/galleryImages/kanalski5.png';
+import kanalski6 from '../../assets/galleryImages/kanalski6.png';
 import servisKlime1 from '../../assets/galleryImages/servisKlime1.png';
 import servisKlime2 from '../../assets/galleryImages/servisKlime2.png';
 import servisKlime3 from '../../assets/galleryImages/servisKlime3.png';
+import servisKlime4 from '../../assets/galleryImages/servisKlime4.png';
 import ventilacija1 from '../../assets/galleryImages/ventilacija1.jpg';
 import ventilacija2 from '../../assets/galleryImages/ventilacija2.jpg';
 import ventilacija3 from '../../assets/galleryImages/ventilacija3.jpg';
@@ -24,8 +33,6 @@ import ventilacija4 from '../../assets/galleryImages/ventilacija4.jpg';
 import ventilacija5 from '../../assets/galleryImages/ventilacija5.png';
 import ventilacija6 from '../../assets/galleryImages/ventilacija6.png';
 import ventilacija7 from '../../assets/galleryImages/ventilacija7.png';
-import ventilacija8 from '../../assets/galleryImages/ventilacija8.jpg';
-import ventilacija9 from '../../assets/galleryImages/ventilacija9.jpg';
 import kernovanje1 from '../../assets/galleryImages/kernovanje1.png';
 import kernovanje2 from '../../assets/galleryImages/kernovanje2.png';
 import kernovanje3 from '../../assets/galleryImages/kernovanje3.png';
@@ -45,6 +52,7 @@ import podnoGrejanje6 from '../../assets/galleryImages/podnoGrejanje6.png';
 import podnoGrejanje7 from '../../assets/galleryImages/podnoGrejanje7.png';
 import podnoGrejanje8 from '../../assets/galleryImages/podnoGrejanje8.png';
 import podnoGrejanje9 from '../../assets/galleryImages/podnoGrejanje9.png';
+import podnoGrejanje10 from '../../assets/galleryImages/podnoGrejanje10.png';
 import radijator1 from '../../assets/galleryImages/radijator1.png';
 import radijator2 from '../../assets/galleryImages/radijator2.png';
 import radijator3 from '../../assets/galleryImages/radijator3.png';
@@ -56,21 +64,30 @@ export const images = {
   split1,
   split2,
   split3,
+  split4,
+  split5,
+  multi1,
+  multi2,
+  multi3,
   centralni1,
-  centralni2,
+  // centralni2,
   centralni3,
-  centralni4,
+  // centralni4,
   centralni5,
-  centralni6,
+  // centralni6,
   centralni7,
   centralni8,
   centralni9,
   kanalski1,
   kanalski2,
   kanalski3,
+  kanalski4,
+  kanalski5,
+  kanalski6,
   servisKlime1,
   servisKlime2,
   servisKlime3,
+  servisKlime4,
   ventilacija1,
   ventilacija2,
   ventilacija3,
@@ -78,8 +95,6 @@ export const images = {
   ventilacija5,
   ventilacija6,
   ventilacija7,
-  ventilacija8,
-  ventilacija9,
   kernovanje1,
   kernovanje2,
   kernovanje3,
@@ -99,6 +114,7 @@ export const images = {
   podnoGrejanje7,
   podnoGrejanje8,
   podnoGrejanje9,
+  podnoGrejanje10,
   radijator1,
   radijator2,
   radijator3,

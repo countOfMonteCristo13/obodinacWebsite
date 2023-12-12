@@ -35,6 +35,7 @@
 }
 
 .gallery__img {
+  max-width: 650px;
   width: 100%;
   transition: all 0.2s;
   /* border-radius: 10px; */
@@ -48,7 +49,7 @@
 }
 
 .gallery__img:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   cursor: pointer;
 }
 

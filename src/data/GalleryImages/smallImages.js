@@ -5,6 +5,12 @@
 import split1_small from '../../assets/smallGalleryImages/split1_small.png';
 import split2_small from '../../assets/smallGalleryImages/split2_small.png';
 import split3_small from '../../assets/smallGalleryImages/split3_small.png';
+import split4_small from '../../assets/smallGalleryImages/split4_small.png';
+import split5_small from '../../assets/smallGalleryImages/split5_small.png';
+
+import multi1_small from '../../assets/smallGalleryImages/multi1_small.png';
+import multi2_small from '../../assets/smallGalleryImages/multi2_small.png';
+import multi3_small from '../../assets/smallGalleryImages/multi3_small.png';
 
 import centralni1_small from '../../assets/smallGalleryImages/centralni1_small.png';
 import centralni2_small from '../../assets/smallGalleryImages/centralni2_small.png';
@@ -19,6 +25,9 @@ import centralni9_small from '../../assets/smallGalleryImages/centralni9_small.p
 import kanalski1_small from '../../assets/smallGalleryImages/kanalski1_small.png';
 import kanalski2_small from '../../assets/smallGalleryImages/kanalski2_small.png';
 import kanalski3_small from '../../assets/smallGalleryImages/kanalski3_small.png';
+import kanalski4_small from '../../assets/smallGalleryImages/kanalski4_small.png';
+import kanalski5_small from '../../assets/smallGalleryImages/kanalski5_small.png';
+import kanalski6_small from '../../assets/smallGalleryImages/kanalski6_small.png';
 
 //Servis klima uredjaja
 import servisKlime1_small from '../../assets/smallGalleryImages/servisKlime1_small.png';
@@ -53,6 +62,7 @@ import podnoGrejanje6_small from '../../assets/smallGalleryImages/podnoGrejanje6
 import podnoGrejanje7_small from '../../assets/smallGalleryImages/podnoGrejanje7_small.png';
 import podnoGrejanje8_small from '../../assets/smallGalleryImages/podnoGrejanje8_small.png';
 import podnoGrejanje9_small from '../../assets/smallGalleryImages/podnoGrejanje9_small.png';
+import podnoGrejanje10_small from '../../assets/smallGalleryImages/podnoGrejanje10_small.png';
 
 //Ventilacija
 import ventilacija1_small from '../../assets/smallGalleryImages/ventilacija1_small.png';
@@ -62,8 +72,6 @@ import ventilacija4_small from '../../assets/smallGalleryImages/ventilacija4_sma
 import ventilacija5_small from '../../assets/smallGalleryImages/ventilacija5_small.png';
 import ventilacija6_small from '../../assets/smallGalleryImages/ventilacija6_small.png';
 import ventilacija7_small from '../../assets/smallGalleryImages/ventilacija7_small.png';
-import ventilacija8_small from '../../assets/smallGalleryImages/ventilacija8_small.png';
-import ventilacija9_small from '../../assets/smallGalleryImages/ventilacija9_small.png';
 
 export const smallImages = {
   centralni1_small,
@@ -78,9 +86,17 @@ export const smallImages = {
   kanalski1_small,
   kanalski2_small,
   kanalski3_small,
+  kanalski4_small,
+  kanalski5_small,
+  kanalski6_small,
   split1_small,
   split2_small,
   split3_small,
+  split4_small,
+  split5_small,
+  multi1_small,
+  multi2_small,
+  multi3_small,
   servisKlime1_small,
   servisKlime2_small,
   servisKlime3_small,
@@ -109,6 +125,7 @@ export const smallImages = {
   podnoGrejanje7_small,
   podnoGrejanje8_small,
   podnoGrejanje9_small,
+  podnoGrejanje10_small,
   ventilacija1_small,
   ventilacija2_small,
   ventilacija3_small,
@@ -116,6 +133,4 @@ export const smallImages = {
   ventilacija5_small,
   ventilacija6_small,
   ventilacija7_small,
-  ventilacija8_small,
-  ventilacija9_small,
 };

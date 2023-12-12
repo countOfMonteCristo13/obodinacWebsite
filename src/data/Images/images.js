@@ -1,13 +1,9 @@
 /* eslint-disable camelcase */
 //Header Logos
 import logoHeader from '../../assets/headerImages/obodinac.png';
-import logoHeader_small from '../../assets/headerImages/obodinac_small.png';
 import ventilacijaHeader from '../../assets/headerImages/vent.png';
-import ventilacijaHeader_small from '../../assets/headerImages/vent_small.png';
 import grejanjeHeader from '../../assets/headerImages/radiator.png';
-import grejanjeHeader_small from '../../assets/headerImages/radiator_small.png';
 import klimatizacijaHeader from '../../assets/headerImages/splitSistem.png';
-import klimatizacijaHeader_small from '../../assets/headerImages/splitSistem_small.png';
 
 //Type Cards Images
 import kondezator from '../../assets/typeCards/kondezator.png';
@@ -161,13 +157,9 @@ const images = {
   zamenaKondezatora,
   ciscenjeKlimaUredjaja,
   logoHeader,
-  logoHeader_small,
   klimatizacijaHeader,
-  klimatizacijaHeader_small,
   ventilacijaHeader,
-  ventilacijaHeader_small,
   grejanjeHeader,
-  grejanjeHeader_small,
 };
 
 export default images;
