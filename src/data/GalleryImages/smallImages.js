@@ -33,6 +33,7 @@ import kanalski6_small from '../../assets/smallGalleryImages/kanalski6_small.png
 import servisKlime1_small from '../../assets/smallGalleryImages/servisKlime1_small.png';
 import servisKlime2_small from '../../assets/smallGalleryImages/servisKlime2_small.png';
 import servisKlime3_small from '../../assets/smallGalleryImages/servisKlime3_small.png';
+import servisKlime4_small from '../../assets/smallGalleryImages/servisKlime4_small.png';
 
 //Kernovanje rupa
 import kernovanje1_small from '../../assets/smallGalleryImages/kernovanje1_small.png';
@@ -100,6 +101,7 @@ export const smallImages = {
   servisKlime1_small,
   servisKlime2_small,
   servisKlime3_small,
+  servisKlime4_small,
   kernovanje1_small,
   kernovanje2_small,
   kernovanje3_small,
