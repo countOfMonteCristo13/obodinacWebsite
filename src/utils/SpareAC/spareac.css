@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  min-height: 8rem;
   height: 100%;
 }
 
@@ -11,6 +12,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.o__spareAC-no-ac-info {
+  color: var(--color-blue);
 }
 
 .o__spareAC-klima {
@@ -88,7 +93,10 @@
 }
 
 .o__spareAC-menu-slider {
-  width: 55%;
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #reserve-btn {
   background: var(--color-white);
@@ -101,7 +109,6 @@
   position: absolute;
   top: 0.5rem;
   left: 0.5rem;
-  padding: 0.3rem;
   cursor: pointer;
 }
 
@@ -112,6 +119,7 @@
 @media screen and (max-width: 1024px) {
   .o__spareAC-menu {
     flex-direction: column-reverse;
+    justify-content: space-evenly;
     gap: 2rem;
   }
 
@@ -142,9 +150,5 @@
 
   .o__spareAC-klima-desc h2 {
     font-size: 1.2rem;
-  }
-
-  .o__spareAC-menu_close-btn img {
-    max-width: 1rem;
   }
 }

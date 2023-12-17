@@ -1,14 +1,18 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import images from '../../data/Images/images';
-import spareAC from '../../data/SpareAC/spareAC';
-import galleryImages from '../../data/GalleryImages/galleryImages';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import './spareac.css';
+import useSpareACs from '../../hooks/useSpareACs';
+import Loader from '../Loader/Loader';
 
 const SpareAC = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [imgTitle, setImgTitle] = useState('');
+  const [sliderImgs, setSliderImgs] = useState([]);
+
+  const { data, isLoading, error } = useSpareACs('acs/get-spare-acs');
 
   useEffect(() => {
     const body = document.querySelector('body');
@@ -20,45 +24,55 @@ const SpareAC = () => {
     }
   });
 
-  const showACMenu = event => {
+  const showACMenu = (event, ac) => {
     const acCard = event.target.parentNode.parentNode;
 
     const imgElement = acCard.querySelector('.ac');
     const titleValue = imgElement.getAttribute('alt');
 
-    setImgTitle(titleValue);
+    setImgTitle(ac.title);
+    setSliderImgs(ac.sliderImgs);
 
     setToggleMenu(true);
   };
 
   return (
     <div className='o__spareAC-wrapper section__padding'>
-      <div className='o__spareAC'>
-        {spareAC.map(klima => (
-          <div className='o__spareAC-klima' key={klima.name}>
-            <div className='o__spareAC-klima-img'>
-              <img src={klima.image} alt={klima.name} className='ac' />
-            </div>
-            <div className='o__spareAC-klima-desc'>
-              <h2>{klima.name}</h2>
-              <p>Klima uredjaj</p>
-            </div>
-            <div className='o__spareAC-klima-buttons'>
-              <button
-                className='custom__button more-btn o__spareAC-klima-buttons_button'
-                onClick={event => showACMenu(event)}
-              >
-                Detaljnije...
-              </button>
-              <Link to='/contact'>
-                <button className='custom__button checkout-btn o__spareAC-klima-buttons_button'>
-                  Rezerviši
-                </button>
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
+      {isLoading ? (
+        <Loader width={64} height={64} border={4} />
+      ) : (
+        <div className='o__spareAC'>
+          {data.length === 0 ? (
+            <h2 className='o__spareAC-no-ac-info'>Na stanju trenutno nema polovnih klima</h2>
+          ) : (
+            data.map(klima => (
+              <div className='o__spareAC-klima' key={klima._id}>
+                <div className='o__spareAC-klima-img'>
+                  <img src={klima.coverImg} alt={klima.title} className='ac' />
+                </div>
+                <div className='o__spareAC-klima-desc'>
+                  <h2>{klima.title}</h2>
+                  <p>Klima uredjaj</p>
+                </div>
+                <div className='o__spareAC-klima-buttons'>
+                  <button
+                    className='custom__button more-btn o__spareAC-klima-buttons_button'
+                    onClick={event => showACMenu(event, klima)}
+                  >
+                    Detaljnije...
+                  </button>
+                  <Link to='/contact'>
+                    <button className='custom__button checkout-btn o__spareAC-klima-buttons_button'>
+                      Rezerviši
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      )}
+
       {toggleMenu && (
         <div className='o__spareAC-menu'>
           <div
@@ -70,11 +84,7 @@ const SpareAC = () => {
           <div className='o__spareAC-menu-desc-wrapper'>
             <div className='o__spareAC-menu-desc'>
               <h2>{imgTitle}</h2>
-              <p>
-                Veritatis dignissimos aliquid dolorum cumque et reprehenderit dolore, nesciunt omnis
-                quae ipsa! Dolorem corrupti doloribus praesentium? A amet provident laboriosam sequi
-                quis.
-              </p>
+              <p>{data[0].description}</p>
               <Link to='/contact'>
                 <button
                   className='custom__button checkout-btn o__spareAC-klima-buttons_button'
@@ -86,7 +96,7 @@ const SpareAC = () => {
             </div>
           </div>
           <div className='o__spareAC-menu-slider'>
-            <ImageSlider images={galleryImages.servisKlimaImages} />
+            <ImageSlider images={sliderImgs} />
           </div>
         </div>
       )}

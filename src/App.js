@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Lottie from 'lottie-react';
-import obodinacLoading from './assets/obodinacLoading.json';
+// import Lottie from 'lottie-react';
+// import obodinacLoading from './assets/obodinacLoading.json';
 
 import {
   HomePage,
@@ -26,6 +26,7 @@ import { heatingTypes } from './pages/TypePage/Types/heatingTypes';
 import { serviceTypes } from './pages/TypePage/Types/serviceTypes';
 import { Footer } from './components';
 import { ScrollUp } from './utils';
+import Loader from './utils/Loader/Loader';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,7 +39,8 @@ function App() {
     <>
       {isLoading && (
         <div className='flex__center loadingScreen'>
-          <Lottie animationData={obodinacLoading} loop={1} autoplay={1} height={50} width={50} />
+          {/* <Lottie animationData={obodinacLoading} loop={1} autoplay={1} height={50} width={50} /> */}
+          <Loader width={192} height={192} border={8} />
         </div>
       )}
       {!isLoading && (
