@@ -22,10 +22,10 @@
   gap: 0.5rem;
 }
 
-.o__mobile-nav-list div {
+.o__mobile_nav-link-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
 }
 
 .o__mobile-nav-list a:hover,
@@ -33,6 +33,11 @@
 .slider svg:hover {
   color: var(--color-darkgrey);
   cursor: pointer;
+}
+
+.dropdown-menu__btn {
+  width: 24px;
+  height: 24px;
 }
 
 .slider {
@@ -86,15 +91,20 @@
   .o__mobile_nav-link {
     font-size: 1.45rem;
   }
-}
-@media screen and (max-width: 350px) {
-  .o__mobile_nav-link {
-    font-size: 1.1rem;
-  }
 
   .go-back-btn {
     width: 24px;
     height: 24px;
+  }
+
+  .dropdown-menu__btn {
+    width: 16px;
+    height: 16px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .o__mobile_nav-link {
+    font-size: 1.1rem;
   }
 
   .slider1 {

@@ -13,7 +13,8 @@ const MobileNavbar = () => {
   const sliderThreeRef = useRef(null);
 
   const showDropdown = (e, options) => {
-    const linkClicked = e.parentNode.querySelector('a').innerText;
+    const linkClicked = e.parentNode.innerText;
+    // console.log(linkClicked);
     if (linkClicked === 'Usluge' || linkClicked === 'Galerija') {
       if (linkClicked === 'Usluge') {
         setGalleryOrOffers('offers');
@@ -46,19 +47,18 @@ const MobileNavbar = () => {
         <ul className='o__mobile-nav-list'>
           {Object.values(mobileNavbarLinks).map(navbarLink => (
             <div key={navbarLink.title}>
-              <Link to={navbarLink.url}>
+              <Link to={navbarLink.url} className='o__mobile_nav-link-wrapper'>
                 <li className='o__mobile_nav-link' id={navbarLink.id}>
                   {navbarLink.title}
                 </li>
+                {(navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija') && (
+                  <BsChevronRight
+                    strokeWidth={1}
+                    className='dropdown-menu__btn'
+                    onClick={e => showDropdown(e.currentTarget)}
+                  />
+                )}
               </Link>
-              {/* {(navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija') && (
-                <BsChevronRight
-                  strokeWidth={1}
-                  size={16}
-                  className='dropdown-menu__btn'
-                  onClick={e => showDropdown(e.currentTarget)}
-                />
-              )} */}
             </div>
           ))}
         </ul>
@@ -67,7 +67,7 @@ const MobileNavbar = () => {
         <BsChevronLeft
           size={32}
           strokeWidth={2}
-          className='dropdown-menu__btn go-back-btn'
+          className='go-back-btn'
           onClick={e => closeDropdown(e.currentTarget)}
         />
         <ul className='o__mobile-nav-list'>
@@ -78,18 +78,18 @@ const MobileNavbar = () => {
             return (
               <div key={navbarLink.title}>
                 <Link
+                  className='o__mobile_nav-link-wrapper'
                   to={galleryOrOffers === 'gallery' ? navbarLink.urlGalerija : navbarLink.urlUsluge}
                 >
                   <li className='o__mobile_nav-link'>{navbarLink.title}</li>
+                  {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
+                    <BsChevronRight
+                      strokeWidth={1}
+                      className='dropdown-menu__btn'
+                      onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
+                    />
+                  )}
                 </Link>
-                {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
-                  <BsChevronRight
-                    strokeWidth={1}
-                    size={16}
-                    className='dropdown-menu__btn'
-                    onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
-                  />
-                )}
               </div>
             );
           })}
@@ -99,7 +99,7 @@ const MobileNavbar = () => {
         <BsChevronLeft
           size={32}
           strokeWidth={2}
-          className='dropdown-menu__btn go-back-btn'
+          className='go-back-btn'
           onClick={e => closeDropdown(e.currentTarget)}
         />
 
