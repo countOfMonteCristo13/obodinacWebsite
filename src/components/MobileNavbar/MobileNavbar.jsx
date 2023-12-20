@@ -47,7 +47,26 @@ const MobileNavbar = () => {
         <ul className='o__mobile-nav-list'>
           {Object.values(mobileNavbarLinks).map(navbarLink => (
             <div key={navbarLink.title}>
-              <Link to={navbarLink.url} className='o__mobile_nav-link-wrapper'>
+              {navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija' ? (
+                <div className='o__mobile_nav-link-wrapper'>
+                  <li className='o__mobile_nav-link' id={navbarLink.id}>
+                    {navbarLink.title}
+                  </li>
+                  <BsChevronRight
+                    strokeWidth={1}
+                    className='dropdown-menu__btn'
+                    onClick={e => showDropdown(e.currentTarget)}
+                  />
+                </div>
+              ) : (
+                <Link to={navbarLink.url}>
+                  <li className='o__mobile_nav-link' id={navbarLink.id}>
+                    {navbarLink.title}
+                  </li>
+                </Link>
+              )}
+
+              {/* <Link to={navbarLink.url} className='o__mobile_nav-link-wrapper'>
                 <li className='o__mobile_nav-link' id={navbarLink.id}>
                   {navbarLink.title}
                 </li>
@@ -58,7 +77,7 @@ const MobileNavbar = () => {
                     onClick={e => showDropdown(e.currentTarget)}
                   />
                 )}
-              </Link>
+              </Link> */}
             </div>
           ))}
         </ul>
@@ -76,20 +95,19 @@ const MobileNavbar = () => {
               return null;
             }
             return (
-              <div key={navbarLink.title}>
+              <div key={navbarLink.title} className='o__mobile_nav-link-wrapper'>
                 <Link
-                  className='o__mobile_nav-link-wrapper'
                   to={galleryOrOffers === 'gallery' ? navbarLink.urlGalerija : navbarLink.urlUsluge}
                 >
                   <li className='o__mobile_nav-link'>{navbarLink.title}</li>
-                  {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
-                    <BsChevronRight
-                      strokeWidth={1}
-                      className='dropdown-menu__btn'
-                      onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
-                    />
-                  )}
                 </Link>
+                {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
+                  <BsChevronRight
+                    strokeWidth={1}
+                    className='dropdown-menu__btn'
+                    onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
+                  />
+                )}
               </div>
             );
           })}
