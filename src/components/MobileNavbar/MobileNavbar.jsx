@@ -8,128 +8,121 @@ import './mobileNavbar.css';
 const MobileNavbar = () => {
   const [optionOptions, setOptionOptions] = useState([]);
   const [galleryOrOffers, setGalleryOrOffers] = useState('');
+  const [slider, setSlider] = useState('slider1');
   const sliderOneRef = useRef(null);
   const sliderTwoRef = useRef(null);
   const sliderThreeRef = useRef(null);
 
   const showDropdown = (e, options) => {
     const linkClicked = e.parentNode.innerText;
-    // console.log('open', linkClicked);
     if (linkClicked === 'Usluge' || linkClicked === 'Galerija') {
       if (linkClicked === 'Usluge') {
         setGalleryOrOffers('offers');
       } else {
         setGalleryOrOffers('gallery');
       }
-      sliderOneRef.current.classList.add('slider-left');
-      sliderTwoRef.current.classList.add('slider-zero');
     } else {
-      sliderTwoRef.current.classList.add('slider-left');
-      sliderThreeRef.current.classList.add('slider-zero');
       setOptionOptions(options);
+    }
+
+    if (slider === 'slider1') {
+      setSlider('slider2');
+    } else {
+      setSlider('slider3');
     }
   };
 
-  const closeDropdown = e => {
-    const linkClicked = e.parentNode;
-    // console.log('close', linkClicked);
-    if (linkClicked.classList.contains('slider2')) {
-      sliderOneRef.current.classList.remove('slider-left');
-      sliderTwoRef.current.classList.remove('slider-zero');
+  const closeDropdown = () => {
+    if (slider === 'slider3') {
+      setSlider('slider2');
     } else {
-      sliderTwoRef.current.classList.remove('slider-left');
-      sliderThreeRef.current.classList.remove('slider-zero');
+      setSlider('slider1');
     }
   };
 
   return (
     <div className='o__mobile-nav'>
-      <div ref={sliderOneRef} className='slider slider1'>
-        <ul className='o__mobile-nav-list'>
-          {Object.values(mobileNavbarLinks).map(navbarLink => (
-            <div key={navbarLink.title}>
-              {navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija' ? (
-                <div className='o__mobile_nav-link-wrapper'>
-                  <li className='o__mobile_nav-link' id={navbarLink.id}>
-                    {navbarLink.title}
-                  </li>
-                  <BsChevronRight
-                    strokeWidth={1}
-                    className='dropdown-menu__btn'
-                    onClick={e => showDropdown(e.currentTarget)}
-                  />
-                </div>
-              ) : (
-                <Link to={navbarLink.url}>
-                  <li className='o__mobile_nav-link' id={navbarLink.id}>
-                    {navbarLink.title}
-                  </li>
-                </Link>
-              )}
-
-              {/* <Link to={navbarLink.url} className='o__mobile_nav-link-wrapper'>
-                <li className='o__mobile_nav-link' id={navbarLink.id}>
-                  {navbarLink.title}
-                </li>
-                {(navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija') && (
-                  <BsChevronRight
-                    strokeWidth={1}
-                    className='dropdown-menu__btn'
-                    onClick={e => showDropdown(e.currentTarget)}
-                  />
-                )}
-              </Link> */}
-            </div>
-          ))}
-        </ul>
-      </div>
-      <div ref={sliderTwoRef} className='slider slider2'>
-        <BsChevronLeft
-          size={32}
-          strokeWidth={2}
-          className='go-back-btn'
-          onClick={e => closeDropdown(e.currentTarget)}
-        />
-        <ul className='o__mobile-nav-list'>
-          {navbarDropdownLinks.map(navbarLink => {
-            if (galleryOrOffers === 'gallery' && navbarLink.id === 'polovne') {
-              return null;
-            }
-            return (
-              <div key={navbarLink.title} className='o__mobile_nav-link-wrapper'>
-                <Link
-                  to={galleryOrOffers === 'gallery' ? navbarLink.urlGalerija : navbarLink.urlUsluge}
-                >
-                  <li className='o__mobile_nav-link'>{navbarLink.title}</li>
-                </Link>
-                {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
-                  <BsChevronRight
-                    strokeWidth={1}
-                    className='dropdown-menu__btn'
-                    onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
-                  />
+      {slider === 'slider1' && (
+        <div ref={sliderOneRef} className='slider slider1 slide-enterance1'>
+          <ul className='o__mobile-nav-list'>
+            {Object.values(mobileNavbarLinks).map(navbarLink => (
+              <div key={navbarLink.title}>
+                {navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija' ? (
+                  <div className='o__mobile_nav-link-wrapper'>
+                    <li className='o__mobile_nav-link' id={navbarLink.id}>
+                      {navbarLink.title}
+                    </li>
+                    <BsChevronRight
+                      strokeWidth={1}
+                      className='dropdown-menu__btn'
+                      onClick={e => showDropdown(e.currentTarget)}
+                    />
+                  </div>
+                ) : (
+                  <Link to={navbarLink.url}>
+                    <li className='o__mobile_nav-link' id={navbarLink.id}>
+                      {navbarLink.title}
+                    </li>
+                  </Link>
                 )}
               </div>
-            );
-          })}
-        </ul>
-      </div>
-      <div ref={sliderThreeRef} className='slider slider3'>
-        <BsChevronLeft
-          size={32}
-          strokeWidth={2}
-          className='go-back-btn'
-          onClick={e => closeDropdown(e.currentTarget)}
-        />
+            ))}
+          </ul>
+        </div>
+      )}
+      {slider === 'slider2' && (
+        <div ref={sliderTwoRef} className='slider slider2 slide-enterance1'>
+          <BsChevronLeft
+            size={32}
+            strokeWidth={2}
+            className='go-back-btn'
+            onClick={closeDropdown}
+          />
+          <ul className='o__mobile-nav-list'>
+            {navbarDropdownLinks.map(navbarLink => {
+              if (galleryOrOffers === 'gallery' && navbarLink.id === 'polovne') {
+                return null;
+              }
+              return (
+                <div key={navbarLink.title} className='o__mobile_nav-link-wrapper'>
+                  <Link
+                    to={
+                      galleryOrOffers === 'gallery' ? navbarLink.urlGalerija : navbarLink.urlUsluge
+                    }
+                  >
+                    <li className='o__mobile_nav-link'>{navbarLink.title}</li>
+                  </Link>
+                  {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
+                    <BsChevronRight
+                      strokeWidth={1}
+                      className='dropdown-menu__btn'
+                      onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {slider === 'slider3' && (
+        <div ref={sliderThreeRef} className='slider slider3 slide-enterance1'>
+          <BsChevronLeft
+            size={32}
+            strokeWidth={2}
+            className='go-back-btn'
+            onClick={closeDropdown}
+          />
 
-        <ul className='o__mobile-nav-list'>
-          {optionOptions.map(option => (
-            <Link to={option.url} key={option.id}>
-              <li className='o__mobile_nav-link'>{option.title}</li>
-            </Link>
-          ))}
-        </ul>
-      </div>
+          <ul className='o__mobile-nav-list'>
+            {optionOptions.map(option => (
+              <Link to={option.url} key={option.id}>
+                <li className='o__mobile_nav-link'>{option.title}</li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
