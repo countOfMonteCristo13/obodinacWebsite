@@ -15,7 +15,7 @@
 .o__offersSection_img img {
   max-width: 300px;
   max-height: 450px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .o__offersSection_details {
