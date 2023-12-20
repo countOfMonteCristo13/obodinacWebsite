@@ -17,13 +17,21 @@
 }
 
 .o__mobile-nav-list {
+  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
+  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
   display: flex;
+  -webkit-flex-direction: column; /* Dodajte WebKit prefix za flex-direction */
+  -ms-flex-direction: column; /* Dodajte MS prefix za flex-direction */
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .o__mobile_nav-link-wrapper {
+  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
+  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
   display: flex;
+  -webkit-align-items: center; /* Dodajte WebKit prefix za align-items */
+  -ms-align-items: center; /* Dodajte MS prefix za align-items */
   align-items: center;
   gap: 1rem;
 }
@@ -46,39 +54,52 @@
   position: absolute;
   left: 0;
   top: 0;
+  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
+  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
   display: flex;
+  -webkit-align-items: center; /* Dodajte WebKit prefix za align-items */
+  -ms-align-items: center; /* Dodajte MS prefix za align-items */
   align-items: center;
+  -webkit-transition: -webkit-transform 1s; /* Dodajte WebKit prefix za transition */
   transition: transform 1s;
 }
 
 .slider2,
 .slider3 {
+  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
+  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
   display: flex;
   gap: 0.5rem;
 }
 
 .slider1 {
+  -webkit-transform: translateX(0%); /* Dodajte WebKit prefix za transform */
   transform: translateX(0%);
   margin-left: 2.5rem;
 }
 
 .slider2 {
+  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
   transform: translateX(100%);
 }
 
 .slider3 {
+  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
   transform: translateX(100%);
 }
 
 .slider-zero {
+  -webkit-transform: translateX(0%); /* Dodajte WebKit prefix za transform */
   transform: translateX(0%);
 }
 
 .slider-left {
+  -webkit-transform: translateX(-100%); /* Dodajte WebKit prefix za transform */
   transform: translateX(-100%);
 }
 
 .slider-right {
+  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
   transform: translateX(100%);
 }
 

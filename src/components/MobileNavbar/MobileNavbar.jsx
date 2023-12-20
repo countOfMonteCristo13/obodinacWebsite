@@ -14,7 +14,7 @@ const MobileNavbar = () => {
 
   const showDropdown = (e, options) => {
     const linkClicked = e.parentNode.innerText;
-    // console.log(linkClicked);
+    // console.log('open', linkClicked);
     if (linkClicked === 'Usluge' || linkClicked === 'Galerija') {
       if (linkClicked === 'Usluge') {
         setGalleryOrOffers('offers');
@@ -32,6 +32,7 @@ const MobileNavbar = () => {
 
   const closeDropdown = e => {
     const linkClicked = e.parentNode;
+    // console.log('close', linkClicked);
     if (linkClicked.classList.contains('slider2')) {
       sliderOneRef.current.classList.remove('slider-left');
       sliderTwoRef.current.classList.remove('slider-zero');
