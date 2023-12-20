@@ -114,6 +114,10 @@
   .o__offersSection_details h2 {
     font-size: 2.5rem;
   }
+
+  .o__offersSection_img img {
+    max-height: 250px;
+  }
 }
 
 @media screen and (max-width: 425px) {
