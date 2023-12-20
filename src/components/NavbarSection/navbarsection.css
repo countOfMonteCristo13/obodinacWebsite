@@ -33,7 +33,7 @@
   transition: 0.5s ease;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: 1rem;
+  /* gap: 1rem; */
   z-index: 999;
 }
 
