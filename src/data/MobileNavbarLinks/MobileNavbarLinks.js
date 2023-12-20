@@ -10,12 +10,12 @@ export const mobileNavbarLinks = {
     title: 'O nama',
   },
   Offers: {
-    url: '#',
+    url: '/o-nama',
     id: 'nav__offers-menu',
     title: 'Usluge',
   },
   Gallery: {
-    url: '#',
+    url: '/o-nama',
     id: 'nav__gallery-menu',
     title: 'Galerija',
   },
