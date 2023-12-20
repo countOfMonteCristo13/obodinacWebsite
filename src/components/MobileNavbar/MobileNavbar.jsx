@@ -9,9 +9,6 @@ const MobileNavbar = () => {
   const [optionOptions, setOptionOptions] = useState([]);
   const [galleryOrOffers, setGalleryOrOffers] = useState('');
   const [slider, setSlider] = useState('slider1');
-  const sliderOneRef = useRef(null);
-  const sliderTwoRef = useRef(null);
-  const sliderThreeRef = useRef(null);
 
   const showDropdown = (e, options) => {
     const linkClicked = e.parentNode.innerText;
@@ -43,7 +40,7 @@ const MobileNavbar = () => {
   return (
     <div className='o__mobile-nav'>
       {slider === 'slider1' && (
-        <div ref={sliderOneRef} className='slider slider1 slide-enterance1'>
+        <div className='slider slider1 slide-enterance1'>
           <ul className='o__mobile-nav-list'>
             {Object.values(mobileNavbarLinks).map(navbarLink => (
               <div key={navbarLink.title}>
@@ -71,7 +68,7 @@ const MobileNavbar = () => {
         </div>
       )}
       {slider === 'slider2' && (
-        <div ref={sliderTwoRef} className='slider slider2 slide-enterance1'>
+        <div className='slider slider2 slide-enterance1'>
           <BsChevronLeft
             size={32}
             strokeWidth={2}
@@ -106,7 +103,7 @@ const MobileNavbar = () => {
         </div>
       )}
       {slider === 'slider3' && (
-        <div ref={sliderThreeRef} className='slider slider3 slide-enterance1'>
+        <div className='slider slider3 slide-enterance1'>
           <BsChevronLeft
             size={32}
             strokeWidth={2}

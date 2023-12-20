@@ -124,6 +124,9 @@
   .o__offersSection_details h2 {
     font-size: 2rem;
   }
+  .o__offersSection_img img {
+    max-height: 200px;
+  }
 
   .o__offersSection_details p {
     font-size: 0.9rem;
