@@ -1,6 +1,5 @@
 .o__mobile-nav {
   display: block;
-  /* background: var(--color-darkblue); */
   color: var(--color-white);
   overflow: hidden;
   position: absolute;
@@ -17,21 +16,21 @@
 }
 
 .o__mobile-nav-list {
-  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
-  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
+  /* display: -webkit-box; 
+  display: -ms-flexbox;  */
   display: flex;
-  -webkit-flex-direction: column; /* Dodajte WebKit prefix za flex-direction */
-  -ms-flex-direction: column; /* Dodajte MS prefix za flex-direction */
+  /* -webkit-flex-direction: column; 
+  -ms-flex-direction: column; */
   flex-direction: column;
   gap: 0.5rem;
 }
 
 .o__mobile_nav-link-wrapper {
-  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
-  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
+  /* display: -webkit-box; 
+  display: -ms-flexbox;  */
   display: flex;
-  -webkit-align-items: center; /* Dodajte WebKit prefix za align-items */
-  -ms-align-items: center; /* Dodajte MS prefix za align-items */
+  /* -webkit-align-items: center; 
+  -ms-align-items: center;  */
   align-items: center;
   gap: 1rem;
 }
@@ -54,53 +53,78 @@
   position: absolute;
   left: 0;
   top: 0;
-  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
-  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
+  /* display: -webkit-box; 
+  display: -ms-flexbox;  */
   display: flex;
-  -webkit-align-items: center; /* Dodajte WebKit prefix za align-items */
-  -ms-align-items: center; /* Dodajte MS prefix za align-items */
+  /* -webkit-align-items: center; 
+  -ms-align-items: center;  */
   align-items: center;
-  -webkit-transition: -webkit-transform 1s; /* Dodajte WebKit prefix za transition */
+  -webkit-transition: -webkit-transform 1s;
   transition: transform 1s;
 }
 
 .slider2,
 .slider3 {
-  display: -webkit-box; /* Dodajte WebKit prefix za flexbox */
-  display: -ms-flexbox; /* Dodajte MS prefix za flexbox */
+  /* display: -webkit-box;
+  display: -ms-flexbox;  */
   display: flex;
   gap: 0.5rem;
 }
 
 .slider1 {
-  -webkit-transform: translateX(0%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(0%);
   margin-left: 2.5rem;
 }
 
-.slider2 {
-  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(100%);
+.slide-right {
+  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.slider3 {
-  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(100%);
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
 }
 
-.slider-zero {
-  -webkit-transform: translateX(0%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(0%);
+.slide-left {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.slider-left {
-  -webkit-transform: translateX(-100%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(-100%);
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
 }
-
-.slider-right {
-  -webkit-transform: translateX(100%); /* Dodajte WebKit prefix za transform */
-  transform: translateX(100%);
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
 }
 
 @media screen and (max-width: 576px) {
