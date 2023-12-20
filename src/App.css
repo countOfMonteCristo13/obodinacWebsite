@@ -22,6 +22,7 @@
   color: var(--color-blue);
   font-weight: 300;
   font-family: var(--font-base);
+  font-weight: 400;
 }
 
 .cursor-pointer {
@@ -112,6 +113,7 @@
   font-size: 3rem;
   color: var(--color-blue);
   text-align: center;
+  font-weight: 400;
 }
 
 .headtext p {

@@ -10,6 +10,7 @@
   color: var(--color-white);
   background: var(--color-blue);
   border-radius: 10px;
+  font-weight: 400;
 }
 
 .sistemi__klima-headtext {

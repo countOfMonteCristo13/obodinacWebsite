@@ -30,6 +30,7 @@
 .o__section_details h2 {
   font-size: 2.5rem;
   color: var(--color-blue);
+  font-weight: 400;
 }
 
 .o__section_details p {
