@@ -51,14 +51,14 @@ const MobileNavbar = () => {
                   {navbarLink.title}
                 </li>
               </Link>
-              {(navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija') && (
+              {/* {(navbarLink.title === 'Usluge' || navbarLink.title === 'Galerija') && (
                 <BsChevronRight
                   strokeWidth={1}
                   size={16}
                   className='dropdown-menu__btn'
                   onClick={e => showDropdown(e.currentTarget)}
                 />
-              )}
+              )} */}
             </div>
           ))}
         </ul>
