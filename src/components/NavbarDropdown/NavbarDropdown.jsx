@@ -19,6 +19,8 @@ const NavbarDropdown = ({ options, galerija }) => {
 
   const handleButtonClick = e => {
     const uslugeOption = e.parentNode.querySelector('a div').innerText;
+    console.log(uslugeOption);
+    console.log(optionClicked);
     if (optionClicked !== '') {
       setOptionClicked('');
     } else {

@@ -15,6 +15,13 @@
   font-family: var(--font-base);
 }
 
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 body {
   background: var(--color-darkgrey);
   height: 100%;

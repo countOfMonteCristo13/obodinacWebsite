@@ -61,7 +61,7 @@ const SpareAC = () => {
                   >
                     Detaljnije...
                   </button>
-                  <Link to='/contact'>
+                  <Link to='/kontakt'>
                     <button className='custom__button checkout-btn o__spareAC-klima-buttons_button'>
                       Rezerviši
                     </button>
@@ -85,7 +85,7 @@ const SpareAC = () => {
             <div className='o__spareAC-menu-desc'>
               <h2>{imgTitle}</h2>
               <p>{data[0].description}</p>
-              <Link to='/contact'>
+              <Link to='/kontakt'>
                 <button
                   className='custom__button checkout-btn o__spareAC-klima-buttons_button'
                   id='reserve-btn'
