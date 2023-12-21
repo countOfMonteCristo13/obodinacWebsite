@@ -1,37 +1,40 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
-import { mobileNavbarLinks } from '../../data/MobileNavbarLinks/MobileNavbarLinks';
-import navbarDropdownLinks from '../../data/navbarDropdownLinks/navbarDropdownLinks';
+import {
+  mobileNavbarLinks,
+  galleryNavbarLinks,
+  offersNavbarLinks,
+} from '../../data/MobileNavbarLinks/MobileNavbarLinks';
 import './mobileNavbar.css';
 
 const MobileNavbar = () => {
   const [optionOptions, setOptionOptions] = useState([]);
-  const [galleryOrOffers, setGalleryOrOffers] = useState('');
   const [slider, setSlider] = useState('slider1');
+  const [navLinkClicked, setNavLinkClicked] = useState('');
 
-  const showDropdown = (e, options) => {
-    const linkClicked = e.parentNode.innerText;
-    if (linkClicked === 'Usluge' || linkClicked === 'Galerija') {
-      if (linkClicked === 'Usluge') {
-        setGalleryOrOffers('offers');
-      } else {
-        setGalleryOrOffers('gallery');
-      }
-    } else {
-      setOptionOptions(options);
-    }
+  const toSliderTwo = () => {
+    setSlider('slider2');
+    setNavLinkClicked('Galerija');
+  };
 
-    if (slider === 'slider1') {
-      setSlider('slider2');
-    } else {
-      setSlider('slider3');
-    }
+  const toSliderThree = () => {
+    setSlider('slider3');
+    setNavLinkClicked('Usluge');
+  };
+
+  const showDropdown = options => {
+    setSlider('slider4');
+    setOptionOptions(options);
   };
 
   const closeDropdown = () => {
-    if (slider === 'slider3') {
-      setSlider('slider2');
+    if (slider === 'slider4') {
+      if (navLinkClicked === 'Usluge') {
+        setSlider('slider3');
+      } else if (navLinkClicked === 'Galerija') {
+        setSlider('slider2');
+      }
     } else {
       setSlider('slider1');
     }
@@ -52,7 +55,18 @@ const MobileNavbar = () => {
                     <BsChevronRight
                       strokeWidth={1}
                       className='dropdown-menu__btn'
-                      onClick={e => showDropdown(e.currentTarget)}
+                      onClick={() => {
+                        switch (navbarLink.title) {
+                          case 'Galerija':
+                            toSliderTwo();
+                            break;
+                          case 'Usluge':
+                            toSliderThree();
+                            break;
+                          default:
+                            toSliderTwo();
+                        }
+                      }}
                     />
                   </div>
                 ) : (
@@ -76,33 +90,42 @@ const MobileNavbar = () => {
             onClick={closeDropdown}
           />
           <ul className='o__mobile-nav-list'>
-            {navbarDropdownLinks.map(navbarLink => {
-              if (galleryOrOffers === 'gallery' && navbarLink.id === 'polovne') {
-                return null;
-              }
-              return (
-                <div key={navbarLink.title} className='o__mobile_nav-link-wrapper'>
-                  <Link
-                    to={
-                      galleryOrOffers === 'gallery' ? navbarLink.urlGalerija : navbarLink.urlUsluge
-                    }
-                  >
-                    <li className='o__mobile_nav-link'>{navbarLink.title}</li>
-                  </Link>
-                  {navbarLink.dropdown && galleryOrOffers !== 'gallery' && (
-                    <BsChevronRight
-                      strokeWidth={1}
-                      className='dropdown-menu__btn'
-                      onClick={e => showDropdown(e.currentTarget, navbarLink.options)}
-                    />
-                  )}
-                </div>
-              );
-            })}
+            {galleryNavbarLinks.map(navLink => (
+              <Link to={navLink.url} key={navLink.id}>
+                <li className='o__mobile_nav-link'>{navLink.title}</li>
+              </Link>
+            ))}
           </ul>
         </div>
       )}
+
       {slider === 'slider3' && (
+        <div className='slider slider2 slide-enterance1'>
+          <BsChevronLeft
+            size={32}
+            strokeWidth={2}
+            className='go-back-btn'
+            onClick={closeDropdown}
+          />
+          <ul className='o__mobile-nav-list'>
+            {offersNavbarLinks.map(navLink => (
+              <div className='o__mobile_nav-link-wrapper' key={navLink.id}>
+                <Link to={navLink.url}>
+                  <li className='o__mobile_nav-link'>{navLink.title}</li>
+                </Link>
+                {navLink.dropdown && (
+                  <BsChevronRight
+                    strokeWidth={1}
+                    className='dropdown-menu__btn'
+                    onClick={e => showDropdown(navLink.options)}
+                  />
+                )}
+              </div>
+            ))}
+          </ul>
+        </div>
+      )}
+      {slider === 'slider4' && (
         <div className='slider slider3 slide-enterance1'>
           <BsChevronLeft
             size={32}

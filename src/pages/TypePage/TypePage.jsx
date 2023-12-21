@@ -5,9 +5,9 @@ import { BlueLine } from '../../utils';
 const TypePage = ({ type }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [type.title]);
   return (
-    <div className='slide-enterance1'>
+    <div className='slide-enterance1' key={type.title}>
       <NavbarSection activeLink='nav__offers' />
       <div className='headtext flex__center'>
         <h2>{type.title}</h2>

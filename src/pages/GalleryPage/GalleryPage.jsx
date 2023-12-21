@@ -11,7 +11,7 @@ const GalleryPage = ({ gImages, title }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [title]);
 
   useEffect(() => {
     setFilterGalleryImages('Sve');

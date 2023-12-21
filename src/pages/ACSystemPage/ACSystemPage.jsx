@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './acSystemPage.css';
 import { NavbarSection, OffersSection } from '../../components';
 import { BlueLine, CardFlip } from '../../utils';
 import IndoorUnitTypes from '../ACInstallationPage/IndoorUnitTypes/IndoorUnitTypes';
 import images from '../../data/Images/images';
-import { useScrollToTop } from '../../hooks/useScrollToTop';
 
 const ACSystemPage = ({ sistem }) => {
-  const currentSistem = sistem.title;
-
-  useScrollToTop();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [sistem.title]);
   return (
-    <div className='slide-enterance1'>
+    <div className='slide-enterance1' key={sistem.title}>
       <NavbarSection activeLink='nav__offers' />
       <div className='headtext flex__center'>
         <h2>{sistem.title}</h2>
@@ -23,7 +22,7 @@ const ACSystemPage = ({ sistem }) => {
         image={sistem.img}
         href={sistem.galleryUrl}
       />
-      {currentSistem !== 'Kanalski Sistem' ? (
+      {sistem.title !== 'Kanalski Sistem' ? (
         <IndoorUnitTypes />
       ) : (
         <>
