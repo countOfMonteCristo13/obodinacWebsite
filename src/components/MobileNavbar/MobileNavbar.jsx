@@ -14,7 +14,7 @@ const MobileNavbar = () => {
     const linkClicked = e.parentNode.innerText;
     if (linkClicked === 'Usluge' || linkClicked === 'Galerija') {
       if (linkClicked === 'Usluge') {
-        setGalleryOrOffers('gallery');
+        setGalleryOrOffers('offers');
       } else {
         setGalleryOrOffers('gallery');
       }

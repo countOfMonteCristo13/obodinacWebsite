@@ -66,6 +66,7 @@
 .o__aboutPage_section-description h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .o__aboutPage_section-description p {
