@@ -6,39 +6,65 @@ import images from '../../data/Images/images';
 import './contactpage.css';
 
 const ContactPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [message, setMessage] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
 
   const [isEmailValid, setIsEmailValid] = useState(false);
 
   const emailRef = useRef(null);
 
-  const handleEmailChange = e => {
-    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-    const emailValidation = emailRegex.test(e.target.value); // true or false
+  const handleInputChange = e => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
 
-    setEmail(e.target.value);
-    setIsEmailValid(emailValidation);
+    if (name === 'email') {
+      const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+      const emailValidation = emailRegex.test(e.target.value);
+      setIsEmailValid(emailValidation);
+    }
   };
+
+  // const handleEmailChange = e => {
+  //   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  //   const emailValidation = emailRegex.test(e.target.value); // true or false
+
+  //   setEmail(e.target.value);
+  //   setIsEmailValid(emailValidation);
+  // };
 
   const isValidForm = () => {
-    return name !== '' && isEmailValid && message !== '';
+    return formData.name !== '' && isEmailValid && formData.message !== '';
   };
+  // const isValidForm = () => {
+  //   return name !== '' && isEmailValid && message !== '';
+  // };
 
   const axiosInstance = axios.create({
     baseURL: 'https://obodinacback.onrender.com/',
   });
-  // const axiosInstance = axios.create({
-  //   baseURL: 'http://localhost:3001',
-  // });
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const data = { name, email, phone, message };
+    // const data = { name, email, phone, message };
     try {
-      await axiosInstance.post('/send-email', data);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+      await axiosInstance.post('/send-email', formData);
     } catch (error) {
       alert(error.message);
     }
@@ -53,14 +79,6 @@ const ContactPage = () => {
     const clipboardInstances = new ClipboardJS(emailRef.current, {
       text: () => emailRef.current.innerText,
     });
-
-    // clipboardInstances.on('success', e => {
-    //   console.log(`Email ${e.text} is copied`);
-    // });
-
-    // clipboardInstances.on('error', e => {
-    //   console.log('Failed to copy email:', e.text);
-    // });
 
     return () => {
       clipboardInstances.destroy();
@@ -92,9 +110,11 @@ const ContactPage = () => {
               id='ime'
               placeholder='Petar Petrović'
               required
-              onChange={e => {
-                setName(e.target.value);
-              }}
+              value={formData.name}
+              onChange={handleInputChange}
+              // onChange={e => {
+              //   setName(e.target.value);
+              // }}
             />
             <label htmlFor='email'>Email</label>
             <input
@@ -103,7 +123,9 @@ const ContactPage = () => {
               id='email'
               placeholder='petar.petrovic@gmail.com'
               required
-              onChange={handleEmailChange}
+              value={formData.email}
+              onChange={handleInputChange}
+              // onChange={handleEmailChange}
             />
             <label htmlFor='phone'>
               Broj telefona (<span className='phone-optional'>Opcionalno</span>)
@@ -113,7 +135,9 @@ const ContactPage = () => {
               name='phone'
               id='phone'
               placeholder='123/345-678'
-              onChange={e => setPhone(e.target.value)}
+              value={formData.phone}
+              onChange={handleInputChange}
+              // onChange={e => setPhone(e.target.value)}
             />
             <label htmlFor='poruka'>Poruka</label>
             <div className='textarea_wrapper flex__center'>
@@ -122,7 +146,9 @@ const ContactPage = () => {
                 id='poruka'
                 cols='50'
                 rows='10'
-                onChange={e => setMessage(e.target.value)}
+                value={formData.name}
+                onChange={handleInputChange}
+                // onChange={e => setMessage(e.target.value)}
               />
             </div>
 
