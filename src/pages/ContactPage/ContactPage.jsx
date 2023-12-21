@@ -146,7 +146,7 @@ const ContactPage = () => {
                 id='poruka'
                 cols='50'
                 rows='10'
-                value={formData.name}
+                value={formData.message}
                 onChange={handleInputChange}
                 // onChange={e => setMessage(e.target.value)}
               />
