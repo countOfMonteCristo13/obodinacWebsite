@@ -100,10 +100,13 @@
   align-items: center;
 }
 #reserve-btn {
-  background: var(--color-white);
+  background: var(--color-grey);
   color: var(--color-blue);
-  font-weight: bold;
-  border: 2px solid var(--color-white);
+  font-weight: 400;
+}
+
+#reserve-btn:hover {
+  background: var(--color-darkgrey);
 }
 
 .o__spareAC-menu_close-btn {
