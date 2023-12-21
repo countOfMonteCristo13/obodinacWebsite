@@ -103,11 +103,11 @@ const ContactPage = () => {
       <div className='o__contactPage_section'>
         <div className='o__contactPage_options-window' id='option-message'>
           <form onSubmit={handleSubmit} className='kontakt-inputi'>
-            <label htmlFor='ime'>Ime i prezime</label>
+            <label htmlFor='name'>Ime i prezime</label>
             <input
               type='text'
-              name='ime'
-              id='ime'
+              name='name'
+              id='name'
               placeholder='Petar Petrović'
               required
               value={formData.name}
@@ -139,11 +139,11 @@ const ContactPage = () => {
               onChange={handleInputChange}
               // onChange={e => setPhone(e.target.value)}
             />
-            <label htmlFor='poruka'>Poruka</label>
+            <label htmlFor='message'>Poruka</label>
             <div className='textarea_wrapper flex__center'>
               <textarea
-                name='poruka'
-                id='poruka'
+                name='message'
+                id='message'
                 cols='50'
                 rows='10'
                 value={formData.message}
