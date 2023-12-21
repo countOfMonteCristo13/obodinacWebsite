@@ -35,6 +35,7 @@
 
 .faq-page__question h4 {
   width: 100%;
+  font-weight: 500;
 }
 
 .faq-page__question:hover {

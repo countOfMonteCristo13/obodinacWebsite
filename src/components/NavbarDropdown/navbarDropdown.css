@@ -51,7 +51,7 @@
 .dropdown__option {
   background: var(--color-darkgrey);
   color: var(--color-blue);
-  font-weight: bold;
+  font-weight: 500;
   width: 100%;
   display: flex;
   flex-direction: column;

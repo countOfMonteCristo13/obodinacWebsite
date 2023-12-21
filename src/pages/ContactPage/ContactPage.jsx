@@ -86,6 +86,7 @@ const ContactPage = () => {
             <input
               type='text'
               name='ime'
+              id='ime'
               placeholder='Petar Petrović'
               required
               onChange={e => {
@@ -96,6 +97,7 @@ const ContactPage = () => {
             <input
               type='email'
               name='email'
+              id='email'
               placeholder='petar.petrovic@gmail.com'
               required
               onChange={handleEmailChange}
@@ -106,6 +108,7 @@ const ContactPage = () => {
             <input
               type='text'
               name='phone'
+              id='phone'
               placeholder='123/345-678'
               onChange={e => setPhone(e.target.value)}
             />

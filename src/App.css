@@ -94,9 +94,7 @@
 }
 
 .checkout-btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-blue);
-  font-weight: bold;
+  background-color: var(--color-darkblue);
 }
 
 .loadingScreen {
@@ -113,7 +111,7 @@
   font-size: 3rem;
   color: var(--color-blue);
   text-align: center;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .headtext p {

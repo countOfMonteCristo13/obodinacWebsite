@@ -14,7 +14,7 @@
   padding: 0.5rem 1rem;
   border: 3px solid var(--color-blue);
   border-radius: 10px;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--color-blue);
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -38,7 +38,6 @@
   max-width: 650px;
   width: 100%;
   transition: all 0.2s;
-  /* border-radius: 10px; */
 }
 .gallery__img img {
   width: 100%;
