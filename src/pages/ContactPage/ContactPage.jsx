@@ -28,8 +28,11 @@ const ContactPage = () => {
   };
 
   const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3001',
+    baseURL: 'https://obodinacback.onrender.com/',
   });
+  // const axiosInstance = axios.create({
+  //   baseURL: 'http://localhost:3001',
+  // });
 
   const handleSubmit = async e => {
     e.preventDefault();

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const useSpareACs = url => {
-  const BASE_URL = 'http://localhost:3001/api/';
+  const BASE_URL = 'https://obodinacback.onrender.com/api/';
   const FULL_URL = BASE_URL + url;
   //acs/get-spare-acs
   const [data, setData] = useState([]);
