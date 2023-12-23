@@ -28,7 +28,6 @@
 .o__aboutUs_details h2 {
   font-size: 2.5rem;
   color: var(--color-blue);
-  font-weight: 400;
 }
 
 .o__aboutUs_details p {
@@ -41,7 +40,7 @@
 
 @media screen and (max-width: 1200px) {
   .o__aboutUs {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .o__aboutUs_img {
@@ -72,7 +71,9 @@
   .o__aboutUs_details {
     gap: 1.5rem;
   }
+}
 
+@media screen and (max-width: 576px) {
   .o__aboutUs_img {
     width: 100%;
   }
