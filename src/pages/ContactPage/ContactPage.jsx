@@ -1,15 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ClipboardJS from 'clipboard';
 import axios from 'axios';
-import { NavbarSection } from '../../components';
+import { Header, NavbarSection } from '../../components';
 import images from '../../data/Images/images';
 import './contactpage.css';
 
 const ContactPage = () => {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -35,20 +31,9 @@ const ContactPage = () => {
     }
   };
 
-  // const handleEmailChange = e => {
-  //   const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-  //   const emailValidation = emailRegex.test(e.target.value); // true or false
-
-  //   setEmail(e.target.value);
-  //   setIsEmailValid(emailValidation);
-  // };
-
   const isValidForm = () => {
     return formData.name !== '' && isEmailValid && formData.message !== '';
   };
-  // const isValidForm = () => {
-  //   return name !== '' && isEmailValid && message !== '';
-  // };
 
   const axiosInstance = axios.create({
     baseURL: 'https://obodinacback.onrender.com/',
@@ -56,7 +41,6 @@ const ContactPage = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    // const data = { name, email, phone, message };
     try {
       setFormData({
         name: '',
@@ -66,6 +50,7 @@ const ContactPage = () => {
       });
       await axiosInstance.post('/send-email', formData);
     } catch (error) {
+      // eslint-disable-next-line no-alert
       alert(error.message);
     }
   };
@@ -112,9 +97,6 @@ const ContactPage = () => {
               required
               value={formData.name}
               onChange={handleInputChange}
-              // onChange={e => {
-              //   setName(e.target.value);
-              // }}
             />
             <label htmlFor='email'>Email</label>
             <input
@@ -125,7 +107,6 @@ const ContactPage = () => {
               required
               value={formData.email}
               onChange={handleInputChange}
-              // onChange={handleEmailChange}
             />
             <label htmlFor='phone'>
               Broj telefona (<span className='phone-optional'>Opcionalno</span>)
@@ -137,7 +118,6 @@ const ContactPage = () => {
               placeholder='123/345-678'
               value={formData.phone}
               onChange={handleInputChange}
-              // onChange={e => setPhone(e.target.value)}
             />
             <label htmlFor='message'>Poruka</label>
             <div className='textarea_wrapper flex__center'>
@@ -148,13 +128,12 @@ const ContactPage = () => {
                 rows='10'
                 value={formData.message}
                 onChange={handleInputChange}
-                // onChange={e => setMessage(e.target.value)}
               />
             </div>
 
             <div className='o__contactPage_options_message-submit flex__center' id='submitButton'>
               <button
-                className='custom__button submit__btn'
+                className='o__contactPage_options_message-submit_btn'
                 type='submit'
                 value='Pošalji'
                 disabled={!isValidForm()}

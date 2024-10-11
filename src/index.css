@@ -23,7 +23,7 @@ main {
 }
 
 body {
-  background: var(--color-darkgrey);
+  background: var(--color-white);
   height: 100%;
 }
 

@@ -18,7 +18,7 @@ const OffersSection = ({ description, image, alt, odd, href }) => {
       </div>
       <div className='o__offersSection_img flex__center'>
         <div className='o__offersSection_img-wrapper'>
-          <IKImage urlEndpoint={urlEndpoint} path={image} lqip={{ active: true, quality: 20 }} />
+          <IKImage urlEndpoint={urlEndpoint} path={image} loading='lazy' lqip={{ active: true, quality: 20 }} />
         </div>
       </div>
     </div>

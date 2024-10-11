@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { IKImage } from 'imagekitio-react';
+import React, { useState, useEffect } from 'react';
 import images from '../../data/Images/images';
 import navbarDropdownLinks from '../../data/navbarDropdownLinks/navbarDropdownLinks';
 import DesktopNavbar from '../DesktopNavbar/DesktopNavbar';
-import './navbarsection.css';
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
-
-const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
+import './navbarsection.css';
 
 const NavbarSection = ({ activeLink }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [homePage, setHomePage] = useState(false);
 
   const [offersDropdownToggleButton, setOffersDropdownToggleButton] = useState(false);
   const [galleryDropdownToggleButton, setGalleryDropdownToggleButton] = useState(false);
@@ -32,9 +28,6 @@ const NavbarSection = ({ activeLink }) => {
       activeNavLinkMenu.classList.add('menu__link-active');
     }
 
-    if (activeLink === 'nav__home') {
-      setHomePage(true);
-    }
 
     activeNavLink.classList.add('active');
 
@@ -59,7 +52,6 @@ const NavbarSection = ({ activeLink }) => {
         setOffersDropdownToggleButton={setOffersDropdownToggleButton}
         toggleMenu={toggleMenu}
         offersDropdownToggleButton={offersDropdownToggleButton}
-        homePage={homePage}
         navbarDropdownLinks={navbarDropdownLinks}
         galleryDropdownToggleButton={galleryDropdownToggleButton}
       />
@@ -80,9 +72,6 @@ const NavbarSection = ({ activeLink }) => {
               onClick={() => setToggleMenu(false)}
             >
               <img src={images.maintenanceWhite} alt='wrench and screwdriver' />
-            </div>
-            <div className='o__header_menu-overlay_logo'>
-              <IKImage urlEndpoint={urlEndpoint} path={images.obodinacFooter2} />
             </div>
             <div className='o__header_menu-overlay_links flex__center'>
               <MobileNavbar />

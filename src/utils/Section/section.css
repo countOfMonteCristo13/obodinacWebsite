@@ -4,7 +4,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  background-color: var(--color-grey);
 }
 
 .o__section_img {

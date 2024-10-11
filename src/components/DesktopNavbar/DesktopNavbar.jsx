@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { IKImage } from 'imagekitio-react';
-import images from '../../data/Images/images';
 import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
 import './desktopNavbar.css';
-
-const urlEndpoint = 'https://ik.imagekit.io/montecristo/';
 
 const DesktopNavbar = ({
   setOffersDropdownToggleButton,
@@ -14,7 +10,6 @@ const DesktopNavbar = ({
   toggleMenu,
   offersDropdownToggleButton,
   navbarDropdownLinks,
-  homePage,
   galleryDropdownToggleButton,
 }) => {
   return (
@@ -50,11 +45,6 @@ const DesktopNavbar = ({
           <NavbarDropdown options={navbarDropdownLinks} galerija={false} />
         )}
       </div>
-      {!homePage && (
-        <div className='o__desktop-nav-logo flex__center'>
-          <IKImage urlEndpoint={urlEndpoint} path={images.obodinacFooter2} />
-        </div>
-      )}
       <div
         className='o__desktop-nav__dropdown'
         onMouseEnter={() => {

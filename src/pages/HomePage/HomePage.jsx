@@ -9,7 +9,6 @@ const HomePage = () => {
 
   return (
     <div className='hp slide-enterance1'>
-      <Header />
       <NavbarSection activeLink='nav__home' />
       <div className='o__line o__line-hidden flex__center'>
         <div />

@@ -11,13 +11,13 @@ const Header = () => {
       <IKContext urlEndpoint={urlEndpoint}>
         <header className='o__header'>
           <div className='o__header_logo'>
-            <IKImage path={images.obodinac} loading='lazy' lqip={{ active: true }} />
+            <IKImage path={images.obodinac}  lqip={{ active: true }} />
           </div>
 
           <div className='o__header_images'>
-            <IKImage path={images.splitSistem} loading='lazy' lqip={{ active: true }} />
-            <IKImage path={images.radiator} loading='lazy' lqip={{ active: true }} />
-            <IKImage path={images.vent} loading='lazy' lqip={{ active: true }} />
+            <IKImage path={images.splitSistem}  lqip={{ active: true }} />
+            <IKImage path={images.radiator}  lqip={{ active: true }} />
+            <IKImage path={images.vent} lqip={{ active: true }} />
           </div>
         </header>
       </IKContext>

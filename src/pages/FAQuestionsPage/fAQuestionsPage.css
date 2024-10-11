@@ -51,7 +51,7 @@
 }
 
 .faq-page__answer {
-  background: var(--color-white);
+  background: var(--color-darkgrey);
   color: var(--color-blue);
   font-weight: bold;
   border-bottom-left-radius: 10px;

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-// import Lottie from 'lottie-react';
-// import obodinacLoading from './assets/obodinacLoading.json';
 
 import {
   HomePage,
@@ -24,7 +22,7 @@ import { acTypes } from './pages/TypePage/Types/acTypes';
 import { ventilationTypes } from './pages/TypePage/Types/ventilationTypes';
 import { heatingTypes } from './pages/TypePage/Types/heatingTypes';
 import { serviceTypes } from './pages/TypePage/Types/serviceTypes';
-import { Footer } from './components';
+import { Footer, Header } from './components';
 import { ScrollUp } from './utils';
 import Loader from './utils/Loader/Loader';
 
@@ -46,6 +44,7 @@ function App() {
       {!isLoading && (
         <>
           <ScrollUp />
+          <Header/>
           <main>
             <Routes>
               <Route path='/' element={<HomePage />} />

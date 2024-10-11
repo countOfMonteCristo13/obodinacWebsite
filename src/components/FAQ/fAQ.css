@@ -1,7 +1,3 @@
-.faq__section {
-  background: var(--color-grey);
-}
-
 .faq__cta {
   display: flex;
   flex-direction: row;
