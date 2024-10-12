@@ -144,7 +144,8 @@
     color: var(--color-white);
   }
 
-  .section__padding {
+  .section__padding,
+  .headtext {
     padding: 2rem;
   }
 
@@ -158,9 +159,6 @@
     padding: 0.6rem 1.1rem;
   }
 
-  .headtext {
-    padding: 2rem;
-  }
 
   .headtext h2 {
     font-size: 2.8rem;
@@ -178,8 +176,9 @@
     padding: 0.5rem 1rem;
   }
 
-  .headtext {
-    padding: 1.5rem 2rem;
+  .headtext,
+  .section__padding {
+    padding: 1.5rem;
   }
 
   .headtext h2 {

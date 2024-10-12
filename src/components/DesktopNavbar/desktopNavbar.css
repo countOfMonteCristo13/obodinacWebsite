@@ -13,6 +13,11 @@
   height: 45px;
 }
 
+.glass-nav{
+  /* border-bottom: 3px solid var(--color-darkblue); */
+  background-color: var(--color-darkblue);
+}
+
 .o__desktop-nav p {
   transition: all 0.3s;
   cursor: pointer;

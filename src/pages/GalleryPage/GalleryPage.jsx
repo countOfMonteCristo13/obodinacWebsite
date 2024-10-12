@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './gallerypage.css';
 import { NavbarSection } from '../../components';
 import { BlueLine } from '../../utils';
 import images from '../../data/Images/images';
+import './gallerypage.css';
 
 const GalleryPage = ({ gImages, title }) => {
   const [filterGalleryImages, setFilterGalleryImages] = useState('Sve');

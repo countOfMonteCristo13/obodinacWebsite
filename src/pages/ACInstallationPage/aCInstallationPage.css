@@ -72,6 +72,11 @@
 }
 
 @media screen and (max-width: 425px) {
+  .tipovi__klima-headtext,
+  .sistemi__klima-headtext {
+    padding: 0 1.5rem;
+  }
+
   .tipovi__klima-headtext h2,
   .sistemi__klima-headtext h2 {
     font-size: 1.5rem;

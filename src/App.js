@@ -23,7 +23,7 @@ import { ventilationTypes } from './pages/TypePage/Types/ventilationTypes';
 import { heatingTypes } from './pages/TypePage/Types/heatingTypes';
 import { serviceTypes } from './pages/TypePage/Types/serviceTypes';
 import { Footer, Header } from './components';
-import { ScrollUp } from './utils';
+import { BlueLine, ScrollUp } from './utils';
 import Loader from './utils/Loader/Loader';
 
 function App() {
@@ -37,7 +37,6 @@ function App() {
     <>
       {isLoading && (
         <div className='flex__center loadingScreen'>
-          {/* <Lottie animationData={obodinacLoading} loop={1} autoplay={1} height={50} width={50} /> */}
           <Loader width={192} height={192} border={8} />
         </div>
       )}
@@ -45,6 +44,7 @@ function App() {
         <>
           <ScrollUp />
           <Header/>
+          <BlueLine isHidden={true}/>
           <main>
             <Routes>
               <Route path='/' element={<HomePage />} />

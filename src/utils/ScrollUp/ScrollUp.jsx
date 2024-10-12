@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './scrollup.css';
 import { BsChevronUp } from 'react-icons/bs';
+import './scrollup.css';
 
 const ScrollUp = () => {
   const [buttonUp, setButtonUp] = useState(false);

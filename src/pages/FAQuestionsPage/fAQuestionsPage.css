@@ -81,3 +81,9 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .faq-page__section {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+}

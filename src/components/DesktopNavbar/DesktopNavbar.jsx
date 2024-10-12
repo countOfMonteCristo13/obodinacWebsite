@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import NavbarDropdown from '../NavbarDropdown/NavbarDropdown';
@@ -12,8 +12,32 @@ const DesktopNavbar = ({
   navbarDropdownLinks,
   galleryDropdownToggleButton,
 }) => {
+
+  const navRef = useRef(null);
+
+  const handleScroll = () => {
+    if(navRef.current){
+      if(navRef.current.getBoundingClientRect().top <= 0){
+        navRef.current.classList.add('glass-nav')
+      }else{
+        navRef.current.classList.remove('glass-nav')
+      }
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll',handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll',handleScroll);
+    }
+
+  })
+
+
+
   return (
-    <div className='o__desktop-nav'>
+    <div className='o__desktop-nav' ref={navRef}>
       <Link to='/'>
         <p className='o__desktop-nav-link' id='nav__home'>
           Početna
